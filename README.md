@@ -40,6 +40,8 @@ This repository constructs Monolayer using Density Functional Theory (DFT). The 
 
 ### KGRIDS Convergence
 ![KGRIDS Convergence](<outputs/figs/KGRIDS Convergence.png>)
+[KGRIDS Measurements](outputs/conv/KGRIDS%20Convergence.txt)
 
 ### ECUTWFC Convergence
 ![ECUTWFC Convergence](<outputs/figs/ECUTWFC Convergence.png>)
+[ECUTWFC Measurements](outputs/conv/ECUTWFC%20Convergence.txt)
