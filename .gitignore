@@ -1,6 +1,0 @@
-.gitignore
-.vscode
-description.md
-test.py
-outputs/.DS_Store
-outputs/temp/
