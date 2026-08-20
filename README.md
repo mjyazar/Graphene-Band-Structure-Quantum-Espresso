@@ -25,7 +25,7 @@ This repository constructs Monolayer using Density Functional Theory (DFT). The 
 |   |-- scf.pwi / scf.pwo.     # Self Consistent Field input/output
 |
 |-- pseudo/
-|    |-- C.pbe-n-kjpaw_psl.1.0.0.UPF  # psuedopotential of Carbon (https://pseudopotentials.quantum-espresso.org/)
+|    |-- C.pbe-n-kjpaw_psl.1.0.0.UPF  # psuedopotential of Carbon (https://sssp.materialscloud.org/pseudopotentials/PBE/efficiency)
 
 
 ```
