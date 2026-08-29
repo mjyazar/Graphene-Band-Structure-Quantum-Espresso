@@ -1,0 +1,48 @@
+&CONTROL
+   calculation      = 'scf'
+   verbosity        = 'high'
+   tprnfor          = .true.
+   outdir           = '/Users/memo/Desktop/New Horizons/Graphene Band Structure QE/outputs/monolayer/data'
+   prefix           = 'graphene'
+   pseudo_dir       = '/Users/memo/Desktop/New Horizons/Graphene Band Structure QE/pseudo'
+/
+&SYSTEM
+   nbnd             = 8
+   ecutwfc          = 100.0
+   ecutrho          = 400.0
+   occupations      = 'smearing'
+   degauss          = 0.01
+   smearing         = 'mv'
+   assume_isolated  = '2D'
+   ntyp             = 1
+   nat              = 2
+   ibrav            = 0
+/
+&ELECTRONS
+   electron_maxstep = 200
+   conv_thr         = 1e-08
+   mixing_beta      = 0.7
+/
+&IONS
+/
+&CELL
+/
+&FCP
+/
+&RISM
+/
+ATOMIC_SPECIES
+C 12.011 C.pbe-n-kjpaw_psl.1.0.0.UPF
+
+K_POINTS automatic
+12 12 1  0 0 0
+
+CELL_PARAMETERS angstrom
+2.45999984708052 0.00000000000000 0.00000000000000
+-1.22999992354026 2.13042136756791 0.00000000000000
+0.00000000000000 0.00000000000000 19.99999801675228
+
+ATOMIC_POSITIONS angstrom
+C 0.0000000000 0.0000000000 9.9999995004  
+C 1.2299999235 0.7101407019 9.9999995004  
+

@@ -2,12 +2,12 @@
    calculation      = 'bands'
    verbosity        = 'high'
    tprnfor          = .true.
-   outdir           = '/Users/memo/Desktop/New Horizons/Graphene Band Structure QE/outputs/temp'
+   outdir           = '/Users/memo/Desktop/New Horizons/Graphene Band Structure QE/outputs/monolayer/data'
    prefix           = 'graphene'
    pseudo_dir       = '/Users/memo/Desktop/New Horizons/Graphene Band Structure QE/pseudo'
 /
 &SYSTEM
-   nbnd             = 10
+   nbnd             = 8
    ecutwfc          = 100.0
    ecutrho          = 400.0
    assume_isolated  = '2D'
