@@ -16,9 +16,9 @@ SMEARING = "mv"
 UNOCCUPIED_BANDS = 4  # number of unoccupied bands to run the calculations for
 
 
-def input_data(calculation, data_path, ecutwfc, nbnd):
+def input_data(calculation, data_path, ecutwfc, nbnd, efield=True):
     """
-    Functioncalled by write_input to create input file
+    Function called by write_input to create input file
     """
 
     control = {"calculation": calculation, 
@@ -44,20 +44,36 @@ def input_data(calculation, data_path, ecutwfc, nbnd):
         system["smearing"] = SMEARING  # 'mv'
         system["degauss"] = DEGAUSS
         
+    if efield == True:
+        """
+        Perpendicular saw-like potential 
+        
+        The saw-like potential increases with slope eamp in the region from (emaxpos+eopreg-1) to (emaxpos), 
+        then decreases to 0 until (emaxpos+eopreg), in units of the crystal vector edir. 
+        Important: the change of slope of this potential must be located in the empty region, 
+        or else unphysical forces will result.
+        """
+        
+        control["tefield"] = True  # saw-like potential simulating an E-field is added to the bare ionic potential
+        system["edir"] = 3  # z-direction
+        system["emaxpos"] = 0.9  # Position of the maximum of the saw-like potential along crystal axis edir
+        system["eopreg"] = 0.1  # Zone in the unit cell where the saw-like potential decreases
+        system["eamp"] = 0.005
+        
     namelists = {"control": control, "system": system, "electrons": electrons}
 
     if calculation == "relax":
-        namelists["ions"] = {"ion_dynamics": "bfgs"}
+        namelists["ions"] = {"ion_dynamics": "bfgs"}        
 
     return namelists
 
 
-def write_input(path, structure, calculation, data_path, kpts, ecutwfc, nbnd):
+def write_input(path, structure, calculation, data_path, kpts, ecutwfc, nbnd, efield):
     """
     Write QE input file using ASE
     """
     
-    write(path, structure, format="espresso-in", input_data=input_data(calculation, data_path, ecutwfc, nbnd), pseudopotentials={"C": PSEUDO}, kpts=kpts)
+    write(path, structure, format="espresso-in", input_data=input_data(calculation, data_path, ecutwfc, nbnd, efield), pseudopotentials={"C": PSEUDO}, kpts=kpts)
 
 
 def run_qe(input_path, output_path):
@@ -76,7 +92,7 @@ def read_output(path, index=-1):
     return structure
 
 
-def calculate(structure, calculation, path, kpts, ecutwfc):
+def calculate(structure, calculation, path, kpts, ecutwfc, efield):
     
     path.mkdir(parents=True, exist_ok=True)
     
@@ -87,7 +103,7 @@ def calculate(structure, calculation, path, kpts, ecutwfc):
     # 2 * (number of atoms in Atoms object) -> number of occupied bands
     nbnd = 2 * len(structure) + UNOCCUPIED_BANDS
     
-    write_input(input_path, structure, calculation, data_path, kpts, ecutwfc, nbnd)
+    write_input(input_path, structure, calculation, data_path, kpts, ecutwfc, nbnd, efield)
     print(f"\nCREATED {input_path.name}")
 
     run_qe(input_path, output_path)

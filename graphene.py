@@ -19,6 +19,8 @@ class GrapheneStructure:
         """
         Construct unit cell lattice vectors
         https://mc2d.materialscloud.org/details/mc2d-71
+        
+        dz: thickness of the layer
         """
         
         a = self.lattice_const

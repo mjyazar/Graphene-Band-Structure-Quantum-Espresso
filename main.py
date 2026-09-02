@@ -73,9 +73,9 @@ def print_structure_data(name, structure, relaxed, band_structure, total_energy,
     print("\nBand energy array shape:")
     print(band_structure.energies.shape)
 
-    band_energies = band_structure.energies
-    print("\nBand energies:")
-    print(band_energies)
+    # band_energies = band_structure.energies
+    # print("\nBand energies:")
+    # print(band_energies)
 
     print(f"\nTotal Energy: {total_energy} eV")
     print(f"\nFermi Energy: {fermi_energy} eV")
@@ -108,17 +108,17 @@ def main():
     bilayer = graphene.bilayer()
     print("CREATED GRAPHENE BILAYER\n")
 
-    atoms = {"monolayer": (monolayer, MONOLAYER), "bilayer": (bilayer, BILAYER)}
+    atoms = {"monolayer": (monolayer, MONOLAYER, False), "bilayer": (bilayer, BILAYER, True)}
 
-    for name, (structure, path) in atoms.items():
+    for name, (structure, path, efield) in atoms.items():
         print(f"\nGRAPHENE {name.upper()}")
 
         if RUN_QE:
-                                
-            relaxed = qe.calculate(structure, "relax", path, kgrid, ecutwfc)
-            scf = qe.calculate(relaxed, "scf", path, kgrid, ecutwfc)
+            
+            relaxed = qe.calculate(structure, "relax", path, kgrid, ecutwfc, efield)
+            scf = qe.calculate(relaxed, "scf", path, kgrid, ecutwfc, efield)
             bandpath = band_path(relaxed)
-            bands = qe.calculate(relaxed, "bands", path, bandpath, ecutwfc)
+            bands = qe.calculate(relaxed, "bands", path, bandpath, ecutwfc, efield)
             
         else:
             
@@ -142,15 +142,14 @@ def main():
 
     
     if RUN_CONVERGENCE:
+        print("CONVERGENCE TESTING MONOLAYER GRAPHENE")
+        convergence_path = MONOLAYER / "convergence"
         
-        for name, (structure, path) in atoms.items():
-            print(f"\nCONVERGENCE TESTING {name.upper()} GRAPHENE")
-            convergence_path = path / "convergence"
-            
-            print("\nRUNNING KGRID CONVERGENCE TEST")
-            kgrid_values, kgrid_energies = convergence.test_kgrid(structure, name, convergence_path, 16, ecutwfc)
-            print("\nRUNNING ECUTWFC CONVERGENCE TEST")
-            ecutwfc_values, ecutwfc_energies = convergence.test_ecutwfc(structure, name, convergence_path, 100, kgrid)
+        print("\nRUNNING KGRID CONVERGENCE TEST")
+        kgrid_values, kgrid_energies = convergence.test_kgrid(monolayer, "monolayer", convergence_path, 16, ecutwfc)
+        
+        print("\nRUNNING ECUTWFC CONVERGENCE TEST")
+        ecutwfc_values, ecutwfc_energies = convergence.test_ecutwfc(monolayer, "monolayer", convergence_path, 100, kgrid)
 
 
 if __name__ == "__main__":
