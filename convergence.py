@@ -1,4 +1,4 @@
-import qe
+import qe.pw as pw
 import numpy as np
 from pathlib import Path
 import matplotlib.pyplot as plt
@@ -52,7 +52,7 @@ def test_kgrid(structure, structure_name, path, upper, ecutwfc=ECUTWFC):
         
         calculation_path = path / "kgrid" / str(i)
         
-        scf = qe.calculate(structure, "scf", calculation_path, kgrid, ecutwfc)
+        scf = pw.calculate(structure, "scf", calculation_path, kgrid, ecutwfc)
                 
         total_energy = scf.get_potential_energy()  # extract total energy
         
@@ -86,7 +86,7 @@ def test_ecutwfc(structure, structure_name, path, upper, kgrid=KGRID):
     
         calculation_path = path / "ecutwfc" / str(ecutwfc)
                 
-        scf = qe.calculate(structure, "scf", calculation_path, kgrid, ecutwfc)
+        scf = pw.calculate(structure, "scf", calculation_path, kgrid, ecutwfc)
         
         total_energy = scf.get_potential_energy()  # extract total energy
     
