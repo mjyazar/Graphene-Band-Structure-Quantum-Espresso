@@ -51,7 +51,7 @@ class GrapheneStructure:
         # calculating z coordinates in units of unit cell (i.e. 0 to 1)
         dz = interlayer_dist / (self.vacuum * 2 + interlayer_dist)
         
-        # centre the bilayer around around z=0.1
+        # centre the bilayer around around z=0.5
         z1 = 0.5 - dz/2
         z2 = 0.5 + dz/2
             
@@ -80,13 +80,11 @@ class GrapheneStructure:
     def isolate_bilayer(self, bilayer, layer):
         
         # returns atoms 1 and 2 - in bottom layer
-        if layer == "bottom":
-            return bilayer[[0, 1]]
+        z = bilayer.positions[:, 2]
         
-        # returns atoms 3 and 4 - in top layer
-        elif layer == "top":
-            return bilayer[[2, 3]]
-                
-        else:
-            raise ValueError("Layer needs to be set to 'top' or 'bottom'")
-    
+        mid = (z.min() + z.max()) / 2
+        
+        bottom = bilayer[np.where(z < mid)[0]]
+        top = bilayer[np.where(z >= mid)[0]]
+
+        return bottom, top
