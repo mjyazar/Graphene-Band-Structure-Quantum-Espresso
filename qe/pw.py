@@ -13,19 +13,19 @@ PSEUDO = "C.pbe-n-kjpaw_psl.1.0.0.UPF"
 # parameters
 ECUTRHO = 400.0
 CONV_THRESHOLD = 1.0e-8
-DEGAUSS = 0.01
-SMEARING = "mv"
-UNOCCUPIED_BANDS = 6  # number of unoccupied bands to run the calculations for
+DEGAUSS = 0.005
+SMEARING = "gauss"
+UNOCCUPIED_BANDS = 8  # number of unoccupied bands to run the calculations for
 
 
-def input_data(calculation, data_path, ecutwfc, nbnd, efield=0):
+def input_data(calculation, data_path, ecutwfc, nbnd, prefix, efield):
     """
     https://www.quantum-espresso.org/Doc/INPUT_PW.html#id3
     Function called by write_input to create input file
     """
 
     control = {"calculation": calculation, 
-               "prefix": "graphene",
+               "prefix": prefix,
                "verbosity": "high",  # amount of information written in QE output - high -> slower
                "outdir": str(data_path),  # path for temporary/intermediate calculation files
                "pseudo_dir": str(PSEUDO_DIR),  # directory containing pseudopotentials.
@@ -71,12 +71,12 @@ def input_data(calculation, data_path, ecutwfc, nbnd, efield=0):
     return namelists
 
 
-def write_input(path, structure, calculation, data_path, kpts, ecutwfc, nbnd, efield):
+def write_input(path, structure, calculation, data_path, kpts, ecutwfc, nbnd, prefix, efield):
     """
     Write QE input file using ASE
     """
     
-    write(path, structure, format="espresso-in", input_data=input_data(calculation, data_path, ecutwfc, nbnd, efield), pseudopotentials={"C": PSEUDO}, kpts=kpts)
+    write(path, structure, format="espresso-in", input_data=input_data(calculation, data_path, ecutwfc, nbnd, prefix, efield), pseudopotentials={"C": PSEUDO}, kpts=kpts)
 
 
 def read_output(path, index=-1):
@@ -85,7 +85,7 @@ def read_output(path, index=-1):
     return structure
 
 
-def calculate(structure, calculation, path, kpts, ecutwfc, efield=False):
+def calculate(structure, calculation, path, kpts, ecutwfc, efield=0):
     
     path.mkdir(parents=True, exist_ok=True)
     
@@ -97,7 +97,7 @@ def calculate(structure, calculation, path, kpts, ecutwfc, efield=False):
     nbnd = 2 * len(structure) + UNOCCUPIED_BANDS
     
     print(f"\nCREATING {input_path.name}")
-    write_input(input_path, structure, calculation, data_path, kpts, ecutwfc, nbnd, efield)
+    write_input(input_path, structure, calculation, data_path, kpts, ecutwfc, nbnd, path.name, efield)
 
     print(f"RUNNING pw.x WITH {input_path.name}")
     runner.run("pw.x", input_path, output_path)
