@@ -1,5 +1,6 @@
 import numpy as np
 from ase import Atoms
+# from ase.constraints import FixCartesian
 
 LATTICE_CONSTANT = 2.46
 VACUUM = 10.0  # QE requires 2D Coulomb truncation of the cell to have min z-length ~10.58 A
@@ -74,3 +75,18 @@ class GrapheneStructure:
                                          [2/3, 1/3, z2]])
             
         return Atoms(symbols="C4", cell=self.cell(interlayer_dist), scaled_positions=atomic_positions, pbc=True)
+
+    
+    def isolate_bilayer(self, bilayer, layer):
+        
+        # returns atoms 1 and 2 - in bottom layer
+        if layer == "bottom":
+            return bilayer[[0, 1]]
+        
+        # returns atoms 3 and 4 - in top layer
+        elif layer == "top":
+            return bilayer[[2, 3]]
+                
+        else:
+            raise ValueError("Layer needs to be set to 'top' or 'bottom'")
+    
