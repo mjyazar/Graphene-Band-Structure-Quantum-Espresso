@@ -1,26 +1,23 @@
 from graphene import GrapheneStructure
-import qe
+import qe.pw as pw
+import qe.dos as dos
 import convergence
+import plotting
 
 from ase.spectrum.band_structure import get_band_structure, BandStructure
-import matplotlib.pyplot as plt
 from pathlib import Path
-
 
 ROOT = Path(__file__).resolve().parent
 
 # Paths
 OUT_DIR = ROOT / "outputs"
-FIG_DIR = OUT_DIR / "figures"
-MONOLAYER = OUT_DIR / "monolayer"
+#MONOLAYER = OUT_DIR / "monolayer"
 BILAYER = OUT_DIR / "bilayer"
 
 # Ensure folders exist
 OUT_DIR.mkdir(exist_ok=True)
-FIG_DIR.mkdir(exist_ok=True)
-MONOLAYER.mkdir(exist_ok=True)
+#MONOLAYER.mkdir(exist_ok=True)
 BILAYER.mkdir(exist_ok=True)
-
 
 # RUN_QE may be False if script already ran and want to work with existing files
 # True if running for the first time or want to create new files with new parameters
@@ -30,7 +27,8 @@ RUN_CONVERGENCE = True
 # parameters
 BANDPATH = 'GMKG'
 ecutwfc = 100.0
-kgrid = (12, 12, 1)
+KGRID = (12, 12, 1)
+KGRID_DENSE = (21, 21, 1)
 
 
 def band_path(structure, path=BANDPATH):
@@ -81,75 +79,49 @@ def print_structure_data(name, structure, relaxed, band_structure, total_energy,
     print(f"\nFermi Energy: {fermi_energy} eV")
 
 
-def plot_band_structure(name, bandpath, energies):
-    """
-    Plot and save band structure
-    """
-    
-    band_structure = BandStructure(path=bandpath, energies=energies, reference=0.0)  # reference is now zero after shifting
-    
-    ax = band_structure.plot()
-    ax.set_ylim(-10, 10)
-    ax.set_ylabel("Energy - $E_F$ (eV)")
-    ax.set_title(f"Graphene {name.capitalize()} Band Structure")
-    
-    plt.savefig(FIG_DIR / f"{name.capitalize()} Graphene Band Structure.png", dpi=300)
-    plt.close()
-    
-
 def main():
     graphene = GrapheneStructure()
-
-    print("\nCREATING GRAPHENE MONOLAYER")
-    monolayer = graphene.monolayer()
-    print("CREATED GRAPHENE MONOLAYER")
-
-    print("\nCREATING GRAPHENE BILAYER")
-    bilayer = graphene.bilayer()
-    print("CREATED GRAPHENE BILAYER\n")
-
-    atoms = {"monolayer": (monolayer, MONOLAYER, False), "bilayer": (bilayer, BILAYER, True)}
-
-    for name, (structure, path, efield) in atoms.items():
-        print(f"\nGRAPHENE {name.upper()}")
-
-        if RUN_QE:
-            
-            relaxed = qe.calculate(structure, "relax", path, kgrid, ecutwfc, efield)
-            scf = qe.calculate(relaxed, "scf", path, kgrid, ecutwfc, efield)
-            bandpath = band_path(relaxed)
-            bands = qe.calculate(relaxed, "bands", path, bandpath, ecutwfc, efield)
-            
-        else:
-            
-            relaxed = qe.read_output(path / "relax.pwo")
-            scf = qe.read_output(path / "scf.pwo")
-            bandpath = band_path(relaxed)
-            bands = qe.read_output(path / "bands.pwo")
-
-        print("GETTING BAND STRUCTURE")
-        band_structure = get_band_structure(atoms=bands, calc=bands.calc)
-        
-        print("CALCULATING ENERGIES")
-        total_energy = scf.get_potential_energy()
-        fermi_energy = scf.calc.get_fermi_level()
-        energies = band_structure.energies - fermi_energy
-
-        print("PLOTTING BAND STRUCTURE")
-        plot_band_structure(name, bandpath, energies)
-
-        print_structure_data(name, structure, relaxed, band_structure, total_energy, fermi_energy)
-
     
-    if RUN_CONVERGENCE:
-        print("CONVERGENCE TESTING MONOLAYER GRAPHENE")
-        convergence_path = MONOLAYER / "convergence"
+    energies = [0, 0.005, 0.01]
+    
+    for energy in energies:
         
-        print("\nRUNNING KGRID CONVERGENCE TEST")
-        kgrid_values, kgrid_energies = convergence.test_kgrid(monolayer, "monolayer", convergence_path, 16, ecutwfc)
+        path = BILAYER /  f"field_{str(energy)}eV"
         
-        print("\nRUNNING ECUTWFC CONVERGENCE TEST")
-        ecutwfc_values, ecutwfc_energies = convergence.test_ecutwfc(monolayer, "monolayer", convergence_path, 100, kgrid)
+        PATH_COUPLED = path / "coupled"
+        PATH_BOTTOM = path / "bottom"
+        PATH_TOP = path / "top"
+        
+        
+        print("\nCREATING GRAPHENE BILAYERS")
+        bilayer = graphene.bilayer()
+        
+        print("\nRELAXING COUPLED BILAYER")
+        relaxed_coupled = pw.calculate(bilayer, "relax", PATH_COUPLED, KGRID, ecutwfc, energy)
+        
+        print("\nEXTRACTING FROZEN BOTTOM LAYER")
+        bilayer_bottom = graphene.isolate_bilayer(relaxed_coupled, "bottom")
+        
+        print("\nEXTRACTING FROZEN TOP LAYER")
+        bilayer_top = graphene.isolate_bilayer(relaxed_coupled, "top")
+        
+        scf_coupled = pw.calculate(relaxed_coupled, "scf", PATH_COUPLED, KGRID, ecutwfc, energy)
+        nscf_coupled = pw.calculate(relaxed_coupled, "nscf", PATH_COUPLED, KGRID_DENSE, ecutwfc, energy)
+        dos_coupled = dos.calculate(PATH_COUPLED)
+        fermi_e_coupled = nscf_coupled.calc.get_fermi_level()
+        plotting.plot_dos(dos_coupled[0], dos_coupled[1], fermi_e_coupled, "Coupled")
+        
+        scf_bottom = pw.calculate(bilayer_bottom, "scf", PATH_BOTTOM, KGRID, ecutwfc, energy)
+        nscf_bottom = pw.calculate(bilayer_bottom, "nscf", PATH_BOTTOM, KGRID_DENSE, ecutwfc, energy)
+        dos_bottom = dos.calculate(PATH_BOTTOM)
+        fermi_e_bottom = nscf_bottom.calc.get_fermi_level()
+        plotting.plot_dos(dos_bottom[0], dos_bottom[1], fermi_e_bottom, "Bottom")
+        
+        scf_top = pw.calculate(bilayer_top, "scf", PATH_TOP, KGRID, ecutwfc, energy)
+        nscf_top = pw.calculate(bilayer_top, "nscf", PATH_TOP, KGRID_DENSE, ecutwfc, energy)
+        dos_top = dos.calculate(PATH_TOP)
+        fermi_e_top = nscf_top.calc.get_fermi_level()
+        plotting.plot_dos(dos_top[0], dos_top[1], fermi_e_top, "Top")
 
 
 if __name__ == "__main__":
