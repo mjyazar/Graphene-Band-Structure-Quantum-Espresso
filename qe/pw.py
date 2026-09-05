@@ -15,7 +15,8 @@ ECUTRHO = 400.0
 CONV_THRESHOLD = 1.0e-8
 DEGAUSS = 0.005
 SMEARING = "gauss"
-UNOCCUPIED_BANDS = 8  # number of unoccupied bands to run the calculations for
+SCF_EXTRA_BANDS = 6  # number of unoccupied bands to run the calculations for nzcf
+NSCF_EXTRA_BANDS = 8  # number of unoccupied bands to run the calculations for nscf
 
 
 def input_data(calculation, data_path, ecutwfc, nbnd, prefix, efield):
@@ -37,14 +38,14 @@ def input_data(calculation, data_path, ecutwfc, nbnd, prefix, efield):
               "nbnd": nbnd}  # number of energy/eigenbands calculated at every k point - C: 4 valence e -> 2 atoms
                              # = 8 electrons = 4 filled bands (spin degeneracy). Anything above is empty states
     
-    electrons = {"conv_thr": CONV_THRESHOLD,  # scf convergence thmaximum number of electronic SCF iterations allowed treshold (Ry)
+    electrons = {"conv_thr": CONV_THRESHOLD,  # max number of electronic SCF iterations treshold (Ry)
                  "mixing_beta": 0.7,  # How much electron density updates with scf
                  "electron_maxstep": 200}  # maximum number of electronic SCF iterations allowed
     
     # additional parameters if doing relaxation or s
     if calculation in ["relax", "scf", "nscf"]:
         system["occupations"] = "smearing"  # smoothing out Fermi level 0-1 jump - prevent oscillation of SCF
-        system["smearing"] = SMEARING  # 'mv'
+        system["smearing"] = SMEARING
         system["degauss"] = DEGAUSS
         
     if efield != 0:
@@ -94,7 +95,7 @@ def calculate(structure, calculation, path, kpts, ecutwfc, efield=0):
     output_path = path / f"{calculation}.pwo"
 
     # 2 * (number of atoms in Atoms object) -> number of occupied bands
-    nbnd = 2 * len(structure) + UNOCCUPIED_BANDS
+    nbnd = 2 * len(structure) + (NSCF_EXTRA_BANDS if calculation == "nscf" else SCF_EXTRA_BANDS)
     
     print(f"\nCREATING {input_path.name}")
     write_input(input_path, structure, calculation, data_path, kpts, ecutwfc, nbnd, path.name, efield)
