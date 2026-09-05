@@ -11,7 +11,7 @@ def write_input(input_path, outdir, data_path, prefix):
                          outdir = '{outdir}'  ! directory containing the input data, i.e. the pw.x metadata
                          bz_sum = 'smearing'  ! integration using gaussian smearing
                          ngauss = 0  ! type of gaussian broadening - 0: Simple Gaussian (default)
-                         degauss = 0.01  ! gaussian broadening, Ry (not eV!)
+                         degauss = 0.005  ! gaussian broadening, Ry (not eV!)
                          deltae = 0.01  ! energy grid step (eV)
                          fildos = '{data_path}'  ! output file containing DOS(E)
                          /
@@ -20,6 +20,7 @@ def write_input(input_path, outdir, data_path, prefix):
 
 def read_output(path):
     
+    # idos - integrated dos
     energy, dos, idos = np.loadtxt(path, unpack=True)
     
     return energy, dos, idos
