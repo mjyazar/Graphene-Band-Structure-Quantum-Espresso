@@ -77,7 +77,7 @@ class GrapheneStructure:
         return Atoms(symbols="C4", cell=self.cell(interlayer_dist), scaled_positions=atomic_positions, pbc=True)
 
     
-    def isolate_bilayer(self, bilayer, layer):
+    def isolate_bilayer(self, bilayer):
         
         # returns atoms 1 and 2 - in bottom layer
         z = bilayer.positions[:, 2]
