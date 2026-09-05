@@ -99,30 +99,32 @@ def main():
         print("\nRELAXING COUPLED BILAYER")
         relaxed_coupled = pw.calculate(bilayer, "relax", PATH_COUPLED, KGRID, ecutwfc, energy)
         
-        print("\nEXTRACTING FROZEN BOTTOM LAYER")
-        bilayer_bottom = graphene.isolate_bilayer(relaxed_coupled, "bottom")
-        
-        print("\nEXTRACTING FROZEN TOP LAYER")
-        bilayer_top = graphene.isolate_bilayer(relaxed_coupled, "top")
+        print("\nEXTRACTING FROZEN LAYERS")
+        bilayer_bottom, bilayer_top = graphene.isolate_bilayer(relaxed_coupled)
         
         scf_coupled = pw.calculate(relaxed_coupled, "scf", PATH_COUPLED, KGRID, ecutwfc, energy)
         nscf_coupled = pw.calculate(relaxed_coupled, "nscf", PATH_COUPLED, KGRID_DENSE, ecutwfc, energy)
         dos_coupled = dos.calculate(PATH_COUPLED)
         fermi_e_coupled = nscf_coupled.calc.get_fermi_level()
+        energy_coupled = dos_coupled[0] - fermi_e_coupled
         plotting.plot_dos(dos_coupled[0], dos_coupled[1], fermi_e_coupled, "Coupled")
+        
         
         scf_bottom = pw.calculate(bilayer_bottom, "scf", PATH_BOTTOM, KGRID, ecutwfc, energy)
         nscf_bottom = pw.calculate(bilayer_bottom, "nscf", PATH_BOTTOM, KGRID_DENSE, ecutwfc, energy)
         dos_bottom = dos.calculate(PATH_BOTTOM)
         fermi_e_bottom = nscf_bottom.calc.get_fermi_level()
+        energy_bottom = dos_bottom[0] - fermi_e_bottom
         plotting.plot_dos(dos_bottom[0], dos_bottom[1], fermi_e_bottom, "Bottom")
         
         scf_top = pw.calculate(bilayer_top, "scf", PATH_TOP, KGRID, ecutwfc, energy)
         nscf_top = pw.calculate(bilayer_top, "nscf", PATH_TOP, KGRID_DENSE, ecutwfc, energy)
         dos_top = dos.calculate(PATH_TOP)
         fermi_e_top = nscf_top.calc.get_fermi_level()
+        energy_top = dos_top[0] - fermi_e_top
         plotting.plot_dos(dos_top[0], dos_top[1], fermi_e_top, "Top")
 
 
 if __name__ == "__main__":
     main()
+
