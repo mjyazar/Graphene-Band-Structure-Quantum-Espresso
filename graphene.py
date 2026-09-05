@@ -84,7 +84,7 @@ class GrapheneStructure:
         
         mid = (z.min() + z.max()) / 2
         
-        bottom = bilayer[np.where(z < mid)[0]]
-        top = bilayer[np.where(z >= mid)[0]]
+        bottom = bilayer[np.where(z < mid)[0]].copy()
+        top = bilayer[np.where(z >= mid)[0]].copy()
 
         return bottom, top
