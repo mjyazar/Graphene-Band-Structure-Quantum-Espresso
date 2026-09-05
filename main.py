@@ -28,7 +28,7 @@ RUN_CONVERGENCE = True
 BANDPATH = 'GMKG'
 ecutwfc = 100.0
 KGRID = (12, 12, 1)
-KGRID_DENSE = (15, 15, 1)
+KGRID_DENSE = (60, 60, 1)
 
 
 def band_path(structure, path=BANDPATH):
