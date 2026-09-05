@@ -17,7 +17,7 @@ def run(process, input_path, output_path):
         command = ["mpirun", "-np", str(NPROC), process]
         
         if process == "pw.x" and NK != 0:
-            command.append(["-nk", str(NK)])
+            command.extend(["-nk", str(NK)])
         
         calculation = subprocess.Popen(command, stdin=input_file, stdout=output_file, stderr=subprocess.STDOUT)
 
