@@ -1,5 +1,6 @@
 import subprocess   
 
+NPROC = 4
 
 def run(process, input_path, output_path):
     """
@@ -8,4 +9,4 @@ def run(process, input_path, output_path):
     """
     
     with open(input_path, mode="r") as input_file, open(output_path, mode="w") as output_file:
-        subprocess.run([process], stdin=input_file, stdout=output_file, check=True)
+        subprocess.run(["mpirun", "-np", str(NPROC), process], stdin=input_file, stdout=output_file, check=True)
