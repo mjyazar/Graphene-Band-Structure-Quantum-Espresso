@@ -43,6 +43,6 @@ def calculate(path):
     print(f"RUNNING dos.x WITH {input_path.name}")
     runner.run("dos.x", input_path, output_path)
     
-    print(f"\nREADING {data_path.name}")
+    print(f"READING {data_path.name}")
     
     return read_output(data_path)

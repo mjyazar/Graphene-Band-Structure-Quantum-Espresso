@@ -93,15 +93,19 @@ def main():
         PATH_TOP = path / "top"
         
         
-        print("\nCREATING GRAPHENE BILAYERS")
+        print(f"\nE-field = {str(energy)}eV ")
+        print("-" * 30)
+
+        print("CREATING GRAPHENE BILAYERS")
         bilayer = graphene.bilayer()
         
-        print("\nRELAXING COUPLED BILAYER")
+        print("RELAXING COUPLED BILAYER")
         relaxed_coupled = pw.calculate(bilayer, "relax", PATH_COUPLED, KGRID, ecutwfc, energy)
         
-        print("\nEXTRACTING FROZEN LAYERS")
+        print("EXTRACTING FROZEN LAYERS")
         bilayer_bottom, bilayer_top = graphene.isolate_bilayer(relaxed_coupled)
         
+        print("\nCOUPLED LAYERS COMPUTATIONS")
         scf_coupled = pw.calculate(relaxed_coupled, "scf", PATH_COUPLED, KGRID, ecutwfc, energy)
         nscf_coupled = pw.calculate(relaxed_coupled, "nscf", PATH_COUPLED, KGRID_DENSE, ecutwfc, energy)
         dos_coupled = dos.calculate(PATH_COUPLED)
@@ -109,7 +113,7 @@ def main():
         energy_coupled = dos_coupled[0] - fermi_e_coupled
         plotting.plot_dos(dos_coupled[0], dos_coupled[1], fermi_e_coupled, "Coupled")
         
-        
+        print("\nBOTTOM LAYER COMPUTATIONS")
         scf_bottom = pw.calculate(bilayer_bottom, "scf", PATH_BOTTOM, KGRID, ecutwfc, energy)
         nscf_bottom = pw.calculate(bilayer_bottom, "nscf", PATH_BOTTOM, KGRID_DENSE, ecutwfc, energy)
         dos_bottom = dos.calculate(PATH_BOTTOM)
@@ -117,6 +121,7 @@ def main():
         energy_bottom = dos_bottom[0] - fermi_e_bottom
         plotting.plot_dos(dos_bottom[0], dos_bottom[1], fermi_e_bottom, "Bottom")
         
+        print("\nTOP LAYER COMPUTATIONS")
         scf_top = pw.calculate(bilayer_top, "scf", PATH_TOP, KGRID, ecutwfc, energy)
         nscf_top = pw.calculate(bilayer_top, "nscf", PATH_TOP, KGRID_DENSE, ecutwfc, energy)
         dos_top = dos.calculate(PATH_TOP)
@@ -127,4 +132,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

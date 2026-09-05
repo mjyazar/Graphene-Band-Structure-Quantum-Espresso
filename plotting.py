@@ -30,12 +30,15 @@ def plot_band_structure(bandpath, energies, name):
     plt.close(fig)
 
 
-def plot_dos(energy, dos, fermi_energy, name, window=(-15, 15)):
+def plot_1d_dos(energy, dos, fermi_energy, name, window=(-15, 15)):
+    
+    print(f"PLOTTING {name} DOS")
 
     fig, ax = plt.subplots()
     
     ax.plot(energy - fermi_energy, dos, linewidth=0.75, color='red')
     ax.axvline(0, linestyle="--")
+    ax.set_title(f"1D DOS")
     ax.set_xlabel(r"$E - E_{Fermi}$ (eV)")
     ax.set_ylabel("DOS (states/eV/cell)")
     ax.set_xlim(window)
@@ -47,3 +50,13 @@ def plot_dos(energy, dos, fermi_energy, name, window=(-15, 15)):
     fig.tight_layout()
     plt.savefig(FIG_DIR / f"{name.capitalize()} Layer DOS.png", dpi=300)
     plt.close(fig)
+
+
+def plot_2d_dos():
+    pass
+
+
+def plot_dos(energy, dos, fermi_energy, name):
+    
+    plot_1d_dos(energy, dos, fermi_energy, name)
+    plot_2d_dos()
