@@ -12,6 +12,8 @@ def write_input(input_path, outdir, data_path, prefix):
                          bz_sum = 'smearing'  ! integration using gaussian smearing
                          ngauss = 0  ! type of gaussian broadening - 0: Simple Gaussian (default)
                          degauss = 0.005  ! gaussian broadening, Ry (not eV!)
+                         emin = -10
+                         emax = 10
                          deltae = 0.01  ! energy grid step (eV)
                          fildos = '{data_path}'  ! output file containing DOS(E)
                          /

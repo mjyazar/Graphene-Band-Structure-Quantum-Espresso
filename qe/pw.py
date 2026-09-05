@@ -30,6 +30,7 @@ def input_data(calculation, data_path, ecutwfc, nbnd, prefix, efield):
                "verbosity": "high",  # amount of information written in QE output - high -> slower
                "outdir": str(data_path),  # path for temporary/intermediate calculation files
                "pseudo_dir": str(PSEUDO_DIR),  # directory containing pseudopotentials.
+               "disk_io": "low",  # keeps wavefunctions in memory while running and writes them at the end
                "tprnfor": True}  # print atomic forces on each atom
     
     system = {"assume_isolated": "2D",

@@ -28,7 +28,7 @@ RUN_CONVERGENCE = True
 BANDPATH = 'GMKG'
 ecutwfc = 100.0
 KGRID = (12, 12, 1)
-KGRID_DENSE = (21, 21, 1)
+KGRID_DENSE = (15, 15, 1)
 
 
 def band_path(structure, path=BANDPATH):
@@ -42,7 +42,7 @@ def band_path(structure, path=BANDPATH):
     return structure.cell.bandpath(path=path, pbc=[True, True, False], npoints=100)
 
 
-def print_structure_data(name, structure, relaxed, band_structure, total_energy, fermi_energy):
+def print_structure_data(name, structure, relaxed, band_structure, total_eamp, fermi_eamp):
     print(f"\n{name.upper()}:")
     print(structure)
 
@@ -68,15 +68,15 @@ def print_structure_data(name, structure, relaxed, band_structure, total_energy,
     print("\nFinal Relaxed Atomic Coordinates:")
     print(relaxed.positions)
     
-    print("\nBand energy array shape:")
+    print("\nBand eamp array shape:")
     print(band_structure.energies.shape)
 
     # band_energies = band_structure.energies
     # print("\nBand energies:")
     # print(band_energies)
 
-    print(f"\nTotal Energy: {total_energy} eV")
-    print(f"\nFermi Energy: {fermi_energy} eV")
+    print(f"\nTotal eamp: {total_eamp} eV")
+    print(f"\nFermi eamp: {fermi_eamp} eV")
 
 
 def main():
@@ -84,50 +84,54 @@ def main():
     
     energies = [0, 0.005, 0.01]
     
-    for energy in energies:
+    for eamp in energies:
         
-        path = BILAYER /  f"field_{str(energy)}eV"
+        path = BILAYER /  f"field_{str(eamp)}Ry"
         
         PATH_COUPLED = path / "coupled"
         PATH_BOTTOM = path / "bottom"
         PATH_TOP = path / "top"
         
         
-        print(f"\nE-field = {str(energy)}eV ")
+        print(f"\nE-field = {str(eamp)}Ry")
         print("-" * 30)
 
         print("CREATING GRAPHENE BILAYERS")
         bilayer = graphene.bilayer()
         
         print("RELAXING COUPLED BILAYER")
-        relaxed_coupled = pw.calculate(bilayer, "relax", PATH_COUPLED, KGRID, ecutwfc, energy)
+        relaxed_coupled = pw.calculate(bilayer, "relax", PATH_COUPLED, KGRID, ecutwfc, eamp)
         
         print("EXTRACTING FROZEN LAYERS")
         bilayer_bottom, bilayer_top = graphene.isolate_bilayer(relaxed_coupled)
         
+        results = {}
+        
         print("\nCOUPLED LAYERS COMPUTATIONS")
-        scf_coupled = pw.calculate(relaxed_coupled, "scf", PATH_COUPLED, KGRID, ecutwfc, energy)
-        nscf_coupled = pw.calculate(relaxed_coupled, "nscf", PATH_COUPLED, KGRID_DENSE, ecutwfc, energy)
+        scf_coupled = pw.calculate(relaxed_coupled, "scf", PATH_COUPLED, KGRID, ecutwfc, eamp)
+        nscf_coupled = pw.calculate(relaxed_coupled, "nscf", PATH_COUPLED, KGRID_DENSE, ecutwfc, eamp)
         dos_coupled = dos.calculate(PATH_COUPLED)
         fermi_e_coupled = nscf_coupled.calc.get_fermi_level()
-        energy_coupled = dos_coupled[0] - fermi_e_coupled
-        plotting.plot_dos(dos_coupled[0], dos_coupled[1], fermi_e_coupled, "Coupled")
+        
+        results["coupled"] = [dos_coupled[0], dos_coupled[1], fermi_e_coupled]
         
         print("\nBOTTOM LAYER COMPUTATIONS")
-        scf_bottom = pw.calculate(bilayer_bottom, "scf", PATH_BOTTOM, KGRID, ecutwfc, energy)
-        nscf_bottom = pw.calculate(bilayer_bottom, "nscf", PATH_BOTTOM, KGRID_DENSE, ecutwfc, energy)
+        scf_bottom = pw.calculate(bilayer_bottom, "scf", PATH_BOTTOM, KGRID, ecutwfc, eamp)
+        nscf_bottom = pw.calculate(bilayer_bottom, "nscf", PATH_BOTTOM, KGRID_DENSE, ecutwfc, eamp)
         dos_bottom = dos.calculate(PATH_BOTTOM)
         fermi_e_bottom = nscf_bottom.calc.get_fermi_level()
-        energy_bottom = dos_bottom[0] - fermi_e_bottom
-        plotting.plot_dos(dos_bottom[0], dos_bottom[1], fermi_e_bottom, "Bottom")
+
+        results["bottom"] = [dos_bottom[0], dos_bottom[1], fermi_e_bottom]
         
         print("\nTOP LAYER COMPUTATIONS")
-        scf_top = pw.calculate(bilayer_top, "scf", PATH_TOP, KGRID, ecutwfc, energy)
-        nscf_top = pw.calculate(bilayer_top, "nscf", PATH_TOP, KGRID_DENSE, ecutwfc, energy)
+        scf_top = pw.calculate(bilayer_top, "scf", PATH_TOP, KGRID, ecutwfc, eamp)
+        nscf_top = pw.calculate(bilayer_top, "nscf", PATH_TOP, KGRID_DENSE, ecutwfc, eamp)
         dos_top = dos.calculate(PATH_TOP)
         fermi_e_top = nscf_top.calc.get_fermi_level()
-        energy_top = dos_top[0] - fermi_e_top
-        plotting.plot_dos(dos_top[0], dos_top[1], fermi_e_top, "Top")
+
+        results["top"] = [dos_top[0], dos_top[1], fermi_e_top]
+        
+        plotting.plot_dos(results, eamp)
 
 
 if __name__ == "__main__":
