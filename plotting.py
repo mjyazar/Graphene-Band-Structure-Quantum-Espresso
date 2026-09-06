@@ -51,7 +51,7 @@ def plot_dos_comparison(results, field, window=(-5, 5)):
     ax.text(0, 2.5, "Fermi energy", fontsize=16, rotation=90)
 
     fig.tight_layout()
-    plt.savefig(FIG_DIR / f"DOS Comparison {field}au", dpi=300, )
+    plt.savefig(FIG_DIR / f"DOS Comparison {field}au.png", dpi=300, )
     plt.close(fig)
 
 
