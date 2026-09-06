@@ -16,7 +16,7 @@ def run(process, input_path, output_path):
         
         command = ["mpirun", "-np", str(NPROC), process]
         
-        if process == "pw.x" and NK != 0:
+        if NK != 0:  # and if process == "pw.x" - potential crash culprit
             command.extend(["-nk", str(NK)])
         
         calculation = subprocess.Popen(command, stdin=input_file, stdout=output_file, stderr=subprocess.STDOUT)
@@ -28,11 +28,10 @@ def run(process, input_path, output_path):
             minutes = (elapsed % 3600) // 60
             seconds = elapsed % 60
 
-            print(f"\rElapsed: {hours:02d}:{minutes:02d}:{seconds:02d}", end="", flush=True)
+            print(f"\rDURATION: {hours:02d}:{minutes:02d}:{seconds:02d}", end="", flush=True)
 
             time.sleep(1)
 
-    
     returncode = calculation.wait()
 
     elapsed = int(time.perf_counter() - start)
