@@ -39,5 +39,5 @@ def run(process, input_path, output_path):
     minutes = (elapsed % 3600) // 60
     seconds = elapsed % 60
 
-    print(f"\rElapsed: {hours:02d}:{minutes:02d}:{seconds:02d}")
+    print(f"\rDURATION: {hours:02d}:{minutes:02d}:{seconds:02d}")
     
