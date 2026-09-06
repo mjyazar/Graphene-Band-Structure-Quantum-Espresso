@@ -32,12 +32,9 @@ def calculate(path):
     
     path.mkdir(parents=True, exist_ok=True)
     
-    dos_path = path / "dos"
-    dos_path.mkdir(parents=True, exist_ok=True)
-    
-    input_path = dos_path / "dos.in"
-    output_path = dos_path / "dos.out"  # log file
-    data_path = dos_path / "dos.data"  # data file
+    input_path = path / "dos.in"
+    output_path = path / "dos.out"  # log file
+    data_path = path / "dos.data"  # data file
     
     print(f"\nCREATING {input_path.name}")
     write_input(input_path, path / "data", data_path, path.name)
