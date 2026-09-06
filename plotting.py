@@ -46,7 +46,7 @@ def plot_dos_comparison(results, field, window=(-5, 5)):
     ax.set_xlabel(r"$E - E_{Fermi}$ (eV)")
     ax.set_ylabel("DOS (states/eV/cell)")
     ax.set_xlim(window)
-    # ax.set_ylim()
+    ax.legend()
     
     ax.text(0, 2.5, "Fermi energy", fontsize=16, rotation=90)
 
