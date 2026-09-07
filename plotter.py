@@ -48,8 +48,6 @@ def plot_individual_dos(results, field, window=WINDOW):
         ax.set_ylabel("DOS (states/eV/cell)")
         ax.set_xlim(window)
         # ax.set_ylim()
-
-        ax.text(0, 2, "Fermi energy", fontsize=12, rotation=90)
         
         plt.savefig(FIG_DIR / f"{name.capitalize()} Layer DOS {field}au.png", dpi=300, bbox_inches="tight")
         plt.close(fig)
@@ -69,9 +67,7 @@ def plot_dos_comparison(results, field, window=WINDOW):
     ax.set_ylabel("DOS (states/eV/cell)")
     ax.set_xlim(window)
     ax.legend()
-    
-    ax.text(0, 2.0, "Fermi energy", fontsize=16, rotation=90)
-
+ 
     plt.savefig(FIG_DIR / f"DOS Comparison {field}au.png", dpi=300, bbox_inches="tight")
     plt.close(fig)
 
