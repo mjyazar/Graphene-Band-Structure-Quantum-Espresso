@@ -18,6 +18,7 @@ def plot_band_structure(bandpath, energies, name):
     """
     Plot and save band structure
     """
+    print("\nPLOTTING BAND STRUCTURE")
     
     band_structure = BandStructure(path=bandpath, energies=energies, reference=0.0)  # reference is now zero after shifting
     
@@ -35,13 +36,11 @@ def plot_band_structure(bandpath, energies, name):
 
 def plot_individual_dos(results, field, window=WINDOW):
 
-    fig, ax = plt.subplots()
-
     for name, (energy, dos, fermi_energy) in results.items():
-        print(f"PLOTTING {name} DOS")
+        print(f"\nPLOTTING {name} DOS")
 
-        ax.plot(energy - fermi_energy, dos, linewidth=0.75, color='red')
-          
+        fig, ax = plt.subplots()
+
         ax.plot(energy - fermi_energy, dos, linewidth=0.75, color='red')
         ax.axvline(0, linestyle="--")
         ax.set_title(f"1D {name} Layer DOS {field}au")
@@ -58,7 +57,7 @@ def plot_individual_dos(results, field, window=WINDOW):
 
 
 def plot_dos_comparison(results, field, window=WINDOW):
-    print("\nPLOTTING DOS")
+    print("\nPLOTTING DOS COMPARISON")
     
     fig, ax = plt.subplots()
 
@@ -80,7 +79,8 @@ def plot_dos_comparison(results, field, window=WINDOW):
 
 
 def plot_dos_added(results, field, delta_e=0.01):
-    
+    print("\nPLOTTING DOS ADDED")
+
     energy_coupled, dos_coupled, fermi_coupled = results["coupled"]
     energy_bottom, dos_bottom, fermi_bottom = results["bottom"]
     energy_top, dos_top, fermi_top = results["top"]
