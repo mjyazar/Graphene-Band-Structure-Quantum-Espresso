@@ -15,7 +15,7 @@ ECUTRHO = 400.0
 CONV_THRESHOLD = 1.0e-8
 DEGAUSS = 0.01
 SMEARING = "gauss"
-SCF_EXTRA_BANDS_PER = 6  # number of unoccupied bands to run the calculations for nzcf
+SCF_EXTRA_BANDS = 6  # number of unoccupied bands to run the calculations for nzcf
 NSCF_EXTRA_BANDS_PER_ATOM = 4  # number of unoccupied bands to run the calculations for nscf
 
 
