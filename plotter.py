@@ -11,6 +11,8 @@ FIG_DIR = OUT_DIR / "figures"
 FIG_DIR.mkdir(exist_ok=True)
 OUT_DIR.mkdir(exist_ok=True)
 
+WINDOW = (-5, 5)
+
 
 def plot_band_structure(bandpath, energies, name):
     """
@@ -31,14 +33,37 @@ def plot_band_structure(bandpath, energies, name):
     plt.close(fig)
 
 
-def plot_dos_comparison(results, field, window=(-5, 5)):
+def plot_individual_dos(results, field, window=WINDOW):
+
+    fig, ax = plt.subplots()
+
+    for name, (energy, dos, fermi_energy) in results.items():
+        print(f"PLOTTING {name} DOS")
+
+        ax.plot(energy - fermi_energy, dos, linewidth=0.75, color='red')
+          
+        ax.plot(energy - fermi_energy, dos, linewidth=0.75, color='red')
+        ax.axvline(0, linestyle="--")
+        ax.set_title(f"1D {name} Layer DOS")
+        ax.set_xlabel(r"$E - E_{Fermi}$ (eV)")
+        ax.set_ylabel("DOS (states/eV/cell)")
+        ax.set_xlim(window)
+        # ax.set_ylim()
+
+        ax.text(0, 2, "Fermi energy", fontsize=12, rotation=90)
+        
+        fig.tight_layout()
+        plt.savefig(FIG_DIR / f"{name.capitalize()} Layer DOS.png", dpi=300)
+        plt.close(fig)
+
+
+def plot_dos_comparison(results, field, window=WINDOW):
     print("\nPLOTTING DOS")
     
     fig, ax = plt.subplots()
 
     for name, (energy, dos, fermi_energy) in results.items():
         ax.plot(energy - fermi_energy, dos, label=name)    
-        ax.fill_between(energy - fermi_energy, 0, dos, where=(energy - fermi_energy < 0), facecolor='red', alpha=0.15)
 
     
     ax.axvline(0, linewidth=0.8, linestyle="--")
@@ -94,6 +119,7 @@ def plot_2d_dos():
 
 def plot_dos(results, field):
     
+    plot_individual_dos(results, field)
     plot_dos_comparison(results, field)
     plot_dos_added(results, field)
     plot_2d_dos()
