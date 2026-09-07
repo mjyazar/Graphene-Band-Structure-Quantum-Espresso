@@ -102,7 +102,7 @@ def main():
         print("RELAXING COUPLED BILAYER")
         relaxed_coupled = pw.calculate(bilayer, "relax", PATH_COUPLED, KGRID, ecutwfc, eamp)
         
-        print("EXTRACTING FROZEN LAYERS")
+        print("\nEXTRACTING FROZEN LAYERS")
         bilayer_bottom, bilayer_top = graphene.isolate_bilayer(relaxed_coupled)
         
         results = {}
