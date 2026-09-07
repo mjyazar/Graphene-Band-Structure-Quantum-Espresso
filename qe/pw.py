@@ -15,8 +15,8 @@ ECUTRHO = 400.0
 CONV_THRESHOLD = 1.0e-8
 DEGAUSS = 0.01
 SMEARING = "gauss"
-SCF_EXTRA_BANDS = 6  # number of unoccupied bands to run the calculations for nzcf
-NSCF_EXTRA_BANDS = 8  # number of unoccupied bands to run the calculations for nscf
+SCF_EXTRA_BANDS_PER = 6  # number of unoccupied bands to run the calculations for nzcf
+NSCF_EXTRA_BANDS_PER_ATOM = 4  # number of unoccupied bands to run the calculations for nscf
 
 
 def input_data(calculation, data_path, ecutwfc, nbnd, prefix, efield):
@@ -94,9 +94,11 @@ def calculate(structure, calculation, path, kpts, ecutwfc, efield=0):
     data_path = path / "data"
     input_path = path / f"{calculation}.pwi"
     output_path = path / f"{calculation}.pwo"
+    
+    occupied = 2 * len(structure)
 
     # 2 * (number of atoms in Atoms object) -> number of occupied bands
-    nbnd = 2 * len(structure) + (NSCF_EXTRA_BANDS if calculation == "nscf" else SCF_EXTRA_BANDS)
+    nbnd = 2 * len(structure) + (NSCF_EXTRA_BANDS_PER_ATOM * len(structure) if calculation == "nscf" else SCF_EXTRA_BANDS)
     
     print(f"\nCREATING {input_path.name}")
     write_input(input_path, structure, calculation, data_path, kpts, ecutwfc, nbnd, path.name, efield)
@@ -108,3 +110,4 @@ def calculate(structure, calculation, path, kpts, ecutwfc, efield=0):
     output = read_output(output_path)
     
     return output
+``
