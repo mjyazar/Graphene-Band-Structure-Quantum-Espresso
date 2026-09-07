@@ -82,7 +82,7 @@ def print_structure_data(name, structure, relaxed, band_structure, total_eamp, f
 def main():
     graphene = GrapheneStructure()
     
-    energies = [0, 0.005, 0.01]
+    energies = [0, 0.005]
     
     for eamp in energies:
         
