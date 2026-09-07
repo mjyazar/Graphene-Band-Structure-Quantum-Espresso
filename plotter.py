@@ -44,7 +44,7 @@ def plot_individual_dos(results, field, window=WINDOW):
           
         ax.plot(energy - fermi_energy, dos, linewidth=0.75, color='red')
         ax.axvline(0, linestyle="--")
-        ax.set_title(f"1D {name} Layer DOS")
+        ax.set_title(f"1D {name} Layer DOS {field}au")
         ax.set_xlabel(r"$E - E_{Fermi}$ (eV)")
         ax.set_ylabel("DOS (states/eV/cell)")
         ax.set_xlim(window)
@@ -64,10 +64,9 @@ def plot_dos_comparison(results, field, window=WINDOW):
 
     for name, (energy, dos, fermi_energy) in results.items():
         ax.plot(energy - fermi_energy, dos, label=name)    
-
     
     ax.axvline(0, linewidth=0.8, linestyle="--")
-    ax.set_title(f"Graphene 1D DOS Comparison")
+    ax.set_title(f"Graphene 1D DOS Comparison {field}au")
     ax.set_xlabel(r"$E - E_{Fermi}$ (eV)")
     ax.set_ylabel("DOS (states/eV/cell)")
     ax.set_xlim(window)
@@ -102,7 +101,7 @@ def plot_dos_added(results, field, delta_e=0.01):
     ax.plot(grid, dos_coupled_grid, label="$DOS_{coupled}$")
     ax.plot(grid, dos_sum, label="$DOS_{top} + DOS_{bottom}$")
 
-    ax.set_title(f"DOS Comparison")
+    ax.set_title(f"DOS Comparison {field}au")
     ax.set_xlabel(r"$Energy$ (eV)")
     ax.set_ylabel("DOS (states/eV/cell)")
     ax.legend()
