@@ -84,7 +84,7 @@ def plot_dos_added(results, field, delta_e=0.01):
     
     fig.tight_layout()
     
-    plt.savefig(FIG_DIR / f"DOS Added {field}au", dpi=300, )
+    plt.savefig(FIG_DIR / f"DOS Added {field}au.png", dpi=300, )
     plt.close(fig)
 
 
