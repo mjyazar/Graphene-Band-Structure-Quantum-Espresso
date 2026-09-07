@@ -12,7 +12,7 @@ def write_input(input_path, outdir, data_path, prefix):
                          outdir = "{outdir}"  ! directory containing the input data, i.e. the pw.x metadata
                          bz_sum = "smearing"  ! integration using gaussian smearing
                          ngauss = 0  ! type of gaussian broadening - 0: Simple Gaussian (default)
-                         degauss = "{DEGAUSS}"  ! gaussian broadening, Ry (not eV!)
+                         degauss = {DEGAUSS}  ! gaussian broadening, Ry (not eV!)
                          emin = -10
                          emax = 10
                          deltaE = 0.01  ! energy grid step (eV)
