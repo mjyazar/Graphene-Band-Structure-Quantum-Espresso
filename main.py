@@ -27,7 +27,7 @@ RUN_CONVERGENCE = True
 # parameters
 BANDPATH = 'GMKG'
 ecutwfc = 60.0
-KGRID = (12, 12, 1)
+KGRID = (15, 15, 1)
 KGRID_DENSE = (60, 60, 1)
 
 
@@ -86,7 +86,7 @@ def main():
     
     for eamp in energies:
         
-        path = BILAYER /  f"field_{str(eamp)}Ry"
+        path = BILAYER /  f"field_{str(eamp)}"
         
         PATH_COUPLED = path / "coupled"
         PATH_BOTTOM = path / "bottom"
@@ -110,24 +110,24 @@ def main():
         print("\nCOUPLED LAYERS COMPUTATIONS")
         scf_coupled = pw.calculate(relaxed_coupled, "scf", PATH_COUPLED, KGRID, ecutwfc, eamp)
         nscf_coupled = pw.calculate(relaxed_coupled, "nscf", PATH_COUPLED, KGRID_DENSE, ecutwfc, eamp)
-        dos_coupled = dos.calculate(PATH_COUPLED)
         fermi_e_coupled = nscf_coupled.calc.get_fermi_level()
-        
+        dos_coupled = dos.calculate(PATH_COUPLED, fermi_e_coupled)
+
         results["coupled"] = [dos_coupled[0], dos_coupled[1], fermi_e_coupled]
         
         print("\nBOTTOM LAYER COMPUTATIONS")
         scf_bottom = pw.calculate(bilayer_bottom, "scf", PATH_BOTTOM, KGRID, ecutwfc, eamp)
         nscf_bottom = pw.calculate(bilayer_bottom, "nscf", PATH_BOTTOM, KGRID_DENSE, ecutwfc, eamp)
-        dos_bottom = dos.calculate(PATH_BOTTOM)
         fermi_e_bottom = nscf_bottom.calc.get_fermi_level()
+        dos_bottom = dos.calculate(PATH_BOTTOM, fermi_e_bottom)
 
         results["bottom"] = [dos_bottom[0], dos_bottom[1], fermi_e_bottom]
         
         print("\nTOP LAYER COMPUTATIONS")
         scf_top = pw.calculate(bilayer_top, "scf", PATH_TOP, KGRID, ecutwfc, eamp)
         nscf_top = pw.calculate(bilayer_top, "nscf", PATH_TOP, KGRID_DENSE, ecutwfc, eamp)
-        dos_top = dos.calculate(PATH_TOP)
         fermi_e_top = nscf_top.calc.get_fermi_level()
+        dos_top = dos.calculate(PATH_TOP, fermi_e_top)
 
         results["top"] = [dos_top[0], dos_top[1], fermi_e_top]
         

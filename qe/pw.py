@@ -27,7 +27,7 @@ def input_data(calculation, data_path, ecutwfc, nbnd, prefix, efield):
 
     control = {"calculation": calculation, 
                "prefix": prefix,
-               "verbosity": "high",  # amount of information written in QE output - high -> slower
+               "verbosity": "low",  # amount of information written in QE output - high -> slower
                "outdir": str(data_path),  # path for temporary/intermediate calculation files
                "pseudo_dir": str(PSEUDO_DIR),  # directory containing pseudopotentials.
                "disk_io": "low",  # keeps wavefunctions in memory while running and writes them at the end
@@ -110,4 +110,3 @@ def calculate(structure, calculation, path, kpts, ecutwfc, efield=0):
     output = read_output(output_path)
     
     return output
-``

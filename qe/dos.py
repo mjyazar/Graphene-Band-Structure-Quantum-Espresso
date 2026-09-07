@@ -3,8 +3,10 @@ import numpy as np
 import qe.runner as runner
 
 DEGAUSS = 0.01
+DOS_WINDOW = (-5, 5)
 
-def write_input(input_path, outdir, data_path, prefix):
+
+def write_input(input_path, outdir, data_path, prefix, fermi_energy, window=DOS_WINDOW):
     
     with open(input_path, "w") as input_file:
         input_file.write(f"""&DOS  ! QE input begins
@@ -13,9 +15,9 @@ def write_input(input_path, outdir, data_path, prefix):
                          bz_sum = "smearing"  ! integration using gaussian smearing
                          ngauss = 0  ! type of gaussian broadening - 0: Simple Gaussian (default)
                          degauss = {DEGAUSS}  ! gaussian broadening, Ry (not eV!)
-                         emin = -10
-                         emax = 10
-                         deltaE = 0.01  ! energy grid step (eV)
+                         emin = {fermi_energy + window[0]}
+                         emax = {fermi_energy + window[1]}
+                         deltaE = 0.02  ! energy grid step (eV)
                          fildos = '{data_path}'  ! output file containing DOS(E)
                          /
                          """)
@@ -29,7 +31,7 @@ def read_output(path):
     return energy, dos, idos
 
 
-def calculate(path):
+def calculate(path, fermi_energy):
     
     path.mkdir(parents=True, exist_ok=True)
     
@@ -38,7 +40,7 @@ def calculate(path):
     data_path = path / "dos.data"  # data file
     
     print(f"\nCREATING {input_path.name}")
-    write_input(input_path, path / "data", data_path, path.name)
+    write_input(input_path, path / "data", data_path, path.name, fermi_energy)
 
     print(f"RUNNING dos.x WITH {input_path.name}")
     runner.run("dos.x", input_path, output_path)
