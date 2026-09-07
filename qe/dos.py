@@ -2,19 +2,20 @@ import numpy as np
 
 import qe.runner as runner
 
+DEGAUSS = 0.01
 
 def write_input(input_path, outdir, data_path, prefix):
     
     with open(input_path, "w") as input_file:
         input_file.write(f"""&DOS  ! QE input begins
-                         prefix = '{prefix}'
-                         outdir = '{outdir}'  ! directory containing the input data, i.e. the pw.x metadata
-                         bz_sum = 'smearing'  ! integration using gaussian smearing
+                         prefix = "{prefix}"
+                         outdir = "{outdir}"  ! directory containing the input data, i.e. the pw.x metadata
+                         bz_sum = "smearing"  ! integration using gaussian smearing
                          ngauss = 0  ! type of gaussian broadening - 0: Simple Gaussian (default)
-                         degauss = 0.05  ! gaussian broadening, Ry (not eV!)
+                         degauss = "{DEGAUSS}"  ! gaussian broadening, Ry (not eV!)
                          emin = -10
                          emax = 10
-                         deltae = 0.01  ! energy grid step (eV)
+                         deltaE = 0.01  ! energy grid step (eV)
                          fildos = '{data_path}'  ! output file containing DOS(E)
                          /
                          """)

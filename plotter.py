@@ -53,7 +53,7 @@ def plot_individual_dos(results, field, window=WINDOW):
         ax.text(0, 2, "Fermi energy", fontsize=12, rotation=90)
         
         fig.tight_layout()
-        plt.savefig(FIG_DIR / f"{name.capitalize()} Layer DOS.png", dpi=300)
+        plt.savefig(FIG_DIR / f"{name.capitalize()} Layer DOS {field}au.png", dpi=300)
         plt.close(fig)
 
 

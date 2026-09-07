@@ -13,7 +13,7 @@ PSEUDO = "C.pbe-n-kjpaw_psl.1.0.0.UPF"
 # parameters
 ECUTRHO = 400.0
 CONV_THRESHOLD = 1.0e-8
-DEGAUSS = 0.05
+DEGAUSS = 0.01
 SMEARING = "gauss"
 SCF_EXTRA_BANDS = 6  # number of unoccupied bands to run the calculations for nzcf
 NSCF_EXTRA_BANDS = 8  # number of unoccupied bands to run the calculations for nscf
