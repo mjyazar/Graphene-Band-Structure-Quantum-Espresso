@@ -2,7 +2,7 @@ from graphene import GrapheneStructure
 import qe.pw as pw
 import qe.dos as dos
 import convergence
-import plotting
+import plotter
 
 from ase.spectrum.band_structure import get_band_structure, BandStructure
 from pathlib import Path
@@ -26,7 +26,7 @@ RUN_CONVERGENCE = True
 
 # parameters
 BANDPATH = 'GMKG'
-ecutwfc = 100.0
+ecutwfc = 60.0
 KGRID = (12, 12, 1)
 KGRID_DENSE = (21, 21, 1)
 
@@ -82,7 +82,7 @@ def print_structure_data(name, structure, relaxed, band_structure, total_eamp, f
 def main():
     graphene = GrapheneStructure()
     
-    energies = [0, 0.005]
+    energies = [0, 0.01]
     
     for eamp in energies:
         
@@ -131,7 +131,7 @@ def main():
 
         results["top"] = [dos_top[0], dos_top[1], fermi_e_top]
         
-        plotting.plot_dos(results, eamp)
+        plotter.plot_dos(results, eamp)
 
 
 if __name__ == "__main__":
