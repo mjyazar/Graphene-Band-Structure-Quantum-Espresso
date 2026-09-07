@@ -11,7 +11,7 @@ FIG_DIR = OUT_DIR / "figures"
 FIG_DIR.mkdir(exist_ok=True)
 OUT_DIR.mkdir(exist_ok=True)
 
-WINDOW = (-5, 5)
+WINDOW = (-10, 10)
 
 
 def plot_band_structure(bandpath, energies, name):
@@ -51,8 +51,7 @@ def plot_individual_dos(results, field, window=WINDOW):
 
         ax.text(0, 2, "Fermi energy", fontsize=12, rotation=90)
         
-        fig.tight_layout()
-        plt.savefig(FIG_DIR / f"{name.capitalize()} Layer DOS {field}au.png", dpi=300)
+        plt.savefig(FIG_DIR / f"{name.capitalize()} Layer DOS {field}au.png", dpi=300, bbox_inches="tight")
         plt.close(fig)
 
 
@@ -71,10 +70,9 @@ def plot_dos_comparison(results, field, window=WINDOW):
     ax.set_xlim(window)
     ax.legend()
     
-    ax.text(0, 2.5, "Fermi energy", fontsize=16, rotation=90)
+    ax.text(0, 2.0, "Fermi energy", fontsize=16, rotation=90)
 
-    fig.tight_layout()
-    plt.savefig(FIG_DIR / f"DOS Comparison {field}au.png", dpi=300, )
+    plt.savefig(FIG_DIR / f"DOS Comparison {field}au.png", dpi=300, bbox_inches="tight")
     plt.close(fig)
 
 
@@ -105,10 +103,8 @@ def plot_dos_added(results, field, delta_e=0.01):
     ax.set_xlabel(r"$Energy$ (eV)")
     ax.set_ylabel("DOS (states/eV/cell)")
     ax.legend()
-    
-    fig.tight_layout()
-    
-    plt.savefig(FIG_DIR / f"DOS Added {field}au.png", dpi=300, )
+        
+    plt.savefig(FIG_DIR / f"DOS Added {field}au.png", dpi=300, bbox_inches="tight")
     plt.close(fig)
 
 

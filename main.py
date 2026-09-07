@@ -93,7 +93,7 @@ def main():
         PATH_TOP = path / "top"
         
         
-        print(f"\nE-field = {str(eamp)}Ry")
+        print(f"\nE-field = {str(eamp)}au")
         print("-" * 30)
 
         print("CREATING GRAPHENE BILAYERS")
@@ -112,6 +112,7 @@ def main():
         nscf_coupled = pw.calculate(relaxed_coupled, "nscf", PATH_COUPLED, KGRID_DENSE, ecutwfc, eamp)
         fermi_e_coupled = nscf_coupled.calc.get_fermi_level()
         dos_coupled = dos.calculate(PATH_COUPLED, fermi_e_coupled)
+        
 
         results["coupled"] = [dos_coupled[0], dos_coupled[1], fermi_e_coupled]
         

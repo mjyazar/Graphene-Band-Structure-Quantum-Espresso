@@ -3,10 +3,9 @@ import numpy as np
 import qe.runner as runner
 
 DEGAUSS = 0.01
-DOS_WINDOW = (-5, 5)
+WINDOW_DOS = (-10, 10)
 
-
-def write_input(input_path, outdir, data_path, prefix, fermi_energy, window=DOS_WINDOW):
+def write_input(input_path, outdir, data_path, prefix, fermi_energy, window=WINDOW_DOS):
     
     with open(input_path, "w") as input_file:
         input_file.write(f"""&DOS  ! QE input begins
@@ -18,7 +17,7 @@ def write_input(input_path, outdir, data_path, prefix, fermi_energy, window=DOS_
                          emin = {fermi_energy + window[0]}
                          emax = {fermi_energy + window[1]}
                          deltaE = 0.02  ! energy grid step (eV)
-                         fildos = '{data_path}'  ! output file containing DOS(E)
+                         fildos = "{data_path}"  ! output file containing DOS(E)
                          /
                          """)
 
