@@ -4,11 +4,14 @@ import qe.runner as runner
 
 DEGAUSS = 0.01
 WINDOW_DOS = (-10, 10)
+DELTA_E = 0.02
 
-def write_input(input_path, outdir, data_path, prefix, fermi_energy, window=WINDOW_DOS):
+# RY_TO_EV = 
+
+def _write_input(input_path, outdir, output_path, prefix, fermi_energy, window=WINDOW_DOS):
     
     with open(input_path, "w") as input_file:
-        input_file.write(f"""&DOS  ! QE input begins
+        input_file.write(f"""&DOS
                          prefix = "{prefix}"
                          outdir = "{outdir}"  ! directory containing the input data, i.e. the pw.x metadata
                          bz_sum = "smearing"  ! integration using gaussian smearing
@@ -16,13 +19,13 @@ def write_input(input_path, outdir, data_path, prefix, fermi_energy, window=WIND
                          degauss = {DEGAUSS}  ! gaussian broadening, Ry (not eV!)
                          emin = {fermi_energy + window[0]}
                          emax = {fermi_energy + window[1]}
-                         deltaE = 0.02  ! energy grid step (eV)
-                         fildos = "{data_path}"  ! output file containing DOS(E)
+                         deltaE = {DELTA_E}  ! energy grid step (eV)
+                         fildos = "{output_path}"  ! output file containing DOS(E)
                          /
                          """)
 
 
-def read_output(path):
+def _read_output(path):
     
     # idos - integrated dos
     energy, dos, idos = np.loadtxt(path, unpack=True)
@@ -34,16 +37,16 @@ def calculate(path, fermi_energy):
     
     path.mkdir(parents=True, exist_ok=True)
     
+    outdir = path / "data"
     input_path = path / "dos.in"
-    output_path = path / "dos.out"  # log file
-    data_path = path / "dos.data"  # data file
+    log_path = path / "dos.log"  # log file
+    output_path = path / "dos.out"  # data file
     
     print(f"\nCREATING {input_path.name}")
-    write_input(input_path, path / "data", data_path, path.name, fermi_energy)
+    _write_input(input_path, outdir, output_path, path.name, fermi_energy)
 
     print(f"RUNNING dos.x WITH {input_path.name}")
-    runner.run("dos.x", input_path, output_path)
+    runner.run("dos.x", input_path, log_path)
     
-    print(f"READING {data_path.name}")
-    
-    return read_output(data_path)
+    print(f"READING {output_path.name}")
+    return _read_output(output_path)
