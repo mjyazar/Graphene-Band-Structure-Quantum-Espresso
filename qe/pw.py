@@ -2,8 +2,7 @@ from ase.io import write, read
 from pathlib import Path
 
 import qe.runner as runner
-
-
+from config import *
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -11,20 +10,6 @@ ROOT = Path(__file__).resolve().parents[1]
 PSEUDO_DIR = ROOT / "pseudo"
 PSEUDO = "C.pbe-n-kjpaw_psl.1.0.0.UPF"
 PSEUDO_2 = "C.upf"
-
-# parameters
-ECUTRHO = 400.0
-CONV_THRESHOLD = 1.0e-8
-DEGAUSS = 0.01
-SMEARING = "gauss"
-SCF_EXTRA_BANDS = 6  # number of unoccupied bands to run the calculations for nzcf
-NSCF_EXTRA_BANDS_PER_ATOM = 4  # number of unoccupied bands to run the calculations for nscf
-FORCE_CONVERGENCE_THRESHOLD = 0.001
-BANDPATH = 'GMKG'
-ecutwfc = 60.0
-KGRID = (15, 15, 1)
-KGRID_DENSE = (60, 60, 1)
-
 
 
 def _input_data(calculation, outdir, ecutwfc, nbnd, prefix, efield):
