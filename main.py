@@ -4,7 +4,6 @@ import qe.dos as dos
 import convergence
 import plotter
 
-from ase.spectrum.band_structure import get_band_structure, BandStructure
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
@@ -24,22 +23,6 @@ BILAYER.mkdir(exist_ok=True)
 RUN_QE = True
 RUN_CONVERGENCE = True
 
-# parameters
-BANDPATH = 'GMKG'
-ecutwfc = 60.0
-KGRID = (15, 15, 1)
-KGRID_DENSE = (60, 60, 1)
-
-
-def band_path(structure, path=BANDPATH):
-    """
-    Determining the band- (k-) path
-    
-    pbc: Whether cell is periodic in each direction
-         If cell has three nonzero cell vectors, use pbc=[1, 1, 0] to request a 2D bandpath
-    """
-    
-    return structure.cell.bandpath(path=path, pbc=[True, True, False], npoints=100)
 
 
 def print_structure_data(name, structure, relaxed, band_structure, total_eamp, fermi_eamp):
@@ -82,7 +65,7 @@ def print_structure_data(name, structure, relaxed, band_structure, total_eamp, f
 def main():
     graphene = GrapheneStructure()
     
-    energies = [0, 0.01]
+    energies = [0]
     
     for eamp in energies:
         
@@ -100,7 +83,7 @@ def main():
         bilayer = graphene.bilayer()
         
         print("RELAXING COUPLED BILAYER")
-        relaxed_coupled = pw.calculate(bilayer, "relax", PATH_COUPLED, KGRID, ecutwfc, eamp)
+        relaxed_coupled = pw.relax(bilayer, PATH_COUPLED, eamp)
         
         print("\nEXTRACTING FROZEN LAYERS")
         bilayer_bottom, bilayer_top = graphene.isolate_bilayer(relaxed_coupled)
@@ -108,29 +91,31 @@ def main():
         results = {}
         
         print("\nCOUPLED LAYERS COMPUTATIONS")
-        scf_coupled = pw.calculate(relaxed_coupled, "scf", PATH_COUPLED, KGRID, ecutwfc, eamp)
-        nscf_coupled = pw.calculate(relaxed_coupled, "nscf", PATH_COUPLED, KGRID_DENSE, ecutwfc, eamp)
+        scf_coupled = pw.scf(relaxed_coupled, PATH_COUPLED, eamp)
+        nscf_coupled = pw.nscf(relaxed_coupled, PATH_COUPLED, eamp)
         fermi_e_coupled = nscf_coupled.calc.get_fermi_level()
         dos_coupled = dos.calculate(PATH_COUPLED, fermi_e_coupled)
         
-
         results["coupled"] = [dos_coupled[0], dos_coupled[1], fermi_e_coupled]
         
+        
         print("\nBOTTOM LAYER COMPUTATIONS")
-        scf_bottom = pw.calculate(bilayer_bottom, "scf", PATH_BOTTOM, KGRID, ecutwfc, eamp)
-        nscf_bottom = pw.calculate(bilayer_bottom, "nscf", PATH_BOTTOM, KGRID_DENSE, ecutwfc, eamp)
+        scf_bottom = pw.scf(bilayer_bottom, PATH_BOTTOM, eamp)
+        nscf_bottom = pw.nscf(bilayer_bottom, PATH_BOTTOM, eamp)
         fermi_e_bottom = nscf_bottom.calc.get_fermi_level()
         dos_bottom = dos.calculate(PATH_BOTTOM, fermi_e_bottom)
 
         results["bottom"] = [dos_bottom[0], dos_bottom[1], fermi_e_bottom]
         
+        
         print("\nTOP LAYER COMPUTATIONS")
-        scf_top = pw.calculate(bilayer_top, "scf", PATH_TOP, KGRID, ecutwfc, eamp)
-        nscf_top = pw.calculate(bilayer_top, "nscf", PATH_TOP, KGRID_DENSE, ecutwfc, eamp)
+        scf_top = pw.scf(bilayer_top, PATH_TOP, eamp)
+        nscf_top = pw.nscf(bilayer_top, PATH_TOP, eamp)
         fermi_e_top = nscf_top.calc.get_fermi_level()
         dos_top = dos.calculate(PATH_TOP, fermi_e_top)
 
         results["top"] = [dos_top[0], dos_top[1], fermi_e_top]
+        
         
         plotter.plot_dos(results, eamp)
 
