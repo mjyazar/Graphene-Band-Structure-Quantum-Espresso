@@ -1,8 +1,7 @@
-*/data
-
-*.in
-*.out
-*.data
-
+*\data
 *hdf5
 *.xml
+
+# *.in
+# *.out
+# *.dat
