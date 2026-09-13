@@ -4,11 +4,13 @@ from pathlib import Path
 import qe.runner as runner
 
 
+
 ROOT = Path(__file__).resolve().parents[1]
 
 # Carbon pseudopotential (from https://sssp.materialscloud.org/pseudopotentials/PBE/efficiency)
 PSEUDO_DIR = ROOT / "pseudo"
 PSEUDO = "C.pbe-n-kjpaw_psl.1.0.0.UPF"
+PSEUDO_2 = "C.upf"
 
 # parameters
 ECUTRHO = 400.0
@@ -17,9 +19,15 @@ DEGAUSS = 0.01
 SMEARING = "gauss"
 SCF_EXTRA_BANDS = 6  # number of unoccupied bands to run the calculations for nzcf
 NSCF_EXTRA_BANDS_PER_ATOM = 4  # number of unoccupied bands to run the calculations for nscf
+FORCE_CONVERGENCE_THRESHOLD = 0.001
+BANDPATH = 'GMKG'
+ecutwfc = 60.0
+KGRID = (15, 15, 1)
+KGRID_DENSE = (60, 60, 1)
 
 
-def input_data(calculation, data_path, ecutwfc, nbnd, prefix, efield):
+
+def _input_data(calculation, outdir, ecutwfc, nbnd, prefix, efield):
     """
     https://www.quantum-espresso.org/Doc/INPUT_PW.html#id3
     Function called by write_input to create input file
@@ -28,7 +36,7 @@ def input_data(calculation, data_path, ecutwfc, nbnd, prefix, efield):
     control = {"calculation": calculation, 
                "prefix": prefix,
                "verbosity": "high",  # amount of information written in QE output - high -> slower
-               "outdir": str(data_path),  # path for temporary/intermediate calculation files
+               "outdir": str(outdir),  # path for temporary/intermediate calculation files
                "pseudo_dir": str(PSEUDO_DIR),  # directory containing pseudopotentials.
                "disk_io": "low",  # keeps wavefunctions in memory while running and writes them at the end
                "tprnfor": True}  # print atomic forces on each atom
@@ -48,6 +56,9 @@ def input_data(calculation, data_path, ecutwfc, nbnd, prefix, efield):
         system["occupations"] = "smearing"  # smoothing out Fermi level 0-1 jump - prevent oscillation of SCF
         system["smearing"] = SMEARING
         system["degauss"] = DEGAUSS
+    
+    if calculation == "nscf":
+        control["forc_conv_thr"] = FORCE_CONVERGENCE_THRESHOLD
         
     if efield != 0:
         """
@@ -69,29 +80,29 @@ def input_data(calculation, data_path, ecutwfc, nbnd, prefix, efield):
 
     if calculation == "relax":
         namelists["ions"] = {"ion_dynamics": "bfgs"}        
-
+    
     return namelists
 
 
-def write_input(path, structure, calculation, data_path, kpts, ecutwfc, nbnd, prefix, efield):
+def _write_input(path, structure, calculation, data_path, kpts, ecutwfc, nbnd, prefix, efield):
     """
     Write QE input file using ASE
     """
     
-    write(path, structure, format="espresso-in", input_data=input_data(calculation, data_path, ecutwfc, nbnd, prefix, efield), pseudopotentials={"C": PSEUDO}, kpts=kpts)
+    write(path, structure, format="espresso-in", input_data=_input_data(calculation, data_path, ecutwfc, nbnd, prefix, efield), pseudopotentials={"C": PSEUDO}, kpts=kpts)
 
 
-def read_output(path, index=-1):
+def _read_output(path, index=-1):
     structure = read(path, format="espresso-out", index=index)  # index=-1 gets last structure
         
     return structure
 
 
-def calculate(structure, calculation, path, kpts, ecutwfc, efield=0):
+def _calculate(calculation, structure, path, kpts, ecutwfc, efield=0):
     
     path.mkdir(parents=True, exist_ok=True)
     
-    data_path = path / "data"
+    outdir = path / "data"
     input_path = path / f"{calculation}.pwi"
     output_path = path / f"{calculation}.pwo"
     
@@ -101,12 +112,38 @@ def calculate(structure, calculation, path, kpts, ecutwfc, efield=0):
     nbnd = 2 * len(structure) + (NSCF_EXTRA_BANDS_PER_ATOM * len(structure) if calculation == "nscf" else SCF_EXTRA_BANDS)
     
     print(f"\nCREATING {input_path.name}")
-    write_input(input_path, structure, calculation, data_path, kpts, ecutwfc, nbnd, path.name, efield)
+    _write_input(input_path, structure, calculation, outdir, kpts, ecutwfc, nbnd, path.name, efield)
 
     print(f"RUNNING pw.x WITH {input_path.name}")
     runner.run("pw.x", input_path, output_path)
 
     print(f"READING {output_path.name}")
-    output = read_output(output_path)
+    output = _read_output(output_path)
     
     return output
+
+
+def relax(bilayer, path, eamp):
+    
+    return _calculate("relax", bilayer, path, KGRID, ecutwfc, eamp)
+
+
+def scf(relaxed, path, eamp):
+    
+    return _calculate("scf", relaxed, path, KGRID, ecutwfc, eamp)
+
+
+def nscf(relaxed, path, eamp):
+    
+    return _calculate("nscf", relaxed, path, KGRID_DENSE, ecutwfc, eamp)
+    
+
+def band_path(structure, path=BANDPATH):
+    """
+    Determining the band- (k-) path
+    
+    pbc: Whether cell is periodic in each direction
+         If cell has three nonzero cell vectors, use pbc=[1, 1, 0] to request a 2D bandpath
+    """
+    
+    structure.cell.bandpath(path=path, pbc=[True, True, False], npoints=100)
