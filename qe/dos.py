@@ -1,12 +1,8 @@
 import numpy as np
 
 import qe.runner as runner
+from config import *
 
-DEGAUSS = 0.01
-WINDOW_DOS = (-10, 10)
-DELTA_E = 0.02
-
-# RY_TO_EV = 
 
 def _write_input(input_path, outdir, output_path, prefix, fermi_energy, window=WINDOW_DOS):
     

@@ -2,12 +2,7 @@ import numpy as np
 from ase import Atoms
 # from ase.constraints import FixCartesian
 
-LATTICE_CONSTANT = 2.46
-VACUUM = 10.0  # QE requires 2D Coulomb truncation of the cell to have min z-length ~10.58 A
-
-INTERLAYER_DISTANCE = 3.35  # for bilayer (angstrom)
-STACKING = "AB"
-
+from config import *
 
 class GrapheneStructure:
     
