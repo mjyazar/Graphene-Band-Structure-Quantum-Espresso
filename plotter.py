@@ -1,7 +1,9 @@
 import matplotlib.pyplot as plt
 import numpy as np
 from pathlib import Path
-from ase.spectrum.band_structure import BandStructure
+from ase.spectrum.band_structure import get_band_structure, BandStructure
+
+from results import * 
 
 ROOT = Path(__file__).resolve().parent
 
@@ -34,9 +36,9 @@ def plot_band_structure(bandpath, energies, name):
     plt.close(fig)
 
 
-def plot_individual_dos(results, field, window=WINDOW):
+def individual_dos(results, field, window=WINDOW):
 
-    for name, (energy, dos, fermi_energy) in results.items():
+    for name, (energy, dos, fermi_energy) in results["dos"].items():
         print(f"\nPLOTTING {name} DOS")
 
         fig, ax = plt.subplots()
@@ -49,16 +51,57 @@ def plot_individual_dos(results, field, window=WINDOW):
         ax.set_xlim(window)
         # ax.set_ylim()
         
-        plt.savefig(FIG_DIR / f"{name.capitalize()} Layer DOS {field}au.png", dpi=300, bbox_inches="tight")
+        plt.savefig(FIG_DIR / f"DOS_{name.capitalize()}_Layer_{field}au.png", dpi=300, bbox_inches="tight")
         plt.close(fig)
 
 
-def plot_dos_comparison(results, field, window=WINDOW):
+def fermi_aligned(results, field, delta_e=0.01):
+    print(f"PLOTTING FERMI-ALIGNED SUBTRACTED DOS")
+
+    energy_coupled, dos_coupled, fermi_coupled = results["coupled"]["dos"]
+    energy_bottom, dos_bottom, fermi_bottom = results["bottom"]["dos"]
+    energy_top, dos_top, fermi_top = results["top"]["dos"]
+
+    energy_coupled = energy_coupled - fermi_coupled
+    energy_bottom = energy_bottom - fermi_bottom
+    energy_top = energy_top - fermi_top
+    
+    min_energy = max(energy_coupled.min(), energy_bottom.min(), energy_top.min())
+    max_energy = min(energy_coupled.max(), energy_top.max(), energy_bottom.max())
+    
+    grid = np.arange(min_energy, max_energy, delta_e)
+    
+    dos_coupled_grid = np.interp(grid, energy_coupled, dos_coupled)
+    dos_bottom_grid = np.interp(grid, energy_bottom, dos_bottom)
+    dos_top_grid = np.interp(grid, energy_top, dos_top)
+    
+    dos_subtracted = dos_coupled_grid - dos_bottom_grid - dos_top_grid
+    
+    fig, ax = plt.subplots()
+
+    # ax.plot(grid, dos_coupled_grid, label="$DOS_{coupled}$")
+    ax.plot(grid, dos_subtracted, label="$DOS_{coupled} - DOS_{top} - DOS_{bottom}$")
+
+    ax.set_title(f"FERMI-ALIGNED DOS SUBTRACTED {field}au")
+    ax.set_xlabel(r"$Energy$ (eV)")
+    ax.set_ylabel("DOS (states/eV/cell)")
+    ax.legend()
+        
+    plt.savefig(FIG_DIR / f"DOS_Subtracted_Fermi-aligned_{field}au.png", dpi=300, bbox_inches="tight")
+    plt.close(fig)
+
+
+def vacuum_aligned(results, field):
+    pass
+
+
+
+def dos_comparison(results, field, window=WINDOW):
     print("\nPLOTTING DOS COMPARISON")
     
     fig, ax = plt.subplots()
 
-    for name, (energy, dos, fermi_energy) in results.items():
+    for name, (energy, dos, fermi_energy) in results["dos"].items():
         ax.plot(energy - fermi_energy, dos, label=name)    
     
     ax.axvline(0, linewidth=0.8, linestyle="--")
@@ -72,45 +115,34 @@ def plot_dos_comparison(results, field, window=WINDOW):
     plt.close(fig)
 
 
-def plot_dos_added(results, field, delta_e=0.01):
-    print("\nPLOTTING DOS ADDED")
-
-    energy_coupled, dos_coupled, fermi_coupled = results["coupled"]
-    energy_bottom, dos_bottom, fermi_bottom = results["bottom"]
-    energy_top, dos_top, fermi_top = results["top"]
+def subtracted_potential(results:Results, field):
+    print("\nPLOTTING SUBTRACTED POTENTIAL")
     
-    min_energy = max(energy_coupled.min(), energy_bottom.min(), energy_top.min())
-    max_energy = min(energy_coupled.max(), energy_top.max(), energy_bottom.max())
+    coupled = results.coupled
+    bottom = results.bottom
+    top = results.top
     
-    grid = np.arange(min_energy, max_energy, delta_e)
+    coordinates = coupled.potential_averaged.coordinates
     
-    dos_coupled_grid = np.interp(grid, energy_coupled, dos_coupled)
-    dos_bottom_grid = np.interp(grid, energy_bottom, dos_bottom)
-    dos_top_grid = np.interp(grid, energy_top, dos_top)
-
-    dos_sum = dos_bottom_grid + dos_top_grid
+    potential = coupled.potential_averaged.planar - bottom.potential_averaged.planar - top.potential_averaged.planar
     
     fig, ax = plt.subplots()
+    
+    ax.plot(coordinates, potential)
+    
+    ax.set_xlabel("z")
+    ax.set_ylabel("Potential")
+    ax.set_title(f"Subtracted Potential — E-field = {field}au")
 
-    ax.plot(grid, dos_coupled_grid, label="$DOS_{coupled}$")
-    ax.plot(grid, dos_sum, label="$DOS_{top} + DOS_{bottom}$")
-
-    ax.set_title(f"DOS Comparison {field}au")
-    ax.set_xlabel(r"$Energy$ (eV)")
-    ax.set_ylabel("DOS (states/eV/cell)")
-    ax.legend()
-        
-    plt.savefig(FIG_DIR / f"DOS Added {field}au.png", dpi=300, bbox_inches="tight")
+    fig.tight_layout()
+    plt.savefig(FIG_DIR / f"DOS Comparison {field}au.png", dpi=300, bbox_inches="tight")
     plt.close(fig)
-
-
-def plot_2d_dos():
-    pass
-
-
+        
+    
 def plot_dos(results, field):
     
-    plot_individual_dos(results, field)
-    plot_dos_comparison(results, field)
-    plot_dos_added(results, field)
-    plot_2d_dos()
+    subtracted_potential(results, field)
+    
+    #individual_dos(results, field)
+    #dos_comparison(results, field)
+    #fermi_aligned(results, field)
