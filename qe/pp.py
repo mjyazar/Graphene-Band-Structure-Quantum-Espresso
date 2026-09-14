@@ -77,7 +77,7 @@ def _write_input(computation, input_path, outdir, intermediate_path, fileout, pr
                              ny = 288
             """)
         
-        input_file.write("/")
+        input_file.write("/\n")
 
 
 def _read_output(path, output_format):
@@ -94,7 +94,7 @@ def _read_output(path, output_format):
         return x, y, z
     
     else:
-        raise ValueError("asdf")
+        raise ValueError("Invalid output_format.")
     
 
 def _calculate(computation, path, iflag, fileout, fermi_energy=None):
