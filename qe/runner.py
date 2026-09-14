@@ -19,7 +19,7 @@ def run(process, input_path, output_path, cwd=None, nproc=NPROC):
         if NK != 0 and process == "pw.x":  # and if process == "pw.x" - potential crash culprit
             command.extend(["-nk", str(NK)])
         
-        calculation = subprocess.Popen(command, stdin=input_file, stdout=output_file, stderr=subprocess.STDOUT, cwd=cwd)
+        calculation = subprocess.Popen(command, stdin=input_file, stdout=output_file, stderr=subprocess.STDOUT, cwd=cwd, check=True)
 
         while calculation.poll() is None:
             elapsed = int(time.perf_counter() - start)
