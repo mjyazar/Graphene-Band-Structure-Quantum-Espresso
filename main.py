@@ -1,4 +1,5 @@
 from graphene import GrapheneStructure
+from results import *
 import qe.pw as pw
 import qe.dos as dos
 import qe.pp as pp
@@ -26,42 +27,30 @@ RUN_QE = True
 RUN_CONVERGENCE = True
 
 
-
-def print_structure_data(name, structure, relaxed, band_structure, total_eamp, fermi_eamp):
-    print(f"\n{name.upper()}:")
-    print(structure)
-
-    print("\nCell:")
-    print(structure.cell)
-
-    print("\nPositions:")
-    print(structure.positions)
-
-    print("\nDistances:")
-    print(structure.get_all_distances(mic=True))
-
-    print(f"\nNumber of Atoms: {len(structure)}")
-
-    print("\nScaled positions:")
-    print(structure.get_scaled_positions())
-
-    # use mic=True to use the Minimum Image Convention
-    # vector=True gives the distance vector (from a0 to a1)
-    print(f"\nC-C Distance (A): {structure.get_distance(0, 1, mic=True)}")
-    print(f"\nC-C Distance (A): {structure.get_distance(0, 1, vector=True)}")
+def run_calculations(structure, path, eamp):
     
-    print("\nFinal Relaxed Atomic Coordinates:")
-    print(relaxed.positions)
+    print(f"\n{path.name.upper()} LAYERS COMPUTATIONS")
     
-    print("\nBand eamp array shape:")
-    print(band_structure.energies.shape)
-
-    # band_energies = band_structure.energies
-    # print("\nBand energies:")
-    # print(band_energies)
-
-    print(f"\nTotal eamp: {total_eamp} eV")
-    print(f"\nFermi eamp: {fermi_eamp} eV")
+    scf = pw.scf(structure, path, eamp)
+    nscf = pw.nscf(structure, path, eamp)
+    
+    fermi_energy = nscf.calc.get_fermi_level()
+    
+    dos_ = dos.calculate(path, fermi_energy)
+    
+    potential_raw, intermediate_pp_path = pp.potential(path)
+    potential_averaged = average.calculate(path, intermediate_pp_path)
+    
+    results = System(name=f"{path.name}",
+                            atoms=structure,
+                            path=path,
+                            fermi_energy=fermi_energy,
+                            
+                            potential_raw=potential_raw,
+                            potential_averaged=potential_averaged,
+                            dos = dos_)
+    
+    return results
 
 
 def main():
@@ -69,14 +58,13 @@ def main():
     
     energies = [0]
     
-    for eamp in energies:
+    for eamp in energies:        
         
         path = BILAYER /  f"field_{str(eamp)}"
         
         PATH_COUPLED = path / "coupled"
         PATH_BOTTOM = path / "bottom"
         PATH_TOP = path / "top"
-        
         
         print(f"\nE-field = {str(eamp)}au")
         print("-" * 30)
@@ -88,44 +76,14 @@ def main():
         relaxed_coupled = pw.relax(bilayer, PATH_COUPLED, eamp)
         
         print("\nEXTRACTING FROZEN LAYERS")
-        bilayer_bottom, bilayer_top = graphene.isolate_bilayer(relaxed_coupled)
+        isolated_bottom, isolated_top = graphene.isolate_bilayer(relaxed_coupled)
+            
+        coupled = run_calculations(relaxed_coupled, PATH_COUPLED, eamp)
+        bottom = run_calculations(isolated_bottom, PATH_BOTTOM, eamp)
+        top = run_calculations(isolated_top, PATH_TOP, eamp)
         
-        results = {}
-        
-        print("\nCOUPLED LAYERS COMPUTATIONS")
-        scf_coupled = pw.scf(relaxed_coupled, PATH_COUPLED, eamp)
-        nscf_coupled = pw.nscf(relaxed_coupled, PATH_COUPLED, eamp)
-        fermi_e_coupled = nscf_coupled.calc.get_fermi_level()
-        dos_coupled = dos.calculate(PATH_COUPLED, fermi_e_coupled)
-        potential_coupled, intermediate_pp_coupled_path = pp.potential(PATH_COUPLED)
-        averaged_potential_coupled = average.calculate(PATH_COUPLED, intermediate_pp_coupled_path)
-        
-        results["coupled"] = {"dos": [dos_coupled[0], dos_coupled[1], fermi_e_coupled], 
-                              "potential": [potential_coupled, averaged_potential_coupled]}
-        
-        print("\nBOTTOM LAYER COMPUTATIONS")
-        scf_bottom = pw.scf(bilayer_bottom, PATH_BOTTOM, eamp)
-        nscf_bottom = pw.nscf(bilayer_bottom, PATH_BOTTOM, eamp)
-        fermi_e_bottom = nscf_bottom.calc.get_fermi_level()
-        dos_bottom = dos.calculate(PATH_BOTTOM, fermi_e_bottom)
-        potential_bottom, intermediate_pp_bottom_path = pp.potential(PATH_BOTTOM)
-        averaged_potential_bottom = average.calculate(PATH_BOTTOM, intermediate_pp_bottom_path)
-
-        results["bottom"] = {"dos": [dos_bottom[0], dos_bottom[1], fermi_e_bottom],
-                             "potential": [potential_bottom, averaged_potential_bottom]}
-        
-        print("\nTOP LAYER COMPUTATIONS")
-        scf_top = pw.scf(bilayer_top, PATH_TOP, eamp)
-        nscf_top = pw.nscf(bilayer_top, PATH_TOP, eamp)
-        fermi_e_top = nscf_top.calc.get_fermi_level()
-        dos_top = dos.calculate(PATH_TOP, fermi_e_top)
-        potential_top, intermediate_pp_top_path = pp.potential(PATH_TOP)
-        averaged_potential_top = average.calculate(PATH_TOP, intermediate_pp_top_path)
-
-        results["top"] = {"dos": [dos_top[0], dos_top[1], fermi_e_top], 
-                          "potential": [potential_top, averaged_potential_top]}
-        
-        
+        results = Results(coupled, bottom, top)
+                
         plotter.plot_dos(results, eamp)
 
 
