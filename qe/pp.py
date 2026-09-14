@@ -1,6 +1,7 @@
 import numpy as np
 from ase.io.cube import read_cube_data
 
+from results import *
 import qe.runner as runner
 from config import *
 
@@ -23,7 +24,7 @@ def _write_input(computation, input_path, outdir, intermediate_path, fileout, pr
                              """)
         
         # 1 = total potential V_bare + V_H + V_xc
-        # total potential
+        # total potential including xc
         elif computation == 1:
             input_file.write(f"""
                              spin_component = 0  ! spin averaged potential
@@ -92,6 +93,9 @@ def _read_output(path, output_format):
         
         return x, y, z
     
+    else:
+        raise ValueError("asdf")
+    
 
 def _calculate(computation, path, iflag, fileout, fermi_energy=None):
     
@@ -123,15 +127,26 @@ def _calculate(computation, path, iflag, fileout, fermi_energy=None):
 
     
 def charge_density(path):
+    (data, atoms), intermediate_path = _calculate(0, path, 3, "charge",)
     
-    return _calculate(0, path, 3, "charge",)
+    results = PotentialRaw(data=data, atoms=atoms)
+    
+    return results, intermediate_path
 
 
 def potential(path):
     
-    return _calculate(11, path, 3, "potential")
+    (data, atoms), intermediate_path = _calculate(11, path, 3, "potential")
+    
+    results = ChargeDensity(data=data, atoms=atoms)
+    
+    return results, intermediate_path
     
 
 def ldos(path, fermi_energy):
+
+    (data, atoms), intermediate_path = _calculate(3, path, 3, "ldos", fermi_energy)
     
-    return _calculate(3, path, 3, "ldos", fermi_energy)
+    results = LDOS(data=data, atoms=atoms)
+    
+    return results, intermediate_path
