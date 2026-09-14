@@ -1,8 +1,8 @@
+import numpy as np
 
+from results import *
 import qe.runner as runner
 from config import *
-
-import numpy as np
 
 
 def _write_input(input_path, input_data_path):
@@ -19,12 +19,12 @@ def _write_input(input_path, input_data_path):
 
 def _read_output(path):
     
-    coordinate, planar_average, macroscopic_average = np.loadtxt(path, unpack=True)
+    coordinates, planar_average, macroscopic_average = np.loadtxt(path, unpack=True)
     
-    return coordinate, planar_average, macroscopic_average
+    return coordinates, planar_average, macroscopic_average
 
 
-def calculate(path, input_data_path):
+def _calculate(path, input_data_path):
     
     path.mkdir(parents=True, exist_ok=True)
 
@@ -33,7 +33,7 @@ def calculate(path, input_data_path):
     input_path = path / f"{process}.avg.in"
     log_path = path / f"{process}.avg.log"  # log file
     output_path = path / f"{process}.avg.dat"
-     
+    
     print(f"\nCREATING {input_path.name}")
     _write_input(input_path, input_data_path)
 
@@ -45,3 +45,12 @@ def calculate(path, input_data_path):
     
     print(f"READING {output_path.name}")
     return _read_output(output_path)
+
+
+def potential(path, input_data_path):
+    
+    coordinates, planar_average, macroscopic_average = _calculate(path, input_data_path)
+    
+    return PotentialAveraged(coordinates=coordinates, 
+                             planar=planar_average, 
+                             macroscopic=macroscopic_average)
