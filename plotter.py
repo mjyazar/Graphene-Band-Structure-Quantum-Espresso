@@ -15,7 +15,6 @@ OUT_DIR.mkdir(exist_ok=True)
 
 WINDOW = (-10, 10)
 
-
 def plot_band_structure(bandpath, energies, name):
     """
     Plot and save band structure

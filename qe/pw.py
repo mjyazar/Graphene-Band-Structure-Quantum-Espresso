@@ -42,7 +42,7 @@ def _input_data(calculation, outdir, ecutwfc, nbnd, prefix, efield):
         system["smearing"] = SMEARING
         system["degauss"] = DEGAUSS
     
-    if calculation == "nscf":
+    if calculation == "relax":
         control["forc_conv_thr"] = FORCE_CONVERGENCE_THRESHOLD
         
     if efield != 0:
