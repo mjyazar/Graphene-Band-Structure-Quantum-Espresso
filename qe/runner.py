@@ -4,7 +4,7 @@ import time
 NPROC = 4
 NK = 4  # split kgrid computations into n pools with
 
-def run(process, input_path, output_path):
+def run(process, input_path, output_path, cwd=None, nproc=NPROC):
     """
     Atomate the process of manually running pw.x << input_file.pwi >> output_file.pwo 
     in the terminal after creating an input file.
@@ -14,12 +14,12 @@ def run(process, input_path, output_path):
         
         start = time.perf_counter()
         
-        command = ["mpirun", "-np", str(NPROC), process]
+        command = ["mpirun", "-np", str(nproc), process]
         
         if NK != 0 and process == "pw.x":  # and if process == "pw.x" - potential crash culprit
             command.extend(["-nk", str(NK)])
         
-        calculation = subprocess.Popen(command, stdin=input_file, stdout=output_file, stderr=subprocess.STDOUT)
+        calculation = subprocess.Popen(command, stdin=input_file, stdout=output_file, stderr=subprocess.STDOUT, cwd=cwd)
 
         while calculation.poll() is None:
             elapsed = int(time.perf_counter() - start)
