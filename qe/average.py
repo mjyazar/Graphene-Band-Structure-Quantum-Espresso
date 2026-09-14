@@ -1,0 +1,47 @@
+
+import qe.runner as runner
+from config import *
+
+import numpy as np
+
+
+def _write_input(input_path, input_data_path):
+    
+    with open(input_path, "w") as input_file:
+        input_file.write(f"""1  ! number of files
+                         "{input_data_path}"  ! pp intermediate data path
+                         1.0  ! file weight
+                         1000  ! number of output points
+                         3  ! average over planes perpendicular to z i.e. x & y
+                         5  ! macroscopic averaging window
+                         """)
+
+
+def _read_output(path):
+    
+    coordinate, planar_average, macroscopic_average = np.loadtxt(path, unpack=True)
+    
+    return coordinate, planar_average, macroscopic_average
+
+
+def calculate(path, input_data_path):
+    
+    path.mkdir(parents=True, exist_ok=True)
+
+    process = input_data_path.name.removesuffix(".pp.dat")
+    
+    input_path = path / f"{process}.avg.in"
+    log_path = path / f"{process}.avg.log"  # log file
+    output_path = path / f"{process}.avg.dat"
+     
+    print(f"\nCREATING {input_path.name}")
+    _write_input(input_path, input_data_path)
+
+    print(f"RUNNING average.x WITH {input_path.name}")
+    runner.run("average.x", input_path, log_path, cwd=path, nproc=1)
+
+    qe_output_path = path / "avg.dat"
+    qe_output_path.replace(output_path)
+    
+    print(f"READING {output_path.name}")
+    return _read_output(output_path)
