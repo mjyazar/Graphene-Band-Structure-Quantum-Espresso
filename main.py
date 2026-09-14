@@ -39,7 +39,7 @@ def run_calculations(structure, path, eamp):
     dos_ = dos.calculate(path, fermi_energy)
     
     potential_raw, intermediate_pp_path = pp.potential(path)
-    potential_averaged = average.calculate(path, intermediate_pp_path)
+    potential_averaged = average.potential(path, intermediate_pp_path)
     
     results = System(name=f"{path.name}",
                             atoms=structure,
@@ -83,7 +83,7 @@ def main():
         top = run_calculations(isolated_top, PATH_TOP, eamp)
         
         results = Results(coupled, bottom, top)
-                
+        
         plotter.plot_dos(results, eamp)
 
 
