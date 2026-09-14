@@ -1,5 +1,6 @@
 import numpy as np
 
+from results import *
 import qe.runner as runner
 from config import *
 
@@ -26,7 +27,7 @@ def _read_output(path):
     # idos - integrated dos
     energy, dos, idos = np.loadtxt(path, unpack=True)
     
-    return energy, dos, idos
+    return DOS(energy=energy, dos=dos, idos=idos)
 
 
 def calculate(path, fermi_energy):
