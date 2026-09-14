@@ -8,14 +8,12 @@ from config import *
 def _write_input(input_path, input_data_path):
     
     with open(input_path, "w") as input_file:
-        input_file.write(f"""
-        1
-        "{input_data_path}"
-        1.0
-        1000
-        3
-        5
-        """)
+        input_file.write(f"1\n"
+                         f"{input_data_path}\n"
+                         f"1.0\n"
+                         f"1000\n"
+                         f"3\n"
+                         f"5.0\n")
 
 
 def _read_output(path):
