@@ -1,6 +1,8 @@
 from graphene import GrapheneStructure
 import qe.pw as pw
 import qe.dos as dos
+import qe.pp as pp
+import qe.average as average
 import convergence
 import plotter
 
@@ -95,26 +97,33 @@ def main():
         nscf_coupled = pw.nscf(relaxed_coupled, PATH_COUPLED, eamp)
         fermi_e_coupled = nscf_coupled.calc.get_fermi_level()
         dos_coupled = dos.calculate(PATH_COUPLED, fermi_e_coupled)
+        potential_coupled, intermediate_pp_coupled_path = pp.potential(PATH_COUPLED)
+        averaged_potential_coupled = average.calculate(PATH_COUPLED, intermediate_pp_coupled_path)
         
-        results["coupled"] = [dos_coupled[0], dos_coupled[1], fermi_e_coupled]
-        
+        results["coupled"] = {"dos": [dos_coupled[0], dos_coupled[1], fermi_e_coupled], 
+                              "potential": [potential_coupled, averaged_potential_coupled]}
         
         print("\nBOTTOM LAYER COMPUTATIONS")
         scf_bottom = pw.scf(bilayer_bottom, PATH_BOTTOM, eamp)
         nscf_bottom = pw.nscf(bilayer_bottom, PATH_BOTTOM, eamp)
         fermi_e_bottom = nscf_bottom.calc.get_fermi_level()
         dos_bottom = dos.calculate(PATH_BOTTOM, fermi_e_bottom)
+        potential_bottom, intermediate_pp_bottom_path = pp.potential(PATH_BOTTOM)
+        averaged_potential_bottom = average.calculate(PATH_BOTTOM, intermediate_pp_bottom_path)
 
-        results["bottom"] = [dos_bottom[0], dos_bottom[1], fermi_e_bottom]
-        
+        results["bottom"] = {"dos": [dos_bottom[0], dos_bottom[1], fermi_e_bottom],
+                             "potential": [potential_bottom, averaged_potential_bottom]}
         
         print("\nTOP LAYER COMPUTATIONS")
         scf_top = pw.scf(bilayer_top, PATH_TOP, eamp)
         nscf_top = pw.nscf(bilayer_top, PATH_TOP, eamp)
         fermi_e_top = nscf_top.calc.get_fermi_level()
         dos_top = dos.calculate(PATH_TOP, fermi_e_top)
+        potential_top, intermediate_pp_top_path = pp.potential(PATH_TOP)
+        averaged_potential_top = average.calculate(PATH_TOP, intermediate_pp_top_path)
 
-        results["top"] = [dos_top[0], dos_top[1], fermi_e_top]
+        results["top"] = {"dos": [dos_top[0], dos_top[1], fermi_e_top], 
+                          "potential": [potential_top, averaged_potential_top]}
         
         
         plotter.plot_dos(results, eamp)
