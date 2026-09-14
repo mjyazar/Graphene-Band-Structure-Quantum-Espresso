@@ -125,18 +125,18 @@ def _calculate(computation, path, iflag, fileout, fermi_energy=None):
     print(f"READING {output_path.name}")
     return _read_output(output_path, output_format), intermediate_path
 
+
+def potential(path):
     
-def charge_density(path):
-    (data, atoms), intermediate_path = _calculate(0, path, 3, "charge",)
+    (data, atoms), intermediate_path = _calculate(11, path, 3, "potential")
     
     results = PotentialRaw(data=data, atoms=atoms)
     
     return results, intermediate_path
 
 
-def potential(path):
-    
-    (data, atoms), intermediate_path = _calculate(11, path, 3, "potential")
+def charge_density(path):
+    (data, atoms), intermediate_path = _calculate(0, path, 3, "charge",)
     
     results = ChargeDensity(data=data, atoms=atoms)
     
