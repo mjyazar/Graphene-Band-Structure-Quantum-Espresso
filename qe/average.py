@@ -8,13 +8,14 @@ from config import *
 def _write_input(input_path, input_data_path):
     
     with open(input_path, "w") as input_file:
-        input_file.write(f"""1  ! number of files
-                         "{input_data_path}"  ! pp intermediate data path
-                         1.0  ! file weight
-                         1000  ! number of output points
-                         3  ! average over planes perpendicular to z i.e. x & y
-                         5  ! macroscopic averaging window
-                         """)
+        input_file.write(f"""
+        1
+        "{input_data_path}"
+        1.0
+        1000
+        3
+        5
+        """)
 
 
 def _read_output(path):
