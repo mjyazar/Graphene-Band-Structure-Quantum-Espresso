@@ -4,14 +4,17 @@ from pathlib import Path
 from ase.spectrum.band_structure import get_band_structure, BandStructure
 
 from results import * 
+from config import *
 
 ROOT = Path(__file__).resolve().parent
 
 OUT_DIR = ROOT / "outputs"
 FIG_DIR = OUT_DIR / "figures"
+POTENTIAL_DIR = FIG_DIR / "potential"
 
 FIG_DIR.mkdir(exist_ok=True)
 OUT_DIR.mkdir(exist_ok=True)
+POTENTIAL_DIR.mkdir(exist_ok=True)
 
 WINDOW = (-10, 10)
 
@@ -117,26 +120,55 @@ def dos_comparison(results, field, window=WINDOW):
 def subtracted_potential(results:Results, field):
     print("\nPLOTTING SUBTRACTED POTENTIAL")
     
-    coupled = results.coupled
-    bottom = results.bottom
-    top = results.top
+    coupled = results.coupled.potential_averaged
+    bottom = results.bottom.potential_averaged
+    top = results.top.potential_averaged
+
+    np.testing.assert_allclose(coupled.coordinates, bottom.coordinates)
+    np.testing.assert_allclose(coupled.coordinates, top.coordinates)
     
-    coordinates = coupled.potential_averaged.coordinates
+    z = coupled.coordinates * BOHR_TO_ANGSTROM
     
-    potential = coupled.potential_averaged.planar - bottom.potential_averaged.planar - top.potential_averaged.planar
+    potential = (coupled.planar - bottom.planar - top.planar) * RY_TO_EV
+
+    # coordinates = coupled.potential_averaged.coordinates
+    # potential = coupled.potential_averaged.planar - bottom.potential_averaged.planar - top.potential_averaged.planar
     
     fig, ax = plt.subplots()
     
-    ax.plot(coordinates, potential)
+    ax.plot(z, potential)
     
-    ax.set_xlabel("z")
-    ax.set_ylabel("Potential")
+    ax.set_xlabel(r"z (($\AA$))")
+    ax.set_ylabel("Potential Energy (eV)")
     ax.set_title(f"Subtracted Potential — E-field = {field}au")
 
-    fig.tight_layout()
     plt.savefig(FIG_DIR / f"Subtracted Potential {field}au.png", dpi=300, bbox_inches="tight")
     plt.close(fig)
+    
+
+def individual_potentials(results:Results, field):
+    print("\nPLOTTING INDIVIDUAL POTENTIALS")
+    fig, ax = plt.subplots()
+
+    for system in results.__dict__.values():
+        system:System
+
+        coordinates = system.potential_averaged.coordinates * BOHR_TO_ANGSTROM
+        potential = system.potential_averaged.planar * RY_TO_EV
         
+        print(f"\nPLOTTING {system.name} POTENTIAL")
+
+        fig, ax = plt.subplots()
+
+        ax.plot(coordinates, potential, linewidth=0.75, color='red')
+        ax.axvline(0, linestyle="--")
+        ax.set_title(f"1D {system.name} Layer Potential V(z), {field}au")
+        ax.set_xlabel(r"z (($\AA$))")
+        ax.set_ylabel("Potential Energy (eV)")
+        
+        plt.savefig(POTENTIAL_DIR / f"Potential_{system.name.capitalize()}_Layer_{field}au.png", dpi=300, bbox_inches="tight")
+        plt.close(fig)
+
     
 def plot_dos(results, field):
     
