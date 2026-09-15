@@ -93,6 +93,8 @@ def main():
         results = Results(coupled, bottom, top)
         
         plotter.plot_potential(results, eamp)
+        plotter.plot_charge_density(results, eamp)
+        plotter.plot_dos(results, eamp)
 
 
 if __name__ == "__main__":

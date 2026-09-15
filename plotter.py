@@ -11,12 +11,13 @@ ROOT = Path(__file__).resolve().parent
 OUT_DIR = ROOT / "outputs"
 FIG_DIR = OUT_DIR / "figures"
 POTENTIAL_DIR = FIG_DIR / "potential"
+CHARGE_DENSITY_DIR = FIG_DIR / "charge_density"
 
 FIG_DIR.mkdir(exist_ok=True)
 OUT_DIR.mkdir(exist_ok=True)
 POTENTIAL_DIR.mkdir(exist_ok=True)
+CHARGE_DENSITY_DIR.mkdir(exist_ok=True)
 
-WINDOW = (-10, 10)
 
 def plot_band_structure(bandpath, energies, name):
     """
@@ -57,16 +58,20 @@ def individual_dos(results, field, window=WINDOW):
         plt.close(fig)
 
 
-def fermi_aligned(results, field, delta_e=0.01):
+def fermi_aligned(results:Results, field, delta_e=0.01):
     print(f"PLOTTING FERMI-ALIGNED SUBTRACTED DOS")
 
-    energy_coupled, dos_coupled, fermi_coupled = results["coupled"]["dos"]
-    energy_bottom, dos_bottom, fermi_bottom = results["bottom"]["dos"]
-    energy_top, dos_top, fermi_top = results["top"]["dos"]
-
-    energy_coupled = energy_coupled - fermi_coupled
-    energy_bottom = energy_bottom - fermi_bottom
-    energy_top = energy_top - fermi_top
+    coupled = results.coupled
+    bottom = results.bottom
+    top = results.top
+    
+    energy_coupled = coupled.dos.energy - coupled.fermi_energy
+    energy_bottom = bottom.dos.energy - bottom.fermi_energy
+    energy_top = top.dos.energy - top.fermi_energy
+    
+    dos_coupled = coupled.dos.dos
+    dos_bottom = bottom.dos.dos
+    dos_top = top.dos.dos
     
     min_energy = max(energy_coupled.min(), energy_bottom.min(), energy_top.min())
     max_energy = min(energy_coupled.max(), energy_top.max(), energy_bottom.max())
@@ -113,11 +118,11 @@ def dos_comparison(results, field, window=WINDOW):
     ax.set_xlim(window)
     ax.legend()
  
-    plt.savefig(FIG_DIR / f"DOS Comparison {field}au.png", dpi=300, bbox_inches="tight")
+    plt.savefig(FIG_DIR / f"DOS_Comparison_{field}au.png", dpi=300, bbox_inches="tight")
     plt.close(fig)
 
 
-def subtracted_potential(results:Results, field):
+def potential_subtracted(results:Results, field):
     print("\nPLOTTING SUBTRACTED POTENTIAL")
     
     coupled = results.coupled.potential_averaged
@@ -142,11 +147,11 @@ def subtracted_potential(results:Results, field):
     ax.set_ylabel("Potential Energy (eV)")
     ax.set_title(f"Subtracted Potential — E-field = {field}au")
 
-    plt.savefig(POTENTIAL_DIR / f"Subtracted Potential {field}au.png", dpi=300, bbox_inches="tight")
+    plt.savefig(POTENTIAL_DIR / f"Subtracted_Potential_{field}au.png", dpi=300, bbox_inches="tight")
     plt.close(fig)
     
 
-def individual_potentials(results:Results, field):
+def potential_individual(results:Results, field):
     print("\nPLOTTING INDIVIDUAL POTENTIALS")
     fig, ax = plt.subplots()
 
@@ -161,23 +166,50 @@ def individual_potentials(results:Results, field):
         fig, ax = plt.subplots()
 
         ax.plot(coordinates, potential, linewidth=0.75, color='red')
-        ax.set_title(f"1D {system.name.upper()} Layer Potential V(z), {field}au")
-        ax.set_xlabel(r"z (($\AA$))")
+        ax.set_title(f"1D {system.name.capitalize()} Layer Potential V(z), {field}au")
+        ax.set_xlabel(r"z ($\AA$)")
         ax.set_ylabel("Potential Energy (eV)")
         
         plt.savefig(POTENTIAL_DIR / f"Potential_{system.name.capitalize()}_Layer_{field}au.png", dpi=300, bbox_inches="tight")
         plt.close(fig)
 
 
+def charge_density_subtracted(results:Results, field):
+    print("\nPLOTTING SUBTRACTED CHARGE DENSITY")
+
+    coupled = results.coupled.charge_density_averaged
+    bottom = results.bottom.charge_density_averaged
+    top = results.top.charge_density_averaged
+    
+    z = coupled.coordinates * BOHR_TO_ANGSTROM
+    
+    charge_density = (coupled.planar - bottom.planar - top.planar) / (BOHR_TO_ANGSTROM)**3
+    
+    fig, ax = plt.subplots()
+    
+    ax.plot(z, charge_density)
+    
+    ax.set_xlabel(r"z (($\AA$))")
+    ax.set_ylabel(r"Charge Density ($e/{\AA}^3)$")
+    ax.set_title(f"Subtracted Charge Density — E-field = {field}au")
+
+    plt.savefig(CHARGE_DENSITY_DIR / f"Subtracted_Charge_Density_{field}au.png", dpi=300, bbox_inches="tight")
+    plt.close(fig)
+
+
 def plot_potential(results, field):
     
-    subtracted_potential(results, field)
-    individual_potentials(results, field)
+    potential_subtracted(results, field)
+    potential_individual(results, field)
+
+
+def plot_charge_density(result, field):
+    
+    charge_density_subtracted(result, field)
     
 
 def plot_dos(results, field):
     
     #individual_dos(results, field)
     #dos_comparison(results, field)
-    #fermi_aligned(results, field)
-    pass
+    fermi_aligned(results, field)

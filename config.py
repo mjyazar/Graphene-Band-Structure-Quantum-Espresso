@@ -44,3 +44,10 @@ WINDOW_DOS = (-10, 10)
 DELTA_E = 0.02
 
 # RY_TO_EV = 
+
+
+"""
+PLOTTER
+"""
+
+WINDOW = (-10, 10)
