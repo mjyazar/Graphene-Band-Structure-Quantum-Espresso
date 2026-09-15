@@ -36,6 +36,13 @@ class DOS:
 
 
 @dataclass
+class LDOS:
+    energy: np.ndarray
+    dos: np.ndarray
+    idos: np.ndarray
+
+
+@dataclass
 class System:
     name: str
     atoms: Atoms
@@ -47,6 +54,7 @@ class System:
     charge_density_raw: ChargeDensity
     charge_density_averaged: ChargeDensityAveraged
     dos: DOS
+    ldos: LDOS
 
 
 @dataclass

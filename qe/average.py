@@ -54,6 +54,7 @@ def potential(path, input_data_path):
                              planar=planar, 
                              macroscopic=macroscopic)
 
+
 def charge_density(path, input_data_path):
     
     coordinates, planar, macroscopic = _calculate(path, input_data_path)
@@ -61,3 +62,9 @@ def charge_density(path, input_data_path):
     return ChargeDensityAveraged(coordinates=coordinates, 
                                  planar=-planar,
                                  macroscopic=macroscopic)
+
+
+def ldos(path, input_data_path):
+    
+    for file in sorted(input_data_path.parent.glob(f"{input_data_path.name}*")):
+        print(file)
