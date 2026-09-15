@@ -1,0 +1,14 @@
+&INPUTPP
+                         prefix = "bottom"
+                         outdir = "/home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/bottom/data"  ! directory containing the input data, i.e. the pw.x metadata
+                         plot_num = 0
+                         filplot = "/home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/bottom/data/charge.pp.dat"  ! intermediate metadata path
+                         
+                             spin_component = 0  ! total charge
+                             /
+&PLOT
+                         filepp(1) = "/home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/bottom/data/charge.pp.dat"
+                         iflag = 3
+                         output_format = 6
+                         fileout = "/home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/bottom/charge.cube"
+                         /
