@@ -130,7 +130,7 @@ def potential(path):
     
     (data, atoms), intermediate_path = _calculate(11, path, 3, "potential")
     
-    results = PotentialRaw(data=data, atoms=atoms)
+    results = Potential(data=data, atoms=atoms)
     
     return results, intermediate_path
 

@@ -168,12 +168,16 @@ def individual_potentials(results:Results, field):
         plt.savefig(POTENTIAL_DIR / f"Potential_{system.name.capitalize()}_Layer_{field}au.png", dpi=300, bbox_inches="tight")
         plt.close(fig)
 
-    
-def plot_dos(results, field):
+
+def plot_potential(results, field):
     
     subtracted_potential(results, field)
     individual_potentials(results, field)
     
+
+def plot_dos(results, field):
+    
     #individual_dos(results, field)
     #dos_comparison(results, field)
     #fermi_aligned(results, field)
+    pass
