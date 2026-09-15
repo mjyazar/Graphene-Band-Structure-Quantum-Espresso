@@ -37,9 +37,8 @@ class DOS:
 
 @dataclass
 class LDOS:
-    energy: np.ndarray
-    dos: np.ndarray
-    idos: np.ndarray
+    data: np.ndarray
+    atoms: object
 
 
 @dataclass
