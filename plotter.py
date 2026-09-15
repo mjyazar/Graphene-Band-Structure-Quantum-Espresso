@@ -161,7 +161,7 @@ def individual_potentials(results:Results, field):
         fig, ax = plt.subplots()
 
         ax.plot(coordinates, potential, linewidth=0.75, color='red')
-        ax.set_title(f"1D {system.name} Layer Potential V(z), {field}au")
+        ax.set_title(f"1D {system.name.upper()} Layer Potential V(z), {field}au")
         ax.set_xlabel(r"z (($\AA$))")
         ax.set_ylabel("Potential Energy (eV)")
         
