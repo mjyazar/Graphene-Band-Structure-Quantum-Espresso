@@ -173,6 +173,7 @@ def individual_potentials(results:Results, field):
 def plot_dos(results, field):
     
     subtracted_potential(results, field)
+    individual_potentials(results, field)
     
     #individual_dos(results, field)
     #dos_comparison(results, field)
