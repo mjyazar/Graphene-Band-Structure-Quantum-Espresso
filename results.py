@@ -5,10 +5,9 @@ import numpy as np
 
 
 @dataclass
-class PotentialRaw:
+class Potential:
     data: np.ndarray
     atoms: object
-
 
 @dataclass
 class PotentialAveraged:
@@ -22,11 +21,11 @@ class ChargeDensity:
     data: np.ndarray
     atoms: object
 
-
 @dataclass
-class LDOS:
-    data: np.ndarray
-    atoms: object
+class ChargeDensityAveraged:
+    coordinates: np.ndarray
+    planar: np.ndarray
+    macroscopic: np.ndarray
 
 
 @dataclass
@@ -43,8 +42,10 @@ class System:
     path: Path
     fermi_energy: float
     
-    potential_raw: PotentialRaw
+    potential_raw: Potential
     potential_averaged: PotentialAveraged
+    charge_density_raw: ChargeDensity
+    charge_density_averaged: ChargeDensityAveraged
     dos: DOS
 
 

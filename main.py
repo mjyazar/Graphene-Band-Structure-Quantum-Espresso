@@ -14,12 +14,12 @@ ROOT = Path(__file__).resolve().parent
 # Paths
 OUT_DIR = ROOT / "outputs"
 #MONOLAYER = OUT_DIR / "monolayer"
-BILAYER = OUT_DIR / "bilayer"
+#BILAYER = OUT_DIR / "bilayer"
 
 # Ensure folders exist
 OUT_DIR.mkdir(exist_ok=True)
 #MONOLAYER.mkdir(exist_ok=True)
-BILAYER.mkdir(exist_ok=True)
+#BILAYER.mkdir(exist_ok=True)
 
 # RUN_QE may be False if script already ran and want to work with existing files
 # True if running for the first time or want to create new files with new parameters
@@ -35,12 +35,15 @@ def run_calculations(structure, path, eamp):
     nscf = pw.nscf(structure, path, eamp)
     
     fermi_energy = nscf.calc.get_fermi_level()
+        
+    potential_raw, potential_pp_path = pp.potential(path)
+    potential_averaged = average.potential(path, potential_pp_path)
+    
+    charge_raw, charge_pp_path = pp.charge_density(path)
+    charge_averaged = average.charge_density(path, charge_pp_path)
     
     dos_ = dos.calculate(path, fermi_energy)
-    
-    potential_raw, intermediate_pp_path = pp.potential(path)
-    potential_averaged = average.potential(path, intermediate_pp_path)
-    
+
     results = System(name=f"{path.name}",
                             atoms=structure,
                             path=path,
@@ -48,6 +51,8 @@ def run_calculations(structure, path, eamp):
                             
                             potential_raw=potential_raw,
                             potential_averaged=potential_averaged,
+                            charge_density_raw=charge_raw,
+                            charge_density_averaged=charge_averaged,
                             dos = dos_)
     
     return results
@@ -60,7 +65,7 @@ def main():
     
     for eamp in energies:        
         
-        path = BILAYER /  f"field_{str(eamp)}"
+        path = OUT_DIR /  f"field_{str(eamp)}"
         
         PATH_COUPLED = path / "coupled"
         PATH_BOTTOM = path / "bottom"
@@ -84,7 +89,7 @@ def main():
         
         results = Results(coupled, bottom, top)
         
-        plotter.plot_dos(results, eamp)
+        plotter.plot_potential(results, eamp)
 
 
 if __name__ == "__main__":

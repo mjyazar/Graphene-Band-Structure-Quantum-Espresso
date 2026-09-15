@@ -48,8 +48,16 @@ def _calculate(path, input_data_path):
 
 def potential(path, input_data_path):
     
-    coordinates, planar_average, macroscopic_average = _calculate(path, input_data_path)
+    coordinates, planar, macroscopic = _calculate(path, input_data_path)
     
     return PotentialAveraged(coordinates=coordinates, 
-                             planar=planar_average, 
-                             macroscopic=macroscopic_average)
+                             planar=planar, 
+                             macroscopic=macroscopic)
+
+def charge_density(path, input_data_path):
+    
+    coordinates, planar, macroscopic = _calculate(path, input_data_path)
+
+    return ChargeDensityAveraged(coordinates=coordinates, 
+                                 planar=-planar,
+                                 macroscopic=macroscopic)
