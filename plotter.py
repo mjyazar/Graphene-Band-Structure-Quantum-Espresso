@@ -142,7 +142,7 @@ def subtracted_potential(results:Results, field):
     ax.set_ylabel("Potential Energy (eV)")
     ax.set_title(f"Subtracted Potential — E-field = {field}au")
 
-    plt.savefig(FIG_DIR / f"Subtracted Potential {field}au.png", dpi=300, bbox_inches="tight")
+    plt.savefig(POTENTIAL_DIR / f"Subtracted Potential {field}au.png", dpi=300, bbox_inches="tight")
     plt.close(fig)
     
 
