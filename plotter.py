@@ -12,11 +12,13 @@ OUT_DIR = ROOT / "outputs"
 FIG_DIR = OUT_DIR / "figures"
 POTENTIAL_DIR = FIG_DIR / "potential"
 CHARGE_DENSITY_DIR = FIG_DIR / "charge_density"
+DOS_DENSITY_DIR = FIG_DIR / "dos"
 
 FIG_DIR.mkdir(exist_ok=True)
 OUT_DIR.mkdir(exist_ok=True)
 POTENTIAL_DIR.mkdir(exist_ok=True)
 CHARGE_DENSITY_DIR.mkdir(exist_ok=True)
+DOS_DENSITY_DIR.mkdir(exist_ok=True)
 
 
 def plot_band_structure(bandpath, energies, name):
@@ -141,11 +143,13 @@ def potential_subtracted(results:Results, field):
     
     fig, ax = plt.subplots()
     
-    ax.plot(z, potential)
+    ax.plot(z, potential, label=r"U_{coupled layers} - U_{bottom layer} - U_{top layer}")
     
     ax.set_xlabel(r"z (($\AA$))")
     ax.set_ylabel("Potential Energy (eV)")
     ax.set_title(f"Subtracted Potential, E-field={field}au")
+    ax.legend(loc="upper right")
+
 
     plt.savefig(POTENTIAL_DIR / f"Subtracted_Potential_{field}au.png", dpi=300, bbox_inches="tight")
     plt.close(fig)
@@ -153,7 +157,6 @@ def potential_subtracted(results:Results, field):
 
 def potential_individual(results:Results, field):
     print("\nPLOTTING INDIVIDUAL POTENTIALS")
-    fig, ax = plt.subplots()
 
     for system in results.__dict__.values():
         system:System
@@ -165,11 +168,10 @@ def potential_individual(results:Results, field):
 
         fig, ax = plt.subplots()
 
-        ax.plot(coordinates, potential, linewidth=0.75, color='red', label=r"U_{coupled layers} - U_{bottom layer} - U_{top layer}")
+        ax.plot(coordinates, potential, linewidth=0.75, color='red')
         ax.set_title(f"1D {system.name.capitalize()} Layer Potential V(z), E-field={field}au")
         ax.set_xlabel(r"z ($\AA$)")
         ax.set_ylabel("Potential Energy (eV)")
-        ax.legend()
         
         plt.savefig(POTENTIAL_DIR / f"Potential_{system.name.capitalize()}_Layer_{field}au.png", dpi=300, bbox_inches="tight")
         plt.close(fig)
