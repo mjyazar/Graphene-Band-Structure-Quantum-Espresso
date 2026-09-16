@@ -150,7 +150,7 @@ def fermi_aligned_dos(results: Results, field, delta_e=0.01):
     fig, ax = plt.subplots()
 
     # ax.plot(grid, dos_coupled_grid, label="$DOS_{coupled}$")
-    ax.plot(grid, dos_subtracted, label="$DOS_{coupled} - DOS_{top} - DOS_{bottom}$")
+    ax.plot(grid, dos_subtracted, label=r"$DOS_{coupled} - DOS_{top} - DOS_{bottom}$")
 
     ax.set_title(f"Fermi-Aligned DOS Subtracted, E-field={field}au")
     ax.set_xlabel(r"$Energy$ (eV)")
@@ -173,13 +173,16 @@ def ldos_subtracted(results: Results, field):
     ldos_bottom = bottom.ldos.planar
     ldos_top = top.ldos.planar
     
-    coordinates = coupled.ldos.coordinates
+    z = coupled.ldos.coordinates
+    E = np.arange(WINDOW_LDOS[0], WINDOW_LDOS[1] + DELTA_E, DELTA_E)
     
     ldos_subtracted = ldos_coupled - ldos_bottom - ldos_top
     
     fig, ax = plt.subplots()
 
-    ax.plot(coordinates, ldos_subtracted, label="$LDOS_{coupled} - LDOS_{top} - LDOS_{bottom}$")
+    mesh = ax.pcolormesh(z, E, ldos_subtracted, shading="auto")
+    
+    fig.colorbar(mesh, ax=ax, label=r"$LDOS_{coupled} - LDOS_{top} - LDOS_{bottom}$")
 
     ax.set_title(f"Fermi-Aligned DOS Subtracted, E-field={field}au")
     ax.set_xlabel(r"$Energy$ (eV)")
