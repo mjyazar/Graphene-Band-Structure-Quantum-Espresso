@@ -182,11 +182,11 @@ def ldos_subtracted(results: Results, field):
 
     mesh = ax.pcolormesh(z, E, ldos_subtracted, shading="auto")
     
-    fig.colorbar(mesh, ax=ax, label=r"$LDOS_{coupled} - LDOS_{top} - LDOS_{bottom}$")
+    fig.colorbar(mesh, ax=ax, label=r"$\Delta LDOS$")
 
-    ax.set_title(f"Fermi-Aligned DOS Subtracted, E-field={field}au")
-    ax.set_xlabel(r"$Energy$ (eV)")
-    ax.set_ylabel("LDOS (states/eV/cell)")
+    ax.set_title(f"Fermi-Aligned Subtracted LDOS, E-field={field}au")
+    ax.set_xlabel(r"$z$ ($\AA$)")
+    ax.set_ylabel(r"$E-E_F$ (eV)")
     ax.legend()
     
     plt.tight_layout()
