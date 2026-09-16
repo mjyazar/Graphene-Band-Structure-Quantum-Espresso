@@ -23,26 +23,29 @@ def _read_output(path):
     return coordinates, planar_average, macroscopic_average
 
 
-def _calculate(path, input_data_path):
+def _calculate(path, input_data_path, verbose=True):
     
     path.mkdir(parents=True, exist_ok=True)
 
-    process = input_data_path.name.removesuffix(".pp.dat")
+    process = input_data_path.name.split(".pp.dat")[0]
     
     input_path = path / f"{process}.avg.in"
     log_path = path / f"{process}.avg.log"  # log file
     output_path = path / f"{process}.avg.dat"
     
-    print(f"\nCREATING {input_path.name}")
+    if verbose:
+        print(f"\nCREATING {input_path.name}")
     _write_input(input_path, input_data_path)
 
-    print(f"RUNNING average.x WITH {input_path.name}")
+    if verbose:
+        print(f"RUNNING average.x WITH {input_path.name}")
     runner.run("average.x", input_path, log_path, cwd=path, nproc=1)
 
     qe_output_path = path / "avg.dat"
     qe_output_path.replace(output_path)
     
-    print(f"READING {output_path.name}")
+    if verbose:
+        print(f"READING {output_path.name}")
     return _read_output(output_path)
 
 
@@ -69,10 +72,17 @@ def ldos(path, input_data_path):
     averaged_dos = []
     coordinates = None
         
-    for file in sorted(input_data_path.parent.glob(f"{input_data_path.name}*")):
-        print(file)
+    files = sorted(input_data_path.parent.glob(f"{input_data_path.name}[0-9]*"), 
+                   key=lambda f: int(f.name.split("dat")[-1]))
+    file_count = len(files)
+    
+    print("\nCREATING ldos.avg.in")
+
+    for i, file in enumerate(files, start=1):
         
-        z, planar, _ = _calculate(path, file)
+        print(f"\rRUNNING average.x WITH ldos.avg.in [{i}/{file_count}]")
+        
+        z, planar, _ = _calculate(path, file, verbose=False)
         
         if coordinates is None:
             coordinates = z
@@ -81,6 +91,8 @@ def ldos(path, input_data_path):
             np.testing.assert_allclose(coordinates, z)
         
         averaged_dos.append(planar)
+
+    print("READING ldos.avg.dat")
     
     averaged_dos = np.asarray(averaged_dos)
         
