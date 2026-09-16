@@ -122,8 +122,9 @@ def _calculate(computation, path, iflag, fileout, fermi_energy=None):
     print(f"RUNNING pp.x WITH {input_path.name}")
     runner.run("pp.x", input_path, log_path)
     
-    print(f"READING {output_path.name}")
-    return _read_output(output_path, output_format), intermediate_path
+    if fileout != "ldos":
+        print(f"READING {output_path.name}")
+        return _read_output(output_path, output_format), intermediate_path
 
 
 def potential(path):
@@ -141,12 +142,16 @@ def charge_density(path):
     results = ChargeDensity(data=data, atoms=atoms)
     
     return results, intermediate_path
-    
+
 
 def ldos(path, fermi_energy):
 
-    (data, atoms), intermediate_path = _calculate(3, path, 3, "ldos", fermi_energy)
+    # (data, atoms), intermediate_path = _calculate(3, path, 3, "ldos", fermi_energy)
     
-    results = LDOS(data=data, atoms=atoms)
+    # results = LDOS(data=data, atoms=atoms)
     
-    return results, intermediate_path
+    # return results, intermediate_path
+    
+    _calculate(3, path, 3, "ldos", fermi_energy)
+
+    return "test", "test"
