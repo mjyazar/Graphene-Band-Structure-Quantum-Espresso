@@ -80,7 +80,7 @@ def ldos(path, input_data_path):
 
     for i, file in enumerate(files, start=1):
         
-        print(f"\rRUNNING average.x WITH ldos.avg.in [{i}/{file_count}]")
+        print(f"\rRUNNING average.x WITH ldos.avg.in [{i}/{file_count}]", end="", flush=True)
         
         z, planar, _ = _calculate(path, file, verbose=False)
         
@@ -91,11 +91,11 @@ def ldos(path, input_data_path):
             np.testing.assert_allclose(coordinates, z)
         
         averaged_dos.append(planar)
-
+    
     print("READING ldos.avg.dat")
     
     averaged_dos = np.asarray(averaged_dos)
-        
+    
     energies = np.arange(WINDOW_LDOS[0], WINDOW_LDOS[1] + DELTA_E, DELTA_E)
     
     return LDOSAveraged(energies=energies, coordinates=coordinates, planar=averaged_dos)
