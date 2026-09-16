@@ -48,23 +48,42 @@ def _calculate(path, input_data_path):
 
 def potential(path, input_data_path):
     
-    coordinates, planar, macroscopic = _calculate(path, input_data_path)
+    z, planar, macroscopic = _calculate(path, input_data_path)
     
-    return PotentialAveraged(coordinates=coordinates, 
+    return PotentialAveraged(coordinates=z, 
                              planar=planar, 
                              macroscopic=macroscopic)
 
 
 def charge_density(path, input_data_path):
     
-    coordinates, planar, macroscopic = _calculate(path, input_data_path)
+    z, planar, macroscopic = _calculate(path, input_data_path)
 
-    return ChargeDensityAveraged(coordinates=coordinates, 
-                                 planar=-planar,
+    return ChargeDensityAveraged(coordinates=z, 
+                                 planar=planar,
                                  macroscopic=macroscopic)
 
 
 def ldos(path, input_data_path):
     
+    averaged_dos = []
+    coordinates = None
+        
     for file in sorted(input_data_path.parent.glob(f"{input_data_path.name}*")):
         print(file)
+        
+        z, planar, _ = _calculate(path, file)
+        
+        if coordinates is None:
+            coordinates = z
+        
+        else:
+            np.testing.assert_allclose(coordinates, z)
+        
+        averaged_dos.append(planar)
+    
+    averaged_dos = np.asarray(averaged_dos)
+        
+    energies = np.arange(WINDOW_LDOS[0], WINDOW_LDOS[1] + DELTA_E, DELTA_E)
+    
+    return LDOSAveraged(energies=energies, coordinates=coordinates, planar=averaged_dos)

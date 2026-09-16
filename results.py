@@ -36,9 +36,10 @@ class DOS:
 
 
 @dataclass
-class LDOS:
-    data: np.ndarray
-    atoms: object
+class LDOSAveraged:
+    energies: np.ndarray
+    coordinates: np.ndarray
+    planar: np.ndarray
 
 
 @dataclass
@@ -53,7 +54,7 @@ class System:
     charge_density_raw: ChargeDensity
     charge_density_averaged: ChargeDensityAveraged
     dos: DOS
-    ldos: LDOS
+    ldos: LDOSAveraged
 
 
 @dataclass

@@ -147,11 +147,35 @@ def charge_density(path):
 def ldos(path, fermi_energy):
 
     # (data, atoms), intermediate_path = _calculate(3, path, 3, "ldos", fermi_energy)
-    
     # results = LDOS(data=data, atoms=atoms)
-    
     # return results, intermediate_path
-    
-    _calculate(3, path, 3, "ldos", fermi_energy)
 
-    return "test", "test"
+    path.mkdir(parents=True, exist_ok=True)
+    
+    outdir = path / "data"
+    input_path = path / f"ldos.pp.in"
+    log_path = path / f"ldos.pp.log"  # log file
+    intermediate_path = path / "data" / f"ldos.pp.dat"  # intermediate metadata
+    
+    # output_path = path / f"ldos.cube"
+    # output_format = 6  # 6  = format as gaussian cube file (3D)
+
+    print(f"\nCREATING {input_path.name}")
+    with open(input_path, "w") as input_file:
+        input_file.write(f"""&INPUTPP
+                         prefix = "{path.name}"
+                         outdir = "{outdir}"  ! directory containing the input data, i.e. the pw.x metadata
+                         plot_num = 3
+                         filplot = "{intermediate_path}"  ! intermediate metadata path
+                         
+                         emin = {fermi_energy + WINDOW_LDOS[0]}
+                         emax = {fermi_energy + WINDOW_LDOS[1]}
+                         delta_e = {DELTA_E}
+                         degauss_ldos = {DEGAUSS_LDOS}
+                         /
+                         """)
+    
+    print(f"RUNNING pp.x WITH {input_path.name}")
+    runner.run("pp.x", input_path, log_path)
+    
+    return intermediate_path
