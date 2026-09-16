@@ -5,3 +5,5 @@
 # *.in
 # *.out
 # *.dat
+
+ldos.pp.dat*
