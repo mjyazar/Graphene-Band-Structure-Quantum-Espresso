@@ -1,0 +1,12 @@
+&INPUTPP
+                         prefix = "coupled"
+                         outdir = "/home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data"  ! directory containing the input data, i.e. the pw.x metadata
+                         plot_num = 3
+                         filplot = "/home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat"  ! intermediate metadata path
+                         
+                         emin = -14.222100000000001
+                         emax = 5.7779
+                         delta_e = 0.02
+                         degauss_ldos = 0.01
+                         /
+                         
