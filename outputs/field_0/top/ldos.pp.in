@@ -1,0 +1,17 @@
+&INPUTPP
+                         prefix = "top"
+                         outdir = "/home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/top/data"  ! directory containing the input data, i.e. the pw.x metadata
+                         plot_num = 3
+                         filplot = "/home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/top/data/ldos.pp.dat"  ! intermediate metadata path
+                         
+                             emin = -14.2196
+                             emax = 5.7804
+                             delta_e = 0.02
+                             degauss_ldos = 0.01
+                             /
+&PLOT
+                         filepp(1) = "/home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/top/data/ldos.pp.dat"
+                         iflag = 3
+                         output_format = 6
+                         fileout = "/home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/top/ldos.cube"
+                         /

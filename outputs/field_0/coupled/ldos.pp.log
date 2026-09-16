@@ -1,5 +1,5 @@
 
-     Program POST-PROC v.7.6 starts on 15Sep2026 at 14:32: 0 
+     Program POST-PROC v.7.6 starts on 16Sep2026 at  3:14:51 
 
      This program is part of the open-source Quantum ESPRESSO suite
      for quantum simulation of materials; please cite
@@ -14,7 +14,7 @@
 
      MPI processes distributed on     1 nodes
      R & G space division:  proc/nbgrp/npool/nimage =       4
-     2734 MiB available memory on the printing compute node when the environment starts
+     6625 MiB available memory on the printing compute node when the environment starts
 
 
      Reading xml data from directory:
@@ -5060,16 +5060,16 @@ At line 414 of file chdens_module.f90 (unit = 1)
 Fortran runtime error: Cannot open file '/home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat001/home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/ldos.cube': Not a directory
 
 Error termination. Backtrace:
-#0  0x73d450223e59 in ???
-#1  0x73d450224a71 in ???
-#2  0x73d4502256dc in ???
-#3  0x73d4504b6e30 in ???
-#4  0x73d4504b712f in ???
-#5  0x5947c9873356 in __chdens_module_MOD_chdens
+#0  0x799130e23e59 in ???
+#1  0x799130e24a71 in ???
+#2  0x799130e256dc in ???
+#3  0x7991310b6e30 in ???
+#4  0x7991310b712f in ???
+#5  0x55d5245e0356 in __chdens_module_MOD_chdens
 	at /home/ubuntu/software/q-e/PP/src/chdens_module.f90:414
-#6  0x5947c9867047 in pp
+#6  0x55d5245d4047 in pp
 	at /home/ubuntu/software/q-e/PP/src/postproc.f90:347
-#7  0x5947c9867047 in main
+#7  0x55d5245d4047 in main
 	at /home/ubuntu/software/q-e/PP/src/postproc.f90:323
 --------------------------------------------------------------------------
 Primary job  terminated normally, but 1 process returned
@@ -5079,6 +5079,6 @@ a non-zero exit code. Per user-direction, the job has been aborted.
 mpirun detected that one or more processes exited with non-zero status, thus causing
 the job to be terminated. The first process to do so was:
 
-  Process name: [[234,1],0]
+  Process name: [[4601,1],0]
   Exit code:    2
 --------------------------------------------------------------------------

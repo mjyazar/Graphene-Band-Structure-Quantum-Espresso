@@ -1,5 +1,5 @@
 
-     Program PWSCF v.7.6 starts on 16Sep2026 at  0:57:20 
+     Program PWSCF v.7.6 starts on 16Sep2026 at  3:42:10 
 
      This program is part of the open-source Quantum ESPRESSO suite
      for quantum simulation of materials; please cite
@@ -13,7 +13,7 @@
      Parallel version (MPI), running on     4 processors
 
      MPI processes distributed on     1 nodes
-     619 MiB available memory on the printing compute node when the environment starts
+     505 MiB available memory on the printing compute node when the environment starts
 
      Waiting for input...
      Reading input from standard input
@@ -165,14 +165,14 @@ Warning: card &RISM ignored
    Cartesian axes
 
      site n.     atom                  positions (alat units)
-         1        C      tau(   1) = (   0.5000000   0.2886752   5.5765388  )
-         2        C      tau(   2) = (   0.0000000   0.5773503   5.5763610  )
+         1        C      tau(   1) = (   0.5000000   0.2886752   5.5765393  )
+         2        C      tau(   2) = (   0.0000000   0.5773503   5.5763614  )
 
    Crystallographic axes
 
      site n.     atom                  positions (cryst. coord.)
          1        C      tau(   1) = (  0.6666668  0.3333335  0.5875069  )
-         2        C      tau(   2) = (  0.3333335  0.6666670  0.5874881  )
+         2        C      tau(   2) = (  0.3333335  0.6666670  0.5874882  )
 
      number of k points=    91  Gaussian smearing, width (Ry)=  0.0100
                        cart. coord. in units 2pi/alat
@@ -423,78 +423,78 @@ Warning: card &RISM ignored
      Davidson diagonalization with overlap
 
      Computing kpt #:     1  of    23 on this pool
-     total cpu time spent up to now is        5.1 secs
+     total cpu time spent up to now is        4.0 secs
 
      Computing kpt #:     2  of    23 on this pool
-     total cpu time spent up to now is        7.5 secs
+     total cpu time spent up to now is        6.3 secs
 
      Computing kpt #:     3  of    23 on this pool
-     total cpu time spent up to now is       10.4 secs
+     total cpu time spent up to now is        9.4 secs
 
      Computing kpt #:     4  of    23 on this pool
-     total cpu time spent up to now is       13.0 secs
+     total cpu time spent up to now is       13.5 secs
 
      Computing kpt #:     5  of    23 on this pool
-     total cpu time spent up to now is       16.4 secs
+     total cpu time spent up to now is       16.7 secs
 
      Computing kpt #:     6  of    23 on this pool
-     total cpu time spent up to now is       18.6 secs
+     total cpu time spent up to now is       19.3 secs
 
      Computing kpt #:     7  of    23 on this pool
-     total cpu time spent up to now is       20.9 secs
+     total cpu time spent up to now is       22.1 secs
 
      Computing kpt #:     8  of    23 on this pool
-     total cpu time spent up to now is       23.7 secs
+     total cpu time spent up to now is       24.8 secs
 
      Computing kpt #:     9  of    23 on this pool
-     total cpu time spent up to now is       26.2 secs
+     total cpu time spent up to now is       27.8 secs
 
      Computing kpt #:    10  of    23 on this pool
-     total cpu time spent up to now is       29.0 secs
+     total cpu time spent up to now is       31.3 secs
 
      Computing kpt #:    11  of    23 on this pool
-     total cpu time spent up to now is       32.1 secs
+     total cpu time spent up to now is       34.6 secs
 
      Computing kpt #:    12  of    23 on this pool
-     total cpu time spent up to now is       35.8 secs
+     total cpu time spent up to now is       37.8 secs
 
      Computing kpt #:    13  of    23 on this pool
-     total cpu time spent up to now is       38.5 secs
+     total cpu time spent up to now is       40.3 secs
 
      Computing kpt #:    14  of    23 on this pool
-     total cpu time spent up to now is       40.9 secs
+     total cpu time spent up to now is       43.0 secs
 
      Computing kpt #:    15  of    23 on this pool
-     total cpu time spent up to now is       43.8 secs
+     total cpu time spent up to now is       44.8 secs
 
      Computing kpt #:    16  of    23 on this pool
-     total cpu time spent up to now is       46.5 secs
+     total cpu time spent up to now is       47.5 secs
 
      Computing kpt #:    17  of    23 on this pool
-     total cpu time spent up to now is       50.4 secs
+     total cpu time spent up to now is       50.3 secs
 
      Computing kpt #:    18  of    23 on this pool
-     total cpu time spent up to now is       53.5 secs
+     total cpu time spent up to now is       54.0 secs
 
      Computing kpt #:    19  of    23 on this pool
-     total cpu time spent up to now is       55.9 secs
+     total cpu time spent up to now is       56.8 secs
 
      Computing kpt #:    20  of    23 on this pool
-     total cpu time spent up to now is       59.0 secs
+     total cpu time spent up to now is       59.7 secs
 
      Computing kpt #:    21  of    23 on this pool
      c_bands:  1 eigenvalues not converged
-     total cpu time spent up to now is       62.2 secs
+     total cpu time spent up to now is       63.6 secs
 
      Computing kpt #:    22  of    23 on this pool
-     total cpu time spent up to now is       65.8 secs
+     total cpu time spent up to now is       67.5 secs
 
      Computing kpt #:    23  of    23 on this pool
-     total cpu time spent up to now is       67.7 secs
+     total cpu time spent up to now is       69.3 secs
 
      ethr =  1.25E-10,  avg # of iterations = 65.3
 
-     total cpu time spent up to now is       68.1 secs
+     total cpu time spent up to now is       70.3 secs
 
      End of band structure calculation
 
@@ -536,7 +536,7 @@ Warning: card &RISM ignored
 
           k = 0.0000 0.1540 0.0000 (  6496 PWs)   bands (ev):
 
-   -23.3878 -11.3895  -8.8283  -8.0628  -0.4642   0.1781   0.7054   1.0512
+   -23.3878 -11.3895  -8.8283  -8.0628  -0.4642   0.1781   0.7055   1.0512
      2.1292   2.6643   4.0912   4.2903
 
      occupation numbers 
@@ -654,7 +654,7 @@ Warning: card &RISM ignored
           k = 0.0333 0.0962 0.0000 (  6479 PWs)   bands (ev):
 
    -23.6243 -11.6717  -7.9855  -7.6649  -0.7872  -0.1499   0.3762   0.7238
-     1.8023   2.3387   3.8163   4.2751
+     1.8023   2.3387   3.8164   4.2751
 
      occupation numbers 
      1.0000   1.0000   1.0000   1.0000   0.0000   0.0000   0.0000   0.0000
@@ -689,7 +689,7 @@ Warning: card &RISM ignored
 
           k = 0.0333 0.2502 0.0000 (  6482 PWs)   bands (ev):
 
-   -22.6822 -10.8134 -10.5548  -9.0296   0.5041   1.1594   1.6931   2.0297
+   -22.6822 -10.8134 -10.5548  -9.0296   0.5041   1.1594   1.6932   2.0297
      3.1074   3.6171   3.9642   4.1323
 
      occupation numbers 
@@ -753,7 +753,7 @@ Warning: card &RISM ignored
           k = 0.0333 0.5196 0.0000 (  6505 PWs)   bands (ev):
 
    -19.1823 -16.7509 -10.7055  -6.9275  -2.0946   3.3862   5.4902   6.2282
-     6.8130   7.0922   8.1936   8.5694
+     6.8130   7.0923   8.1936   8.5694
 
      occupation numbers 
      1.0000   1.0000   1.0000   1.0000   0.0000   0.0000   0.0000   0.0000
@@ -815,7 +815,7 @@ Warning: card &RISM ignored
 
           k = 0.0667 0.3079 0.0000 (  6479 PWs)   bands (ev):
 
-   -22.0604 -12.1161  -9.8302  -9.7822   1.3633   2.0088   2.4968   2.5708
+   -22.0604 -12.1161  -9.8302  -9.7822   1.3633   2.0089   2.4968   2.5708
      2.9308   3.9619   4.3068   4.5104
 
      occupation numbers 
@@ -833,7 +833,7 @@ Warning: card &RISM ignored
 
           k = 0.0667 0.3849 0.0000 (  6493 PWs)   bands (ev):
 
-   -21.1388 -13.8533 -10.3716  -8.7885   0.6579   2.6445   3.3494   3.8684
+   -21.1388 -13.8533 -10.3716  -8.7885   0.6579   2.6445   3.3495   3.8684
      4.0565   4.2140   5.3045   5.7994
 
      occupation numbers 
@@ -851,7 +851,7 @@ Warning: card &RISM ignored
 
           k = 0.0667 0.4619 0.0000 (  6487 PWs)   bands (ev):
 
-   -20.0379 -15.5397 -10.7833  -7.6370  -1.0738   3.8008   4.2457   4.9332
+   -20.0379 -15.5397 -10.7833  -7.6370  -1.0738   3.8008   4.2457   4.9333
      5.4999   5.7972   6.8958   7.3556
 
      occupation numbers 
@@ -906,7 +906,7 @@ Warning: card &RISM ignored
           k = 0.1000 0.2502 0.0000 (  6481 PWs)   bands (ev):
 
    -22.5263 -10.9231 -10.3711  -9.5627   0.7199   1.3779   1.9130   2.2481
-     3.3285   3.6041   3.8627   4.8701
+     3.3285   3.6041   3.8628   4.8701
 
      occupation numbers 
      1.0000   1.0000   1.0000   1.0000   0.0000   0.0000   0.0000   0.0000
@@ -986,7 +986,7 @@ Warning: card &RISM ignored
 
           k = 0.1333 0.2309 0.0000 (  6457 PWs)   bands (ev):
 
-   -22.5523 -10.7774 -10.4012  -9.6402   0.6842   1.3420   1.8765   2.2128
+   -22.5523 -10.7774 -10.4012  -9.6402   0.6842   1.3420   1.8766   2.2128
      3.2929   3.6870   3.8179   5.1195
 
      occupation numbers 
@@ -1004,7 +1004,7 @@ Warning: card &RISM ignored
 
           k = 0.1333 0.3079 0.0000 (  6480 PWs)   bands (ev):
 
-   -21.8290 -12.1752 -10.5495  -9.5601   1.6865   2.1116   2.3679   2.9008
+   -21.8290 -12.1752 -10.5495  -9.5601   1.6865   2.1116   2.3679   2.9009
      3.2275   4.3085   4.8208   5.4290
 
      occupation numbers 
@@ -1239,7 +1239,7 @@ Warning: card &RISM ignored
           k = 0.2333 0.5196 0.0000 (  6451 PWs)   bands (ev):
 
    -18.3442 -16.1166 -13.6305  -5.8544  -2.6640   6.6782   6.6844   7.6438
-     7.9483   8.1184   8.8280   9.1587
+     7.9483   8.1185   8.8280   9.1587
 
      occupation numbers 
      1.0000   1.0000   1.0000   1.0000   0.0000   0.0000   0.0000   0.0000
@@ -1257,7 +1257,7 @@ Warning: card &RISM ignored
           k = 0.2667 0.4619 0.0000 (  6452 PWs)   bands (ev):
 
    -18.9541 -15.2584 -13.6806  -6.3978  -2.0261   5.7738   6.1913   7.1326
-     7.1465   8.1937   8.3969   8.6454
+     7.1466   8.1937   8.3969   8.6454
 
      occupation numbers 
      1.0000   1.0000   1.0000   1.0000   0.0000   0.0000   0.0000   0.0000
@@ -1275,7 +1275,7 @@ Warning: card &RISM ignored
           k = 0.2667 0.5389 0.0000 (  6444 PWs)   bands (ev):
 
    -17.8112 -16.3097 -14.2234  -5.3108  -3.1682   6.6004   7.4840   8.4236
-     8.7233   8.9645   9.1080   9.5632
+     8.7233   8.9645   9.1080   9.5633
 
      occupation numbers 
      1.0000   1.0000   1.0000   1.0000   0.0000   0.0000   0.0000   0.0000
@@ -1323,60 +1323,60 @@ Warning: card &RISM ignored
      Writing all to output data dir /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/top/data/top.save/ :
      XML data file, pseudopotentials, collected wavefunctions
 
-     init_run     :      1.58s CPU      1.71s WALL (       1 calls)
-     electrons    :     65.88s CPU     66.22s WALL (       1 calls)
+     init_run     :      1.46s CPU      1.60s WALL (       1 calls)
+     electrons    :     67.42s CPU     68.57s WALL (       1 calls)
 
      Called by init_run:
      wfcinit      :      0.00s CPU      0.00s WALL (       1 calls)
      wfcinit:atom :      0.02s CPU      0.02s WALL (      23 calls)
-     wfcinit:wfcr :      1.00s CPU      1.01s WALL (      23 calls)
-     potinit      :      0.48s CPU      0.53s WALL (       1 calls)
-     hinit0       :      0.95s CPU      0.99s WALL (       1 calls)
+     wfcinit:wfcr :      1.11s CPU      1.14s WALL (      23 calls)
+     potinit      :      0.41s CPU      0.46s WALL (       1 calls)
+     hinit0       :      0.93s CPU      0.97s WALL (       1 calls)
 
      Called by electrons:
-     c_bands      :     65.88s CPU     66.20s WALL (       1 calls)
-     v_of_rho     :      0.13s CPU      0.17s WALL (       1 calls)
-     v_h          :      0.01s CPU      0.01s WALL (       1 calls)
-     v_xc         :      0.13s CPU      0.16s WALL (       1 calls)
-     newd         :      0.07s CPU      0.08s WALL (       1 calls)
+     c_bands      :     67.42s CPU     68.56s WALL (       1 calls)
+     v_of_rho     :      0.09s CPU      0.13s WALL (       1 calls)
+     v_h          :      0.00s CPU      0.01s WALL (       1 calls)
+     v_xc         :      0.09s CPU      0.13s WALL (       1 calls)
+     newd         :      0.02s CPU      0.03s WALL (       1 calls)
      PAW_pot      :      0.03s CPU      0.03s WALL (       1 calls)
 
      Called by c_bands:
      init_us_2    :      0.03s CPU      0.03s WALL (      23 calls)
-     cegterg      :     50.48s CPU     50.76s WALL (      91 calls)
+     cegterg      :     50.11s CPU     51.02s WALL (      91 calls)
 
      Called by sum_band:
 
      Called by *egterg:
-     cdiaghg      :      0.37s CPU      0.38s WALL (    1630 calls)
-     cegterg:over :      5.29s CPU      5.31s WALL (    1607 calls)
-     cegterg:upda :      3.44s CPU      3.46s WALL (    1607 calls)
-     cegterg:last :     10.87s CPU     10.91s WALL (    1093 calls)
-     h_psi        :     27.95s CPU     28.14s WALL (    1721 calls)
-     s_psi        :      2.34s CPU      2.36s WALL (    1721 calls)
-     g_psi        :      0.31s CPU      0.31s WALL (    1607 calls)
+     cdiaghg      :      0.38s CPU      0.38s WALL (    1630 calls)
+     cegterg:over :      5.30s CPU      5.39s WALL (    1607 calls)
+     cegterg:upda :      3.44s CPU      3.49s WALL (    1607 calls)
+     cegterg:last :     10.80s CPU     10.97s WALL (    1093 calls)
+     h_psi        :     27.72s CPU     28.27s WALL (    1721 calls)
+     s_psi        :      2.36s CPU      2.41s WALL (    1721 calls)
+     g_psi        :      0.32s CPU      0.32s WALL (    1607 calls)
 
      Called by h_psi:
-     h_psi:calbec :      2.34s CPU      2.36s WALL (    1721 calls)
-     vloc_psi     :     23.12s CPU     23.28s WALL (    1721 calls)
-     add_vuspsi   :      2.36s CPU      2.37s WALL (    1721 calls)
+     h_psi:calbec :      2.32s CPU      2.36s WALL (    1721 calls)
+     vloc_psi     :     22.87s CPU     23.33s WALL (    1721 calls)
+     add_vuspsi   :      2.41s CPU      2.45s WALL (    1721 calls)
 
      General routines
-     calbec       :      2.33s CPU      2.35s WALL (    1721 calls)
-     fft          :      0.72s CPU      0.74s WALL (      13 calls)
-     ffts         :      0.27s CPU      0.28s WALL (       1 calls)
-     fftw         :     20.20s CPU     20.31s WALL (   22796 calls)
-     interpolate  :      0.28s CPU      0.28s WALL (       1 calls)
+     calbec       :      2.31s CPU      2.36s WALL (    1721 calls)
+     fft          :      0.69s CPU      0.70s WALL (      13 calls)
+     ffts         :      0.26s CPU      0.27s WALL (       1 calls)
+     fftw         :     20.03s CPU     20.42s WALL (   22796 calls)
+     interpolate  :      0.26s CPU      0.27s WALL (       1 calls)
 
      Parallel routines
 
      PAW routines
      PAW_pot      :      0.03s CPU      0.03s WALL (       1 calls)
 
-     PWSCF        :   1m 7.67s CPU   1m 8.29s WALL
+     PWSCF        :   1m 9.15s CPU   1m10.54s WALL
 
 
-   This run was terminated on:   0:58:28  16Sep2026            
+   This run was terminated on:   3:43:20  16Sep2026            
 
 =------------------------------------------------------------------------------=
    JOB DONE.

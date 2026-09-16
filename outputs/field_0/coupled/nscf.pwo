@@ -1,5 +1,5 @@
 
-     Program PWSCF v.7.6 starts on 16Sep2026 at  0:52:42 
+     Program PWSCF v.7.6 starts on 16Sep2026 at  3:12:16 
 
      This program is part of the open-source Quantum ESPRESSO suite
      for quantum simulation of materials; please cite
@@ -13,7 +13,7 @@
      Parallel version (MPI), running on     4 processors
 
      MPI processes distributed on     1 nodes
-     668 MiB available memory on the printing compute node when the environment starts
+     6803 MiB available memory on the printing compute node when the environment starts
 
      Waiting for input...
      Reading input from standard input
@@ -231,18 +231,18 @@ Warning: card &RISM ignored
    Cartesian axes
 
      site n.     atom                  positions (alat units)
-         1        C      tau(   1) = (   0.0000000   0.0000000   3.9155096  )
-         2        C      tau(   2) = (   0.5000000   0.2886752   3.9153317  )
-         3        C      tau(   3) = (   0.5000000   0.2886752   5.5765388  )
-         4        C      tau(   4) = (   0.0000000   0.5773503   5.5763610  )
+         1        C      tau(   1) = (   0.0000000   0.0000000   3.9155091  )
+         2        C      tau(   2) = (   0.5000000   0.2886752   3.9153312  )
+         3        C      tau(   3) = (   0.5000000   0.2886752   5.5765393  )
+         4        C      tau(   4) = (   0.0000000   0.5773503   5.5763614  )
 
    Crystallographic axes
 
      site n.     atom                  positions (cryst. coord.)
          1        C      tau(   1) = (  0.0000000  0.0000000  0.4125119  )
-         2        C      tau(   2) = (  0.6666668  0.3333335  0.4124932  )
+         2        C      tau(   2) = (  0.6666668  0.3333335  0.4124931  )
          3        C      tau(   3) = (  0.6666668  0.3333335  0.5875069  )
-         4        C      tau(   4) = (  0.3333335  0.6666670  0.5874881  )
+         4        C      tau(   4) = (  0.3333335  0.6666670  0.5874882  )
 
      number of k points=    91  Gaussian smearing, width (Ry)=  0.0100
                        cart. coord. in units 2pi/alat
@@ -493,79 +493,79 @@ Warning: card &RISM ignored
      Davidson diagonalization with overlap
 
      Computing kpt #:     1  of    23 on this pool
-     total cpu time spent up to now is        8.3 secs
+     total cpu time spent up to now is        7.6 secs
 
      Computing kpt #:     2  of    23 on this pool
-     total cpu time spent up to now is       16.4 secs
+     total cpu time spent up to now is       13.7 secs
 
      Computing kpt #:     3  of    23 on this pool
-     total cpu time spent up to now is       25.4 secs
+     total cpu time spent up to now is       22.7 secs
 
      Computing kpt #:     4  of    23 on this pool
-     total cpu time spent up to now is       31.7 secs
+     total cpu time spent up to now is       28.2 secs
 
      Computing kpt #:     5  of    23 on this pool
-     total cpu time spent up to now is       37.6 secs
+     total cpu time spent up to now is       34.1 secs
 
      Computing kpt #:     6  of    23 on this pool
-     total cpu time spent up to now is       44.1 secs
+     total cpu time spent up to now is       39.7 secs
 
      Computing kpt #:     7  of    23 on this pool
-     total cpu time spent up to now is       49.0 secs
+     total cpu time spent up to now is       46.2 secs
 
      Computing kpt #:     8  of    23 on this pool
-     total cpu time spent up to now is       54.7 secs
+     total cpu time spent up to now is       53.0 secs
 
      Computing kpt #:     9  of    23 on this pool
-     total cpu time spent up to now is       61.2 secs
+     total cpu time spent up to now is       57.8 secs
 
      Computing kpt #:    10  of    23 on this pool
-     total cpu time spent up to now is       67.3 secs
+     total cpu time spent up to now is       62.8 secs
 
      Computing kpt #:    11  of    23 on this pool
      c_bands:  1 eigenvalues not converged
-     total cpu time spent up to now is       76.2 secs
+     total cpu time spent up to now is       70.5 secs
 
      Computing kpt #:    12  of    23 on this pool
-     total cpu time spent up to now is       81.3 secs
+     total cpu time spent up to now is       76.3 secs
 
      Computing kpt #:    13  of    23 on this pool
-     total cpu time spent up to now is       86.5 secs
+     total cpu time spent up to now is       81.8 secs
 
      Computing kpt #:    14  of    23 on this pool
-     total cpu time spent up to now is       92.5 secs
+     total cpu time spent up to now is       87.7 secs
 
      Computing kpt #:    15  of    23 on this pool
      c_bands:  1 eigenvalues not converged
-     total cpu time spent up to now is      100.3 secs
+     total cpu time spent up to now is       95.1 secs
 
      Computing kpt #:    16  of    23 on this pool
-     total cpu time spent up to now is      106.7 secs
+     total cpu time spent up to now is      101.8 secs
 
      Computing kpt #:    17  of    23 on this pool
-     total cpu time spent up to now is      113.7 secs
+     total cpu time spent up to now is      107.9 secs
 
      Computing kpt #:    18  of    23 on this pool
-     total cpu time spent up to now is      121.0 secs
+     total cpu time spent up to now is      114.0 secs
 
      Computing kpt #:    19  of    23 on this pool
-     total cpu time spent up to now is      126.6 secs
+     total cpu time spent up to now is      119.5 secs
 
      Computing kpt #:    20  of    23 on this pool
-     total cpu time spent up to now is      132.3 secs
+     total cpu time spent up to now is      125.3 secs
 
      Computing kpt #:    21  of    23 on this pool
-     total cpu time spent up to now is      138.4 secs
+     total cpu time spent up to now is      130.7 secs
 
      Computing kpt #:    22  of    23 on this pool
-     total cpu time spent up to now is      143.7 secs
+     total cpu time spent up to now is      136.7 secs
 
      Computing kpt #:    23  of    23 on this pool
-     total cpu time spent up to now is      147.6 secs
+     total cpu time spent up to now is      140.9 secs
 
      ethr =  6.25E-11,  avg # of iterations = 62.0
 
-     total cpu time spent up to now is      148.0 secs
+     total cpu time spent up to now is      143.0 secs
 
      End of band structure calculation
 
@@ -627,7 +627,7 @@ Warning: card &RISM ignored
           k = 0.0000 0.1925 0.0000 (  6486 PWs)   bands (ev):
 
    -23.1652 -23.1396 -11.2629 -10.9570  -9.5709  -9.5667  -8.4128  -8.4105
-    -0.1342   0.3377   1.4339   2.6032   3.1112   3.5289   4.1599   4.1898
+    -0.1342   0.3377   1.4339   2.6032   3.1112   3.5288   4.1599   4.1898
      5.1774   5.2252   6.1521   6.7070   6.7107   6.7343   9.5219   9.6973
 
      occupation numbers 
@@ -638,7 +638,7 @@ Warning: card &RISM ignored
           k = 0.0000 0.2309 0.0000 (  6474 PWs)   bands (ev):
 
    -22.8775 -22.8525 -10.9206 -10.6198 -10.3833 -10.3780  -8.7736  -8.7711
-     0.2539   0.7311   1.8128   2.9912   3.4824   3.9275   4.0719   4.1023
+     0.2539   0.7311   1.8128   2.9912   3.4824   3.9274   4.0719   4.1023
      4.3806   4.4566   6.5386   7.1127   7.6706   7.6743   9.8982  10.2072
 
      occupation numbers 
@@ -727,7 +727,7 @@ Warning: card &RISM ignored
 
    -18.9119 -18.8962 -17.1187 -17.1059 -10.6516 -10.6484  -6.8353  -6.6977
     -2.4008  -2.2562   3.2305   3.2690   5.8267   6.4138   7.2690   7.8052
-     8.4528   8.6555   8.9175   9.2580   9.7913  10.7273  10.8647  11.9748
+     8.4528   8.6555   8.9175   9.2580   9.7912  10.7273  10.8647  11.9748
 
      occupation numbers 
      1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
@@ -738,7 +738,7 @@ Warning: card &RISM ignored
 
    -18.5409 -18.5319 -17.5227 -17.5156 -10.6779 -10.6747  -6.6496  -6.5506
     -2.6032  -2.4692   3.2172   3.2563   6.7408   6.8384   7.3997   7.4182
-     8.1140   8.3171   9.6335   9.6582   9.8299  10.0686  10.8490  10.8581
+     8.1140   8.3171   9.6335   9.6582   9.8299  10.0686  10.8489  10.8581
 
      occupation numbers 
      1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
@@ -759,7 +759,7 @@ Warning: card &RISM ignored
           k = 0.0333 0.0962 0.0000 (  6479 PWs)   bands (ev):
 
    -23.6381 -23.6114 -11.8293 -11.5155  -7.9865  -7.9849  -7.6657  -7.6645
-    -0.7701  -0.3080   0.8081   1.9618   2.4826   2.8719   4.2534   4.2705
+    -0.7701  -0.3080   0.8081   1.9618   2.4826   2.8718   4.2534   4.2705
      4.8926   4.8965   5.5102   6.1081   6.6445   6.6683   8.7794   8.8010
 
      occupation numbers 
@@ -792,8 +792,8 @@ Warning: card &RISM ignored
           k = 0.0333 0.2117 0.0000 (  6502 PWs)   bands (ev):
 
    -23.0082 -22.9829 -11.0757 -10.7726  -9.9880  -9.9834  -8.6666  -8.6642
-     0.0777   0.5525   1.6416   2.8164   3.3178   3.7474   4.2188   4.2504
-     4.7411   4.7977   6.3630   6.9386   7.0801   7.0856   9.7358  10.0504
+     0.0777   0.5525   1.6416   2.8164   3.3177   3.7474   4.2188   4.2504
+     4.7411   4.7977   6.3630   6.9387   7.0801   7.0856   9.7358  10.0504
 
      occupation numbers 
      1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
@@ -804,7 +804,7 @@ Warning: card &RISM ignored
 
    -22.6950 -22.6703 -10.8165 -10.8108 -10.7043 -10.4070  -9.0311  -9.0284
      0.5008   0.9809   2.0518   3.2348   3.6736   3.9173   4.0241   4.1303
-     4.1612   4.2011   6.7834   7.3502   8.0360   8.0437  10.1417  10.6182
+     4.1612   4.2011   6.7835   7.3502   8.0360   8.0437  10.1417  10.6182
 
      occupation numbers 
      1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
@@ -846,7 +846,7 @@ Warning: card &RISM ignored
 
           k = 0.0333 0.4041 0.0000 (  6497 PWs)   bands (ev):
 
-   -20.9470 -20.9257 -14.3195 -14.3089 -10.2438 -10.2405  -8.7015  -8.4454
+   -20.9470 -20.9257 -14.3195 -14.3089 -10.2438 -10.2405  -8.7015  -8.4455
      0.1801   0.3123   2.8674   3.3904   3.6385   3.6632   4.4541   5.6923
      6.1078   6.6766   9.1359   9.5982  10.9073  11.5145  11.8416  12.6821
 
@@ -924,7 +924,7 @@ Warning: card &RISM ignored
           k = 0.0667 0.1925 0.0000 (  6491 PWs)   bands (ev):
 
    -23.0867 -23.0612 -11.1691 -10.8646  -9.6774  -9.6740  -8.6748  -8.6727
-    -0.0278   0.4454   1.5388   2.7113   3.2167   3.6386   4.4985   4.5323
+    -0.0279   0.4454   1.5388   2.7113   3.2167   3.6386   4.4985   4.5323
      4.9742   5.0172   6.2563   6.4767   6.4802   6.8346   9.6410  10.0175
 
      occupation numbers 
@@ -947,7 +947,7 @@ Warning: card &RISM ignored
 
    -22.4610 -22.4367 -11.2648 -11.2588 -10.4280 -10.1351  -9.4353  -9.4323
      0.8184   1.3016   2.3558   3.3390   3.4094   3.5800   4.0821   4.3901
-     4.4223   4.5182   7.0965   7.6487   8.1265   8.1481  10.4463  11.3145
+     4.4223   4.5181   7.0965   7.6487   8.1265   8.1481  10.4463  11.3145
 
      occupation numbers 
      1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
@@ -958,7 +958,7 @@ Warning: card &RISM ignored
 
    -22.0726 -22.0491 -12.1199 -12.1127  -9.9738  -9.7841  -9.7808  -9.6888
      1.3455   1.8200   2.4340   2.5093   2.9549   4.0530   4.3067   4.3326
-     4.5896   5.0659   7.6179   8.1513   9.0324   9.0798  10.9205  11.9419
+     4.5896   5.0659   7.6180   8.1513   9.0324   9.0798  10.9205  11.9419
 
      occupation numbers 
      1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
@@ -980,7 +980,7 @@ Warning: card &RISM ignored
 
    -21.1501 -21.1284 -13.8585 -13.8488 -10.3737 -10.3700  -8.9213  -8.6586
      0.5969   0.7147   2.6014   3.1313   3.9843   4.0204   4.2290   5.4079
-     5.8195   6.3826   8.8579   9.3168  10.5020  10.8264  11.5350  12.4749
+     5.8195   6.3826   8.8579   9.3168  10.5020  10.8264  11.5349  12.4749
 
      occupation numbers 
      1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
@@ -1057,7 +1057,7 @@ Warning: card &RISM ignored
 
    -22.8515 -22.8265 -10.8891 -10.5888 -10.1944 -10.1913  -9.1402  -9.1382
      0.2903   0.7679   1.8511   3.0328   3.5291   3.9672   4.3574   4.4025
-     4.8345   4.8738   6.5710   6.6581   6.6630   7.1391   9.9495  10.6864
+     4.8345   4.8738   6.5710   6.6581   6.6630   7.1391   9.9494  10.6864
 
      occupation numbers 
      1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
@@ -1090,7 +1090,7 @@ Warning: card &RISM ignored
 
    -21.7637 -21.7408 -12.5482 -12.5409 -10.3100 -10.3061  -9.6141  -9.3356
      1.7670   1.8416   1.9324   2.2950   3.3136   4.4862   4.7692   4.7926
-     4.9839   5.5032   8.0272   8.5235   8.8715   8.9435  11.1947  12.0111
+     4.9839   5.5031   8.0272   8.5235   8.8715   8.9435  11.1947  12.0111
 
      occupation numbers 
      1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
@@ -1121,7 +1121,7 @@ Warning: card &RISM ignored
 
           k = 0.1000 0.4426 0.0000 (  6490 PWs)   bands (ev):
 
-   -20.2460 -20.2261 -15.0737 -15.0625 -11.0919 -11.0873  -7.9343  -7.6999
+   -20.2460 -20.2261 -15.0737 -15.0625 -11.0919 -11.0873  -7.9343  -7.7000
     -0.7863  -0.6551   3.8368   4.3165   4.4577   4.4913   5.3472   6.6645
      6.9822   7.6972   9.8712  10.1415  10.2667  10.5186  10.9972  12.2753
 
@@ -1132,7 +1132,7 @@ Warning: card &RISM ignored
 
           k = 0.1000 0.4811 0.0000 (  6491 PWs)   bands (ev):
 
-   -19.6583 -19.6396 -15.8789 -15.8666 -11.2522 -11.2474  -7.3501  -7.1432
+   -19.6583 -19.6396 -15.8789 -15.8666 -11.2521 -11.2474  -7.3501  -7.1432
     -1.5735  -1.4346   4.2983   4.3374   4.7338   5.2452   6.1167   7.4924
      7.7401   8.5741   9.3366   9.9205  10.1633  10.8816  11.0942  11.9691
 
@@ -1144,7 +1144,7 @@ Warning: card &RISM ignored
           k = 0.1000 0.5196 0.0000 (  6503 PWs)   bands (ev):
 
    -19.0497 -19.0328 -16.6346 -16.6217 -11.3597 -11.3549  -6.8278  -6.6630
-    -2.2183  -2.0841   4.2589   4.3053   5.5844   6.1333   6.9136   8.2945
+    -2.2183  -2.0841   4.2589   4.3053   5.5844   6.1332   6.9136   8.2945
      8.4571   8.5477   9.1377   9.4876   9.5780  11.1041  11.2997  11.6090
 
      occupation numbers 
@@ -1156,7 +1156,7 @@ Warning: card &RISM ignored
 
    -18.5037 -18.4913 -17.2517 -17.2414 -11.4137 -11.4089  -6.4830  -6.3723
     -2.6016  -2.4844   4.2331   4.2819   6.5059   7.0449   7.4948   7.6301
-     8.1703   8.6126   9.3625   9.5076  10.2877  10.4594  10.5657  11.6389
+     8.1703   8.6126   9.3625   9.5076  10.2877  10.4594  10.5657  11.6388
 
      occupation numbers 
      1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
@@ -1222,7 +1222,7 @@ Warning: card &RISM ignored
 
    -20.3957 -20.3754 -14.5911 -14.5810 -11.4793 -11.4741  -8.0761  -7.8339
     -0.4604  -0.3486   3.6463   4.1708   5.0477   5.1568   5.2691   6.4467
-     6.7392   7.4752   9.6249   9.9115  10.0193  10.1337  10.4839  12.1038
+     6.7392   7.4752   9.6249   9.9116  10.0193  10.1337  10.4839  12.1038
 
      occupation numbers 
      1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
@@ -1266,7 +1266,7 @@ Warning: card &RISM ignored
 
    -18.2704 -18.2617 -17.2592 -17.2525 -11.9251 -11.9193  -6.2635  -6.1658
     -2.7084  -2.6122   4.9339   4.9941   7.0594   7.1422   7.5019   7.5662
-     8.0781   8.5282   9.6886   9.7803  10.1171  10.3037  11.2583  11.2756
+     8.0780   8.5282   9.6886   9.7803  10.1171  10.3037  11.2583  11.2756
 
      occupation numbers 
      1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
@@ -1277,7 +1277,7 @@ Warning: card &RISM ignored
 
    -21.8668 -21.8437 -12.0139 -12.0103 -10.6739 -10.6712  -9.7307  -9.4495
      1.6291   2.1223   2.1691   2.2278   3.1538   4.3836   4.8253   5.3549
-     5.8376   5.8888   7.4098   7.4327   7.9084   8.3779  11.0342  11.8243
+     5.8376   5.8888   7.4098   7.4327   7.9085   8.3779  11.0342  11.8243
 
      occupation numbers 
      1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
@@ -1320,8 +1320,8 @@ Warning: card &RISM ignored
           k = 0.1667 0.4426 0.0000 (  6475 PWs)   bands (ev):
 
    -19.9506 -19.9312 -14.9084 -14.8983 -12.1344 -12.1284  -7.5851  -7.3559
-    -1.0012  -0.8977   4.2656   4.7793   5.5974   5.9251   6.0247   7.0445
-     7.2255   8.1294   9.3107   9.5781   9.9653  10.1657  10.5719  12.0361
+    -1.0012  -0.8977   4.2656   4.7793   5.5973   5.9251   6.0247   7.0445
+     7.2255   8.1293   9.3107   9.5781   9.9653  10.1657  10.5719  12.0361
 
      occupation numbers 
      1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
@@ -1364,7 +1364,7 @@ Warning: card &RISM ignored
           k = 0.2000 0.3464 0.0000 (  6482 PWs)   bands (ev):
 
    -21.0246 -21.0031 -13.1924 -13.1880 -11.7295 -11.7261  -8.7606  -8.4986
-     0.6759   0.7433   2.7833   3.2858   4.2471   5.5409   5.8975   6.5589
+     0.6759   0.7433   2.7833   3.2858   4.2471   5.5409   5.8975   6.5588
      6.6555   6.7177   7.8634   7.9065   9.0238   9.2977  10.4216  12.1345
 
      occupation numbers 
@@ -1387,7 +1387,7 @@ Warning: card &RISM ignored
 
    -20.0246 -20.0051 -14.4814 -14.4736 -12.5529 -12.5474  -7.6472  -7.4129
     -0.8179  -0.7339   4.1639   4.6641   5.4712   6.7682   6.9403   7.0100
-     7.0888   8.0177   8.8155   9.0548   9.3329   9.9130  10.4527  11.9948
+     7.0888   8.0177   8.8155   9.0548   9.3329   9.9130  10.4527  11.9949
 
      occupation numbers 
      1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
@@ -1420,7 +1420,7 @@ Warning: card &RISM ignored
 
    -18.2894 -18.2749 -16.5805 -16.5693 -13.0812 -13.0738  -5.9972  -5.8598
     -2.7378  -2.6602   6.5326   6.6182   6.8142   6.8729   7.0230   8.1522
-     8.4783   8.9323   9.4985   9.7816  10.6952  10.8015  11.2992  11.3172
+     8.4783   8.9323   9.4985   9.7816  10.6952  10.8014  11.2992  11.3172
 
      occupation numbers 
      1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
@@ -1442,7 +1442,7 @@ Warning: card &RISM ignored
 
    -20.0494 -20.0298 -14.2813 -14.2761 -12.7499 -12.7459  -7.6682  -7.4322
     -0.7516  -0.6765   4.1296   4.6248   5.4242   6.8512   7.0332   7.5753
-     7.6575   7.9806   8.2719   8.3393   9.1900   9.8490  10.4151  11.9734
+     7.6575   7.9806   8.2719   8.3393   9.1900   9.8491  10.4151  11.9734
 
      occupation numbers 
      1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
@@ -1464,7 +1464,7 @@ Warning: card &RISM ignored
 
    -18.9407 -18.9235 -15.4733 -15.4645 -13.4601 -13.4536  -6.4942  -6.2977
     -2.1107  -2.0247   5.6619   6.0520   6.4007   7.5877   7.7929   7.9084
-     8.1813   8.8937   9.0247   9.6165   9.6650  10.3388  11.7864  12.3320
+     8.1813   8.8937   9.0247   9.6165   9.6649  10.3388  11.7864  12.3320
 
      occupation numbers 
      1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
@@ -1486,7 +1486,7 @@ Warning: card &RISM ignored
 
    -17.8255 -17.8141 -16.6824 -16.6741 -13.7168 -13.7091  -5.5373  -5.4273
     -3.0914  -3.0503   6.6770   6.7966   7.3901   7.5674   7.7200   8.2785
-     8.5152   9.2286   9.7692  10.4058  10.6018  11.1248  11.5434  11.7872
+     8.5152   9.2286   9.7692  10.4058  10.6018  11.1248  11.5433  11.7872
 
      occupation numbers 
      1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
@@ -1508,7 +1508,7 @@ Warning: card &RISM ignored
 
    -18.3884 -18.3726 -15.7659 -15.7585 -14.0342 -14.0288  -5.9126  -5.7361
     -2.6809  -2.5972   6.2984   6.4745   6.6311   7.9240   8.3287   8.6951
-     8.7282   8.9258   9.4153   9.6518  10.4892  10.8104  12.0395  12.1917
+     8.7282   8.9257   9.4152   9.6518  10.4892  10.8104  12.0395  12.1917
 
      occupation numbers 
      1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
@@ -1519,7 +1519,7 @@ Warning: card &RISM ignored
 
    -17.8184 -17.8048 -16.3143 -16.3057 -14.2270 -14.2203  -5.3833  -5.2448
     -3.2054  -3.1341   6.4688   6.5964   7.3320   8.2710   8.4004   8.6362
-     8.7789   9.4982   9.7732  10.3620  11.1612  11.3299  11.5190  11.7599
+     8.7789   9.4982   9.7732  10.3620  11.1612  11.3299  11.5189  11.7599
 
      occupation numbers 
      1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
@@ -1539,7 +1539,7 @@ Warning: card &RISM ignored
 
           k = 0.3000 0.5196 0.0000 (  6422 PWs)   bands (ev):
 
-   -17.8232 -17.8090 -16.1224 -16.1158 -14.4577 -14.4536  -5.3308  -5.1782
+   -17.8232 -17.8090 -16.1224 -16.1158 -14.4577 -14.4536  -5.3307  -5.1782
     -3.2473  -3.1607   6.3919   6.5222   7.2982   8.4029   8.6470   8.8186
      9.3343   9.5177   9.5477  10.3397  11.2709  11.5661  11.8498  11.8503
 
@@ -1576,60 +1576,60 @@ Warning: card &RISM ignored
      Writing all to output data dir /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/coupled.save/ :
      XML data file, pseudopotentials, collected wavefunctions
 
-     init_run     :      1.73s CPU      1.87s WALL (       1 calls)
-     electrons    :    145.48s CPU    146.02s WALL (       1 calls)
+     init_run     :      1.72s CPU      1.85s WALL (       1 calls)
+     electrons    :    140.52s CPU    141.06s WALL (       1 calls)
 
      Called by init_run:
      wfcinit      :      0.00s CPU      0.00s WALL (       1 calls)
-     wfcinit:atom :      0.03s CPU      0.03s WALL (      23 calls)
-     wfcinit:wfcr :      2.81s CPU      2.83s WALL (      23 calls)
-     potinit      :      0.59s CPU      0.65s WALL (       1 calls)
-     hinit0       :      1.00s CPU      1.03s WALL (       1 calls)
+     wfcinit:atom :      0.02s CPU      0.03s WALL (      23 calls)
+     wfcinit:wfcr :      2.61s CPU      2.62s WALL (      23 calls)
+     potinit      :      0.58s CPU      0.63s WALL (       1 calls)
+     hinit0       :      1.00s CPU      1.02s WALL (       1 calls)
 
      Called by electrons:
-     c_bands      :    145.48s CPU    146.01s WALL (       1 calls)
-     v_of_rho     :      0.16s CPU      0.21s WALL (       1 calls)
-     v_h          :      0.01s CPU      0.02s WALL (       1 calls)
-     v_xc         :      0.15s CPU      0.19s WALL (       1 calls)
-     newd         :      0.04s CPU      0.05s WALL (       1 calls)
-     PAW_pot      :      0.08s CPU      0.08s WALL (       1 calls)
+     c_bands      :    140.51s CPU    141.04s WALL (       1 calls)
+     v_of_rho     :      0.18s CPU      0.22s WALL (       1 calls)
+     v_h          :      0.01s CPU      0.01s WALL (       1 calls)
+     v_xc         :      0.17s CPU      0.21s WALL (       1 calls)
+     newd         :      0.05s CPU      0.07s WALL (       1 calls)
+     PAW_pot      :      0.06s CPU      0.06s WALL (       1 calls)
 
      Called by c_bands:
-     init_us_2    :      0.04s CPU      0.04s WALL (      23 calls)
-     cegterg      :     98.20s CPU     98.63s WALL (      73 calls)
+     init_us_2    :      0.04s CPU      0.05s WALL (      23 calls)
+     cegterg      :    105.30s CPU    105.75s WALL (      73 calls)
 
      Called by sum_band:
 
      Called by *egterg:
-     cdiaghg      :      1.26s CPU      1.27s WALL (    1343 calls)
-     cegterg:over :     13.65s CPU     13.68s WALL (    1320 calls)
-     cegterg:upda :      8.77s CPU      8.80s WALL (    1320 calls)
-     cegterg:last :     25.13s CPU     25.18s WALL (     637 calls)
-     h_psi        :     43.37s CPU     43.65s WALL (    1416 calls)
-     s_psi        :      6.22s CPU      6.24s WALL (    1416 calls)
-     g_psi        :      0.39s CPU      0.39s WALL (    1320 calls)
+     cdiaghg      :      1.36s CPU      1.36s WALL (    1343 calls)
+     cegterg:over :     14.69s CPU     14.73s WALL (    1320 calls)
+     cegterg:upda :      9.48s CPU      9.51s WALL (    1320 calls)
+     cegterg:last :     26.99s CPU     27.05s WALL (     637 calls)
+     h_psi        :     46.08s CPU     46.37s WALL (    1416 calls)
+     s_psi        :      6.61s CPU      6.64s WALL (    1416 calls)
+     g_psi        :      0.41s CPU      0.42s WALL (    1320 calls)
 
      Called by h_psi:
-     h_psi:calbec :      6.18s CPU      6.20s WALL (    1416 calls)
-     vloc_psi     :     30.75s CPU     30.99s WALL (    1416 calls)
-     add_vuspsi   :      6.25s CPU      6.27s WALL (    1416 calls)
+     h_psi:calbec :      6.59s CPU      6.61s WALL (    1416 calls)
+     vloc_psi     :     32.65s CPU     32.89s WALL (    1416 calls)
+     add_vuspsi   :      6.63s CPU      6.65s WALL (    1416 calls)
 
      General routines
-     calbec       :      6.17s CPU      6.20s WALL (    1416 calls)
-     fft          :      0.75s CPU      0.75s WALL (      13 calls)
-     ffts         :      0.32s CPU      0.32s WALL (       1 calls)
-     fftw         :     27.03s CPU     27.19s WALL (   29938 calls)
-     interpolate  :      0.33s CPU      0.33s WALL (       1 calls)
+     calbec       :      6.58s CPU      6.60s WALL (    1416 calls)
+     fft          :      0.76s CPU      0.76s WALL (      13 calls)
+     ffts         :      0.31s CPU      0.31s WALL (       1 calls)
+     fftw         :     28.63s CPU     28.78s WALL (   29938 calls)
+     interpolate  :      0.32s CPU      0.32s WALL (       1 calls)
 
      Parallel routines
 
      PAW routines
-     PAW_pot      :      0.08s CPU      0.08s WALL (       1 calls)
+     PAW_pot      :      0.06s CPU      0.06s WALL (       1 calls)
 
-     PWSCF        :   2m27.51s CPU   2m28.36s WALL
+     PWSCF        :   2m22.45s CPU   2m23.31s WALL
 
 
-   This run was terminated on:   0:55:10  16Sep2026            
+   This run was terminated on:   3:14:39  16Sep2026            
 
 =------------------------------------------------------------------------------=
    JOB DONE.
