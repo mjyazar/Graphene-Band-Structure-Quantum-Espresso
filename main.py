@@ -44,7 +44,7 @@ def run_calculations(structure, path, eamp):
     
     dos_ = dos.calculate(path, fermi_energy)
     
-    ldos_raw, ldos_pp_path = pp.ldos(path, fermi_energy)
+    #ldos_raw, ldos_pp_path = pp.ldos(path, fermi_energy)
 
     results = System(name=f"{path.name}",
                             atoms=structure,
@@ -55,8 +55,8 @@ def run_calculations(structure, path, eamp):
                             potential_averaged=potential_averaged,
                             charge_density_raw=charge_raw,
                             charge_density_averaged=charge_averaged,
-                            dos = dos_,
-                            ldos = ldos_raw)
+                            dos = dos_)
+                            #ldos = ldos_raw)
     
     return results
 

@@ -53,7 +53,7 @@ class System:
     charge_density_raw: ChargeDensity
     charge_density_averaged: ChargeDensityAveraged
     dos: DOS
-    ldos: LDOS
+    #ldos: LDOS
 
 
 @dataclass

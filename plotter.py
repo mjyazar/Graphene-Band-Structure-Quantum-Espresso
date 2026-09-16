@@ -89,7 +89,7 @@ def fermi_aligned(results:Results, field, delta_e=0.01):
     # ax.plot(grid, dos_coupled_grid, label="$DOS_{coupled}$")
     ax.plot(grid, dos_subtracted, label="$DOS_{coupled} - DOS_{top} - DOS_{bottom}$")
 
-    ax.set_title(f"FERMI-ALIGNED DOS SUBTRACTED {field}au")
+    ax.set_title(f"Fermi-Aligned DOS Subtracted, E-field={field}au")
     ax.set_xlabel(r"$Energy$ (eV)")
     ax.set_ylabel("DOS (states/eV/cell)")
     ax.legend()
@@ -112,7 +112,7 @@ def dos_comparison(results, field, window=WINDOW):
         ax.plot(energy - fermi_energy, dos, label=name)    
     
     ax.axvline(0, linewidth=0.8, linestyle="--")
-    ax.set_title(f"Graphene 1D DOS Comparison {field}au")
+    ax.set_title(f"Graphene 1D DOS Comparison, E-field={field}au")
     ax.set_xlabel(r"$E - E_{Fermi}$ (eV)")
     ax.set_ylabel("DOS (states/eV/cell)")
     ax.set_xlim(window)
@@ -145,7 +145,7 @@ def potential_subtracted(results:Results, field):
     
     ax.set_xlabel(r"z (($\AA$))")
     ax.set_ylabel("Potential Energy (eV)")
-    ax.set_title(f"Subtracted Potential — E-field = {field}au")
+    ax.set_title(f"Subtracted Potential, E-field={field}au")
 
     plt.savefig(POTENTIAL_DIR / f"Subtracted_Potential_{field}au.png", dpi=300, bbox_inches="tight")
     plt.close(fig)
@@ -165,10 +165,11 @@ def potential_individual(results:Results, field):
 
         fig, ax = plt.subplots()
 
-        ax.plot(coordinates, potential, linewidth=0.75, color='red')
-        ax.set_title(f"1D {system.name.capitalize()} Layer Potential V(z), {field}au")
+        ax.plot(coordinates, potential, linewidth=0.75, color='red', label=r"U_{coupled layers} - U_{bottom layer} - U_{top layer}")
+        ax.set_title(f"1D {system.name.capitalize()} Layer Potential V(z), E-field={field}au")
         ax.set_xlabel(r"z ($\AA$)")
         ax.set_ylabel("Potential Energy (eV)")
+        ax.legend()
         
         plt.savefig(POTENTIAL_DIR / f"Potential_{system.name.capitalize()}_Layer_{field}au.png", dpi=300, bbox_inches="tight")
         plt.close(fig)
@@ -191,7 +192,7 @@ def charge_density_subtracted(results:Results, field):
     
     ax.set_xlabel(r"z (($\AA$))")
     ax.set_ylabel(r"Charge Density ($e/{\AA}^3)$")
-    ax.set_title(f"Subtracted Charge Density — E-field = {field}au")
+    ax.set_title(f"Subtracted Charge Density, E-field={field}au")
 
     plt.savefig(CHARGE_DENSITY_DIR / f"Subtracted_Charge_Density_{field}au.png", dpi=300, bbox_inches="tight")
     plt.close(fig)
