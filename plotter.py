@@ -174,8 +174,8 @@ def ldos_subtracted(results: Results, field):
     ldos_bottom = bottom.ldos.planar
     ldos_top = top.ldos.planar
     
-    z = coupled.ldos.coordinates
-    E = np.arange(WINDOW_LDOS[0], WINDOW_LDOS[1] + DELTA_E, DELTA_E)
+    z = coupled.ldos.coordinates * BOHR_TO_ANGSTROM
+    E = np.arange(WINDOW_LDOS[0], WINDOW_LDOS[1] + DELTA_E_LDOS, DELTA_E_LDOS)
     
     ldos_subtracted = ldos_coupled - ldos_bottom - ldos_top
     
