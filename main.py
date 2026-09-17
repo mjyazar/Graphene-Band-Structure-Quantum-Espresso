@@ -61,7 +61,7 @@ def run_calculations(structure, path, eamp):
         # potential_averaged_ = average._read_output(path / f"potential.avg.dat")
         # potential_averaged = PotentialAveraged(coordinates=potential_averaged_[0], planar=potential_averaged_[1], macroscopic=potential_averaged_[2])
         
-        charge_raw, charge_pp_path = pp._read_output(path / "charge.cube", 6), "data" / f"charge.pp.dat"
+        charge_raw, charge_pp_path = pp._read_output(path / "charge.cube", 6), path / "data" / f"charge.pp.dat"
         # if no access to .avg.dat files, run:
         charge_averaged = average.charge_density(path, charge_pp_path)
         # ff have access to .avg.dat files, run:
