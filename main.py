@@ -31,7 +31,7 @@ def run_calculations(structure, path, eamp):
     
     print(f"\n{path.name.upper()} LAYERS COMPUTATIONS")
     
-    if RUN_QE
+    if RUN_QE:
         scf = pw.scf(structure, path, eamp)
         nscf = pw.nscf(structure, path, eamp)
 
