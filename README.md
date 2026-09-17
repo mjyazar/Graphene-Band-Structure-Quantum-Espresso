@@ -14,52 +14,60 @@ This repository constructs monolayer and bilayer graphene using Density Function
 ├── graphene.py
 ├── main.py
 ├── outputs
+│   ├── field_0
+│   │   ├── bottom      # relax/scf/nscf, charge, potential, dos, ldos
+│   │   ├── coupled     # same, plus relax.pwi/relax.pwo
+│   │   └── top         # same as bottom
 │   └── figures
-│       ├── Bottom Layer DOS.png
-│       ├── Coupled Layer DOS.png
-│       └── Top Layer DOS.png
-├── plotting.py
+│       ├── charge_density
+│       │   └── Subtracted_Charge_Density_0au.png
+│       ├── dos
+│       │   └── DOS_Subtracted_Fermi-aligned_0au.png
+│       ├── ldos
+│       │   └── LDOS_Subtracted_0au.png
+│       └── potential
+│           ├── Potential_Bottom_Layer_0au.png
+│           ├── Potential_Coupled_Layer_0au.png
+│           ├── Potential_Top_Layer_0au.png
+│           └── Subtracted_Potential_0au.png
+├── plotter.py
 ├── pseudo
-│   └── C.pbe-n-kjpaw_psl.1.0.0.UPF
+│   ├── C.pbe-n-kjpaw_psl.1.0.0.UPF
+│   └── C.upf
 ├── qe
+│   ├── average.py
 │   ├── dos.py
 │   ├── pp.py
+│   ├── projwfc.py
 │   ├── pw.py
 │   └── runner.py
-└── README.md
+├── README.md
+├── results.py
+├── run.sh
+└── timer.py
 ```
 
 
 ---
+## Results (Bilayer Graphene)
 
-## Results
+### Potential
+#### Coupled Layers
+![Coupled Layers](<outputs/figures/potential/Potential_Coupled_Layer_0au.png>)
 
-### Monolayer Graphene
-#### Band Structure
-![Band Structure](<outputs/figures/Monolayer Graphene Band Structure.png>)
-
-#### kgrid Convergence
-![kgrid Convergence](<outputs/figures/Monolayer kgrid Convergence.png>)
-
-[kgrid Measurements](outputs/monolayer/convergence/kgrid%20Convergence.txt)
-
-### ecutwfc Convergence
-![ecutwfc Convergence](<outputs/figures//Monolayer ecutwfc Convergence.png>)
-
-[ecutwfc Measurements](outputs/monolayer/convergence/ecutwfc%20Convergence.txt)
+#### Subtracted Potential
+![Subtracted Potential](<outputs/figures/potential/Subtracted_Potential_0au.png>)
 
 
-### Bilayer Graphene
+### Charge Density
+#### Subtracted Charge Densit
+![Subtracted Charge Density](<outputs/figures/charge_density/Subtracted_Charge_Density_0au.png>)
 
-#### Band Structure
-![Band Structure](<outputs/figures/Bilayer Graphene Band Structure.png>)
 
-#### kgrid Convergence
-![kgrid Convergence](<outputs/figures/Bilayer kgrid Convergence.png>)
+### DOS
+#### Subtracted DOS
+![Subtracted DOS](<outputs/figures/dos/DOS_Subtracted_Fermi-aligned_0au.png>)
 
-[kgrid Measurements](outputs/bilayer/convergence/kgrid%20Convergence.txt)
-
-### ecutwfc Convergence
-![ecutwfc Convergence](<outputs/figures/Bilayer ecutwfc Convergence.png>)
-
-[ecutwfc Measurements](outputs/bilayer/convergence/ecutwfc%20Convergence.txt)
+### LDOS
+#### Subtracted LDOS
+![Subtracted DOS](<outputs/figures/ldos/LDOS_Subtracted_0au.png>)
