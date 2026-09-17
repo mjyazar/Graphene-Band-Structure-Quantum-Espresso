@@ -67,9 +67,8 @@ def run_calculations(structure, path, eamp):
         # ff have access to .avg.dat files, run:
         # charge_averaged_ = average._read_output(path / f"potential.avg.dat")
         # charge_averaged = PotentialAveraged(coordinates=charge_averaged_[0], planar=charge_averaged_[1], macroscopic=charge_averaged_[2])
-
+        
         dos_out = dos._read_output(path / "dos.out")
-        dos_ = DOS(energy=dos_out[0], dos=dos_out[1], idos=dos_out[2])
         
         ldos_pp_path = path / "data" / "ldos.pp.dat"
         ldos_averaged = average.ldos(path, ldos_pp_path)
