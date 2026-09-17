@@ -117,6 +117,7 @@ def charge_density_subtracted(results: Results, field):
     ax.set_ylabel(r"Charge Density ($e/{\AA}^3)$")
     ax.set_title(f"Subtracted Charge Density, E-field={field}au")
 
+    plt.tight_layout()
     plt.savefig(CHARGE_DENSITY_DIR / f"Subtracted_Charge_Density_{field}au.png", dpi=300, bbox_inches="tight")
     plt.close(fig)
 

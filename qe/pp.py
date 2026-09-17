@@ -122,9 +122,8 @@ def _calculate(computation, path, iflag, fileout, fermi_energy=None):
     print(f"RUNNING pp.x WITH {input_path.name}")
     runner.run("pp.x", input_path, log_path)
     
-    if fileout != "ldos":
-        print(f"READING {output_path.name}")
-        return _read_output(output_path, output_format), intermediate_path
+    print(f"READING {output_path.name}")
+    return _read_output(output_path, output_format), intermediate_path
 
 
 def potential(path):
@@ -153,9 +152,9 @@ def ldos(path, fermi_energy):
     path.mkdir(parents=True, exist_ok=True)
     
     outdir = path / "data"
-    input_path = path / f"ldos.pp.in"
-    log_path = path / f"ldos.pp.log"  # log file
-    intermediate_path = path / "data" / f"ldos.pp.dat"  # intermediate metadata
+    input_path = path / "ldos.pp.in"
+    log_path = path / "ldos.pp.log"  # log file
+    intermediate_path = path / "data" / "ldos.pp.dat"  # intermediate metadata
     
     # output_path = path / f"ldos.cube"
     # output_format = 6  # 6  = format as gaussian cube file (3D)
