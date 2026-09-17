@@ -32,12 +32,12 @@ def _write_input(computation, input_path, outdir, intermediate_path, fileout, pr
           
         # 3 = local density of states at specific energy or grid of energies
         # (number of states per volume, in bohr^3, per energy unit, in Ry)
-        # LDOS is plotted on grid [emin, emax] with spacing delta_e. 
+        # LDOS is plotted on grid [emin, emax] with spacing delta_e_ldos
         elif computation == 3:
             input_file.write(f"""
                              emin = {fermi_energy + window[0]}
                              emax = {fermi_energy + window[1]}
-                             delta_e = {DELTA_E}
+                             delta_e = {DELTA_E_LDOS}
                              degauss_ldos = {DEGAUSS_LDOS}
                              """)       
         
@@ -169,12 +169,14 @@ def ldos(path, fermi_energy):
                          
                          emin = {fermi_energy + WINDOW_LDOS[0]}
                          emax = {fermi_energy + WINDOW_LDOS[1]}
-                         delta_e = {DELTA_E}
+                         delta_e = {DELTA_E_LDOS}
                          degauss_ldos = {DEGAUSS_LDOS}
                          /
                          """)
     
     print(f"RUNNING pp.x WITH {input_path.name}")
     runner.run("pp.x", input_path, log_path)
-    
-    return intermediate_path
+
+    energies = np.arange(WINDOW_LDOS[0], WINDOW_LDOS[1] + DELTA_E_LDOS, DELTA_E_LDOS)
+
+    return intermediate_path, energies

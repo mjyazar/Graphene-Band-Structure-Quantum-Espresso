@@ -16,7 +16,7 @@ def _write_input(input_path, outdir, output_path, prefix, fermi_energy, window=W
                          degauss = {DEGAUSS}  ! gaussian broadening, Ry (not eV!)
                          emin = {fermi_energy + window[0]}
                          emax = {fermi_energy + window[1]}
-                         deltaE = {DELTA_E}  ! energy grid step (eV)
+                         deltaE = {DELTA_E_DOS}  ! energy grid step (eV)
                          fildos = "{output_path}"  ! output file containing DOS(E)
                          /
                          """)

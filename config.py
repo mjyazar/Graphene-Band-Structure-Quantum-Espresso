@@ -1,6 +1,7 @@
 
 BOHR_TO_ANGSTROM = 0.529177210903
 RY_TO_EV = 13.605693122994
+EV_TO_RY = 1 / RY_TO_EV
 
 """
 GRAPHENE
@@ -31,9 +32,9 @@ KGRID_DENSE = (30, 30, 1)
 """
 pp.x
 """
-DEGAUSS_LDOS = 0.01  # eV
+DEGAUSS_LDOS = 0.05 * EV_TO_RY  # eV
 WINDOW_LDOS = (-10, 10)
-DELTA_E = 0.1
+DELTA_E_LDOS = 0.1
 
 
 """
@@ -41,7 +42,7 @@ dos.x
 """
 DEGAUSS = 0.01
 WINDOW_DOS = (-10, 10)
-DELTA_E = 0.02
+DELTA_E_DOS = 0.02
 
 # RY_TO_EV = 
 
