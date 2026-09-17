@@ -23,7 +23,8 @@ OUT_DIR.mkdir(exist_ok=True)
 
 # RUN_QE may be False if script already ran and want to work with existing files
 # True if running for the first time or want to create new files with new parameters
-RUN_QE = True
+RUN_QE = False
+RUN_LDOS = True
 RUN_CONVERGENCE = False
 
 
@@ -70,7 +71,11 @@ def run_calculations(structure, path, eamp):
         
         dos_ = dos._read_output(path / "dos.out")
         
-        ldos_pp_path, energies = path / "data" / "ldos.pp.dat"
+        if RUN_LDOS:
+            ldos_pp_path, energies = pp.ldos(path, fermi_energy)
+        else: 
+            ldos_pp_path, energies = path / "data" / "ldos.pp.dat"
+        
         ldos_averaged = average.ldos(path, ldos_pp_path, energies)
         
 

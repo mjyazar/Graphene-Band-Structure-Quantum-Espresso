@@ -23,7 +23,7 @@ def _read_output(path):
     return coordinates, planar_average, macroscopic_average
 
 
-def _calculate(path, input_data_path, verbose=True):
+def _calculate(path, input_data_path, output_path = None, verbose=True):
     
     path.mkdir(parents=True, exist_ok=True)
 
@@ -31,7 +31,9 @@ def _calculate(path, input_data_path, verbose=True):
     
     input_path = path / f"{process}.avg.in"
     log_path = path / f"{process}.avg.log"  # log file
-    output_path = path / f"{process}.avg.dat"
+    
+    if output_path is None:
+        output_path = path / f"{process}.avg.dat"
     
     if verbose:
         print(f"\nCREATING {input_path.name}")
@@ -81,7 +83,7 @@ def ldos(path, input_data_path, energies):
     for i, file in enumerate(files, start=1):
         
         file_number = file.name.split("dat")[-1]
-        averaged_path = path / f"ldos.avg.dat{file_number}"
+        averaged_path = path / "ldos_averaged" / f"ldos.avg.dat{file_number}"
         
         # Read averaged files if already averaged
         if averaged_path.exists():
@@ -91,7 +93,7 @@ def ldos(path, input_data_path, energies):
         else:
             print(f"\rRUNNING average.x WITH ldos.avg.in [{i}/{file_count}]", flush=True)
         
-            z, planar, _ = _calculate(path, file, verbose=False)
+            z, planar, _ = _calculate(path, file, output_path=averaged_path,  verbose=False)
 
             print("\033[2A", end="")  # move back up to the LDOS line
         
