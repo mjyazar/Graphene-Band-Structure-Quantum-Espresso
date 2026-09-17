@@ -1,5 +1,5 @@
 
-     Program POST-PROC v.7.6 starts on 16Sep2026 at 17:21:29 
+     Program POST-PROC v.7.6 starts on 17Sep2026 at  2: 0:12 
 
      This program is part of the open-source Quantum ESPRESSO suite
      for quantum simulation of materials; please cite
@@ -14,7 +14,7 @@
 
      MPI processes distributed on     1 nodes
      R & G space division:  proc/nbgrp/npool/nimage =       4
-     553 MiB available memory on the printing compute node when the environment starts
+     571 MiB available memory on the printing compute node when the environment starts
 
 
      Reading xml data from directory:
@@ -5058,10 +5058,10 @@
      Message from routine chdens:
      namelist plot not found or invalid, exiting
 
-     POST-PROC    :   8m 8.47s CPU   9m22.84s WALL
+     POST-PROC    :   8m28.93s CPU   9m43.83s WALL
 
 
-   This run was terminated on:  17:30:52  16Sep2026            
+   This run was terminated on:   2: 9:55  17Sep2026            
 
 =------------------------------------------------------------------------------=
    JOB DONE.
