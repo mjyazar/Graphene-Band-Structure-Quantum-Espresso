@@ -23,7 +23,7 @@ OUT_DIR.mkdir(exist_ok=True)
 
 # RUN_QE may be False if script already ran and want to work with existing files
 # True if running for the first time or want to create new files with new parameters
-RUN_QE = False
+RUN_QE = True
 RUN_CONVERGENCE = False
 
 
@@ -45,8 +45,8 @@ def run_calculations(structure, path, eamp):
 
         dos_ = dos.calculate(path, fermi_energy)
 
-        ldos_pp_path = pp.ldos(path, fermi_energy)
-        ldos_averaged = average.ldos(path, ldos_pp_path)
+        ldos_pp_path, energies = pp.ldos(path, fermi_energy)
+        ldos_averaged = average.ldos(path, ldos_pp_path, energies)
     
     else:
         
@@ -68,10 +68,10 @@ def run_calculations(structure, path, eamp):
         # charge_averaged_ = average._read_output(path / f"potential.avg.dat")
         # charge_averaged = PotentialAveraged(coordinates=charge_averaged_[0], planar=charge_averaged_[1], macroscopic=charge_averaged_[2])
         
-        dos_out = dos._read_output(path / "dos.out")
+        dos_ = dos._read_output(path / "dos.out")
         
-        ldos_pp_path = path / "data" / "ldos.pp.dat"
-        ldos_averaged = average.ldos(path, ldos_pp_path)
+        ldos_pp_path, energies = path / "data" / "ldos.pp.dat"
+        ldos_averaged = average.ldos(path, ldos_pp_path, energies)
         
 
     results = System(name=f"{path.name}",

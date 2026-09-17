@@ -67,9 +67,9 @@ def charge_density(path, input_data_path):
                                  macroscopic=macroscopic)
 
 
-def ldos(path, input_data_path):
+def ldos(path, input_data_path, energies):
     
-    averaged_dos = []
+    averaged_ldos = []
     coordinates = None
         
     files = sorted(input_data_path.parent.glob(f"{input_data_path.name}[0-9]*"), 
@@ -80,24 +80,31 @@ def ldos(path, input_data_path):
 
     for i, file in enumerate(files, start=1):
         
-        print(f"\rRUNNING average.x WITH ldos.avg.in [{i}/{file_count}]", flush=True)
+        file_number = input_data_path.split("dat")[-1]
+        averaged_path = path / f"ldos.avg.dat{file_number}"
         
-        z, planar, _ = _calculate(path, file, verbose=False)
+        # Read averaged files if already averaged
+        if averaged_path.exists():
+            z, planar, _ = _read_output(averaged_path)
+        
+        # otherwise run average.x
+        else:
+            print(f"\rRUNNING average.x WITH ldos.avg.in [{i}/{file_count}]", flush=True)
+        
+            z, planar, _ = _calculate(path, file, verbose=False)
 
-        print("\033[2A", end="")  # move back up to the LDOS line
+            print("\033[2A", end="")  # move back up to the LDOS line
         
         if coordinates is None:
             coordinates = z
-        
+    
         else:
             np.testing.assert_allclose(coordinates, z)
         
-        averaged_dos.append(planar)
+        averaged_ldos.append(planar)
 
     print("\nREADING ldos.avg.dat")
     
-    averaged_dos = np.asarray(averaged_dos)
-    
-    energies = np.arange(WINDOW_LDOS[0], WINDOW_LDOS[1] + DELTA_E, DELTA_E)
+    averaged_dos = np.asarray(averaged_ldos)
     
     return LDOSAveraged(energies=energies, coordinates=coordinates, planar=averaged_dos)
