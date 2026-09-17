@@ -31,21 +31,49 @@ def run_calculations(structure, path, eamp):
     
     print(f"\n{path.name.upper()} LAYERS COMPUTATIONS")
     
-    scf = pw.scf(structure, path, eamp)
-    nscf = pw.nscf(structure, path, eamp)
+    if RUN_QE
+        scf = pw.scf(structure, path, eamp)
+        nscf = pw.nscf(structure, path, eamp)
+
+        fermi_energy = nscf.calc.get_fermi_level()
+            
+        potential_raw, potential_pp_path = pp.potential(path)
+        potential_averaged = average.potential(path, potential_pp_path)
+
+        charge_raw, charge_pp_path = pp.charge_density(path)
+        charge_averaged = average.charge_density(path, charge_pp_path)
+
+        dos_ = dos.calculate(path, fermi_energy)
+
+        ldos_pp_path = pp.ldos(path, fermi_energy)
+        ldos_averaged = average.ldos(path, ldos_pp_path)
     
-    fermi_energy = nscf.calc.get_fermi_level()
+    else:
         
-    potential_raw, potential_pp_path = pp.potential(path)
-    potential_averaged = average.potential(path, potential_pp_path)
-    
-    charge_raw, charge_pp_path = pp.charge_density(path)
-    charge_averaged = average.charge_density(path, charge_pp_path)
-    
-    dos_ = dos.calculate(path, fermi_energy)
-    
-    ldos_pp_path = pp.ldos(path, fermi_energy)
-    ldos_averaged = average.ldos(path, ldos_pp_path)
+        scf = pw._read_output(path / "scf.pwo")
+        nscf = pw._read_output(path / "nscf.pwo")
+        
+        fermi_energy = nscf.calc.get_fermi_level()
+
+        potential_raw, potential_pp_path = pp._read_output(path / "potential.cube", 6), path / "data" / f"potential.pp.dat"
+        potential_averaged = average.potential(path, potential_pp_path)
+        # ff have access to .avg.dat files, run:
+        # potential_averaged_ = average._read_output(path / f"potential.avg.dat")
+        # potential_averaged = PotentialAveraged(coordinates=potential_averaged_[0], planar=potential_averaged_[1], macroscopic=potential_averaged_[2])
+        
+        charge_raw, charge_pp_path = pp._read_output(path / "charge.cube", 6), "data" / f"charge.pp.dat"
+        # if no access to .avg.dat files, run:
+        charge_averaged = average.charge_density(path, charge_pp_path)
+        # ff have access to .avg.dat files, run:
+        # charge_averaged_ = average._read_output(path / f"potential.avg.dat")
+        # charge_averaged = PotentialAveraged(coordinates=charge_averaged_[0], planar=charge_averaged_[1], macroscopic=charge_averaged_[2])
+
+        dos_out = dos._read_output(path / "dos.out")
+        dos_ = DOS(energy=dos_out[0], dos=dos_out[1], idos=dos_out[2])
+        
+        ldos_pp_path = path / "data" / "ldos.pp.dat"
+        ldos_averaged = average.ldos(path, ldos_pp_path)
+        
 
     results = System(name=f"{path.name}",
                             atoms=structure,
