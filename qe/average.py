@@ -80,7 +80,7 @@ def ldos(path, input_data_path, energies):
 
     for i, file in enumerate(files, start=1):
         
-        file_number = input_data_path.split("dat")[-1]
+        file_number = file.name.split("dat")[-1]
         averaged_path = path / f"ldos.avg.dat{file_number}"
         
         # Read averaged files if already averaged
