@@ -24,7 +24,7 @@ OUT_DIR.mkdir(exist_ok=True)
 # RUN_QE may be False if script already ran and want to work with existing files
 # True if running for the first time or want to create new files with new parameters
 RUN_QE = True
-RUN_CONVERGENCE = True
+RUN_CONVERGENCE = False
 
 
 def run_calculations(structure, path, eamp):
