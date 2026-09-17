@@ -80,9 +80,11 @@ def ldos(path, input_data_path):
 
     for i, file in enumerate(files, start=1):
         
-        print(f"\rRUNNING average.x WITH ldos.avg.in [{i}/{file_count}]", end="", flush=True)
+        print(f"\rRUNNING average.x WITH ldos.avg.in [{i}/{file_count}]", flush=True)
         
         z, planar, _ = _calculate(path, file, verbose=False)
+
+        print("\033[2A", end="")  # move back up to the LDOS line
         
         if coordinates is None:
             coordinates = z
@@ -91,8 +93,8 @@ def ldos(path, input_data_path):
             np.testing.assert_allclose(coordinates, z)
         
         averaged_dos.append(planar)
-    
-    print("READING ldos.avg.dat")
+
+    print("\nREADING ldos.avg.dat")
     
     averaged_dos = np.asarray(averaged_dos)
     
