@@ -1,4 +1,4 @@
-# Graphene Band Structure (Quantum ESPRESSO + ASE)
+# Dielectric Embedding of Bilayer Graphene using Quantum ESPRESSO
 
 This repository constructs monolayer and bilayer graphene using Density Functional Theory (DFT). The graphene structures undergo relaxation, computation of the self-consistent-field (SCF), convergence testing, with a subsequent computation and plotting of the electronic band structure using Quantum Espresso (QE) and the Atomic Simulation Environment (ASE).
 
