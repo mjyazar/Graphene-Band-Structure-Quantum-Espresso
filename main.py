@@ -108,9 +108,13 @@ def main():
 
         print("CREATING GRAPHENE BILAYERS")
         bilayer = graphene.bilayer()
+
+        if RUN_QE:
+            print("RELAXING COUPLED BILAYER")
+            relaxed_coupled = pw.relax(bilayer, PATH_COUPLED, eamp)
         
-        print("RELAXING COUPLED BILAYER")
-        relaxed_coupled = pw.relax(bilayer, PATH_COUPLED, eamp)
+        else:
+            relaxed_coupled = pw._read_output(PATH_COUPLED / "relax.pwo")
         
         print("\nEXTRACTING FROZEN LAYERS")
         isolated_bottom, isolated_top = graphene.isolate_bilayer(relaxed_coupled)
