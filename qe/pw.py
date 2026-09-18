@@ -26,7 +26,7 @@ def _input_data(calculation, outdir, ecutwfc, nbnd, prefix, efield):
                "disk_io": "low",  # keeps wavefunctions in memory while running and writes them at the end
                "tprnfor": True}  # print atomic forces on each atom
     
-    system = {"assume_isolated": "2D",
+    system = {"vdw_corr": "grimme-d3",
               "ecutwfc": ecutwfc,  # kinetic energy (1Ry ~13.6eV) upto which plane waves are included in compuation
               "ecutrho": ECUTRHO,  # kinetic energy upto which electron charge desnity is computed
               "nbnd": nbnd}  # number of energy/eigenbands calculated at every k point - C: 4 valence e -> 2 atoms
