@@ -1,5 +1,5 @@
 
-     Program PWSCF v.7.6 starts on 17Sep2026 at  0:22:59 
+     Program PWSCF v.7.6 starts on 18Sep2026 at 10:32: 6 
 
      This program is part of the open-source Quantum ESPRESSO suite
      for quantum simulation of materials; please cite
@@ -13,7 +13,7 @@
      Parallel version (MPI), running on     4 processors
 
      MPI processes distributed on     1 nodes
-     680 MiB available memory on the printing compute node when the environment starts
+     6564 MiB available memory on the printing compute node when the environment starts
 
      Waiting for input...
      Reading input from standard input
@@ -229,18 +229,41 @@ Warning: card &RISM ignored
    Cartesian axes
 
      site n.     atom                  positions (alat units)
-         1        C      tau(   1) = (   0.0000000   0.0000000   3.9155091  )
-         2        C      tau(   2) = (   0.5000000   0.2886752   3.9153312  )
-         3        C      tau(   3) = (   0.5000000   0.2886752   5.5765393  )
-         4        C      tau(   4) = (   0.0000000   0.5773503   5.5763614  )
+         1        C      tau(   1) = (   0.0000000   0.0000000   4.0644578  )
+         2        C      tau(   2) = (   0.5000000   0.2886752   4.0647254  )
+         3        C      tau(   3) = (   0.5000000   0.2886752   5.4271451  )
+         4        C      tau(   4) = (   0.0000000   0.5773503   5.4274128  )
+
+     --------------------------------------------
+     DFT-D3 Dispersion Correction (3-body terms):
+     --------------------------------------------
+       Reference C6 values for interpolation: 
+
+         atom   Coordination number   C6
+         C          0.000            98.23
+         C          0.987            86.49
+         C          1.998            58.72
+         C          2.999            51.56
+         C          3.984            36.41
+
+       Values used:
+
+         atom   Coordination number  R0_AB[au]  C6      C8
+         C          3.322            2.750     48.11   1391.52
+         C          3.323            2.750     48.11   1391.39
+         C          3.323            2.750     48.11   1391.39
+         C          3.322            2.750     48.11   1391.52
+
+         Molecular C6 ( Ry / a.u.^6 ) =       769.78
+
 
    Crystallographic axes
 
      site n.     atom                  positions (cryst. coord.)
-         1        C      tau(   1) = (  0.0000000  0.0000000  0.4125119  )
-         2        C      tau(   2) = (  0.6666668  0.3333335  0.4124931  )
-         3        C      tau(   3) = (  0.6666668  0.3333335  0.5875069  )
-         4        C      tau(   4) = (  0.3333335  0.6666670  0.5874882  )
+         1        C      tau(   1) = (  0.0000000  0.0000000  0.4282041  )
+         2        C      tau(   2) = (  0.6666668  0.3333335  0.4282323  )
+         3        C      tau(   3) = (  0.6666668  0.3333335  0.5717677  )
+         4        C      tau(   4) = (  0.3333335  0.6666670  0.5717959  )
 
      number of k points=    27  Gaussian smearing, width (Ry)=  0.0100
                        cart. coord. in units 2pi/alat
@@ -346,14 +369,6 @@ Warning: card &RISM ignored
      Estimated max dynamical RAM per process >     101.91 MB
 
      Estimated total dynamical RAM >     325.84 MB
- ----2D----2D----2D----2D----2D----2D----2D----2D----2D----2D----2D----2D
-  The code is running with the 2D cutoff
-  Please refer to:
-  Sohier, T., Calandra, M., & Mauri, F. (2017), 
-  Density functional perturbation theory for gated two-dimensional heterostructures:
-  Theoretical developments and application to flexural phonons in graphene.
-  Physical Review B, 96(7), 75448. https://doi.org/10.1103/PhysRevB.96.075448
- ----2D----2D----2D----2D----2D----2D----2D----2D----2D----2D----2D----2D
 
      Check: negative core charge=   -0.000003
 
@@ -361,7 +376,7 @@ Warning: card &RISM ignored
 
      starting charge      15.9998, renormalised to      16.0000
 
-     negative rho (up, down):  1.201E-04 0.000E+00
+     negative rho (up, down):  1.243E-04 0.000E+00
      Starting wfcs are   16 randomized atomic wfcs
      Checking if some PAW data can be deallocated... 
 
@@ -373,142 +388,141 @@ Warning: card &RISM ignored
      Davidson diagonalization with overlap
 
 ---- Real-time Memory Report at c_bands before calling an iterative solver
-            97 MiB given to the printing process from OS
+           103 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           463 MiB available memory on the node where the printing process lives
+          6352 MiB available memory on the node where the printing process lives
 ------------------
-     ethr =  1.00E-02,  avg # of iterations =  5.8
+     ethr =  1.00E-02,  avg # of iterations =  5.4
 
-     negative rho (up, down):  9.968E-05 0.000E+00
+     negative rho (up, down):  1.208E-04 0.000E+00
 
-     total cpu time spent up to now is        5.3 secs
+     total cpu time spent up to now is        6.0 secs
 
-     total energy              =     -73.72700013 Ry
-     estimated scf accuracy    <       0.37669858 Ry
+     total energy              =     -73.74225341 Ry
+     estimated scf accuracy    <       0.37530348 Ry
 
      iteration #  2     ecut=    60.00 Ry     beta= 0.70
      Davidson diagonalization with overlap
 
 ---- Real-time Memory Report at c_bands before calling an iterative solver
-           122 MiB given to the printing process from OS
+           128 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           369 MiB available memory on the node where the printing process lives
+          6254 MiB available memory on the node where the printing process lives
 ------------------
-     ethr =  2.35E-03,  avg # of iterations =  4.9
+     ethr =  2.35E-03,  avg # of iterations =  7.6
 
-     negative rho (up, down):  1.213E-04 0.000E+00
+     negative rho (up, down):  1.340E-04 0.000E+00
 
-     total cpu time spent up to now is        7.1 secs
+     total cpu time spent up to now is        8.2 secs
 
-     total energy              =     -73.77410367 Ry
-     estimated scf accuracy    <       0.00413904 Ry
+     total energy              =     -73.78973390 Ry
+     estimated scf accuracy    <       0.00433238 Ry
 
      iteration #  3     ecut=    60.00 Ry     beta= 0.70
      Davidson diagonalization with overlap
 
 ---- Real-time Memory Report at c_bands before calling an iterative solver
-           124 MiB given to the printing process from OS
+           130 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           369 MiB available memory on the node where the printing process lives
+          6254 MiB available memory on the node where the printing process lives
 ------------------
-     c_bands:  1 eigenvalues not converged
-     ethr =  2.59E-05,  avg # of iterations = 12.9
+     ethr =  2.71E-05,  avg # of iterations = 10.4
 
-     negative rho (up, down):  1.411E-04 0.000E+00
+     negative rho (up, down):  1.413E-04 0.000E+00
 
-     total cpu time spent up to now is       11.1 secs
+     total cpu time spent up to now is       11.7 secs
 
-     total energy              =     -73.77478571 Ry
-     estimated scf accuracy    <       0.00033908 Ry
+     total energy              =     -73.79029856 Ry
+     estimated scf accuracy    <       0.00067822 Ry
 
      iteration #  4     ecut=    60.00 Ry     beta= 0.70
      Davidson diagonalization with overlap
 
 ---- Real-time Memory Report at c_bands before calling an iterative solver
-           125 MiB given to the printing process from OS
+           131 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           416 MiB available memory on the node where the printing process lives
+          6301 MiB available memory on the node where the printing process lives
 ------------------
-     ethr =  2.12E-06,  avg # of iterations =  5.8
+     ethr =  4.24E-06,  avg # of iterations =  7.6
 
-     negative rho (up, down):  1.420E-04 0.000E+00
+     negative rho (up, down):  1.444E-04 0.000E+00
 
-     total cpu time spent up to now is       13.4 secs
+     total cpu time spent up to now is       13.9 secs
 
-     total energy              =     -73.77481627 Ry
-     estimated scf accuracy    <       0.00006595 Ry
+     total energy              =     -73.79042195 Ry
+     estimated scf accuracy    <       0.00051217 Ry
 
      iteration #  5     ecut=    60.00 Ry     beta= 0.70
      Davidson diagonalization with overlap
 
 ---- Real-time Memory Report at c_bands before calling an iterative solver
-           127 MiB given to the printing process from OS
+           133 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           394 MiB available memory on the node where the printing process lives
+          6284 MiB available memory on the node where the printing process lives
 ------------------
-     ethr =  4.12E-07,  avg # of iterations =  2.9
+     ethr =  3.20E-06,  avg # of iterations =  3.3
 
-     negative rho (up, down):  1.428E-04 0.000E+00
+     negative rho (up, down):  1.449E-04 0.000E+00
 
-     total cpu time spent up to now is       14.9 secs
+     total cpu time spent up to now is       16.4 secs
 
-     total energy              =     -73.77482957 Ry
-     estimated scf accuracy    <       0.00000186 Ry
+     total energy              =     -73.79052340 Ry
+     estimated scf accuracy    <       0.00000153 Ry
 
      iteration #  6     ecut=    60.00 Ry     beta= 0.70
      Davidson diagonalization with overlap
 
 ---- Real-time Memory Report at c_bands before calling an iterative solver
-           128 MiB given to the printing process from OS
+           135 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           376 MiB available memory on the node where the printing process lives
+          6285 MiB available memory on the node where the printing process lives
 ------------------
-     ethr =  1.17E-08,  avg # of iterations =  2.8
+     ethr =  9.54E-09,  avg # of iterations =  3.3
 
-     negative rho (up, down):  1.429E-04 0.000E+00
+     negative rho (up, down):  1.449E-04 0.000E+00
 
-     total cpu time spent up to now is       17.2 secs
+     total cpu time spent up to now is       19.3 secs
 
-     total energy              =     -73.77483042 Ry
-     estimated scf accuracy    <       0.00000022 Ry
+     total energy              =     -73.79052442 Ry
+     estimated scf accuracy    <       0.00000013 Ry
 
      iteration #  7     ecut=    60.00 Ry     beta= 0.70
      Davidson diagonalization with overlap
 
 ---- Real-time Memory Report at c_bands before calling an iterative solver
-           130 MiB given to the printing process from OS
+           136 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           406 MiB available memory on the node where the printing process lives
+          6303 MiB available memory on the node where the printing process lives
 ------------------
-     ethr =  1.40E-09,  avg # of iterations =  1.9
+     ethr =  8.30E-10,  avg # of iterations =  2.0
 
-     negative rho (up, down):  1.430E-04 0.000E+00
+     negative rho (up, down):  1.449E-04 0.000E+00
 
-     total cpu time spent up to now is       18.6 secs
+     total cpu time spent up to now is       21.9 secs
 
-     total energy              =     -73.77483044 Ry
-     estimated scf accuracy    <       0.00000004 Ry
+     total energy              =     -73.79052444 Ry
+     estimated scf accuracy    <       0.00000001 Ry
 
      iteration #  8     ecut=    60.00 Ry     beta= 0.70
      Davidson diagonalization with overlap
 
 ---- Real-time Memory Report at c_bands before calling an iterative solver
-           132 MiB given to the printing process from OS
+           138 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           377 MiB available memory on the node where the printing process lives
+          6279 MiB available memory on the node where the printing process lives
 ------------------
-     ethr =  2.46E-10,  avg # of iterations =  2.0
+     ethr =  7.79E-11,  avg # of iterations =  2.1
 
-     negative rho (up, down):  1.430E-04 0.000E+00
+     negative rho (up, down):  1.449E-04 0.000E+00
 
-     total cpu time spent up to now is       20.1 secs
+     total cpu time spent up to now is       24.5 secs
 
      End of self-consistent calculation
 
           k = 0.0000 0.0000 0.0000 (  6469 PWs)   bands (ev):
 
-   -23.8235 -23.7965 -12.0522 -11.7355  -7.2732  -7.2732  -7.2723  -7.2723
-    -1.0179  -0.5596   0.5634   1.7117   2.2360   2.6171
+   -20.6493 -20.4983  -9.1359  -8.1603  -4.0367  -4.0367  -4.0275  -4.0275
+     2.3357   2.6471   2.9873   3.7774   4.2925   5.7903
 
      occupation numbers 
      1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
@@ -516,8 +530,8 @@ Warning: card &RISM ignored
 
           k = 0.0000 0.0770 0.0000 (  6464 PWs)   bands (ev):
 
-   -23.7180 -23.6912 -11.9252 -11.6101  -7.6991  -7.6975  -7.4973  -7.4959
-    -0.8765  -0.4159   0.7029   1.8546   2.3770   2.7633
+   -20.5434 -20.3933  -9.0080  -8.0363  -4.4650  -4.4506  -4.2623  -4.2496
+     2.4787   2.7916   3.1333   3.9225   4.4348   5.9335
 
      occupation numbers 
      1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
@@ -525,8 +539,8 @@ Warning: card &RISM ignored
 
           k = 0.0000 0.1540 0.0000 (  6496 PWs)   bands (ev):
 
-   -23.4023 -23.3761 -11.5460 -11.2361  -8.8310  -8.8278  -8.0650  -8.0630
-    -0.4525   0.0149   1.1210   2.2829   2.7981   3.2016
+   -20.2264 -20.0792  -8.6258  -7.6665  -5.6020  -5.5764  -4.8324  -4.8144
+     2.9074   3.2250   3.5714   4.3577   4.8615   6.4051
 
      occupation numbers 
      1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
@@ -534,8 +548,8 @@ Warning: card &RISM ignored
 
           k = 0.0000 0.2309 0.0000 (  6474 PWs)   bands (ev):
 
-   -22.8784 -22.8534 -10.9214 -10.6207 -10.3842 -10.3790  -8.7745  -8.7720
-     0.2535   0.7310   1.8123   2.9912   3.4824   3.9285
+   -19.7005 -19.5582  -7.9959  -7.1614  -7.1231  -7.0579  -5.5438  -5.5218
+     3.6208   3.9451   4.3015   5.0813   5.5699   7.0052
 
      occupation numbers 
      1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
@@ -543,8 +557,8 @@ Warning: card &RISM ignored
 
           k = 0.0000 0.3079 0.0000 (  6492 PWs)   bands (ev):
 
-   -22.1508 -22.1272 -12.1230 -12.1155 -10.0662  -9.7797  -9.4648  -9.4620
-     1.2381   1.7129   2.4794   2.6148   2.9206   3.7586
+   -18.9701 -18.8344  -8.9066  -8.8533  -7.1316  -6.2353  -6.2303  -6.2108
+     4.6149   4.9288   5.3228   5.6630   5.9804   6.1254
 
      occupation numbers 
      1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
@@ -552,8 +566,8 @@ Warning: card &RISM ignored
 
           k = 0.0000 0.3849 0.0000 (  6484 PWs)   bands (ev):
 
-   -21.2269 -21.2051 -13.8950 -13.8850 -10.0391 -10.0360  -9.0120  -8.7479
-     0.6535   0.7790   2.4902   3.0249   3.5537   3.5806
+   -18.0426 -17.9153 -10.6846 -10.6176  -6.8103  -6.7841  -6.0620  -5.2193
+     3.7198   4.1786   5.8826   6.2547   6.6189   6.7304
 
      occupation numbers 
      1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
@@ -561,8 +575,8 @@ Warning: card &RISM ignored
 
           k = 0.0000 0.4619 0.0000 (  6490 PWs)   bands (ev):
 
-   -20.1226 -20.1029 -15.6009 -15.5886 -10.4441 -10.4410  -7.8413  -7.6171
-    -1.1199  -0.9668   3.3271   3.3581   4.0708   4.6025
+   -16.9338 -16.8171 -12.3959 -12.3166  -7.2158  -7.1887  -4.8610  -4.1303
+     1.9387   2.4484   6.4913   6.6724   7.4666   7.8371
 
      occupation numbers 
      1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
@@ -570,8 +584,8 @@ Warning: card &RISM ignored
 
           k = 0.0000 0.5389 0.0000 (  6524 PWs)   bands (ev):
 
-   -18.9128 -18.8971 -17.1196 -17.1068 -10.6525 -10.6493  -6.8361  -6.6985
-    -2.4016  -2.2570   3.2296   3.2681   5.8262   6.4137
+   -15.7155 -15.6197 -13.9147 -13.8349  -7.4244  -7.3969  -3.7849  -3.3137
+     0.7157   1.1298   6.3856   6.5835   9.2480   9.6618
 
      occupation numbers 
      1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
@@ -579,8 +593,8 @@ Warning: card &RISM ignored
 
           k = 0.0667 0.1155 0.0000 (  6499 PWs)   bands (ev):
 
-   -23.5074 -23.4810 -11.6720 -11.3604  -8.4255  -8.4239  -7.9453  -7.9442
-    -0.5937  -0.1286   0.9819   2.1405   2.6582   3.0554
+   -20.3319 -20.1838  -8.7529  -7.7894  -5.1916  -5.1774  -4.7095  -4.6986
+     2.7646   3.0806   3.4254   4.2128   4.7195   6.2200
 
      occupation numbers 
      1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
@@ -588,8 +602,8 @@ Warning: card &RISM ignored
 
           k = 0.0667 0.1925 0.0000 (  6491 PWs)   bands (ev):
 
-   -23.0876 -23.0621 -11.1699 -10.8654  -9.6783  -9.6749  -8.6757  -8.6736
-    -0.0282   0.4453   1.5383   2.7113   3.2166   3.6398
+   -19.9105 -19.7663  -8.2466  -7.3003  -6.4500  -6.4233  -5.4433  -5.4252
+     3.3360   3.6577   4.0096   4.7927   5.2885   6.8028
 
      occupation numbers 
      1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
@@ -597,8 +611,8 @@ Warning: card &RISM ignored
 
           k = 0.0667 0.2694 0.0000 (  6480 PWs)   bands (ev):
 
-   -22.4619 -22.4377 -11.2657 -11.2598 -10.4289 -10.1359  -9.4362  -9.4333
-     0.8180   1.3015   2.3553   3.3382   3.4088   3.5798
+   -19.2824 -19.1439  -8.0448  -8.0017  -7.4984  -6.5807  -6.2069  -6.1820
+     4.1909   4.5184   4.8857   5.6568   6.1340   6.4786
 
      occupation numbers 
      1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
@@ -606,8 +620,8 @@ Warning: card &RISM ignored
 
           k = 0.0667 0.3464 0.0000 (  6491 PWs)   bands (ev):
 
-   -21.6360 -21.6134 -12.9905 -12.9820 -10.0999 -10.0964  -9.4701  -9.1949
-     1.5101   1.6110   1.9410   2.4702   3.4886   4.1176
+   -18.4533 -18.3223  -9.7763  -9.7179  -6.8723  -6.8436  -6.5279  -5.6557
+     4.5983   4.9869   5.3284   5.6930   6.0528   6.8189
 
      occupation numbers 
      1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
@@ -615,8 +629,8 @@ Warning: card &RISM ignored
 
           k = 0.0667 0.4234 0.0000 (  6487 PWs)   bands (ev):
 
-   -20.6206 -20.6000 -14.7154 -14.7044 -10.6045 -10.6007  -8.3423  -8.0960
-    -0.3038  -0.1696   3.3150   3.8033   3.9553   3.9853
+   -17.4340 -17.3123 -11.5073 -11.4351  -7.3779  -7.3471  -5.3792  -4.5851
+     2.7607   3.2310   6.7114   7.0127   7.1646   7.2558
 
      occupation numbers 
      1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
@@ -624,8 +638,8 @@ Warning: card &RISM ignored
 
           k = 0.0667 0.5004 0.0000 (  6503 PWs)   bands (ev):
 
-   -19.4452 -19.4271 -16.3396 -16.3266 -10.9178 -10.9139  -7.1903  -7.0016
-    -1.8863  -1.7386   3.7347   3.7739   5.0151   5.5695
+   -16.2531 -16.1443 -13.1360 -13.0536  -7.6916  -7.6598  -4.1814  -3.5554
+     1.1952   1.6627   6.8910   7.0898   8.4269   8.8101
 
      occupation numbers 
      1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
@@ -633,8 +647,8 @@ Warning: card &RISM ignored
 
           k = 0.0667 0.5774 0.0000 (  6480 PWs)   bands (ev):
 
-   -18.4742 -18.4652 -17.4563 -17.4493 -11.0238 -11.0198  -6.5537  -6.4551
-    -2.6235  -2.4987   3.6830   3.7260   6.8247   6.9235
+   -15.2618 -15.2055 -14.2341 -14.1920  -7.7978  -7.7656  -3.4713  -3.1142
+     0.5341   0.8582   6.8364   7.0429  10.2670  10.3537
 
      occupation numbers 
      1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
@@ -642,8 +656,8 @@ Warning: card &RISM ignored
 
           k = 0.1333 0.2309 0.0000 (  6457 PWs)   bands (ev):
 
-   -22.5659 -22.5415 -10.7801 -10.7771 -10.5505 -10.2555  -9.6424  -9.6403
-     0.6782   1.1612   2.2309   3.4250   3.6602   3.7083
+   -19.3868 -19.2474  -7.6222  -7.5497  -7.5276  -6.6984  -6.4092  -6.3929
+     4.0495   4.3774   4.7401   5.5168   5.9996   6.8025
 
      occupation numbers 
      1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
@@ -651,8 +665,8 @@ Warning: card &RISM ignored
 
           k = 0.1333 0.3079 0.0000 (  6480 PWs)   bands (ev):
 
-   -21.8419 -21.8189 -12.1792 -12.1736 -10.5524 -10.5489  -9.7023  -9.4218
-     1.6633   2.0575   2.1475   2.1917   3.1959   4.4172
+   -18.6600 -18.5272  -8.9570  -8.9172  -7.3242  -7.2971  -6.7639  -5.8775
+     5.0421   5.1952   5.3995   5.4792   5.7624   6.5294
 
      occupation numbers 
      1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
@@ -660,8 +674,8 @@ Warning: card &RISM ignored
 
           k = 0.1333 0.3849 0.0000 (  6474 PWs)   bands (ev):
 
-   -20.9238 -20.9026 -13.7764 -13.7676 -11.2291 -11.2242  -8.6552  -8.3970
-     0.3855   0.4816   2.9204   3.4367   4.4021   5.2319
+   -17.7383 -17.6139 -10.5628 -10.5033  -8.0050  -7.9687  -5.7013  -4.8734
+     3.4806   3.8410   6.3155   6.6652   7.0752   7.8202
 
      occupation numbers 
      1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
@@ -669,8 +683,8 @@ Warning: card &RISM ignored
 
           k = 0.1333 0.4619 0.0000 (  6494 PWs)   bands (ev):
 
-   -19.8289 -19.8098 -15.3950 -15.3835 -11.6753 -11.6698  -7.4853  -7.2651
-    -1.2672  -1.1437   4.4255   4.9277   5.1045   5.1383
+   -16.6389 -16.5250 -12.1879 -12.1135  -8.4531  -8.4125  -4.5023  -3.7811
+     1.8147   2.2383   7.8342   8.1333   8.2927   8.4339
 
      occupation numbers 
      1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
@@ -678,8 +692,8 @@ Warning: card &RISM ignored
 
           k = 0.1333 0.5389 0.0000 (  6490 PWs)   bands (ev):
 
-   -18.6346 -18.6195 -16.8671 -16.8549 -11.8982 -11.8924  -6.4596  -6.3224
-    -2.5080  -2.3959   4.9457   5.0042   6.2033   6.7109
+   -15.4361 -15.3431 -13.6606 -13.5845  -8.6767  -8.6345  -3.4089  -2.9373
+     0.6326   0.9585   8.0892   8.3258   9.6353   9.9469
 
      occupation numbers 
      1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
@@ -687,8 +701,8 @@ Warning: card &RISM ignored
 
           k = 0.2000 0.3464 0.0000 (  6482 PWs)   bands (ev):
 
-   -21.0255 -21.0041 -13.1933 -13.1889 -11.7304 -11.7271  -8.7614  -8.4994
-     0.6751   0.7425   2.7829   3.2857   4.2466   5.5412
+   -17.8404 -17.7150  -9.9682  -9.9363  -8.5008  -8.4771  -5.8104  -4.9719
+     3.7971   4.0680   6.1760   6.5126   6.9301   7.6746
 
      occupation numbers 
      1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
@@ -696,8 +710,8 @@ Warning: card &RISM ignored
 
           k = 0.2000 0.4234 0.0000 (  6465 PWs)   bands (ev):
 
-   -20.0255 -20.0060 -14.4823 -14.4745 -12.5539 -12.5483  -7.6481  -7.4137
-    -0.8188  -0.7348   4.1634   4.6640   5.4707   6.7695
+   -16.8364 -16.7204 -11.2662 -11.2132  -9.3309  -9.2922  -4.6765  -3.9131
+     2.2893   2.6074   7.5726   7.8932   8.3865   9.0837
 
      occupation numbers 
      1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
@@ -705,8 +719,8 @@ Warning: card &RISM ignored
 
           k = 0.2000 0.5004 0.0000 (  6474 PWs)   bands (ev):
 
-   -18.8753 -18.8584 -15.9155 -15.9044 -12.9819 -12.9748  -6.4801  -6.2958
-    -2.2223  -2.1262   5.7626   6.1851   6.5855   6.7105
+   -15.6807 -15.5777 -12.7074 -12.6357  -9.7636  -9.7145  -3.4686  -2.8511
+     0.8911   1.2248   9.1996   9.3730   9.8491   9.9934
 
      occupation numbers 
      1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
@@ -714,8 +728,8 @@ Warning: card &RISM ignored
 
           k = 0.2000 0.5774 0.0000 (  6484 PWs)   bands (ev):
 
-   -17.9337 -17.9253 -16.9604 -16.9546 -13.1150 -13.1076  -5.7844  -5.6884
-    -2.9388  -2.8921   6.6105   6.7106   7.0005   7.0827
+   -14.7198 -14.6665 -13.7349 -13.7007  -9.8980  -9.8462  -2.7021  -2.3527
+     0.2925   0.3792   9.6848  10.0010  10.3461  10.5418
 
      occupation numbers 
      1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
@@ -723,8 +737,8 @@ Warning: card &RISM ignored
 
           k = 0.2667 0.4619 0.0000 (  6452 PWs)   bands (ev):
 
-   -18.9641 -18.9468 -15.2626 -15.2567 -13.6840 -13.6795  -6.5009  -6.3004
-    -2.0701  -1.9887   5.6262   6.0032   6.3306   7.7873
+   -15.7703 -15.6653 -12.0416 -12.0013 -10.4568 -10.4278  -3.5029  -2.8343
+     1.0399   1.3524   9.0687   9.1954   9.9029  10.0912
 
      occupation numbers 
      1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
@@ -732,8 +746,8 @@ Warning: card &RISM ignored
 
           k = 0.2667 0.5389 0.0000 (  6444 PWs)   bands (ev):
 
-   -17.8193 -17.8057 -16.3152 -16.3066 -14.2279 -14.2213  -5.3841  -5.2456
-    -3.2062  -3.1350   6.4680   6.5958   7.3315   8.2705
+   -14.6174 -14.5322 -13.1003 -13.0448 -11.0077 -10.9633  -2.3369  -1.8569
+    -0.0677   0.2021   9.7354   9.8630  10.6992  11.4317
 
      occupation numbers 
      1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
@@ -741,152 +755,161 @@ Warning: card &RISM ignored
 
           k = 0.3333 0.5774 0.0000 (  6450 PWs)   bands (ev):
 
-   -16.8616 -16.8540 -16.8540 -16.8470 -14.8478 -14.8478  -4.3132  -4.2232
-    -4.2232  -4.1319   6.3561   6.3561   8.3596   8.6775
+   -13.6651 -13.6150 -13.6150 -13.5697 -11.6085 -11.6085  -1.3296  -1.0009
+    -1.0009  -0.6523   9.5986   9.5986  11.6488  11.9957
 
      occupation numbers 
-     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   0.8259   0.5010
-     0.5010   0.1720   0.0000   0.0000   0.0000   0.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   0.9997   0.5001
+     0.5001   0.0001   0.0000   0.0000   0.0000   0.0000
 
-     the Fermi energy is    -4.2229 ev
+     the Fermi energy is    -1.0009 ev
 
-!    total energy              =     -73.77483045 Ry
-     total all-electron energy =      -304.831219 Ry
-     estimated scf accuracy    <          2.8E-09 Ry
-     smearing contrib. (-TS)   =      -0.00016465 Ry
-     internal energy E=F+TS    =     -73.77466580 Ry
+!    total energy              =     -73.79052445 Ry
+     total all-electron energy =      -304.846913 Ry
+     estimated scf accuracy    <          2.4E-09 Ry
+     smearing contrib. (-TS)   =      -0.00010052 Ry
+     internal energy E=F+TS    =     -73.79042393 Ry
 
      The total energy is F=E-TS. E is the sum of the following terms:
-     one-electron contribution =   -1138.65316581 Ry
-     hartree contribution      =     571.09293285 Ry
-     xc contribution           =     -18.57092331 Ry
-     ewald contribution        =     537.02530246 Ry
-     one-center paw contrib.   =     -24.66881199 Ry
-      -> PAW hartree energy AE =       9.52785666 Ry
-      -> PAW hartree energy PS =      -9.51917656 Ry
-      -> PAW xc energy AE      =     -10.68322696 Ry
-      -> PAW xc energy PS      =       4.50734723 Ry
-      -> total E_H with PAW    =     571.10161295 Ry
-      -> total E_XC with PAW   =     -24.74680304 Ry
+     one-electron contribution =    -707.75421788 Ry
+     hartree contribution      =     357.55126662 Ry
+     xc contribution           =     -18.57725400 Ry
+     ewald contribution        =     319.67640011 Ry
+     DFT-D3 Dispersion         =      -0.01770422 Ry
+     one-center paw contrib.   =     -24.66891456 Ry
+      -> PAW hartree energy AE =       9.53505551 Ry
+      -> PAW hartree energy PS =      -9.52637368 Ry
+      -> PAW xc energy AE      =     -10.68489773 Ry
+      -> PAW xc energy PS      =       4.50902044 Ry
+      -> total E_H with PAW    =     357.55994845 Ry
+      -> total E_XC with PAW   =     -24.75313129 Ry
 
      convergence has been achieved in   8 iterations
 
-     negative rho (up, down):  1.430E-04 0.000E+00
+     negative rho (up, down):  1.449E-04 0.000E+00
 
      Forces acting on atoms (cartesian axes, Ry/au):
 
-     atom    1 type  1   force =     0.00000000    0.00000000   -0.00049147
-     atom    2 type  1   force =     0.00000000   -0.00000000    0.00018631
-     atom    3 type  1   force =     0.00000000   -0.00000000   -0.00018631
-     atom    4 type  1   force =    -0.00000000   -0.00000000    0.00049147
+     atom    1 type  1   force =     0.00000000    0.00000000   -0.00083927
+     atom    2 type  1   force =    -0.00000000    0.00000000   -0.00098674
+     atom    3 type  1   force =     0.00000000   -0.00000000    0.00098674
+     atom    4 type  1   force =     0.00000000    0.00000000    0.00083927
      The non-local contrib.  to forces
-     atom    1 type  1   force =     0.00000000    0.00000000   -0.00083916
-     atom    2 type  1   force =     0.00000000   -0.00000000    0.00038290
-     atom    3 type  1   force =     0.00000000    0.00000000   -0.00038290
-     atom    4 type  1   force =     0.00000000   -0.00000000    0.00083916
+     atom    1 type  1   force =     0.00000000    0.00000000   -0.00189381
+     atom    2 type  1   force =     0.00000000    0.00000000   -0.00206695
+     atom    3 type  1   force =     0.00000000   -0.00000000    0.00206695
+     atom    4 type  1   force =     0.00000000   -0.00000000    0.00189381
      The ionic contribution  to forces
-     atom    1 type  1   force =     0.00000053    0.00000661  -21.47981979
-     atom    2 type  1   force =    -0.00000053   -0.00000661  -21.49258003
-     atom    3 type  1   force =    -0.00000053    0.00000661   21.49258003
-     atom    4 type  1   force =     0.00000053   -0.00000661   21.47981979
+     atom    1 type  1   force =     0.00000053    0.00000661  -15.32168492
+     atom    2 type  1   force =    -0.00000053   -0.00000661  -15.31068114
+     atom    3 type  1   force =    -0.00000053    0.00000661   15.31068114
+     atom    4 type  1   force =     0.00000053   -0.00000661   15.32168492
      The local contribution  to forces
-     atom    1 type  1   force =    -0.00000000   -0.00000189   21.48029242
-     atom    2 type  1   force =    -0.00000038    0.00000002   21.49253650
-     atom    3 type  1   force =    -0.00000038   -0.00000377  -21.49253650
-     atom    4 type  1   force =    -0.00000000   -0.00000185  -21.48029243
+     atom    1 type  1   force =     0.00000000   -0.00000189   15.32128332
+     atom    2 type  1   force =    -0.00000038    0.00000002   15.31041569
+     atom    3 type  1   force =    -0.00000038   -0.00000376  -15.31041568
+     atom    4 type  1   force =    -0.00000000   -0.00000186  -15.32128331
      The core correction contribution to forces
-     atom    1 type  1   force =    -0.00000000   -0.00000000   -0.00004582
-     atom    2 type  1   force =     0.00000004    0.00000021   -0.00007425
-     atom    3 type  1   force =     0.00000004    0.00000020    0.00007426
-     atom    4 type  1   force =    -0.00000000    0.00000041    0.00004583
+     atom    1 type  1   force =     0.00000000   -0.00000000    0.00011202
+     atom    2 type  1   force =     0.00000004    0.00000021    0.00009897
+     atom    3 type  1   force =     0.00000004    0.00000020   -0.00009897
+     atom    4 type  1   force =    -0.00000000    0.00000041   -0.00011202
      The Hubbard contrib.    to forces
      atom    1 type  1   force =     0.00000000    0.00000000    0.00000000
      atom    2 type  1   force =     0.00000000    0.00000000    0.00000000
      atom    3 type  1   force =     0.00000000    0.00000000    0.00000000
      atom    4 type  1   force =     0.00000000    0.00000000    0.00000000
      The SCF correction term to forces
-     atom    1 type  1   force =     0.00000000    0.00000000   -0.00007912
-     atom    2 type  1   force =    -0.00000000   -0.00000000   -0.00007880
-     atom    3 type  1   force =    -0.00000000   -0.00000000    0.00007880
-     atom    4 type  1   force =    -0.00000000   -0.00000000    0.00007912
+     atom    1 type  1   force =    -0.00000000    0.00000000    0.00008601
+     atom    2 type  1   force =    -0.00000000   -0.00000000    0.00008566
+     atom    3 type  1   force =     0.00000000    0.00000000   -0.00008566
+     atom    4 type  1   force =     0.00000000   -0.00000000   -0.00008601
 
-     Total force =     0.000743     Total SCF correction =     0.000158
-     SCF correction compared to forces is large: reduce conv_thr to get better values
+     DFT-D3 dispersion contribution to forces:
+     atom    1 type  1   force =    -0.00000000   -0.00000000    0.00125812
+     atom    2 type  1   force =     0.00000000    0.00000000    0.00116102
+     atom    3 type  1   force =     0.00000000   -0.00000000   -0.00116102
+     atom    4 type  1   force =    -0.00000000    0.00000000   -0.00125812
+
+     Total force =     0.001832     Total SCF correction =     0.000172
+
+     DFT-D3 dispersion Force =     0.002421
 
      Writing all to output data dir /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/coupled.save/ :
      XML data file, charge density, pseudopotentials, collected wavefunctions
 
-     init_run     :      2.76s CPU      2.93s WALL (       1 calls)
-     electrons    :     16.86s CPU     16.99s WALL (       1 calls)
-     forces       :      0.38s CPU      0.41s WALL (       1 calls)
+     init_run     :      2.79s CPU      2.94s WALL (       1 calls)
+     electrons    :     21.18s CPU     21.42s WALL (       1 calls)
+     forces       :      0.69s CPU      0.73s WALL (       1 calls)
+     force_dftd3  :      0.23s CPU      0.23s WALL (       1 calls)
 
      Called by init_run:
-     wfcinit      :      0.90s CPU      0.91s WALL (       1 calls)
+     wfcinit      :      0.60s CPU      0.61s WALL (       1 calls)
      wfcinit:atom :      0.01s CPU      0.01s WALL (       7 calls)
-     wfcinit:wfcr :      0.82s CPU      0.83s WALL (       7 calls)
-     potinit      :      0.67s CPU      0.72s WALL (       1 calls)
-     hinit0       :      1.02s CPU      1.07s WALL (       1 calls)
+     wfcinit:wfcr :      0.55s CPU      0.55s WALL (       7 calls)
+     potinit      :      0.69s CPU      0.74s WALL (       1 calls)
+     hinit0       :      0.87s CPU      0.92s WALL (       1 calls)
 
      Called by electrons:
-     c_bands      :     13.48s CPU     13.54s WALL (       8 calls)
-     sum_band     :      1.53s CPU      1.56s WALL (       8 calls)
-     v_of_rho     :      0.88s CPU      0.95s WALL (       9 calls)
-     v_h          :      0.04s CPU      0.05s WALL (       9 calls)
-     v_xc         :      0.93s CPU      1.01s WALL (      10 calls)
-     newd         :      0.37s CPU      0.39s WALL (       9 calls)
-     PAW_pot      :      0.75s CPU      0.75s WALL (       9 calls)
-     mix_rho      :      0.08s CPU      0.08s WALL (       8 calls)
+     c_bands      :     16.78s CPU     16.89s WALL (       8 calls)
+     sum_band     :      2.04s CPU      2.07s WALL (       8 calls)
+     v_of_rho     :      0.96s CPU      1.05s WALL (       9 calls)
+     v_h          :      0.05s CPU      0.05s WALL (       9 calls)
+     v_xc         :      0.99s CPU      1.09s WALL (      10 calls)
+     newd         :      0.56s CPU      0.59s WALL (       9 calls)
+     PAW_pot      :      0.97s CPU      0.98s WALL (       9 calls)
+     mix_rho      :      0.11s CPU      0.11s WALL (       8 calls)
+     energy_dftd3 :      0.05s CPU      0.05s WALL (       1 calls)
 
      Called by c_bands:
-     init_us_2    :      0.17s CPU      0.18s WALL (     126 calls)
-     cegterg      :     10.07s CPU     10.12s WALL (      56 calls)
+     init_us_2    :      0.20s CPU      0.20s WALL (     126 calls)
+     cegterg      :     11.82s CPU     11.90s WALL (      56 calls)
 
      Called by sum_band:
      sum_band:wei :      0.00s CPU      0.00s WALL (       8 calls)
-     sum_band:loo :      1.06s CPU      1.06s WALL (       8 calls)
-     sum_band:buf :      0.01s CPU      0.01s WALL (      56 calls)
-     sum_band:ini :      0.07s CPU      0.07s WALL (      56 calls)
-     sum_band:cal :      0.29s CPU      0.29s WALL (      56 calls)
+     sum_band:loo :      1.23s CPU      1.24s WALL (       8 calls)
+     sum_band:buf :      0.03s CPU      0.03s WALL (      56 calls)
+     sum_band:ini :      0.08s CPU      0.08s WALL (      56 calls)
+     sum_band:cal :      0.32s CPU      0.32s WALL (      56 calls)
      sum_band:bec :      0.00s CPU      0.00s WALL (      56 calls)
-     addusdens    :      0.21s CPU      0.22s WALL (       8 calls)
-     addusd:skk   :      0.00s CPU      0.00s WALL (       8 calls)
+     addusdens    :      0.28s CPU      0.30s WALL (       8 calls)
+     addusd:skk   :      0.01s CPU      0.01s WALL (       8 calls)
 
      Called by *egterg:
-     cdiaghg      :      0.08s CPU      0.09s WALL (     335 calls)
-     cegterg:over :      0.89s CPU      0.89s WALL (     279 calls)
-     cegterg:upda :      0.58s CPU      0.59s WALL (     279 calls)
-     cegterg:last :      1.41s CPU      1.41s WALL (     141 calls)
-     h_psi        :      6.55s CPU      6.59s WALL (     342 calls)
-     s_psi        :      0.92s CPU      0.92s WALL (     342 calls)
-     g_psi        :      0.04s CPU      0.04s WALL (     279 calls)
+     cdiaghg      :      0.09s CPU      0.09s WALL (     346 calls)
+     cegterg:over :      1.08s CPU      1.09s WALL (     290 calls)
+     cegterg:upda :      0.70s CPU      0.71s WALL (     290 calls)
+     cegterg:last :      1.66s CPU      1.67s WALL (     142 calls)
+     h_psi        :      7.30s CPU      7.36s WALL (     353 calls)
+     s_psi        :      1.02s CPU      1.03s WALL (     353 calls)
+     g_psi        :      0.05s CPU      0.05s WALL (     290 calls)
 
      Called by h_psi:
-     h_psi:calbec :      0.95s CPU      0.95s WALL (     342 calls)
-     vloc_psi     :      4.64s CPU      4.67s WALL (     342 calls)
-     add_vuspsi   :      0.93s CPU      0.94s WALL (     342 calls)
+     h_psi:calbec :      1.08s CPU      1.09s WALL (     353 calls)
+     vloc_psi     :      5.14s CPU      5.18s WALL (     353 calls)
+     add_vuspsi   :      1.03s CPU      1.04s WALL (     353 calls)
 
      General routines
-     calbec       :      1.37s CPU      1.37s WALL (     426 calls)
-     fft          :      1.06s CPU      1.07s WALL (     126 calls)
-     ffts         :      0.37s CPU      0.37s WALL (      17 calls)
-     fftw         :      4.60s CPU      4.63s WALL (    5636 calls)
-     interpolate  :      0.39s CPU      0.39s WALL (       9 calls)
+     calbec       :      1.54s CPU      1.55s WALL (     437 calls)
+     fft          :      0.96s CPU      0.97s WALL (     126 calls)
+     ffts         :      0.28s CPU      0.28s WALL (      17 calls)
+     fftw         :      5.06s CPU      5.10s WALL (    5780 calls)
+     interpolate  :      0.31s CPU      0.31s WALL (       9 calls)
 
      Parallel routines
 
      PAW routines
-     PAW_pot      :      0.75s CPU      0.75s WALL (       9 calls)
+     PAW_pot      :      0.97s CPU      0.98s WALL (       9 calls)
      PAW_symme    :      0.01s CPU      0.01s WALL (      17 calls)
 
-     PWSCF        :     20.17s CPU     20.57s WALL
+     PWSCF        :     24.84s CPU     25.35s WALL
 
 
-   This run was terminated on:   0:23:20  17Sep2026            
+   This run was terminated on:  10:32:32  18Sep2026            
 
 =------------------------------------------------------------------------------=
    JOB DONE.
 =------------------------------------------------------------------------------=
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
 Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
 Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
 Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL

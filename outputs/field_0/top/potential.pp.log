@@ -1,5 +1,5 @@
 
-     Program POST-PROC v.7.6 starts on 17Sep2026 at  2: 0: 0 
+     Program POST-PROC v.7.6 starts on 18Sep2026 at 10:56:12 
 
      This program is part of the open-source Quantum ESPRESSO suite
      for quantum simulation of materials; please cite
@@ -14,7 +14,7 @@
 
      MPI processes distributed on     1 nodes
      R & G space division:  proc/nbgrp/npool/nimage =       4
-     670 MiB available memory on the printing compute node when the environment starts
+     4343 MiB available memory on the printing compute node when the environment starts
 
 
      Reading xml data from directory:
@@ -38,18 +38,10 @@
 
      Using Slab Decomposition
 
- ----2D----2D----2D----2D----2D----2D----2D----2D----2D----2D----2D----2D
-  The code is running with the 2D cutoff
-  Please refer to:
-  Sohier, T., Calandra, M., & Mauri, F. (2017), 
-  Density functional perturbation theory for gated two-dimensional heterostructures:
-  Theoretical developments and application to flexural phonons in graphene.
-  Physical Review B, 96(7), 75448. https://doi.org/10.1103/PhysRevB.96.075448
- ----2D----2D----2D----2D----2D----2D----2D----2D----2D----2D----2D----2D
 
      Check: negative core charge=   -0.000002
 
-     negative rho (up, down):  1.441E-04 0.000E+00
+     negative rho (up, down):  1.440E-04 0.000E+00
 
      Calling punch_plot, plot_num =  11
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/top/data/potential.pp.dat
@@ -58,10 +50,10 @@
      Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/top/potential.cube
      Plot Type: 3D                     Output format: Gaussian cube
 
-     POST-PROC    :      1.13s CPU      1.26s WALL
+     POST-PROC    :      1.39s CPU      1.53s WALL
 
 
-   This run was terminated on:   2: 0: 1  17Sep2026            
+   This run was terminated on:  10:56:13  18Sep2026            
 
 =------------------------------------------------------------------------------=
    JOB DONE.

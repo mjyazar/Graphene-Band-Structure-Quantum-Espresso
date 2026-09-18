@@ -4,9 +4,9 @@
                          plot_num = 3
                          filplot = "/home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/bottom/data/ldos.pp.dat"  ! intermediate metadata path
                          
-                         emin = -14.2193
-                         emax = 5.7807
-                         delta_e = 0.02
-                         degauss_ldos = 0.01
+                         emin = -12.5937
+                         emax = 7.4063
+                         delta_e = 0.1
+                         degauss_ldos = 0.003674932217565499
                          /
                          

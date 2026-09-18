@@ -1,5 +1,5 @@
 
-     Program AVERAGE v.7.6 starts on 17Sep2026 at  1:15:22 
+     Program AVERAGE v.7.6 starts on 18Sep2026 at 10:46:19 
 
      This program is part of the open-source Quantum ESPRESSO suite
      for quantum simulation of materials; please cite
@@ -13,16 +13,16 @@
      Parallel version (MPI), running on     1 processors
 
      MPI processes distributed on     1 nodes
-     581 MiB available memory on the printing compute node when the environment starts
+     5364 MiB available memory on the printing compute node when the environment starts
 
      Reading header from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/bottom/data/charge.pp.dat
      Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/bottom/data/charge.pp.dat
      Output written to file avg.dat
 
-     AVERAGE      :      0.70s CPU      0.72s WALL
+     AVERAGE      :      0.72s CPU      0.74s WALL
 
 
-   This run was terminated on:   1:15:23  17Sep2026            
+   This run was terminated on:  10:46:20  18Sep2026            
 
 =------------------------------------------------------------------------------=
    JOB DONE.

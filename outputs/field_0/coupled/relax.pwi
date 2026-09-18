@@ -15,7 +15,7 @@
    occupations      = 'smearing'
    degauss          = 0.01
    smearing         = 'gauss'
-   assume_isolated  = '2D'
+   vdw_corr         = 'grimme-d3'
    ntyp             = 1
    nat              = 4
    ibrav            = 0

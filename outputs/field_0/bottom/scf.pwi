@@ -14,7 +14,7 @@
    occupations      = 'smearing'
    degauss          = 0.01
    smearing         = 'gauss'
-   assume_isolated  = '2D'
+   vdw_corr         = 'grimme-d3'
    ntyp             = 1
    nat              = 2
    ibrav            = 0
@@ -44,6 +44,6 @@ CELL_PARAMETERS angstrom
 0.00000000000000 0.00000000000000 23.34999874850822
 
 ATOMIC_POSITIONS angstrom
-C 0.0000000000 0.0000000000 9.6321517264  
-C 1.2300000000 0.7101408311 9.6317141247  
+C 0.0000000000 0.0000000000 9.9985654497  
+C 1.2300000000 0.7101408311 9.9992237617  
 
