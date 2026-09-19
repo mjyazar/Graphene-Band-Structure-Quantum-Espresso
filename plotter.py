@@ -185,7 +185,7 @@ def ldos_subtracted(results: Results, field):
     fig, ax = plt.subplots()
     
     limit = np.max(np.abs(ldos_subtracted))
-    symmetric_norm = TwoSlopeNorm(vmin=limit, vcenter=0, vmax=limit)
+    symmetric_norm = TwoSlopeNorm(vmin=-limit, vcenter=0, vmax=limit)
     mesh = ax.pcolormesh(z, E, ldos_subtracted, cmap="seismic", shading="auto", norm=symmetric_norm)
     
     fig.colorbar(mesh, ax=ax, label=r"$\Delta LDOS$")

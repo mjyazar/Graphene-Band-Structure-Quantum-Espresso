@@ -25,7 +25,7 @@ OUT_DIR.mkdir(exist_ok=True)
 
 def run_calculations(structure, path, eamp):
     
-    print(f"\n{path.name.upper()} LAYERS COMPUTATIONS")
+    print(f"\n\n{path.name.upper()} LAYER(S) COMPUTATIONS")
     
     if RUN_QE:
         scf = pw.scf(structure, path, eamp)
