@@ -65,7 +65,7 @@ def potential_subtracted(results: Results, field):
     
     fig, ax = plt.subplots()
     
-    ax.plot(z, potential, label=r"$U_{coupled layers} - U_{bottom layer} - U_{top layer}$")
+    ax.plot(z, potential, color='red', label=r"$U_{coupled layers} - U_{bottom layer} - U_{top layer}$")
     
     ax.set_xlabel(r"z (($\AA$))")
     ax.set_ylabel("Potential Energy (eV)")
@@ -177,8 +177,8 @@ def ldos_subtracted(results: Results, field):
     assert np.array_equal(coupled.ldos.energies, bottom.ldos.energies)
     assert np.array_equal(coupled.ldos.energies, top.ldos.energies)
     E = coupled.ldos.energies
-    print(f"z: {z.shape}")
-    print(f"E: {E.shape}")
+    # print(f"z: {z.shape}")
+    # print(f"E: {E.shape}")
     
     ldos_subtracted = coupled.ldos.averaged - bottom.ldos.averaged - top.ldos.averaged
     

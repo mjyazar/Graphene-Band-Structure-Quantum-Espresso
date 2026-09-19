@@ -50,13 +50,10 @@ dos.x
 """
 DEGAUSS = 0.01
 WINDOW_DOS = (-10, 10)
-DELTA_E_DOS = 0.02
-
-# RY_TO_EV = 
+DELTA_E_DOS = 0.01
 
 
 """
 PLOTTER
 """
-
 WINDOW = (-10, 10)
