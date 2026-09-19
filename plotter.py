@@ -49,16 +49,16 @@ def plot_band_structure(bandpath, energies, name):
 def potential_subtracted(results: Results, field):
     print("\nPLOTTING SUBTRACTED POTENTIAL")
     
-    coupled = results.coupled.potential_averaged
-    bottom = results.bottom.potential_averaged
-    top = results.top.potential_averaged
+    coupled = results.coupled.potential
+    bottom = results.bottom.potential
+    top = results.top.potential
 
-    np.testing.assert_allclose(coupled.coordinates, bottom.coordinates)
-    np.testing.assert_allclose(coupled.coordinates, top.coordinates)
+    np.testing.assert_allclose(coupled.z, bottom.z)
+    np.testing.assert_allclose(coupled.z, top.z)
     
-    z = coupled.coordinates * BOHR_TO_ANGSTROM
+    z = coupled.z * BOHR_TO_ANGSTROM
     
-    potential = (coupled.planar - bottom.planar - top.planar) * RY_TO_EV
+    potential = (coupled.averaged - bottom.averaged - top.averaged) * RY_TO_EV
 
     # coordinates = coupled.potential_averaged.coordinates
     # potential = coupled.potential_averaged.planar - bottom.potential_averaged.planar - top.potential_averaged.planar
@@ -107,9 +107,9 @@ def charge_density_subtracted(results: Results, field):
     bottom = results.bottom.charge_density
     top = results.top.charge_density
     
-    z = coupled.coordinates * BOHR_TO_ANGSTROM
+    z = coupled.z * BOHR_TO_ANGSTROM
     
-    charge_density = (coupled.planar - bottom.planar - top.planar) / (BOHR_TO_ANGSTROM)**3
+    charge_density = (coupled.averaged - bottom.averaged - top.averaged) / (BOHR_TO_ANGSTROM)**3
     
     fig, ax = plt.subplots()
     
