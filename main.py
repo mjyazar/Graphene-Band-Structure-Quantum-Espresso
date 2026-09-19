@@ -1,3 +1,4 @@
+from config import *
 from graphene import GrapheneStructure
 from results import *
 import qe.pw as pw
@@ -21,12 +22,6 @@ OUT_DIR.mkdir(exist_ok=True)
 #MONOLAYER.mkdir(exist_ok=True)
 #BILAYER.mkdir(exist_ok=True)
 
-# RUN_QE may be False if script already ran and want to work with existing files
-# True if running for the first time or want to create new files with new parameters
-RUN_QE = True
-RUN_LDOS = True
-RUN_CONVERGENCE = False
-
 
 def run_calculations(structure, path, eamp):
     
@@ -35,48 +30,35 @@ def run_calculations(structure, path, eamp):
     if RUN_QE:
         scf = pw.scf(structure, path, eamp)
         nscf = pw.nscf(structure, path, eamp)
-
-        fermi_energy = nscf.calc.get_fermi_level()
-            
-        potential_raw, potential_pp_path = pp.potential(path)
-        potential_averaged = average.potential(path, potential_pp_path)
-
-        charge_raw, charge_pp_path = pp.charge_density(path)
-        charge_averaged = average.charge_density(path, charge_pp_path)
-
-        dos_ = dos.calculate(path, fermi_energy)
-
-        ldos_pp_path, energies = pp.ldos(path, fermi_energy)
-        ldos_averaged = average.ldos(path, ldos_pp_path, energies)
-    
-    else:
-        
+    else: 
         scf = pw._read_output(path / "scf.pwo")
         nscf = pw._read_output(path / "nscf.pwo")
-        
-        fermi_energy = nscf.calc.get_fermi_level()
-
+    
+    fermi_energy = nscf.calc.get_fermi_level()
+    
+    if RUN_POTENTIAL:
+        potential_raw, potential_pp_path = pp.potential(path)
+        # potential_averaged = average.potential(path, potential_pp_path)
+    else:
         potential_raw, potential_pp_path = pp._read_output(path / "potential.cube", 6), path / "data" / f"potential.pp.dat"
-        potential_averaged = average.potential(path, potential_pp_path)
-        # ff have access to .avg.dat files, run:
-        # potential_averaged_ = average._read_output(path / f"potential.avg.dat")
-        # potential_averaged = PotentialAveraged(coordinates=potential_averaged_[0], planar=potential_averaged_[1], macroscopic=potential_averaged_[2])
-        
+
+    if RUN_CHARGE_DENSITY:
+        charge_raw, charge_pp_path = pp.charge_density(path)
+    else:
         charge_raw, charge_pp_path = pp._read_output(path / "charge.cube", 6), path / "data" / f"charge.pp.dat"
-        # if no access to .avg.dat files, run:
-        charge_averaged = average.charge_density(path, charge_pp_path)
-        # ff have access to .avg.dat files, run:
-        # charge_averaged_ = average._read_output(path / f"potential.avg.dat")
-        # charge_averaged = PotentialAveraged(coordinates=charge_averaged_[0], planar=charge_averaged_[1], macroscopic=charge_averaged_[2])
-        
+    
+    if RUN_DOS:
+        dos_ = dos.calculate(path, fermi_energy)
+    else:
         dos_ = dos._read_output(path / "dos.out")
+
+    if RUN_LDOS:
+        ldos, ldos_pp_path, energies = pp.ldos(path, fermi_energy)
+        # ldos_averaged = average.ldos(path, ldos_pp_path, energies)
+    else:
+        ldos = pp._read_ldos(path / "data" / f"ldos.pp.dat")
         
-        if RUN_LDOS:
-            ldos_pp_path, energies = pp.ldos(path, fermi_energy)
-        else: 
-            ldos_pp_path, energies = path / "data" / "ldos.pp.dat"
-        
-        ldos_averaged = average.ldos(path, ldos_pp_path, energies)
+    # ldos_averaged = average.ldos(path, ldos_pp_path, energies)
         
 
     results = System(name=f"{path.name}",
@@ -89,7 +71,7 @@ def run_calculations(structure, path, eamp):
                             charge_density_raw=charge_raw,
                             charge_density_averaged=charge_averaged,
                             dos = dos_,
-                            ldos = ldos_averaged)
+                            ldos = ldos)
     
     return results
 
