@@ -108,7 +108,7 @@ def _read_ldos(intermediate_path):
     file_count = len(files)
     
     for i, file in enumerate(files, start=1):
-        print(f"\rREADING {file.name} [{i}/{file_count}]", flush=True)
+        print(f"\rREADING {file.name} [{i}/{file_count}]", flush=True, end="")
         
         data, atoms = read_cube_data(file)
 
