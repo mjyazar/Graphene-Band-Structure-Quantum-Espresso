@@ -33,7 +33,7 @@ class ChargeDensityAveraged:
 
 @dataclass
 class LDOS:
-    averaged_ldos: np.ndarray
+    averaged: np.ndarray
     z: np.ndarray
     energies: np.ndarray
     atoms: Atoms
@@ -58,8 +58,8 @@ class System:
     path: Path
     fermi_energy: float
     
-    potential_raw: Potential
-    charge_density_raw: ChargeDensity
+    potential: Potential
+    charge_density: ChargeDensity
     dos: DOS
     ldos: LDOS
 
