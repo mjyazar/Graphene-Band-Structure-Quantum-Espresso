@@ -109,7 +109,6 @@ def _read_ldos(intermediate_path):
     
     for i, file in enumerate(files, start=1):
         print(f"\rREADING {file.name} [{i}/{file_count}]", flush=True)
-        print("\033[2A", end="")  # move back up to the LDOS line
         
         data, atoms = read_cube_data(file)
 
