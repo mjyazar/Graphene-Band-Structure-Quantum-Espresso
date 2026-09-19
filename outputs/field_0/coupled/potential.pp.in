@@ -2,7 +2,7 @@
                          prefix = "coupled"
                          outdir = "/home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data"  ! directory containing the input data, i.e. the pw.x metadata
                          plot_num = 11
-                         filplot = "/home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/potential.pp.dat"  ! intermediate metadata path
+                         filplot = "/home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/potential.pp.dat"  ! QE intermediate 3D FFT i.e. real-space grid data
                          /
 &PLOT
                          filepp(1) = "/home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/potential.pp.dat"

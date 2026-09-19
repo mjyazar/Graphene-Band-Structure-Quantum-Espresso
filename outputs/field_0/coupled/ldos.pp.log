@@ -1,5 +1,5 @@
 
-     Program POST-PROC v.7.6 starts on 18Sep2026 at 10:35: 4 
+     Program POST-PROC v.7.6 starts on 19Sep2026 at 11: 8:23 
 
      This program is part of the open-source Quantum ESPRESSO suite
      for quantum simulation of materials; please cite
@@ -14,7 +14,7 @@
 
      MPI processes distributed on     1 nodes
      R & G space division:  proc/nbgrp/npool/nimage =       4
-     6356 MiB available memory on the printing compute node when the environment starts
+     2767 MiB available memory on the printing compute node when the environment starts
 
 
      Reading xml data from directory:
@@ -1047,14 +1047,819 @@
 
      Energy =   8.99900 eV, broadening =   0.00367eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat201
-     Message from routine chdens:
-     namelist plot not found or invalid, exiting
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat001
 
-     POST-PROC    :   2m54.83s CPU   3m19.85s WALL
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat001.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat002
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat002.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat003
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat003.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat004
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat004.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat005
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat005.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat006
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat006.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat007
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat007.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat008
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat008.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat009
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat009.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat010
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat010.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat011
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat011.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat012
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat012.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat013
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat013.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat014
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat014.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat015
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat015.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat016
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat016.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat017
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat017.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat018
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat018.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat019
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat019.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat020
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat020.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat021
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat021.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat022
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat022.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat023
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat023.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat024
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat024.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat025
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat025.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat026
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat026.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat027
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat027.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat028
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat028.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat029
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat029.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat030
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat030.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat031
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat031.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat032
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat032.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat033
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat033.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat034
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat034.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat035
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat035.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat036
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat036.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat037
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat037.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat038
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat038.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat039
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat039.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat040
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat040.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat041
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat041.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat042
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat042.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat043
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat043.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat044
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat044.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat045
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat045.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat046
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat046.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat047
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat047.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat048
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat048.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat049
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat049.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat050
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat050.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat051
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat051.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat052
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat052.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat053
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat053.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat054
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat054.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat055
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat055.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat056
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat056.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat057
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat057.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat058
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat058.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat059
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat059.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat060
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat060.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat061
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat061.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat062
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat062.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat063
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat063.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat064
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat064.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat065
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat065.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat066
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat066.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat067
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat067.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat068
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat068.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat069
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat069.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat070
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat070.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat071
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat071.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat072
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat072.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat073
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat073.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat074
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat074.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat075
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat075.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat076
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat076.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat077
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat077.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat078
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat078.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat079
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat079.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat080
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat080.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat081
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat081.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat082
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat082.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat083
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat083.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat084
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat084.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat085
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat085.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat086
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat086.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat087
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat087.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat088
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat088.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat089
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat089.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat090
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat090.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat091
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat091.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat092
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat092.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat093
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat093.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat094
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat094.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat095
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat095.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat096
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat096.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat097
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat097.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat098
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat098.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat099
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat099.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat100
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat100.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat101
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat101.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat102
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat102.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat103
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat103.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat104
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat104.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat105
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat105.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat106
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat106.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat107
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat107.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat108
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat108.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat109
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat109.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat110
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat110.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat111
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat111.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat112
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat112.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat113
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat113.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat114
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat114.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat115
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat115.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat116
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat116.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat117
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat117.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat118
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat118.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat119
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat119.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat120
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat120.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat121
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat121.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat122
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat122.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat123
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat123.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat124
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat124.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat125
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat125.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat126
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat126.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat127
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat127.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat128
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat128.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat129
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat129.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat130
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat130.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat131
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat131.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat132
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat132.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat133
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat133.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat134
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat134.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat135
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat135.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat136
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat136.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat137
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat137.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat138
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat138.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat139
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat139.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat140
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat140.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat141
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat141.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat142
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat142.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat143
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat143.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat144
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat144.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat145
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat145.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat146
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat146.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat147
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat147.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat148
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat148.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat149
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat149.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat150
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat150.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat151
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat151.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat152
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat152.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat153
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat153.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat154
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat154.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat155
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat155.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat156
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat156.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat157
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat157.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat158
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat158.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat159
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat159.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat160
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat160.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat161
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat161.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat162
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat162.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat163
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat163.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat164
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat164.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat165
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat165.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat166
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat166.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat167
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat167.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat168
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat168.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat169
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat169.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat170
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat170.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat171
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat171.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat172
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat172.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat173
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat173.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat174
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat174.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat175
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat175.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat176
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat176.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat177
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat177.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat178
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat178.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat179
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat179.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat180
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat180.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat181
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat181.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat182
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat182.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat183
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat183.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat184
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat184.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat185
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat185.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat186
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat186.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat187
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat187.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat188
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat188.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat189
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat189.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat190
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat190.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat191
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat191.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat192
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat192.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat193
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat193.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat194
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat194.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat195
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat195.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat196
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat196.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat197
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat197.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat198
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat198.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat199
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat199.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat200
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat200.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat201
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/coupled/data/ldos.pp.dat201.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+
+     POST-PROC    :   3m38.89s CPU   4m 1.91s WALL
 
 
-   This run was terminated on:  10:38:24  18Sep2026            
+   This run was terminated on:  11:12:25  19Sep2026            
 
 =------------------------------------------------------------------------------=
    JOB DONE.
 =------------------------------------------------------------------------------=
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
