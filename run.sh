@@ -14,8 +14,8 @@ python main.py 2>&1 | tee log/run.log  # stderror goes where stdout goes, print 
 echo "PROGRAM EXECUTION COMPLETE"
 
 echo "PUSHING PROGRAM"
-git pull --rebase origin main
 git add outputs/
+git add log/
 git commit -m "Results from Nectar"
 git pull --rebase
 git push
