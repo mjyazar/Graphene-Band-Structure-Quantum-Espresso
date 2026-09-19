@@ -37,15 +37,15 @@ def run_calculations(structure, path, eamp):
     fermi_energy = nscf.calc.get_fermi_level()
     
     if RUN_POTENTIAL:
-        potential_raw, potential_pp_path = pp.potential(path)
+        potential, potential_pp_path = pp.potential(path)
         # potential_averaged = average.potential(path, potential_pp_path)
     else:
-        potential_raw, potential_pp_path = pp._read_output(path / "potential.cube", 6), path / "data" / f"potential.pp.dat"
+        potential, potential_pp_path = pp._read_output(path / "potential.cube", 6), path / "data" / f"potential.pp.dat"
 
     if RUN_CHARGE_DENSITY:
-        charge_raw, charge_pp_path = pp.charge_density(path)
+        charge, charge_pp_path = pp.charge_density(path)
     else:
-        charge_raw, charge_pp_path = pp._read_output(path / "charge.cube", 6), path / "data" / f"charge.pp.dat"
+        charge, charge_pp_path = pp._read_output(path / "charge.cube", 6), path / "data" / f"charge.pp.dat"
     
     if RUN_DOS:
         dos_ = dos.calculate(path, fermi_energy)
@@ -66,10 +66,8 @@ def run_calculations(structure, path, eamp):
                             path=path,
                             fermi_energy=fermi_energy,
                             
-                            potential=potential_raw,
-                            potential_averaged=potential_averaged,
-                            charge_density=charge_raw,
-                            charge_density_averaged=charge_averaged,
+                            potential=potential,
+                            charge_density=charge,
                             dos = dos_,
                             ldos = ldos)
     
