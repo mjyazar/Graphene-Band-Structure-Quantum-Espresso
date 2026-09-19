@@ -33,7 +33,6 @@ class ChargeDensityAveraged:
 
 @dataclass
 class LDOS:
-    full_ldos: np.ndarray
     averaged_ldos: np.ndarray
     z: np.ndarray
     energies: np.ndarray
@@ -60,11 +59,9 @@ class System:
     fermi_energy: float
     
     potential_raw: Potential
-    potential_averaged: PotentialAveraged
     charge_density_raw: ChargeDensity
-    charge_density_averaged: ChargeDensityAveraged
     dos: DOS
-    ldos: LDOSAveraged
+    ldos: LDOS
 
 
 @dataclass
