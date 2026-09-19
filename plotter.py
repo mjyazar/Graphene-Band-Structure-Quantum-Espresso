@@ -1,4 +1,6 @@
 import matplotlib.pyplot as plt
+from matplotlib import colormaps
+from matplotlib.colors import TwoSlopeNorm
 import numpy as np
 from pathlib import Path
 from ase.spectrum.band_structure import get_band_structure, BandStructure
@@ -81,8 +83,8 @@ def potential_individual(results: Results, field):
     for system in results.__dict__.values():
         system:System
 
-        coordinates = system.potential_averaged.coordinates * BOHR_TO_ANGSTROM
-        potential = system.potential_averaged.planar * RY_TO_EV
+        coordinates = system.potential.z * BOHR_TO_ANGSTROM
+        potential = system.potential.averaged * RY_TO_EV
         
         print(f"\nPLOTTING {system.name} POTENTIAL")
 
@@ -101,9 +103,9 @@ def potential_individual(results: Results, field):
 def charge_density_subtracted(results: Results, field):
     print("\nPLOTTING SUBTRACTED CHARGE DENSITY")
 
-    coupled = results.coupled.charge_density_averaged
-    bottom = results.bottom.charge_density_averaged
-    top = results.top.charge_density_averaged
+    coupled = results.coupled.charge_density
+    bottom = results.bottom.charge_density
+    top = results.top.charge_density
     
     z = coupled.coordinates * BOHR_TO_ANGSTROM
     
@@ -170,27 +172,27 @@ def ldos_subtracted(results: Results, field):
     bottom = results.bottom
     top = results.top
     
-    ldos_coupled = coupled.ldos.planar
-    ldos_bottom = bottom.ldos.planar
-    ldos_top = top.ldos.planar
+    z = coupled.ldos.z * BOHR_TO_ANGSTROM
     
-    z = coupled.ldos.coordinates * BOHR_TO_ANGSTROM
-    E = np.arange(WINDOW_LDOS[0], WINDOW_LDOS[1] + DELTA_E_LDOS, DELTA_E_LDOS)
+    assert np.array_equal(coupled.ldos.energies, bottom.ldos.energies)
+    assert np.array_equal(coupled.ldos.energies, top.ldos.energies)
+    E = coupled.ldos.energies
     print(f"z: {z.shape}")
     print(f"E: {E.shape}")
     
-    ldos_subtracted = ldos_coupled - ldos_bottom - ldos_top
+    ldos_subtracted = coupled.ldos.averaged - bottom.ldos.averaged - top.ldos.averaged
     
     fig, ax = plt.subplots()
-
-    mesh = ax.pcolormesh(z, E, ldos_subtracted, shading="auto")
+    
+    limit = np.max(np.abs(ldos_subtracted))
+    symmetric_norm = TwoSlopeNorm(vmin=limit, vcenter=0, vmax=limit)
+    mesh = ax.pcolormesh(z, E, ldos_subtracted, cmap="seismic", shading="auto", norm=symmetric_norm)
     
     fig.colorbar(mesh, ax=ax, label=r"$\Delta LDOS$")
 
     ax.set_title(f"Fermi-Aligned Subtracted LDOS, E-field={field}au")
     ax.set_xlabel(r"$z$ ($\AA$)")
     ax.set_ylabel(r"$E-E_F$ (eV)")
-    ax.legend()
     
     plt.tight_layout()
     plt.savefig(LDOS_DIR / f"LDOS_Subtracted_{field}au.png", dpi=300, bbox_inches="tight")
