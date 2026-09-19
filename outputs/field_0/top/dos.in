@@ -6,7 +6,7 @@
                          degauss = 0.01  ! gaussian broadening, Ry (not eV!)
                          emin = -12.5937
                          emax = 7.4063
-                         deltaE = 0.02  ! energy grid step (eV)
+                         deltaE = 0.01  ! energy grid step (eV)
                          fildos = "/home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/top/dos.out"  ! output file containing DOS(E)
                          /
                          
