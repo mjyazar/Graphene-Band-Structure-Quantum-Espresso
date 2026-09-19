@@ -53,20 +53,18 @@ def _calculate(path, input_data_path, output_path = None, verbose=True):
 
 def potential(path, input_data_path):
     
-    z, planar, macroscopic = _calculate(path, input_data_path)
+    z, planar, _ = _calculate(path, input_data_path)
     
     return PotentialAveraged(coordinates=z, 
-                             planar=planar, 
-                             macroscopic=macroscopic)
+                             planar=planar)
 
 
 def charge_density(path, input_data_path):
     
-    z, planar, macroscopic = _calculate(path, input_data_path)
+    z, planar, _ = _calculate(path, input_data_path)
 
     return ChargeDensityAveraged(coordinates=z, 
-                                 planar=planar,
-                                 macroscopic=macroscopic)
+                                 planar=planar)
 
 
 def ldos(path, input_data_path, energies):
@@ -106,7 +104,6 @@ def ldos(path, input_data_path, energies):
         averaged_ldos.append(planar)
 
     print("\nREADING ldos.avg.dat")
-    
     averaged_dos = np.asarray(averaged_ldos)
     
     return LDOSAveraged(energies=energies, coordinates=coordinates, planar=averaged_dos)
