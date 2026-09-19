@@ -2,7 +2,7 @@
                          prefix = "top"
                          outdir = "/home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/top/data"  ! directory containing the input data, i.e. the pw.x metadata
                          plot_num = 0
-                         filplot = "/home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/top/data/charge.pp.dat"  ! intermediate metadata path
+                         filplot = "/home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/top/data/charge.pp.dat"  ! QE intermediate 3D FFT i.e. real-space grid data
                          
                              spin_component = 0  ! total charge
                              /
