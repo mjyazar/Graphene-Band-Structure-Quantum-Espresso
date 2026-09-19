@@ -122,10 +122,8 @@ def _read_ldos(intermediate_path):
     
     # shape[0] gets the number of rows i.e. the energy count
     energies = WINDOW_LDOS[0] + np.arange(averaged_ldos.shape[0]) * DELTA_E_LDOS
-
-    ldos = LDOS(averaged=averaged_ldos, z=z, energies=energies, atoms=atoms_)
     
-    return ldos
+    return LDOS(averaged=averaged_ldos, z=z, energies=energies, atoms=atoms_)
 
 
 def _calculate(computation, path, fileout, iflag=3, fermi_energy=None):
