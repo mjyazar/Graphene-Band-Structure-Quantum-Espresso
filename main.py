@@ -65,8 +65,11 @@ def run_calculations(structure, path, eamp):
                             atoms=structure,
                             path=path,
                             fermi_energy=fermi_energy,
-                            potential=potential,
-                            charge_density=charge,
+                            
+                            potential=potential_raw,
+                            potential_averaged=potential_averaged,
+                            charge_density=charge_raw,
+                            charge_density_averaged=charge_averaged,
                             dos = dos_,
                             ldos = ldos)
     
