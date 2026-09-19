@@ -17,4 +17,5 @@ echo "PUSHING PROGRAM"
 git pull --rebase origin main
 git add outputs/
 git commit -m "Results from Nectar"
+git pull --rebase
 git push
