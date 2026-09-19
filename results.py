@@ -8,32 +8,36 @@ import numpy as np
 class Potential:
     data: np.ndarray
     atoms: object
+    averaged: np.ndarray
+    z: np.ndarray
+
 
 @dataclass
 class PotentialAveraged:
     coordinates: np.ndarray
     planar: np.ndarray
-    macroscopic: np.ndarray
 
 
 @dataclass
 class ChargeDensity:
     data: np.ndarray
     atoms: object
+    averaged: np.ndarray
+    z: np.ndarray
 
 @dataclass
 class ChargeDensityAveraged:
     coordinates: np.ndarray
     planar: np.ndarray
-    macroscopic: np.ndarray
 
 
 @dataclass
-class DOS:
-    energy: np.ndarray
-    dos: np.ndarray
-    idos: np.ndarray
-
+class LDOS:
+    full_ldos: np.ndarray
+    averaged_ldos: np.ndarray
+    z: np.ndarray
+    energies: np.ndarray
+    atoms: Atoms
 
 @dataclass
 class LDOSAveraged:
@@ -41,6 +45,12 @@ class LDOSAveraged:
     coordinates: np.ndarray
     planar: np.ndarray
 
+
+@dataclass
+class DOS:
+    energy: np.ndarray
+    dos: np.ndarray
+    idos: np.ndarray
 
 @dataclass
 class System:
