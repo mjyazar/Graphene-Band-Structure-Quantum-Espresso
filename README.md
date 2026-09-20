@@ -51,23 +51,30 @@ This repository constructs monolayer and bilayer graphene using Density Function
 ---
 ## Results (Bilayer Graphene)
 
-### Potential
-#### Coupled Layers
-![Coupled Layers](<outputs/figures/potential/Potential_Coupled_Layer_0au.png>)
+### LDOS
+#### Subtracted LDOS (E-field=0au)
+![Subtracted DOS](<outputs/figures/ldos/LDOS_Subtracted_0au.png>)
 
-#### Subtracted Potential
-![Subtracted Potential](<outputs/figures/potential/Subtracted_Potential_0au.png>)
+#### Subtracted LDOS (E-field=0.05au)
+![Subtracted DOS](<outputs/figures/ldos/LDOS_Subtracted_0.05au.png>)
 
-
-### Charge Density
-#### Subtracted Charge Densit
-![Subtracted Charge Density](<outputs/figures/charge_density/Subtracted_Charge_Density_0au.png>)
+#### Subtracted LDOS (E-field=0.1au)
+![Subtracted DOS](<outputs/figures/ldos/LDOS_Subtracted_0.1au.png>)
 
 
 ### DOS
 #### Subtracted DOS
 ![Subtracted DOS](<outputs/figures/dos/DOS_Subtracted_Fermi-aligned_0au.png>)
 
-### LDOS
-#### Subtracted LDOS
-![Subtracted DOS](<outputs/figures/ldos/LDOS_Subtracted_0au.png>)
+
+### Subtracted Charge Density
+#### Subtracted Charge Density
+![Subtracted Charge Density](<outputs/figures/charge_density/Subtracted_Charge_Density_0au.png>)
+
+
+### Potential
+#### Coupled Layers
+![Coupled Layers](<outputs/figures/potential/Potential_Coupled_Layer_0au.png>)
+
+#### Subtracted Potential
+![Subtracted Potential](<outputs/figures/potential/Subtracted_Potential_0au.png>)
