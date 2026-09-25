@@ -85,7 +85,8 @@ ny = 288
 def _read_output(path, output_format):
     
     if output_format == 5:
-        data, origin, span_vectors, atoms = read_xsf(path, read_data=True)
+        with open(path, "r") as file:
+            data, origin, span_vectors, atoms = read_xsf(file, read_data=True)
 
         xy_averaged = np.mean(data, axis=(0, 1))
         z = _coordinates(data, atoms)
