@@ -160,10 +160,10 @@ def _calculate(computation, path, fileout, iflag=3, fermi_energy=None):
     # 3D plot
     elif iflag == 3:
         if fileout == "ldos":
-            output_path = ".cube"
+            output_path = ".xsf"
         
         else:
-            output_path = path / f"{fileout}.cube"
+            output_path = path / f"{fileout}.xsf"
         
         # output_format = 6  # 6 = gaussian cube file (3D)
         output_format = 5  # 5 = XCRYSDEN  (3D, using entire FFT grid)
