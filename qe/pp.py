@@ -151,7 +151,8 @@ def _calculate(computation, path, fileout, iflag=3, fermi_energy=None):
         else:
             output_path = path / f"{fileout}.cube"
         
-        output_format = 6  # 6  = format as gaussian cube file (3D)
+        # output_format = 6  # 6 = gaussian cube file (3D)
+        output_format = 5  # 5 = XCRYSDEN  (3D, using entire FFT grid)
     
     else:
         raise ValueError("iflag MUST BE A VALID VALUE")
