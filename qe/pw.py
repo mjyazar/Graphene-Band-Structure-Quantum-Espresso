@@ -8,7 +8,7 @@ ROOT = Path(__file__).resolve().parents[1]
 PSEUDO_DIR = ROOT / "pseudo"
 
 
-def _input_data(calculation, outdir, ecutwfc, nbnd, prefix, efield, correction):
+def _input_data(calculation, outdir, nbnd, prefix, efield, correction):
     """
     https://www.quantum-espresso.org/Doc/INPUT_PW.html#id3
     Function called by write_input to create input file
@@ -23,7 +23,7 @@ def _input_data(calculation, outdir, ecutwfc, nbnd, prefix, efield, correction):
                "tprnfor": True}  # print atomic forces on each atom
     
     system = {"vdw_corr": str(correction),  # only changes where the atoms relax to
-              "ecutwfc": ecutwfc,  # kinetic energy (1Ry ~13.6eV) upto which plane waves are included in compuation
+              "ecutwfc": ECUTWFC,  # kinetic energy (1Ry ~13.6eV) upto which plane waves are included in compuation
               "ecutrho": ECUTRHO,  # kinetic energy upto which electron charge desnity is computed
               "nbnd": nbnd}  # number of energy/eigenbands calculated at every k point - C: 4 valence e -> 2 atoms
                              # = 8 electrons = 4 filled bands (spin degeneracy). Anything above is empty states
@@ -65,12 +65,12 @@ def _input_data(calculation, outdir, ecutwfc, nbnd, prefix, efield, correction):
     return namelists
 
 
-def _write_input(path, structure, calculation, data_path, kpts, ecutwfc, nbnd, prefix, efield):
+def _write_input(path, structure, calculation, data_path, kpts, nbnd, prefix, efield, correction):
     """
     Write QE input file using ASE
     """
     
-    write(path, structure, format="espresso-in", input_data=_input_data(calculation, data_path, ecutwfc, nbnd, prefix, efield), pseudopotentials={"C": PSEUDO}, kpts=kpts)
+    write(path, structure, format="espresso-in", input_data=_input_data(calculation, data_path, nbnd, prefix, efield, correction), pseudopotentials={"C": PSEUDO}, kpts=kpts)
 
 
 def _read_output(path, index=-1):
@@ -79,7 +79,7 @@ def _read_output(path, index=-1):
     return structure
 
 
-def _calculate(calculation, structure, path, kpts, ecutwfc, efield=0, correction="grimme-d3"):
+def _calculate(calculation, structure, path, kpts, efield=0, correction="grimme-d3"):
     
     path.mkdir(parents=True, exist_ok=True)
     
@@ -93,7 +93,7 @@ def _calculate(calculation, structure, path, kpts, ecutwfc, efield=0, correction
     nbnd = 2 * len(structure) + (NSCF_EXTRA_BANDS_PER_ATOM * len(structure) if calculation == "nscf" else SCF_EXTRA_BANDS)
     
     print(f"\nCREATING {input_path.name}")
-    _write_input(input_path, structure, calculation, outdir, kpts, ecutwfc, nbnd, path.name, efield, correction)
+    _write_input(input_path, structure, calculation, outdir, kpts, nbnd, path.name, efield, correction)
 
     print(f"RUNNING pw.x WITH {input_path.name}")
     runner.run("pw.x", input_path, output_path)
@@ -106,17 +106,17 @@ def _calculate(calculation, structure, path, kpts, ecutwfc, efield=0, correction
 
 def relax(bilayer, path, eamp):
     
-    return _calculate("relax", bilayer, path, KGRID, ecutwfc, eamp)
+    return _calculate("relax", bilayer, path, KGRID, eamp)
 
 
 def scf(relaxed, path, eamp, correction):
     
-    return _calculate("scf", relaxed, path, KGRID, ecutwfc, eamp, correction)
+    return _calculate("scf", relaxed, path, KGRID, eamp, correction)
 
 
 def nscf(relaxed, path, eamp, correction):
     
-    return _calculate("nscf", relaxed, path, KGRID_DENSE, ecutwfc, eamp, correction)
+    return _calculate("nscf", relaxed, path, KGRID_DENSE, eamp, correction)
     
 
 def band_path(structure, path=BANDPATH):

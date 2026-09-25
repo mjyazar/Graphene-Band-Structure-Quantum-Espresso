@@ -38,7 +38,7 @@ SCF_EXTRA_BANDS = 6  # number of unoccupied bands to run the calculations for nz
 NSCF_EXTRA_BANDS_PER_ATOM = 4  # number of unoccupied bands to run the calculations for nscf
 FORCE_CONVERGENCE_THRESHOLD = 0.001
 BANDPATH = 'GMKG'
-ecutwfc = 80.0
+ECUTWFC = 80.0
 KGRID = (15, 15, 1)
 KGRID_DENSE = (30, 30, 1)
 
