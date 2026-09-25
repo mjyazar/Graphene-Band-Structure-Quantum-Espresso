@@ -107,7 +107,7 @@ def charge_density_subtracted(results: Results, field, label):
     bottom = results.bottom.charge_density
     top = results.top.charge_density
     
-    z = coupled.z * BOHR_TO_ANGSTROM
+    z = coupled.z  * BOHR_TO_ANGSTROM
     
     charge_density = (coupled.averaged - bottom.averaged - top.averaged) / (BOHR_TO_ANGSTROM)**3
     
@@ -139,7 +139,7 @@ def plot_vdw_charge_difference(results, field):
     
     dn_d3 = d3.coupled.charge_density.averaged - d3.bottom.charge_density.averaged - d3.top.charge_density.averaged
     dn_ts = c09.coupled.charge_density.averaged - c09.bottom.charge_density.averaged - c09.top.charge_density.averaged
-    dn_vdw = dn_ts - dn_d3 / (BOHR_TO_ANGSTROM)**3
+    dn_vdw = (dn_ts - dn_d3) / BOHR_TO_ANGSTROM**3
 
     fig, ax = plt.subplots()
     

@@ -126,15 +126,14 @@ def _read_ldos(intermediate_path):
         
         # data, atoms = read_cube_data(file)
         
-        with open(file, "r") as file:
-            data, origin, span_vectors, atoms = read_xsf(file, read_data=True)
+        with open(file, "r") as file_:
+            data, origin, span_vectors, atoms = read_xsf(file_, read_data=True)
         
         if i == 1:
             z = _coordinates(data, atoms)
             atoms_ = atoms
             
         averaged_ldos.append(np.mean(data, axis=(0, 1)))
-        
         file.unlink()
     
     averaged_ldos = np.asarray(averaged_ldos)
