@@ -8,7 +8,7 @@ ROOT = Path(__file__).resolve().parents[1]
 PSEUDO_DIR = ROOT / "pseudo"
 
 
-def _input_data(calculation, outdir, nbnd, prefix, efield, correction):
+def _input_data(calculation, outdir, nbnd, prefix, efield, xc):
     """
     https://www.quantum-espresso.org/Doc/INPUT_PW.html#id3
     Function called by write_input to create input file
@@ -22,8 +22,7 @@ def _input_data(calculation, outdir, nbnd, prefix, efield, correction):
                "disk_io": "low",  # keeps wavefunctions in memory while running and writes them at the end
                "tprnfor": True}  # print atomic forces on each atom
     
-    system = {"vdw_corr": str(correction),  # only changes where the atoms relax to
-              "ecutwfc": ECUTWFC,  # kinetic energy (1Ry ~13.6eV) upto which plane waves are included in compuation
+    system = {"ecutwfc": ECUTWFC,  # kinetic energy (1Ry ~13.6eV) upto which plane waves are included in compuation
               "ecutrho": ECUTRHO,  # kinetic energy upto which electron charge desnity is computed
               "nbnd": nbnd}  # number of energy/eigenbands calculated at every k point - C: 4 valence e -> 2 atoms
                              # = 8 electrons = 4 filled bands (spin degeneracy). Anything above is empty states
@@ -31,6 +30,11 @@ def _input_data(calculation, outdir, nbnd, prefix, efield, correction):
     electrons = {"conv_thr": CONV_THRESHOLD,  # max number of electronic SCF iterations treshold (Ry)
                  "mixing_beta": 0.7,  # How much electron density updates with scf
                  "electron_maxstep": 200}  # maximum number of electronic SCF iterations allowed
+    
+    if xc is None:
+        system["vdw_corr"] = str(VDW_CORR),  # only changes where the atoms relax to
+    else:
+        system["input_dft"] = xc
     
     # additional parameters if doing relaxation or s
     if calculation in ["relax", "scf", "nscf"]:
@@ -79,7 +83,7 @@ def _read_output(path, index=-1):
     return structure
 
 
-def _calculate(calculation, structure, path, kpts, efield=0, correction="grimme-d3"):
+def _calculate(calculation, structure, path, kpts, efield=0, xc=None):
     
     path.mkdir(parents=True, exist_ok=True)
     
@@ -93,7 +97,7 @@ def _calculate(calculation, structure, path, kpts, efield=0, correction="grimme-
     nbnd = 2 * len(structure) + (NSCF_EXTRA_BANDS_PER_ATOM * len(structure) if calculation == "nscf" else SCF_EXTRA_BANDS)
     
     print(f"\nCREATING {input_path.name}")
-    _write_input(input_path, structure, calculation, outdir, kpts, nbnd, path.name, efield, correction)
+    _write_input(input_path, structure, calculation, outdir, kpts, nbnd, path.name, efield, xc)
 
     print(f"RUNNING pw.x WITH {input_path.name}")
     runner.run("pw.x", input_path, output_path)

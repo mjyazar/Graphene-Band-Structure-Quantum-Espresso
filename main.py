@@ -23,13 +23,13 @@ OUT_DIR.mkdir(exist_ok=True)
 #BILAYER.mkdir(exist_ok=True)
 
 
-def run_calculations(structure, path, eamp, correction):
+def run_calculations(structure, path, eamp, xc):
     
     print(f"\n\n{path.name.upper()} LAYER(S) COMPUTATIONS")
     
     if RUN_QE:
-        scf = pw.scf(structure, path, eamp, correction)
-        nscf = pw.nscf(structure, path, eamp, correction)
+        scf = pw.scf(structure, path, eamp, xc)
+        nscf = pw.nscf(structure, path, eamp, xc)
     else: 
         scf = pw._read_output(path / "scf.pwo")
         nscf = pw._read_output(path / "nscf.pwo")
@@ -41,14 +41,14 @@ def run_calculations(structure, path, eamp, correction):
         # potential_averaged = average.potential(path, potential_pp_path)
     else:
         # potential, potential_pp_path = pp._read_output(path / "potential.cube", 6), path / "data" / f"potential.pp.dat"        
-        data, atoms, xy_averaged, z = pp._read_output(path / "potential.cube", 6)
+        data, atoms, xy_averaged, z = pp._read_output(path / "potential.cube", 5)
         potential = Potential(data=data, atoms=atoms, averaged=xy_averaged, z=z)
         
     if RUN_CHARGE_DENSITY:
         charge, charge_pp_path = pp.charge_density(path)
     else:
         # charge, charge_pp_path = pp._read_output(path / "charge.cube", 6), path / "data" / f"charge.pp.dat"
-        data, atoms, xy_averaged, z = pp._read_output(path / "charge.cube", 6)
+        data, atoms, xy_averaged, z = pp._read_output(path / "charge.cube", 5)
         charge = ChargeDensity(data=data, atoms=atoms, averaged=xy_averaged, z=z)
     
     if RUN_DOS:
@@ -103,19 +103,22 @@ def main():
         isolated_bottom, isolated_top = graphene.isolate_bilayer(relaxed_coupled)
         
         results = {}
-        for correction in CORRECTIONS:
-            label = correction.split("-")[0]
+        for xc in XC:
+            if xc is None:
+                label = "d3"
+            else:
+                label = xc.split("-")[0]
             
-            PATH_COUPLED = path / label / "coupled" 
-            PATH_BOTTOM = path / label / "bottom"
-            PATH_TOP = path / label / "top"
+            PATH_COUPLED = path / (f"PBE-{label}" if xc is None else xc) / "coupled" 
+            PATH_BOTTOM = path / (f"PBE-{label}" if xc is None else xc) / "bottom"
+            PATH_TOP = path / (f"PBE-{label}" if xc is None else xc) / "top"
             
-            coupled = run_calculations(relaxed_coupled, PATH_COUPLED, eamp, correction)
-            bottom = run_calculations(isolated_bottom, PATH_BOTTOM, eamp, correction)
-            top = run_calculations(isolated_top, PATH_TOP, eamp, correction)
+            coupled = run_calculations(relaxed_coupled, PATH_COUPLED, eamp, xc)
+            bottom = run_calculations(isolated_bottom, PATH_BOTTOM, eamp, xc)
+            top = run_calculations(isolated_top, PATH_TOP, eamp, xc)
             
             result = Results(coupled, bottom, top)
-            results[correction] = result
+            results[label] = result
             
             plotter.plot_potential(result, eamp, label)
             plotter.plot_charge_density(result, eamp, label)
@@ -123,7 +126,7 @@ def main():
             plotter.plot_ldos(result, eamp, label)
 
         plotter.plot_vdw_charge_difference(results, eamp)
-    
+
 
 if __name__ == "__main__":
     main()

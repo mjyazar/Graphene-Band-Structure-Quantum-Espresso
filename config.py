@@ -15,7 +15,8 @@ EV_TO_RY = 1 / RY_TO_EV
 # PSEUDO = "C.pbe-n-kjpaw_psl.1.0.0.UPF"
 PSEUDO = "C.upf"
 
-CORRECTIONS = ["grimme-d3", "ts-vdw"]
+VDW_CORR = "grimme-d3"
+XC = [None, "vdw-df2-c09"]
 
 """
 GRAPHENE
@@ -30,7 +31,7 @@ STACKING = "AB"
 """
 pw.x
 """
-ECUTRHO = 400.0
+ECUTRHO = 320.0
 CONV_THRESHOLD = 1.0e-8
 DEGAUSS = 0.01
 SMEARING = "gauss"

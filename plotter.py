@@ -126,18 +126,18 @@ def charge_density_subtracted(results: Results, field, label):
 
 def plot_vdw_charge_difference(results, field):
     print(f"PLOTTING VDW Charge Density Difference")
-    d3: Results = results["grimme-d3"]
-    ts: Results = results["ts-vdw"]
+    d3: Results = results["d3"]
+    c09: Results = results["c09"]
     
     np.testing.assert_allclose(d3.coupled.charge_density.z, d3.bottom.charge_density.z)
     np.testing.assert_allclose(d3.coupled.charge_density.z, d3.top.charge_density.z)
-    np.testing.assert_allclose(ts.coupled.charge_density.z, ts.bottom.charge_density.z)
-    np.testing.assert_allclose(ts.coupled.charge_density.z, ts.top.charge_density.z)
-    np.testing.assert_allclose(d3.coupled.charge_density.z, ts.coupled.charge_density.z)
+    np.testing.assert_allclose(c09.coupled.charge_density.z, c09.bottom.charge_density.z)
+    np.testing.assert_allclose(c09.coupled.charge_density.z, c09.top.charge_density.z)
+    np.testing.assert_allclose(d3.coupled.charge_density.z, c09.coupled.charge_density.z)
     
     z = d3.coupled.charge_density.z * BOHR_TO_ANGSTROM
     dn_d3 = d3.coupled.charge_density.averaged - d3.bottom.charge_density.averaged - d3.top.charge_density.averaged
-    dn_ts = ts.coupled.charge_density.averaged - ts.bottom.charge_density.averaged - ts.top.charge_density.averaged
+    dn_ts = c09.coupled.charge_density.averaged - c09.bottom.charge_density.averaged - c09.top.charge_density.averaged
     
     dn_vdw = dn_ts - dn_d3
 
@@ -235,9 +235,9 @@ def plot_potential(results, field, label):
     potential_individual(results, field, label)
 
 
-def plot_charge_density(result, field, label):
+def plot_charge_density(results, field, label):
     print("")
-    charge_density_subtracted(result, field, label)
+    charge_density_subtracted(results, field, label)
 
 
 def plot_dos(results, field, label):
