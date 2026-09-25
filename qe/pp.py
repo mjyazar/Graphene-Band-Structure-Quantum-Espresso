@@ -87,7 +87,10 @@ def _read_output(path, output_format):
         # data has shape (nx, ny, nz)
         data, atoms = read_cube_data(path)
         
-        return data, atoms
+        xy_averaged = np.mean(data, axis=(0, 1))
+        z = _coordinates(data, atoms)
+        
+        return data, atoms, xy_averaged, z
     
     elif output_format == 7:
         x, y, z = np.loadtxt(path, unpack=True)
@@ -180,10 +183,7 @@ def _coordinates(data, atoms):
 
 def potential(path):
     
-    (data, atoms), intermediate_path = _calculate(11, path, "potential")
-
-    xy_averaged = np.mean(data, axis=(0, 1))
-    z = _coordinates(data, atoms)
+    (data, atoms, xy_averaged, z), intermediate_path = _calculate(11, path, "potential")
 
     results = Potential(data=data, atoms=atoms, averaged=xy_averaged, z=z)
     
@@ -191,10 +191,7 @@ def potential(path):
 
 
 def charge_density(path):
-    (data, atoms), intermediate_path = _calculate(0, path, "charge",)
-    
-    xy_averaged = np.mean(data, axis=(0, 1))
-    z = _coordinates(data, atoms)
+    (data, atoms, xy_averaged, z), intermediate_path = _calculate(0, path, "charge",)
     
     results = ChargeDensity(data=data, atoms=atoms, averaged=xy_averaged, z=z)
     
