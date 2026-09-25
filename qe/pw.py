@@ -5,14 +5,10 @@ import qe.runner as runner
 from config import *
 
 ROOT = Path(__file__).resolve().parents[1]
-
-# Carbon pseudopotential (from https://sssp.materialscloud.org/pseudopotentials/PBE/efficiency)
 PSEUDO_DIR = ROOT / "pseudo"
-PSEUDO = "C.pbe-n-kjpaw_psl.1.0.0.UPF"
-PSEUDO_2 = "C.upf"
 
 
-def _input_data(calculation, outdir, ecutwfc, nbnd, prefix, efield):
+def _input_data(calculation, outdir, ecutwfc, nbnd, prefix, efield, correction):
     """
     https://www.quantum-espresso.org/Doc/INPUT_PW.html#id3
     Function called by write_input to create input file
@@ -26,7 +22,7 @@ def _input_data(calculation, outdir, ecutwfc, nbnd, prefix, efield):
                "disk_io": "low",  # keeps wavefunctions in memory while running and writes them at the end
                "tprnfor": True}  # print atomic forces on each atom
     
-    system = {"vdw_corr": "grimme-d3",
+    system = {"vdw_corr": str(correction),  # only changes where the atoms relax to
               "ecutwfc": ecutwfc,  # kinetic energy (1Ry ~13.6eV) upto which plane waves are included in compuation
               "ecutrho": ECUTRHO,  # kinetic energy upto which electron charge desnity is computed
               "nbnd": nbnd}  # number of energy/eigenbands calculated at every k point - C: 4 valence e -> 2 atoms
@@ -83,7 +79,7 @@ def _read_output(path, index=-1):
     return structure
 
 
-def _calculate(calculation, structure, path, kpts, ecutwfc, efield=0):
+def _calculate(calculation, structure, path, kpts, ecutwfc, efield=0, correction="grimme-d3"):
     
     path.mkdir(parents=True, exist_ok=True)
     
@@ -97,7 +93,7 @@ def _calculate(calculation, structure, path, kpts, ecutwfc, efield=0):
     nbnd = 2 * len(structure) + (NSCF_EXTRA_BANDS_PER_ATOM * len(structure) if calculation == "nscf" else SCF_EXTRA_BANDS)
     
     print(f"\nCREATING {input_path.name}")
-    _write_input(input_path, structure, calculation, outdir, kpts, ecutwfc, nbnd, path.name, efield)
+    _write_input(input_path, structure, calculation, outdir, kpts, ecutwfc, nbnd, path.name, efield, correction)
 
     print(f"RUNNING pw.x WITH {input_path.name}")
     runner.run("pw.x", input_path, output_path)
@@ -113,14 +109,14 @@ def relax(bilayer, path, eamp):
     return _calculate("relax", bilayer, path, KGRID, ecutwfc, eamp)
 
 
-def scf(relaxed, path, eamp):
+def scf(relaxed, path, eamp, correction):
     
-    return _calculate("scf", relaxed, path, KGRID, ecutwfc, eamp)
+    return _calculate("scf", relaxed, path, KGRID, ecutwfc, eamp, correction)
 
 
-def nscf(relaxed, path, eamp):
+def nscf(relaxed, path, eamp, correction):
     
-    return _calculate("nscf", relaxed, path, KGRID_DENSE, ecutwfc, eamp)
+    return _calculate("nscf", relaxed, path, KGRID_DENSE, ecutwfc, eamp, correction)
     
 
 def band_path(structure, path=BANDPATH):
