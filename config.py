@@ -1,15 +1,21 @@
 # RUN_QE may be False if script already ran and want to work with existing files
 # True if running for the first time or want to create new files with new parameters
-RUN_QE = True
+RUN_QE = False
 RUN_POTENTIAL = RUN_QE
 RUN_CHARGE_DENSITY = RUN_QE
 RUN_DOS = RUN_QE
-RUN_LDOS = True
+RUN_LDOS = False  # must be True if no ldos metadata is present locally
 RUN_CONVERGENCE = False
 
 BOHR_TO_ANGSTROM = 0.529177210903
 RY_TO_EV = 13.605693122994
 EV_TO_RY = 1 / RY_TO_EV
+
+# Carbon pseudopotential (from https://sssp.materialscloud.org/pseudopotentials/PBE/efficiency)
+# PSEUDO = "C.pbe-n-kjpaw_psl.1.0.0.UPF"
+PSEUDO = "C.upf"
+
+CORRECTIONS = ["grimme-d3", "ts-vdw"]
 
 """
 GRAPHENE
@@ -32,7 +38,7 @@ SCF_EXTRA_BANDS = 6  # number of unoccupied bands to run the calculations for nz
 NSCF_EXTRA_BANDS_PER_ATOM = 4  # number of unoccupied bands to run the calculations for nscf
 FORCE_CONVERGENCE_THRESHOLD = 0.001
 BANDPATH = 'GMKG'
-ecutwfc = 60.0
+ecutwfc = 80.0
 KGRID = (15, 15, 1)
 KGRID_DENSE = (30, 30, 1)
 
@@ -57,3 +63,4 @@ DELTA_E_DOS = 0.01
 PLOTTER
 """
 WINDOW = (-10, 10)
+LDOS_GRID_DELTA_E = 0.01
