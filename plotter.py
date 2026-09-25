@@ -230,23 +230,23 @@ def ldos_subtracted(results: Results, field, label):
     
 
 def plot_potential(results, field, label):
-    
+    print("")
     potential_subtracted(results, field, label)
     potential_individual(results, field, label)
 
 
 def plot_charge_density(result, field, label):
-    
+    print("")
     charge_density_subtracted(result, field, label)
 
 
 def plot_dos(results, field, label):
-    
+    print("")
     #individual_dos(results, field)
     #dos_comparison(results, field)
     fermi_aligned_dos(results, field, label)
 
 
 def plot_ldos(results, field, label):
-    
+    print("")
     ldos_subtracted(results, field, label)
