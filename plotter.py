@@ -29,7 +29,7 @@ def plot_band_structure(bandpath, energies, name):
     """
     Plot and save band structure
     """
-    print("\nPLOTTING BAND STRUCTURE")
+    print("PLOTTING BAND STRUCTURE")
     
     band_structure = BandStructure(path=bandpath, energies=energies, reference=0.0)  # reference is now zero after shifting
     
@@ -47,7 +47,7 @@ def plot_band_structure(bandpath, energies, name):
 
 
 def potential_subtracted(results: Results, field, label):
-    print("\nPLOTTING SUBTRACTED POTENTIAL")
+    print("PLOTTING SUBTRACTED POTENTIAL")
     
     coupled = results.coupled.potential
     bottom = results.bottom.potential
@@ -78,7 +78,7 @@ def potential_subtracted(results: Results, field, label):
     
 
 def potential_individual(results: Results, field, label):
-    print("\nPLOTTING INDIVIDUAL POTENTIALS")
+    print("PLOTTING INDIVIDUAL POTENTIALS")
 
     for system in results.__dict__.values():
         system:System
@@ -101,7 +101,7 @@ def potential_individual(results: Results, field, label):
 
 
 def charge_density_subtracted(results: Results, field, label):
-    print("\nPLOTTING SUBTRACTED CHARGE DENSITY")
+    print("PLOTTING SUBTRACTED CHARGE DENSITY")
 
     coupled = results.coupled.charge_density
     bottom = results.bottom.charge_density
@@ -125,8 +125,9 @@ def charge_density_subtracted(results: Results, field, label):
 
 
 def plot_vdw_charge_difference(results, field):
+    print(f"PLOTTING VDW Charge Density Difference")
     d3: Results = results["grimme-d3"]
-    ts: Results = results["ts"]
+    ts: Results = results["ts-vdw"]
     
     np.testing.assert_allclose(d3.coupled.charge_density.z, d3.bottom.charge_density.z)
     np.testing.assert_allclose(d3.coupled.charge_density.z, d3.top.charge_density.z)
