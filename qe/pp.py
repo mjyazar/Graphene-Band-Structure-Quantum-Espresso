@@ -117,14 +117,18 @@ def _read_ldos(intermediate_path):
     z = None
     atoms_ = None
     
-    files = sorted(intermediate_path.parent.glob(f"{intermediate_path.name}[0-9]*.cube"))
+    # files = sorted(intermediate_path.parent.glob(f"{intermediate_path.name}[0-9]*.cube"))
+    files = sorted(intermediate_path.parent.glob(f"{intermediate_path.name}[0-9]*.xsf"))
     file_count = len(files)
     
     for i, file in enumerate(files, start=1):
         print(f"\rREADING {file.name} [{i}/{file_count}]", flush=True, end="")
         
-        data, atoms = read_cube_data(file)
-
+        # data, atoms = read_cube_data(file)
+        
+        with open(intermediate_path, "r") as file:
+            data, origin, span_vectors, atoms = read_xsf(file, read_data=True)
+        
         if i == 1:
             z = _coordinates(data, atoms)
             atoms_ = atoms
