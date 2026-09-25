@@ -1,10 +1,11 @@
 #!/bin/bash
 
 set -o pipefail  # if any command in pipeline fails, get a failure status
-set -e  # enable the "errexit" option
+set -e  # stop script when a command fails i.e.s the "errexit" option
 
 echo -e "PULLING LATEST CODE\n"
 git restore outputs/  # throw away any uncommitted output from a previous run
+git restore log/run.log
 git pull --rebase origin main  # get the latest repository
 
 mkdir -p log  # don’t complain if folder already exists
