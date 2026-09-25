@@ -134,6 +134,8 @@ def _read_ldos(intermediate_path):
             atoms_ = atoms
             
         averaged_ldos.append(np.mean(data, axis=(0, 1)))
+        
+        file.unlink()
     
     averaged_ldos = np.asarray(averaged_ldos)
     
