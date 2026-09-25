@@ -9,17 +9,17 @@ def _write_input(input_path, outdir, output_path, prefix, fermi_energy, window=W
     
     with open(input_path, "w") as input_file:
         input_file.write(f"""&DOS
-                         prefix = "{prefix}"
-                         outdir = "{outdir}"  ! directory containing the input data, i.e. the pw.x metadata
-                         bz_sum = "smearing"  ! integration using gaussian smearing
-                         ngauss = 0  ! type of gaussian broadening - 0: Simple Gaussian (default)
-                         degauss = {DEGAUSS}  ! gaussian broadening, Ry (not eV!)
-                         emin = {fermi_energy + window[0]}
-                         emax = {fermi_energy + window[1]}
-                         deltaE = {DELTA_E_DOS}  ! energy grid step (eV)
-                         fildos = "{output_path}"  ! output file containing DOS(E)
-                         /
-                         """)
+prefix = "{prefix}"
+outdir = "{outdir}"  ! directory containing the input data, i.e. the pw.x metadata
+bz_sum = "smearing"  ! integration using gaussian smearing
+ngauss = 0  ! type of gaussian broadening - 0: Simple Gaussian (default)
+degauss = {DEGAUSS}  ! gaussian broadening, Ry (not eV!)
+emin = {fermi_energy + window[0]}
+emax = {fermi_energy + window[1]}
+deltaE = {DELTA_E_DOS}  ! energy grid step (eV)
+fildos = "{output_path}"  ! output file containing DOS(E)
+/
+""")
 
 
 def _read_output(path):

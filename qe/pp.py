@@ -10,73 +10,73 @@ def _write_input(computation, input_path, outdir, intermediate_path, fileout, pr
     
     with open(input_path, "w") as input_file:
         input_file.write(f"""&INPUTPP
-                         prefix = "{prefix}"
-                         outdir = "{outdir}"  ! directory containing the input data, i.e. the pw.x metadata
-                         plot_num = {computation}
-                         filplot = "{intermediate_path}"  ! QE intermediate 3D FFT i.e. real-space grid data
-                         """)
+prefix = "{prefix}"
+outdir = "{outdir}"  ! directory containing the input data, i.e. the pw.x metadata
+plot_num = {computation}
+filplot = "{intermediate_path}"  ! QE intermediate 3D FFT i.e. real-space grid data
+""")
         
         # 0  = electron (pseudo-)charge density
         # total charge
         if computation == 0:
             input_file.write(f"""
-                             spin_component = 0  ! total charge
-                             """)
+spin_component = 0  ! total charge
+""")
         
         # 1 = total potential V_bare + V_H + V_xc
         # total potential including xc
         elif computation == 1:
             input_file.write(f"""
-                             spin_component = 0  ! spin averaged potential
-                             """)
+spin_component = 0  ! spin averaged potential
+""")
           
         # 3 = local density of states at specific energy or grid of energies
         # (number of states per volume, in bohr^3, per energy unit, in Ry)
         # LDOS is plotted on grid [emin, emax] with spacing delta_e_ldos
         elif computation == 3:
             input_file.write(f"""
-                             emin = {fermi_energy + window[0]}
-                             emax = {fermi_energy + window[1]}
-                             delta_e = {DELTA_E_LDOS}
-                             degauss_ldos = {DEGAUSS_LDOS}
-                             use_gauss_ldos = .true.
-                             """)       
+emin = {fermi_energy + window[0]}
+emax = {fermi_energy + window[1]}
+delta_e = {DELTA_E_LDOS}
+degauss_ldos = {DEGAUSS_LDOS}
+use_gauss_ldos = .true.
+""")       
         
         # 10 = integrated local density of states (ILDOS) from emin to emax 
         # (emin, emax in eV) if emax is not specified, emax=E_fermi
         elif computation == 10:
             input_file.write(f"""
-                             emin = {fermi_energy + window[0]}
-                             emax = {fermi_energy + window[1]}
-                             spin_component = 0  ! spin-up + spin-down
-                             """)
+emin = {fermi_energy + window[0]}
+emax = {fermi_energy + window[1]}
+spin_component = 0  ! spin-up + spin-down
+""")
         
         input_file.write("/\n")
         
         input_file.write(f"""&PLOT
-                         filepp(1) = "{intermediate_path}"
-                         iflag = {iflag}
-                         output_format = {output_format}
-                         fileout = "{fileout}"
-                         """)
+filepp(1) = "{intermediate_path}"
+iflag = {iflag}
+output_format = {output_format}
+fileout = "{fileout}"
+""")
         
         if iflag == 2:
             input_file.write("""
-                             e1(1) = 1.0
-                             e1(2) = 0.0
-                             e1(3) = 0.0
+e1(1) = 1.0
+e1(2) = 0.0
+e1(3) = 0.0
 
-                             e2(1) = 0.0
-                             e2(2) = 0.0
-                             e2(3) = 9.491870
+e2(1) = 0.0
+e2(2) = 0.0
+e2(3) = 9.491870
 
-                             x0(1) = 0.0
-                             x0(2) = 0.2886752
-                             x0(3) = 0.0
+x0(1) = 0.0
+x0(2) = 0.2886752
+x0(3) = 0.0
 
-                             nx = 30
-                             ny = 288
-                             """)
+nx = 30
+ny = 288
+""")
     
         input_file.write("/\n")
 
