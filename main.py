@@ -23,13 +23,13 @@ OUT_DIR.mkdir(exist_ok=True)
 #BILAYER.mkdir(exist_ok=True)
 
 
-def run_calculations(structure, path, eamp):
+def run_calculations(structure, path, eamp, correction):
     
     print(f"\n\n{path.name.upper()} LAYER(S) COMPUTATIONS")
     
     if RUN_QE:
-        scf = pw.scf(structure, path, eamp)
-        nscf = pw.nscf(structure, path, eamp)
+        scf = pw.scf(structure, path, eamp, correction)
+        nscf = pw.nscf(structure, path, eamp, correction)
     else: 
         scf = pw._read_output(path / "scf.pwo")
         nscf = pw._read_output(path / "nscf.pwo")
@@ -40,18 +40,22 @@ def run_calculations(structure, path, eamp):
         potential, potential_pp_path = pp.potential(path)
         # potential_averaged = average.potential(path, potential_pp_path)
     else:
-        potential, potential_pp_path = pp._read_output(path / "potential.cube", 6), path / "data" / f"potential.pp.dat"
-
+        # potential, potential_pp_path = pp._read_output(path / "potential.cube", 6), path / "data" / f"potential.pp.dat"        
+        data, atoms, xy_averaged, z = pp._read_output(path / "potential.cube", 6)
+        potential = Potential(data=data, atoms=atoms, averaged=xy_averaged, z=z)
+        
     if RUN_CHARGE_DENSITY:
         charge, charge_pp_path = pp.charge_density(path)
     else:
-        charge, charge_pp_path = pp._read_output(path / "charge.cube", 6), path / "data" / f"charge.pp.dat"
+        # charge, charge_pp_path = pp._read_output(path / "charge.cube", 6), path / "data" / f"charge.pp.dat"
+        data, atoms, xy_averaged, z = pp._read_output(path / "charge.cube", 6)
+        charge = ChargeDensity(data=data, atoms=atoms, averaged=xy_averaged, z=z)
     
     if RUN_DOS:
         dos_ = dos.calculate(path, fermi_energy)
     else:
         dos_ = dos._read_output(path / "dos.out")
-
+    
     if RUN_LDOS:
         ldos, ldos_pp_path, energies = pp.ldos(path, fermi_energy)
         # ldos_averaged = average.ldos(path, ldos_pp_path, energies)
@@ -76,15 +80,11 @@ def run_calculations(structure, path, eamp):
 def main():
     graphene = GrapheneStructure()
     
-    energies = [0, 0.05, 0.1]
+    energies = [0]
     
-    for eamp in energies:        
+    for eamp in energies:
         
         path = OUT_DIR /  f"field_{str(eamp)}"
-        
-        PATH_COUPLED = path / "coupled"
-        PATH_BOTTOM = path / "bottom"
-        PATH_TOP = path / "top"
         
         print(f"\nE-field = {str(eamp)}au")
         print("-" * 30)
@@ -94,25 +94,36 @@ def main():
 
         if RUN_QE:
             print("RELAXING COUPLED BILAYER")
-            relaxed_coupled = pw.relax(bilayer, PATH_COUPLED, eamp)
+            relaxed_coupled = pw.relax(bilayer, path, eamp)
         
         else:
-            relaxed_coupled = pw._read_output(PATH_COUPLED / "relax.pwo")
+            relaxed_coupled = pw._read_output(path / "relax.pwo")
         
         print("\nEXTRACTING FROZEN LAYERS")
         isolated_bottom, isolated_top = graphene.isolate_bilayer(relaxed_coupled)
+        
+        results = {}
+        for correction in CORRECTIONS:
+            label = correction.split("-")[0]
             
-        coupled = run_calculations(relaxed_coupled, PATH_COUPLED, eamp)
-        bottom = run_calculations(isolated_bottom, PATH_BOTTOM, eamp)
-        top = run_calculations(isolated_top, PATH_TOP, eamp)
-        
-        results = Results(coupled, bottom, top)
-        
-        plotter.plot_potential(results, eamp)
-        plotter.plot_charge_density(results, eamp)
-        plotter.plot_dos(results, eamp)
-        plotter.plot_ldos(results, eamp)
+            PATH_COUPLED = path / label / "coupled" 
+            PATH_BOTTOM = path / label / "bottom"
+            PATH_TOP = path / label / "top"
+            
+            coupled = run_calculations(relaxed_coupled, PATH_COUPLED, eamp, correction)
+            bottom = run_calculations(isolated_bottom, PATH_BOTTOM, eamp, correction)
+            top = run_calculations(isolated_top, PATH_TOP, eamp, correction)
+            
+            result = Results(coupled, bottom, top)
+            results[correction] = result
+            
+            plotter.plot_potential(result, eamp, label)
+            plotter.plot_charge_density(result, eamp, label)
+            plotter.plot_dos(result, eamp, label)
+            plotter.plot_ldos(result, eamp, label)
 
+        plotter.plot_vdw_charge_difference(results, eamp)
+    
 
 if __name__ == "__main__":
     main()
