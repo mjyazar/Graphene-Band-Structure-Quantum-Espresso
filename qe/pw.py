@@ -32,7 +32,7 @@ def _input_data(calculation, outdir, nbnd, prefix, efield, xc):
                  "electron_maxstep": 200}  # maximum number of electronic SCF iterations allowed
     
     if xc is None:
-        system["vdw_corr"] = str(VDW_CORR),  # only changes where the atoms relax to
+        system["vdw_corr"] = str(VDW_CORR)  # only changes where the atoms relax to
     else:
         system["input_dft"] = xc
     
