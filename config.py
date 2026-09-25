@@ -1,10 +1,10 @@
 # RUN_QE may be False if script already ran and want to work with existing files
 # True if running for the first time or want to create new files with new parameters
-RUN_QE = False
+RUN_QE = True
 RUN_POTENTIAL = RUN_QE
 RUN_CHARGE_DENSITY = RUN_QE
 RUN_DOS = RUN_QE
-RUN_LDOS = False  # must be True if no ldos metadata is present locally
+RUN_LDOS = True  # must be True if no ldos metadata is present locally
 RUN_CONVERGENCE = False
 
 BOHR_TO_ANGSTROM = 0.529177210903
