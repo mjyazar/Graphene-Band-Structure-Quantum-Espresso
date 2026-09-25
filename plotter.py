@@ -136,16 +136,16 @@ def plot_vdw_charge_difference(results, field):
     np.testing.assert_allclose(d3.coupled.charge_density.z, c09.coupled.charge_density.z)
     
     z = d3.coupled.charge_density.z * BOHR_TO_ANGSTROM
+    
     dn_d3 = d3.coupled.charge_density.averaged - d3.bottom.charge_density.averaged - d3.top.charge_density.averaged
     dn_ts = c09.coupled.charge_density.averaged - c09.bottom.charge_density.averaged - c09.top.charge_density.averaged
-    
-    dn_vdw = dn_ts - dn_d3
+    dn_vdw = dn_ts - dn_d3 / (BOHR_TO_ANGSTROM)**3
 
     fig, ax = plt.subplots()
     
-    ax.plot(z, dn_vdw)
+    ax.plot(dn_vdw, z, color="black", linewidth=1.1)
     
-    ax.set_xlabel(r"z (($\AA$))")
+    ax.set_xlabel(r"z ($\AA$))")
     ax.set_ylabel(r"vdW Charge Density ($e/{\AA}^3)$")
     ax.set_title(rf"vdW Charge Density $\Delta n_{{TS}}(z)-\Delta n_{{d3}}(z)$, E-field={field}au")
 
