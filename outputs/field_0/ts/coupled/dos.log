@@ -1,0 +1,78 @@
+
+     Program DOS v.7.6 starts on 25Sep2026 at  2:46: 6 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+         "P. Giannozzi et al., J. Chem. Phys. 152 154105 (2020);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI), running on     4 processors
+
+     MPI processes distributed on     1 nodes
+     R & G space division:  proc/nbgrp/npool/nimage =       4
+     749 MiB available memory on the printing compute node when the environment starts
+
+
+     Reading xml data from directory:
+
+     /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/ts/coupled/data/coupled.save/
+
+     IMPORTANT: XC functional enforced from input :
+     Exchange-correlation= PBE
+                           (   1   4   3   4   0   0   0)
+     Any further DFT definition will be discarded
+     Please, verify this is what you really want
+
+
+     Parallelization info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Min         148     118     37                27908    19916    3337
+     Max         150     119     38                27928    19947    3350
+     Sum         595     475    151               111671    79745   13381
+
+     Using Slab Decomposition
+
+
+   TS-vdW initialization
+   ---------------------
+
+   Determining TS-vdW damping function parameters...
+     ddamp = 20.000000
+     sR =  0.940000
+   Initializing species #   1 with atomic symbol C  
+     Equispaced/Uniform radial atomic grid detected...
+     Radial grid parameter: NrgpA is  1248.
+     Radial grid parameter: gfctrA is  1.000000.
+     Radial grid parameter: dxA is  0.010000.
+     The number of valence electrons, eref, is         3.999997992905759.
+     The reference free atom volume, vref, is        38.949206933621483 bohr^3.
+     Determining intial radial grid cutoff...
+     An acceptable radial grid cutoff was determined by retaining  801 of 1248 radial grid points.
+     The magnitude of the atomic pseudo-density at the radial grid cutoff is  8.758705E-07.
+     Using this radial grid cutoff value of         8.000000000000000 au:
+     The free atom volume computed with this cutoff is        38.564933645733234 bohr^3 with an error of  0.987%.
+     Linear grid spacing was computed as:         0.001800000000000 bohr.
+     The free atom static dipole polarizability is     12.000000 bohr^3.
+     The free atom homonuclear C6 coefficient is     46.600000 Hartree bohr^6.
+     The free atom vdW radius is      3.590000 bohr.
+
+     Gaussian broadening (read from input): ngauss,degauss=   0    0.010000
+
+
+     DOS          :      0.76s CPU      0.86s WALL
+
+
+   This run was terminated on:   2:46: 7  25Sep2026            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
