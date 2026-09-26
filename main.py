@@ -108,7 +108,7 @@ def main():
                 label = "d3"
                 print("RUNNING grimme-d3")
             else:
-                label = xc.split("-")[0]
+                label = xc.split("-")[-1]
                 print(f"RUNNING {xc}")                
             
             PATH_COUPLED = path / (f"PBE-{label}" if xc is None else xc) / "coupled" 
