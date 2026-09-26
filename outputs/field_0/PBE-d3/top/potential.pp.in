@@ -1,0 +1,12 @@
+&INPUTPP
+prefix = "top"
+outdir = "/home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data"  ! directory containing the input data, i.e. the pw.x metadata
+plot_num = 11
+filplot = "/home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/potential.pp.dat"  ! QE intermediate 3D FFT i.e. real-space grid data
+/
+&PLOT
+filepp(1) = "/home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/potential.pp.dat"
+iflag = 3
+output_format = 5
+fileout = "/home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/potential.xsf"
+/

@@ -1,15 +1,14 @@
 &CONTROL
-   calculation      = 'relax'
+   calculation      = 'scf'
    verbosity        = 'high'
    tprnfor          = .true.
-   outdir           = '/home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/data'
-   prefix           = 'field_0'
-   forc_conv_thr    = 0.001
+   outdir           = '/home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data'
+   prefix           = 'top'
    disk_io          = 'low'
    pseudo_dir       = '/home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/pseudo'
 /
 &SYSTEM
-   nbnd             = 14
+   nbnd             = 10
    ecutwfc          = 80.0
    ecutrho          = 320.0
    occupations      = 'smearing'
@@ -17,7 +16,7 @@
    smearing         = 'gauss'
    vdw_corr         = 'grimme-d3'
    ntyp             = 1
-   nat              = 4
+   nat              = 2
    ibrav            = 0
 /
 &ELECTRONS
@@ -26,7 +25,6 @@
    mixing_beta      = 0.7
 /
 &IONS
-   ion_dynamics     = 'bfgs'
 /
 &CELL
 /
@@ -41,13 +39,11 @@ K_POINTS automatic
 15 15 1  0 0 0
 
 CELL_PARAMETERS angstrom
-2.46000000000000 0.00000000000000 0.00000000000000
--1.23000000000000 2.13042249330972 0.00000000000000
-0.00000000000000 0.00000000000000 23.35000000000000
+2.45999984708052 0.00000000000000 0.00000000000000
+-1.22999992354026 2.13042136756791 0.00000000000000
+0.00000000000000 0.00000000000000 23.34999874850822
 
 ATOMIC_POSITIONS angstrom
-C 0.0000000000 0.0000000000 10.0000000000  
-C 1.2300000000 0.7101408311 10.0000000000  
-C 1.2300000000 0.7101408311 13.3500000000  
-C 0.0000000000 1.4202816622 13.3500000000  
+C 1.2300000000 0.7101408311 13.4291791423  
+C 0.0000000000 1.4202816622 13.4307547546  
 
