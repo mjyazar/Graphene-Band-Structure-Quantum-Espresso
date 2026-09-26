@@ -56,7 +56,7 @@ def potential_subtracted(results: Results, field, label):
     np.testing.assert_allclose(coupled.z, bottom.z)
     np.testing.assert_allclose(coupled.z, top.z)
     
-    z = coupled.z * BOHR_TO_ANGSTROM
+    z = coupled.z
     
     potential = (coupled.averaged - bottom.averaged - top.averaged) * RY_TO_EV
 
@@ -65,7 +65,7 @@ def potential_subtracted(results: Results, field, label):
     
     fig, ax = plt.subplots()
     
-    ax.plot(z, potential, color='red', label=r"$U_{coupled layers} - U_{bottom layer} - U_{top layer}$")
+    ax.plot(z, potential, color='black', label=r"$U_{coupled layers} - U_{bottom layer} - U_{top layer}$")
     
     ax.set_xlabel(r"z (($\AA$))")
     ax.set_ylabel("Potential Energy (eV)")
@@ -90,7 +90,7 @@ def potential_individual(results: Results, field, label):
 
         fig, ax = plt.subplots()
 
-        ax.plot(coordinates, potential, linewidth=0.75, color='red')
+        ax.plot(coordinates, potential, linewidth=0.75, color='black')
         ax.set_title(f"1D {system.name.capitalize()} Layer Potential V(z), E-field={field}au, Correction: {'ts_vd' if label == 'ts' else 'grimme-d3'}")
         ax.set_xlabel(r"z ($\AA$)")
         ax.set_ylabel("Potential Energy (eV)")
@@ -107,13 +107,13 @@ def charge_density_subtracted(results: Results, field, label):
     bottom = results.bottom.charge_density
     top = results.top.charge_density
     
-    z = coupled.z  * BOHR_TO_ANGSTROM
+    z = coupled.z
     
     charge_density = (coupled.averaged - bottom.averaged - top.averaged) / (BOHR_TO_ANGSTROM)**3
     
     fig, ax = plt.subplots()
     
-    ax.plot(z, charge_density)
+    ax.plot(z, charge_density, color="black")
     
     ax.set_xlabel(r"z (($\AA$))")
     ax.set_ylabel(r"Charge Density ($e/{\AA}^3)$")
@@ -135,19 +135,23 @@ def plot_vdw_charge_difference(results, field):
     np.testing.assert_allclose(c09.coupled.charge_density.z, c09.top.charge_density.z)
     np.testing.assert_allclose(d3.coupled.charge_density.z, c09.coupled.charge_density.z)
     
-    z = d3.coupled.charge_density.z * BOHR_TO_ANGSTROM
+    z = d3.coupled.charge_density.z
     
     dn_d3 = d3.coupled.charge_density.averaged - d3.bottom.charge_density.averaged - d3.top.charge_density.averaged
-    dn_ts = c09.coupled.charge_density.averaged - c09.bottom.charge_density.averaged - c09.top.charge_density.averaged
-    dn_vdw = (dn_ts - dn_d3) / BOHR_TO_ANGSTROM**3
+    dn_c09 = c09.coupled.charge_density.averaged - c09.bottom.charge_density.averaged - c09.top.charge_density.averaged
+    
+    cell = c09.coupled.atoms.cell.array
+    area = np.linalg.norm(np.cross(cell[0], cell[1]))
+    
+    dn_vdw = ((dn_c09 - dn_d3) / BOHR_TO_ANGSTROM**3) * area
 
     fig, ax = plt.subplots()
     
     ax.plot(dn_vdw, z, color="black", linewidth=1.1)
     
-    ax.set_xlabel(r"z ($\AA$))")
-    ax.set_ylabel(r"vdW Charge Density ($e/{\AA}^3)$")
-    ax.set_title(rf"vdW Charge Density $\Delta n_{{TS}}(z)-\Delta n_{{d3}}(z)$, E-field={field}au")
+    ax.set_xlabel(r"vdW Charge Density ($e/{\AA}^3)$")
+    ax.set_ylabel(r"z ($\AA$))")
+    ax.set_title(rf"vdW Charge Density $\Delta n_{{c09}}(z)-\Delta n_{{PBE + d3}}(z)$, E-field={field}au")
 
     plt.tight_layout()
     plt.savefig(CHARGE_DENSITY_DIR / f"vdW_Charge_Density_{field}au_.png", dpi=300, bbox_inches="tight")
@@ -183,7 +187,7 @@ def fermi_aligned_dos(results: Results, field, label, delta_e=LDOS_GRID_DELTA_E)
     fig, ax = plt.subplots()
 
     # ax.plot(grid, dos_coupled_grid, label="$DOS_{coupled}$")
-    ax.plot(grid, dos_subtracted, label=r"$DOS_{coupled} - DOS_{top} - DOS_{bottom}$")
+    ax.plot(grid, dos_subtracted, color="black", label=r"$DOS_{coupled} - DOS_{top} - DOS_{bottom}$")
 
     ax.set_title(f"Fermi-Aligned DOS Subtracted, E-field={field}au, Correction: {'ts_vd' if label == 'ts' else 'grimme-d3'}")
     ax.set_xlabel(r"$Energy$ (eV)")
@@ -202,7 +206,7 @@ def ldos_subtracted(results: Results, field, label):
     bottom = results.bottom
     top = results.top
     
-    z = coupled.ldos.z * BOHR_TO_ANGSTROM
+    z = coupled.ldos.z
     
     assert np.array_equal(coupled.ldos.energies, bottom.ldos.energies)
     assert np.array_equal(coupled.ldos.energies, top.ldos.energies)
