@@ -106,10 +106,10 @@ def main():
         for xc in XC:
             if xc is None:
                 label = "d3"
-                print("RUNNING grimme-d3")
+                print("\nRUNNING grimme-d3")
             else:
                 label = xc.split("-")[-1]
-                print(f"RUNNING {xc}")                
+                print(f"\nRUNNING {xc}")                
             
             PATH_COUPLED = path / (f"PBE-{label}" if xc is None else xc) / "coupled" 
             PATH_BOTTOM = path / (f"PBE-{label}" if xc is None else xc) / "bottom"
