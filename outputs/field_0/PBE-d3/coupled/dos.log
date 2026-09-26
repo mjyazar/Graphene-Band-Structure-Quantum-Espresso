@@ -1,5 +1,5 @@
 
-     Program DOS v.7.6 starts on 26Sep2026 at  4:51: 9 
+     Program DOS v.7.6 starts on 26Sep2026 at  9:39:14 
 
      This program is part of the open-source Quantum ESPRESSO suite
      for quantum simulation of materials; please cite
@@ -41,10 +41,10 @@
      Gaussian broadening (read from input): ngauss,degauss=   0    0.010000
 
 
-     DOS          :      0.40s CPU      0.43s WALL
+     DOS          :      0.47s CPU      0.51s WALL
 
 
-   This run was terminated on:   4:51:10  26Sep2026            
+   This run was terminated on:   9:39:14  26Sep2026            
 
 =------------------------------------------------------------------------------=
    JOB DONE.

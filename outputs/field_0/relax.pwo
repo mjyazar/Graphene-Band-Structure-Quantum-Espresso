@@ -1,5 +1,5 @@
 
-     Program PWSCF v.7.6 starts on 26Sep2026 at  4:41:53 
+     Program PWSCF v.7.6 starts on 26Sep2026 at  9:30:24 
 
      This program is part of the open-source Quantum ESPRESSO suite
      for quantum simulation of materials; please cite
@@ -13,7 +13,7 @@
      Parallel version (MPI), running on     4 processors
 
      MPI processes distributed on     1 nodes
-     1121 MiB available memory on the printing compute node when the environment starts
+     1146 MiB available memory on the printing compute node when the environment starts
 
      Waiting for input...
      Reading input from standard input
@@ -369,7 +369,7 @@ Warning: card &RISM ignored
      negative rho (up, down):  3.593E-05 0.000E+00
      Starting wfcs are   16 randomized atomic wfcs
 
-     total cpu time spent up to now is        2.3 secs
+     total cpu time spent up to now is        2.6 secs
 
      Self-consistent Calculation
 
@@ -379,13 +379,13 @@ Warning: card &RISM ignored
 ---- Real-time Memory Report at c_bands before calling an iterative solver
             89 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           876 MiB available memory on the node where the printing process lives
+           866 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  1.00E-02,  avg # of iterations =  5.8
 
      negative rho (up, down):  4.121E-08 0.000E+00
 
-     total cpu time spent up to now is        6.9 secs
+     total cpu time spent up to now is        7.2 secs
 
      total energy              =     -48.16101491 Ry
      estimated scf accuracy    <       0.36907073 Ry
@@ -396,11 +396,11 @@ Warning: card &RISM ignored
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            118 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           779 MiB available memory on the node where the printing process lives
+           759 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  2.31E-03,  avg # of iterations =  6.8
 
-     total cpu time spent up to now is        9.9 secs
+     total cpu time spent up to now is       10.8 secs
 
      total energy              =     -48.20580976 Ry
      estimated scf accuracy    <       0.00436992 Ry
@@ -409,14 +409,14 @@ Warning: card &RISM ignored
      Davidson diagonalization with overlap
 
 ---- Real-time Memory Report at c_bands before calling an iterative solver
-           121 MiB given to the printing process from OS
+           120 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           775 MiB available memory on the node where the printing process lives
+           752 MiB available memory on the node where the printing process lives
 ------------------
      c_bands:  1 eigenvalues not converged
      ethr =  2.73E-05,  avg # of iterations = 11.9
 
-     total cpu time spent up to now is       16.1 secs
+     total cpu time spent up to now is       16.7 secs
 
      total energy              =     -48.20665726 Ry
      estimated scf accuracy    <       0.00093828 Ry
@@ -427,11 +427,11 @@ Warning: card &RISM ignored
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            123 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           763 MiB available memory on the node where the printing process lives
+           757 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  5.86E-06,  avg # of iterations =  6.4
 
-     total cpu time spent up to now is       19.9 secs
+     total cpu time spent up to now is       21.0 secs
 
      total energy              =     -48.20688887 Ry
      estimated scf accuracy    <       0.00053457 Ry
@@ -442,11 +442,11 @@ Warning: card &RISM ignored
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            125 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           756 MiB available memory on the node where the printing process lives
+           759 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  3.34E-06,  avg # of iterations =  5.1
 
-     total cpu time spent up to now is       23.2 secs
+     total cpu time spent up to now is       24.2 secs
 
      total energy              =     -48.20699033 Ry
      estimated scf accuracy    <       0.00000404 Ry
@@ -457,11 +457,11 @@ Warning: card &RISM ignored
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            128 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           754 MiB available memory on the node where the printing process lives
+           767 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  2.52E-08,  avg # of iterations =  2.5
 
-     total cpu time spent up to now is       26.1 secs
+     total cpu time spent up to now is       27.1 secs
 
      total energy              =     -48.20699191 Ry
      estimated scf accuracy    <       0.00000015 Ry
@@ -472,11 +472,11 @@ Warning: card &RISM ignored
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            130 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           759 MiB available memory on the node where the printing process lives
+           762 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  9.46E-10,  avg # of iterations =  3.8
 
-     total cpu time spent up to now is       29.6 secs
+     total cpu time spent up to now is       30.0 secs
 
      End of self-consistent calculation
 
@@ -741,14 +741,14 @@ Warning: card &RISM ignored
 
      Forces acting on atoms (cartesian axes, Ry/au):
 
-     atom    1 type  1   force =     0.00000000   -0.00000000   -0.00129998
-     atom    2 type  1   force =     0.00000000   -0.00000000   -0.00059292
-     atom    3 type  1   force =     0.00000000    0.00000000    0.00059292
+     atom    1 type  1   force =     0.00000000    0.00000000   -0.00129998
+     atom    2 type  1   force =     0.00000000    0.00000000   -0.00059292
+     atom    3 type  1   force =     0.00000000   -0.00000000    0.00059292
      atom    4 type  1   force =     0.00000000    0.00000000    0.00129998
      The non-local contrib.  to forces
-     atom    1 type  1   force =     0.00000000    0.00000000   -0.00227473
-     atom    2 type  1   force =    -0.00000000    0.00000000   -0.00108215
-     atom    3 type  1   force =    -0.00000000   -0.00000000    0.00108215
+     atom    1 type  1   force =     0.00000000   -0.00000000   -0.00227473
+     atom    2 type  1   force =     0.00000000   -0.00000000   -0.00108215
+     atom    3 type  1   force =     0.00000000    0.00000000    0.00108215
      atom    4 type  1   force =     0.00000000    0.00000000    0.00227473
      The ionic contribution  to forces
      atom    1 type  1   force =     0.00000000   -0.00000000  -15.31775822
@@ -761,7 +761,7 @@ Warning: card &RISM ignored
      atom    3 type  1   force =    -0.00000000    0.00000000  -15.32196377
      atom    4 type  1   force =     0.00000000    0.00000000  -15.31734718
      The core correction contribution to forces
-     atom    1 type  1   force =     0.00000000    0.00000000    0.00011485
+     atom    1 type  1   force =    -0.00000000    0.00000000    0.00011485
      atom    2 type  1   force =     0.00000000   -0.00000000    0.00006101
      atom    3 type  1   force =     0.00000000   -0.00000000   -0.00006101
      atom    4 type  1   force =     0.00000000   -0.00000000   -0.00011485
@@ -771,9 +771,9 @@ Warning: card &RISM ignored
      atom    3 type  1   force =     0.00000000    0.00000000    0.00000000
      atom    4 type  1   force =     0.00000000    0.00000000    0.00000000
      The SCF correction term to forces
-     atom    1 type  1   force =     0.00000000    0.00000000    0.00001208
-     atom    2 type  1   force =    -0.00000000   -0.00000000    0.00001166
-     atom    3 type  1   force =    -0.00000000   -0.00000000   -0.00001166
+     atom    1 type  1   force =    -0.00000000   -0.00000000    0.00001208
+     atom    2 type  1   force =     0.00000000    0.00000000    0.00001166
+     atom    3 type  1   force =     0.00000000    0.00000000   -0.00001166
      atom    4 type  1   force =    -0.00000000   -0.00000000   -0.00001208
 
      DFT-D3 dispersion contribution to forces:
@@ -800,7 +800,7 @@ Warning: card &RISM ignored
 
 
 ATOMIC_POSITIONS (angstrom)
-C                0.0000000000       -0.0000000000        9.9993120818
+C                0.0000000000        0.0000000000        9.9993120818
 C                1.2300000000        0.7101408311        9.9996862418
 C                1.2300000000        0.7101408311       13.3503137582
 C                0.0000000000        1.4202816622       13.3506879182
@@ -813,7 +813,7 @@ C                0.0000000000        1.4202816622       13.3506879182
 
      negative rho (up, down):  3.298E-07 0.000E+00
 
-     total cpu time spent up to now is       30.5 secs
+     total cpu time spent up to now is       31.0 secs
 
      Self-consistent Calculation
 
@@ -823,7 +823,7 @@ C                0.0000000000        1.4202816622       13.3506879182
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           769 MiB available memory on the node where the printing process lives
+           772 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  1.00E-06,  avg # of iterations =  2.0
 
@@ -835,13 +835,13 @@ C                0.0000000000        1.4202816622       13.3506879182
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           810 MiB available memory on the node where the printing process lives
+           804 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  2.91E-09,  avg # of iterations =  3.4
 
      negative rho (up, down):  5.904E-08 0.000E+00
 
-     total cpu time spent up to now is       36.3 secs
+     total cpu time spent up to now is       36.7 secs
 
      total energy              =     -48.20699560 Ry
      estimated scf accuracy    <       0.00000077 Ry
@@ -852,13 +852,13 @@ C                0.0000000000        1.4202816622       13.3506879182
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           763 MiB available memory on the node where the printing process lives
+           766 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  4.82E-09,  avg # of iterations =  2.0
 
      negative rho (up, down):  2.507E-08 0.000E+00
 
-     total cpu time spent up to now is       39.3 secs
+     total cpu time spent up to now is       39.6 secs
 
      total energy              =     -48.20699572 Ry
      estimated scf accuracy    <       0.00000069 Ry
@@ -869,11 +869,11 @@ C                0.0000000000        1.4202816622       13.3506879182
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           761 MiB available memory on the node where the printing process lives
+           768 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  4.29E-09,  avg # of iterations =  2.0
 
-     total cpu time spent up to now is       41.8 secs
+     total cpu time spent up to now is       42.1 secs
 
      total energy              =     -48.20699588 Ry
      estimated scf accuracy    <       0.00000001 Ry
@@ -888,7 +888,7 @@ C                0.0000000000        1.4202816622       13.3506879182
 ------------------
      ethr =  6.43E-11,  avg # of iterations =  1.9
 
-     total cpu time spent up to now is       44.6 secs
+     total cpu time spent up to now is       45.0 secs
 
      End of self-consistent calculation
 
@@ -1154,11 +1154,11 @@ C                0.0000000000        1.4202816622       13.3506879182
      Forces acting on atoms (cartesian axes, Ry/au):
 
      atom    1 type  1   force =     0.00000000    0.00000000   -0.00104476
-     atom    2 type  1   force =     0.00000000   -0.00000000   -0.00083125
-     atom    3 type  1   force =     0.00000000    0.00000000    0.00083125
+     atom    2 type  1   force =     0.00000000    0.00000000   -0.00083125
+     atom    3 type  1   force =     0.00000000   -0.00000000    0.00083125
      atom    4 type  1   force =     0.00000000    0.00000000    0.00104476
      The non-local contrib.  to forces
-     atom    1 type  1   force =     0.00000000   -0.00000000   -0.00179328
+     atom    1 type  1   force =     0.00000000    0.00000000   -0.00179328
      atom    2 type  1   force =     0.00000000   -0.00000000   -0.00155111
      atom    3 type  1   force =     0.00000000    0.00000000    0.00155111
      atom    4 type  1   force =     0.00000000    0.00000000    0.00179328
@@ -1170,7 +1170,7 @@ C                0.0000000000        1.4202816622       13.3506879182
      The local contribution  to forces
      atom    1 type  1   force =    -0.00000000   -0.00000000   15.31981361
      atom    2 type  1   force =    -0.00000000    0.00000000   15.31581203
-     atom    3 type  1   force =    -0.00000000    0.00000000  -15.31581203
+     atom    3 type  1   force =     0.00000000    0.00000000  -15.31581203
      atom    4 type  1   force =     0.00000000    0.00000000  -15.31981361
      The core correction contribution to forces
      atom    1 type  1   force =     0.00000000    0.00000000    0.00010927
@@ -1183,10 +1183,10 @@ C                0.0000000000        1.4202816622       13.3506879182
      atom    3 type  1   force =     0.00000000    0.00000000    0.00000000
      atom    4 type  1   force =     0.00000000    0.00000000    0.00000000
      The SCF correction term to forces
-     atom    1 type  1   force =    -0.00000000   -0.00000000    0.00001874
+     atom    1 type  1   force =     0.00000000    0.00000000    0.00001874
      atom    2 type  1   force =     0.00000000    0.00000000    0.00001912
      atom    3 type  1   force =     0.00000000    0.00000000   -0.00001912
-     atom    4 type  1   force =     0.00000000    0.00000000   -0.00001874
+     atom    4 type  1   force =    -0.00000000   -0.00000000   -0.00001874
 
      DFT-D3 dispersion contribution to forces:
      atom    1 type  1   force =     0.00000000    0.00000000    0.00125853
@@ -1228,7 +1228,7 @@ C                0.0000000000        1.4202816622       13.3514446282
 
      negative rho (up, down):  4.032E-07 0.000E+00
 
-     total cpu time spent up to now is       45.5 secs
+     total cpu time spent up to now is       45.9 secs
 
      Self-consistent Calculation
 
@@ -1238,7 +1238,7 @@ C                0.0000000000        1.4202816622       13.3514446282
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           777 MiB available memory on the node where the printing process lives
+           789 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  1.00E-06,  avg # of iterations =  2.5
 
@@ -1250,13 +1250,13 @@ C                0.0000000000        1.4202816622       13.3514446282
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           816 MiB available memory on the node where the printing process lives
+           825 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  4.72E-09,  avg # of iterations =  3.0
 
      negative rho (up, down):  7.750E-08 0.000E+00
 
-     total cpu time spent up to now is       51.9 secs
+     total cpu time spent up to now is       52.4 secs
 
      total energy              =     -48.20699986 Ry
      estimated scf accuracy    <       0.00000114 Ry
@@ -1267,13 +1267,13 @@ C                0.0000000000        1.4202816622       13.3514446282
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           764 MiB available memory on the node where the printing process lives
+           763 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  7.09E-09,  avg # of iterations =  2.0
 
      negative rho (up, down):  3.492E-08 0.000E+00
 
-     total cpu time spent up to now is       54.6 secs
+     total cpu time spent up to now is       55.5 secs
 
      total energy              =     -48.20700003 Ry
      estimated scf accuracy    <       0.00000099 Ry
@@ -1284,11 +1284,11 @@ C                0.0000000000        1.4202816622       13.3514446282
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           765 MiB available memory on the node where the printing process lives
+           767 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  6.20E-09,  avg # of iterations =  2.0
 
-     total cpu time spent up to now is       57.3 secs
+     total cpu time spent up to now is       58.8 secs
 
      total energy              =     -48.20700026 Ry
      estimated scf accuracy    <       0.00000002 Ry
@@ -1299,11 +1299,11 @@ C                0.0000000000        1.4202816622       13.3514446282
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           761 MiB available memory on the node where the printing process lives
+           763 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  1.01E-10,  avg # of iterations =  1.9
 
-     total cpu time spent up to now is       60.2 secs
+     total cpu time spent up to now is       61.5 secs
 
      total energy              =     -48.20700026 Ry
      estimated scf accuracy    <          2.0E-10 Ry
@@ -1314,11 +1314,11 @@ C                0.0000000000        1.4202816622       13.3514446282
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           760 MiB available memory on the node where the printing process lives
+           755 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  1.27E-12,  avg # of iterations =  3.6
 
-     total cpu time spent up to now is       63.7 secs
+     total cpu time spent up to now is       65.2 secs
 
      End of self-consistent calculation
 
@@ -1584,26 +1584,26 @@ C                0.0000000000        1.4202816622       13.3514446282
      Forces acting on atoms (cartesian axes, Ry/au):
 
      atom    1 type  1   force =     0.00000000    0.00000000   -0.00085377
-     atom    2 type  1   force =     0.00000000    0.00000000   -0.00100174
-     atom    3 type  1   force =     0.00000000    0.00000000    0.00100174
+     atom    2 type  1   force =     0.00000000   -0.00000000   -0.00100174
+     atom    3 type  1   force =     0.00000000   -0.00000000    0.00100174
      atom    4 type  1   force =     0.00000000    0.00000000    0.00085377
      The non-local contrib.  to forces
-     atom    1 type  1   force =     0.00000000    0.00000000   -0.00143748
-     atom    2 type  1   force =     0.00000000   -0.00000000   -0.00189098
+     atom    1 type  1   force =     0.00000000   -0.00000000   -0.00143748
+     atom    2 type  1   force =     0.00000000    0.00000000   -0.00189098
      atom    3 type  1   force =     0.00000000    0.00000000    0.00189098
-     atom    4 type  1   force =     0.00000000    0.00000000    0.00143748
+     atom    4 type  1   force =    -0.00000000    0.00000000    0.00143748
      The ionic contribution  to forces
      atom    1 type  1   force =     0.00000000   -0.00000000  -15.32151995
      atom    2 type  1   force =     0.00000000    0.00000000  -15.31072297
-     atom    3 type  1   force =     0.00000000   -0.00000000   15.31072297
+     atom    3 type  1   force =    -0.00000000   -0.00000000   15.31072297
      atom    4 type  1   force =     0.00000000    0.00000000   15.32151995
      The local contribution  to forces
-     atom    1 type  1   force =    -0.00000000    0.00000000   15.32074665
+     atom    1 type  1   force =    -0.00000000   -0.00000000   15.32074665
      atom    2 type  1   force =    -0.00000000    0.00000000   15.31038840
-     atom    3 type  1   force =    -0.00000000    0.00000000  -15.31038840
+     atom    3 type  1   force =     0.00000000    0.00000000  -15.31038840
      atom    4 type  1   force =     0.00000000    0.00000000  -15.32074665
      The core correction contribution to forces
-     atom    1 type  1   force =     0.00000000   -0.00000000    0.00010546
+     atom    1 type  1   force =     0.00000000    0.00000000    0.00010546
      atom    2 type  1   force =    -0.00000000   -0.00000000    0.00006916
      atom    3 type  1   force =     0.00000000   -0.00000000   -0.00006916
      atom    4 type  1   force =    -0.00000000   -0.00000000   -0.00010546
@@ -1615,8 +1615,8 @@ C                0.0000000000        1.4202816622       13.3514446282
      The SCF correction term to forces
      atom    1 type  1   force =     0.00000000    0.00000000   -0.00000656
      atom    2 type  1   force =     0.00000000    0.00000000   -0.00000639
-     atom    3 type  1   force =    -0.00000000    0.00000000    0.00000639
-     atom    4 type  1   force =    -0.00000000   -0.00000000    0.00000656
+     atom    3 type  1   force =     0.00000000    0.00000000    0.00000639
+     atom    4 type  1   force =     0.00000000   -0.00000000    0.00000656
 
      DFT-D3 dispersion contribution to forces:
      atom    1 type  1   force =    -0.00000000    0.00000000    0.00125811
@@ -1634,7 +1634,7 @@ C                0.0000000000        1.4202816622       13.3514446282
      number of bfgs steps    =   2
 
      energy             old  =     -48.2069958774 Ry
-     energy             new  =     -48.2070002629 Ry
+     energy             new  =     -48.2070002630 Ry
 
      CASE: energy            _new < energy            _old
 
@@ -1656,7 +1656,7 @@ C                0.0000000000        1.4202816622       13.3525796932
 
      negative rho (up, down):  6.953E-07 0.000E+00
 
-     total cpu time spent up to now is       64.4 secs
+     total cpu time spent up to now is       65.8 secs
 
      Self-consistent Calculation
 
@@ -1666,7 +1666,7 @@ C                0.0000000000        1.4202816622       13.3525796932
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           767 MiB available memory on the node where the printing process lives
+           762 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  1.00E-06,  avg # of iterations =  3.0
 
@@ -1678,13 +1678,13 @@ C                0.0000000000        1.4202816622       13.3525796932
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           813 MiB available memory on the node where the printing process lives
+           802 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  1.54E-08,  avg # of iterations =  1.3
 
      negative rho (up, down):  1.529E-07 0.000E+00
 
-     total cpu time spent up to now is       70.8 secs
+     total cpu time spent up to now is       71.7 secs
 
      total energy              =     -48.20700597 Ry
      estimated scf accuracy    <       0.00000297 Ry
@@ -1695,13 +1695,13 @@ C                0.0000000000        1.4202816622       13.3525796932
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           762 MiB available memory on the node where the printing process lives
+           756 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  1.85E-08,  avg # of iterations =  2.0
 
      negative rho (up, down):  7.770E-08 0.000E+00
 
-     total cpu time spent up to now is       74.0 secs
+     total cpu time spent up to now is       73.6 secs
 
      total energy              =     -48.20700641 Ry
      estimated scf accuracy    <       0.00000255 Ry
@@ -1712,11 +1712,11 @@ C                0.0000000000        1.4202816622       13.3525796932
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           763 MiB available memory on the node where the printing process lives
+           756 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  1.59E-08,  avg # of iterations =  2.0
 
-     total cpu time spent up to now is       77.1 secs
+     total cpu time spent up to now is       76.4 secs
 
      total energy              =     -48.20700701 Ry
      estimated scf accuracy    <       0.00000004 Ry
@@ -1727,11 +1727,11 @@ C                0.0000000000        1.4202816622       13.3525796932
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           764 MiB available memory on the node where the printing process lives
+           758 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  2.69E-10,  avg # of iterations =  1.7
 
-     total cpu time spent up to now is       79.7 secs
+     total cpu time spent up to now is       79.1 secs
 
      total energy              =     -48.20700702 Ry
      estimated scf accuracy    <          5.9E-10 Ry
@@ -1742,11 +1742,11 @@ C                0.0000000000        1.4202816622       13.3525796932
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           763 MiB available memory on the node where the printing process lives
+           748 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  3.70E-12,  avg # of iterations =  3.7
 
-     total cpu time spent up to now is       83.6 secs
+     total cpu time spent up to now is       83.1 secs
 
      End of self-consistent calculation
 
@@ -2012,39 +2012,39 @@ C                0.0000000000        1.4202816622       13.3525796932
      Forces acting on atoms (cartesian axes, Ry/au):
 
      atom    1 type  1   force =     0.00000000   -0.00000000   -0.00065329
-     atom    2 type  1   force =     0.00000000    0.00000000   -0.00116795
+     atom    2 type  1   force =     0.00000000   -0.00000000   -0.00116795
      atom    3 type  1   force =     0.00000000   -0.00000000    0.00116795
      atom    4 type  1   force =     0.00000000    0.00000000    0.00065329
      The non-local contrib.  to forces
-     atom    1 type  1   force =    -0.00000000   -0.00000000   -0.00106939
-     atom    2 type  1   force =     0.00000000   -0.00000000   -0.00223078
+     atom    1 type  1   force =     0.00000000   -0.00000000   -0.00106939
+     atom    2 type  1   force =    -0.00000000   -0.00000000   -0.00223078
      atom    3 type  1   force =     0.00000000    0.00000000    0.00223078
-     atom    4 type  1   force =     0.00000000   -0.00000000    0.00106939
+     atom    4 type  1   force =     0.00000000    0.00000000    0.00106939
      The ionic contribution  to forces
      atom    1 type  1   force =     0.00000000   -0.00000000  -15.32123651
      atom    2 type  1   force =     0.00000000    0.00000000  -15.30368738
      atom    3 type  1   force =     0.00000000   -0.00000000   15.30368738
      atom    4 type  1   force =     0.00000000    0.00000000   15.32123651
      The local contribution  to forces
-     atom    1 type  1   force =    -0.00000000    0.00000000   15.32030935
+     atom    1 type  1   force =    -0.00000000   -0.00000000   15.32030935
      atom    2 type  1   force =    -0.00000000    0.00000000   15.30353087
      atom    3 type  1   force =    -0.00000000    0.00000000  -15.30353087
-     atom    4 type  1   force =    -0.00000000    0.00000000  -15.32030935
+     atom    4 type  1   force =     0.00000000    0.00000000  -15.32030935
      The core correction contribution to forces
      atom    1 type  1   force =     0.00000000    0.00000000    0.00010095
      atom    2 type  1   force =     0.00000000   -0.00000000    0.00007234
      atom    3 type  1   force =     0.00000000   -0.00000000   -0.00007234
-     atom    4 type  1   force =    -0.00000000   -0.00000000   -0.00010095
+     atom    4 type  1   force =     0.00000000   -0.00000000   -0.00010095
      The Hubbard contrib.    to forces
      atom    1 type  1   force =     0.00000000    0.00000000    0.00000000
      atom    2 type  1   force =     0.00000000    0.00000000    0.00000000
      atom    3 type  1   force =     0.00000000    0.00000000    0.00000000
      atom    4 type  1   force =     0.00000000    0.00000000    0.00000000
      The SCF correction term to forces
-     atom    1 type  1   force =     0.00000000    0.00000000   -0.00001513
-     atom    2 type  1   force =     0.00000000   -0.00000000   -0.00001488
+     atom    1 type  1   force =     0.00000000   -0.00000000   -0.00001513
+     atom    2 type  1   force =    -0.00000000   -0.00000000   -0.00001488
      atom    3 type  1   force =    -0.00000000   -0.00000000    0.00001488
-     atom    4 type  1   force =    -0.00000000   -0.00000000    0.00001513
+     atom    4 type  1   force =     0.00000000    0.00000000    0.00001513
 
      DFT-D3 dispersion contribution to forces:
      atom    1 type  1   force =    -0.00000000    0.00000000    0.00125743
@@ -2061,7 +2061,7 @@ C                0.0000000000        1.4202816622       13.3525796932
      number of scf cycles    =   4
      number of bfgs steps    =   3
 
-     energy             old  =     -48.2070002629 Ry
+     energy             old  =     -48.2070002630 Ry
      energy             new  =     -48.2070070214 Ry
 
      CASE: energy            _new < energy            _old
@@ -2084,7 +2084,7 @@ C                0.0000000000        1.4202816622       13.3542822907
 
      negative rho (up, down):  1.147E-06 0.000E+00
 
-     total cpu time spent up to now is       84.5 secs
+     total cpu time spent up to now is       84.0 secs
 
      Self-consistent Calculation
 
@@ -2094,7 +2094,7 @@ C                0.0000000000        1.4202816622       13.3542822907
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           773 MiB available memory on the node where the printing process lives
+           769 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  1.00E-06,  avg # of iterations =  3.0
 
@@ -2106,13 +2106,13 @@ C                0.0000000000        1.4202816622       13.3542822907
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           825 MiB available memory on the node where the printing process lives
+           798 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  3.72E-08,  avg # of iterations =  1.3
 
      negative rho (up, down):  2.737E-07 0.000E+00
 
-     total cpu time spent up to now is       91.3 secs
+     total cpu time spent up to now is       89.3 secs
 
      total energy              =     -48.20701463 Ry
      estimated scf accuracy    <       0.00000722 Ry
@@ -2123,13 +2123,13 @@ C                0.0000000000        1.4202816622       13.3542822907
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           764 MiB available memory on the node where the printing process lives
+           753 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  4.51E-08,  avg # of iterations =  2.0
 
      negative rho (up, down):  1.491E-07 0.000E+00
 
-     total cpu time spent up to now is       93.8 secs
+     total cpu time spent up to now is       91.9 secs
 
      total energy              =     -48.20701571 Ry
      estimated scf accuracy    <       0.00000620 Ry
@@ -2140,11 +2140,11 @@ C                0.0000000000        1.4202816622       13.3542822907
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           764 MiB available memory on the node where the printing process lives
+           749 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  3.88E-08,  avg # of iterations =  2.0
 
-     total cpu time spent up to now is       96.6 secs
+     total cpu time spent up to now is       94.5 secs
 
      total energy              =     -48.20701719 Ry
      estimated scf accuracy    <       0.00000010 Ry
@@ -2155,11 +2155,11 @@ C                0.0000000000        1.4202816622       13.3542822907
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           764 MiB available memory on the node where the printing process lives
+           755 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  6.55E-10,  avg # of iterations =  1.8
 
-     total cpu time spent up to now is       99.7 secs
+     total cpu time spent up to now is       97.2 secs
 
      total energy              =     -48.20701721 Ry
      estimated scf accuracy    <          1.4E-09 Ry
@@ -2170,11 +2170,11 @@ C                0.0000000000        1.4202816622       13.3542822907
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           763 MiB available memory on the node where the printing process lives
+           733 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  8.59E-12,  avg # of iterations =  3.5
 
-     total cpu time spent up to now is      102.9 secs
+     total cpu time spent up to now is      100.8 secs
 
      total energy              =     -48.20701721 Ry
      estimated scf accuracy    <          1.3E-10 Ry
@@ -2185,11 +2185,11 @@ C                0.0000000000        1.4202816622       13.3542822907
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           760 MiB available memory on the node where the printing process lives
+           740 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  8.05E-13,  avg # of iterations =  2.2
 
-     total cpu time spent up to now is      106.1 secs
+     total cpu time spent up to now is      103.6 secs
 
      End of self-consistent calculation
 
@@ -2454,25 +2454,25 @@ C                0.0000000000        1.4202816622       13.3542822907
 
      Forces acting on atoms (cartesian axes, Ry/au):
 
-     atom    1 type  1   force =     0.00000000   -0.00000000   -0.00043433
+     atom    1 type  1   force =     0.00000000    0.00000000   -0.00043433
      atom    2 type  1   force =     0.00000000    0.00000000   -0.00133933
      atom    3 type  1   force =     0.00000000    0.00000000    0.00133933
      atom    4 type  1   force =     0.00000000    0.00000000    0.00043433
      The non-local contrib.  to forces
      atom    1 type  1   force =     0.00000000    0.00000000   -0.00067236
-     atom    2 type  1   force =     0.00000000   -0.00000000   -0.00258953
-     atom    3 type  1   force =     0.00000000    0.00000000    0.00258953
-     atom    4 type  1   force =     0.00000000    0.00000000    0.00067236
+     atom    2 type  1   force =     0.00000000    0.00000000   -0.00258953
+     atom    3 type  1   force =     0.00000000   -0.00000000    0.00258953
+     atom    4 type  1   force =     0.00000000   -0.00000000    0.00067236
      The ionic contribution  to forces
      atom    1 type  1   force =     0.00000000   -0.00000000  -15.31911737
      atom    2 type  1   force =    -0.00000000    0.00000000  -15.29437908
      atom    3 type  1   force =    -0.00000000   -0.00000000   15.29437908
      atom    4 type  1   force =     0.00000000    0.00000000   15.31911737
      The local contribution  to forces
-     atom    1 type  1   force =    -0.00000000   -0.00000000   15.31800474
+     atom    1 type  1   force =    -0.00000000    0.00000000   15.31800474
      atom    2 type  1   force =    -0.00000000    0.00000000   15.29439201
      atom    3 type  1   force =    -0.00000000    0.00000000  -15.29439201
-     atom    4 type  1   force =    -0.00000000    0.00000000  -15.31800474
+     atom    4 type  1   force =     0.00000000    0.00000000  -15.31800474
      The core correction contribution to forces
      atom    1 type  1   force =     0.00000000    0.00000000    0.00009564
      atom    2 type  1   force =     0.00000000   -0.00000000    0.00007537
@@ -2484,9 +2484,9 @@ C                0.0000000000        1.4202816622       13.3542822907
      atom    3 type  1   force =     0.00000000    0.00000000    0.00000000
      atom    4 type  1   force =     0.00000000    0.00000000    0.00000000
      The SCF correction term to forces
-     atom    1 type  1   force =     0.00000000   -0.00000000   -0.00000132
+     atom    1 type  1   force =    -0.00000000   -0.00000000   -0.00000132
      atom    2 type  1   force =    -0.00000000   -0.00000000   -0.00000134
-     atom    3 type  1   force =    -0.00000000   -0.00000000    0.00000134
+     atom    3 type  1   force =    -0.00000000    0.00000000    0.00000134
      atom    4 type  1   force =     0.00000000    0.00000000    0.00000132
 
      DFT-D3 dispersion contribution to forces:
@@ -2514,9 +2514,9 @@ C                0.0000000000        1.4202816622       13.3542822907
 
 
 ATOMIC_POSITIONS (angstrom)
-C                0.0000000000       -0.0000000000        9.9931638130
-C                1.2300000000        0.7101408311        9.9947076744
-C                1.2300000000        0.7101408311       13.3552923256
+C                0.0000000000        0.0000000000        9.9931638130
+C                1.2300000000        0.7101408311        9.9947076743
+C                1.2300000000        0.7101408311       13.3552923257
 C                0.0000000000        1.4202816622       13.3568361870
 
 
@@ -2527,7 +2527,7 @@ C                0.0000000000        1.4202816622       13.3568361870
 
      negative rho (up, down):  1.845E-06 0.000E+00
 
-     total cpu time spent up to now is      107.1 secs
+     total cpu time spent up to now is      104.2 secs
 
      Self-consistent Calculation
 
@@ -2537,13 +2537,13 @@ C                0.0000000000        1.4202816622       13.3568361870
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           764 MiB available memory on the node where the printing process lives
+           746 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  1.00E-06,  avg # of iterations =  4.0
 
      negative rho (up, down):  4.634E-07 0.000E+00
 
-     total cpu time spent up to now is      111.4 secs
+     total cpu time spent up to now is      108.4 secs
 
      total energy              =     -48.20702628 Ry
      estimated scf accuracy    <       0.00001672 Ry
@@ -2554,13 +2554,13 @@ C                0.0000000000        1.4202816622       13.3568361870
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           764 MiB available memory on the node where the printing process lives
+           746 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  1.04E-07,  avg # of iterations =  2.0
 
      negative rho (up, down):  2.620E-07 0.000E+00
 
-     total cpu time spent up to now is      114.4 secs
+     total cpu time spent up to now is      111.5 secs
 
      total energy              =     -48.20702885 Ry
      estimated scf accuracy    <       0.00001398 Ry
@@ -2571,13 +2571,13 @@ C                0.0000000000        1.4202816622       13.3568361870
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           768 MiB available memory on the node where the printing process lives
+           753 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  8.74E-08,  avg # of iterations =  2.0
 
      negative rho (up, down):  1.173E-08 0.000E+00
 
-     total cpu time spent up to now is      117.5 secs
+     total cpu time spent up to now is      115.0 secs
 
      total energy              =     -48.20703220 Ry
      estimated scf accuracy    <       0.00000028 Ry
@@ -2588,11 +2588,11 @@ C                0.0000000000        1.4202816622       13.3568361870
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           764 MiB available memory on the node where the printing process lives
+           741 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  1.74E-09,  avg # of iterations =  2.2
 
-     total cpu time spent up to now is      119.9 secs
+     total cpu time spent up to now is      117.6 secs
 
      total energy              =     -48.20703226 Ry
      estimated scf accuracy    <          2.0E-09 Ry
@@ -2603,11 +2603,11 @@ C                0.0000000000        1.4202816622       13.3568361870
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           764 MiB available memory on the node where the printing process lives
+           746 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  1.24E-11,  avg # of iterations =  3.2
 
-     total cpu time spent up to now is      123.6 secs
+     total cpu time spent up to now is      120.3 secs
 
      total energy              =     -48.20703226 Ry
      estimated scf accuracy    <          1.1E-10 Ry
@@ -2618,11 +2618,11 @@ C                0.0000000000        1.4202816622       13.3568361870
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           749 MiB available memory on the node where the printing process lives
+           735 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  7.14E-13,  avg # of iterations =  2.4
 
-     total cpu time spent up to now is      126.2 secs
+     total cpu time spent up to now is      123.1 secs
 
      End of self-consistent calculation
 
@@ -2877,8 +2877,8 @@ C                0.0000000000        1.4202816622       13.3568361870
      internal energy E=F+TS    =     -48.20693169 Ry
 
      The total energy is F=E-TS. E is the sum of the following terms:
-     one-electron contribution =    -707.05940144 Ry
-     hartree contribution      =     356.95436118 Ry
+     one-electron contribution =    -707.05940146 Ry
+     hartree contribution      =     356.95436119 Ry
      xc contribution           =     -17.18665267 Ry
      ewald contribution        =     319.10241996 Ry
      DFT-D3 Dispersion         =      -0.01765871 Ry
@@ -2887,22 +2887,22 @@ C                0.0000000000        1.4202816622       13.3568361870
 
      Forces acting on atoms (cartesian axes, Ry/au):
 
-     atom    1 type  1   force =     0.00000000    0.00000000   -0.00018466
-     atom    2 type  1   force =     0.00000000    0.00000000   -0.00151537
+     atom    1 type  1   force =     0.00000000   -0.00000000   -0.00018466
+     atom    2 type  1   force =     0.00000000   -0.00000000   -0.00151537
      atom    3 type  1   force =     0.00000000    0.00000000    0.00151537
      atom    4 type  1   force =     0.00000000   -0.00000000    0.00018466
      The non-local contrib.  to forces
-     atom    1 type  1   force =     0.00000000    0.00000000   -0.00023285
-     atom    2 type  1   force =     0.00000000   -0.00000000   -0.00297477
-     atom    3 type  1   force =     0.00000000    0.00000000    0.00297477
-     atom    4 type  1   force =     0.00000000    0.00000000    0.00023285
+     atom    1 type  1   force =     0.00000000    0.00000000   -0.00023284
+     atom    2 type  1   force =     0.00000000    0.00000000   -0.00297476
+     atom    3 type  1   force =     0.00000000   -0.00000000    0.00297476
+     atom    4 type  1   force =     0.00000000    0.00000000    0.00023284
      The ionic contribution  to forces
      atom    1 type  1   force =     0.00000000   -0.00000000  -15.31423265
      atom    2 type  1   force =    -0.00000000    0.00000000  -15.28167047
      atom    3 type  1   force =    -0.00000000   -0.00000000   15.28167047
      atom    4 type  1   force =     0.00000000    0.00000000   15.31423265
      The local contribution  to forces
-     atom    1 type  1   force =    -0.00000000   -0.00000000   15.31294078
+     atom    1 type  1   force =    -0.00000000    0.00000000   15.31294078
      atom    2 type  1   force =    -0.00000000    0.00000000   15.28189004
      atom    3 type  1   force =    -0.00000000    0.00000000  -15.28189004
      atom    4 type  1   force =     0.00000000    0.00000000  -15.31294078
@@ -2917,9 +2917,9 @@ C                0.0000000000        1.4202816622       13.3568361870
      atom    3 type  1   force =     0.00000000    0.00000000    0.00000000
      atom    4 type  1   force =     0.00000000    0.00000000    0.00000000
      The SCF correction term to forces
-     atom    1 type  1   force =     0.00000000    0.00000000   -0.00000408
-     atom    2 type  1   force =     0.00000000    0.00000000   -0.00000402
-     atom    3 type  1   force =     0.00000000    0.00000000    0.00000402
+     atom    1 type  1   force =    -0.00000000   -0.00000000   -0.00000408
+     atom    2 type  1   force =     0.00000000    0.00000000   -0.00000403
+     atom    3 type  1   force =     0.00000000    0.00000000    0.00000403
      atom    4 type  1   force =    -0.00000000   -0.00000000    0.00000408
 
      DFT-D3 dispersion contribution to forces:
@@ -2947,9 +2947,9 @@ C                0.0000000000        1.4202816622       13.3568361870
 
 
 ATOMIC_POSITIONS (angstrom)
-C                0.0000000000       -0.0000000000        9.9893329686
-C                1.2300000000        0.7101408311        9.9912219017
-C                1.2300000000        0.7101408311       13.3587780983
+C                0.0000000000        0.0000000000        9.9893329686
+C                1.2300000000        0.7101408311        9.9912218988
+C                1.2300000000        0.7101408311       13.3587781012
 C                0.0000000000        1.4202816622       13.3606670314
 
 
@@ -2960,7 +2960,7 @@ C                0.0000000000        1.4202816622       13.3606670314
 
      negative rho (up, down):  2.919E-06 0.000E+00
 
-     total cpu time spent up to now is      126.9 secs
+     total cpu time spent up to now is      123.9 secs
 
      Self-consistent Calculation
 
@@ -2970,13 +2970,13 @@ C                0.0000000000        1.4202816622       13.3606670314
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           762 MiB available memory on the node where the printing process lives
+           766 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  1.00E-06,  avg # of iterations =  4.0
 
      negative rho (up, down):  7.612E-07 0.000E+00
 
-     total cpu time spent up to now is      131.1 secs
+     total cpu time spent up to now is      127.3 secs
 
      total energy              =     -48.20703951 Ry
      estimated scf accuracy    <       0.00004004 Ry
@@ -2987,13 +2987,13 @@ C                0.0000000000        1.4202816622       13.3606670314
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           767 MiB available memory on the node where the printing process lives
+           747 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  2.50E-07,  avg # of iterations =  2.0
 
      negative rho (up, down):  4.458E-07 0.000E+00
 
-     total cpu time spent up to now is      134.1 secs
+     total cpu time spent up to now is      129.6 secs
 
      total energy              =     -48.20704565 Ry
      estimated scf accuracy    <       0.00003499 Ry
@@ -3004,13 +3004,13 @@ C                0.0000000000        1.4202816622       13.3606670314
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           768 MiB available memory on the node where the printing process lives
+           760 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  2.19E-07,  avg # of iterations =  2.0
 
      negative rho (up, down):  3.149E-08 0.000E+00
 
-     total cpu time spent up to now is      136.7 secs
+     total cpu time spent up to now is      132.7 secs
 
      total energy              =     -48.20705389 Ry
      estimated scf accuracy    <       0.00000058 Ry
@@ -3021,11 +3021,11 @@ C                0.0000000000        1.4202816622       13.3606670314
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           762 MiB available memory on the node where the printing process lives
+           757 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  3.63E-09,  avg # of iterations =  1.9
 
-     total cpu time spent up to now is      139.7 secs
+     total cpu time spent up to now is      135.5 secs
 
      total energy              =     -48.20705399 Ry
      estimated scf accuracy    <          5.6E-09 Ry
@@ -3036,11 +3036,11 @@ C                0.0000000000        1.4202816622       13.3606670314
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           758 MiB available memory on the node where the printing process lives
+           747 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  3.47E-11,  avg # of iterations =  3.1
 
-     total cpu time spent up to now is      142.5 secs
+     total cpu time spent up to now is      138.8 secs
 
      total energy              =     -48.20705400 Ry
      estimated scf accuracy    <          3.3E-10 Ry
@@ -3051,11 +3051,11 @@ C                0.0000000000        1.4202816622       13.3606670314
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           764 MiB available memory on the node where the printing process lives
+           753 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  2.05E-12,  avg # of iterations =  2.5
 
-     total cpu time spent up to now is      145.4 secs
+     total cpu time spent up to now is      140.7 secs
 
      End of self-consistent calculation
 
@@ -3310,10 +3310,10 @@ C                0.0000000000        1.4202816622       13.3606670314
      internal energy E=F+TS    =     -48.20695339 Ry
 
      The total energy is F=E-TS. E is the sum of the following terms:
-     one-electron contribution =    -706.21426198 Ry
-     hartree contribution      =     356.53188475 Ry
+     one-electron contribution =    -706.21426164 Ry
+     hartree contribution      =     356.53188458 Ry
      xc contribution           =     -17.18650158 Ry
-     ewald contribution        =     318.67955061 Ry
+     ewald contribution        =     318.67955044 Ry
      DFT-D3 Dispersion         =      -0.01762519 Ry
 
      convergence has been achieved in   6 iterations
@@ -3321,29 +3321,29 @@ C                0.0000000000        1.4202816622       13.3606670314
      Forces acting on atoms (cartesian axes, Ry/au):
 
      atom    1 type  1   force =     0.00000000    0.00000000    0.00010137
-     atom    2 type  1   force =     0.00000000   -0.00000000   -0.00168976
-     atom    3 type  1   force =     0.00000000    0.00000000    0.00168976
+     atom    2 type  1   force =     0.00000000    0.00000000   -0.00168976
+     atom    3 type  1   force =     0.00000000   -0.00000000    0.00168976
      atom    4 type  1   force =     0.00000000   -0.00000000   -0.00010137
      The non-local contrib.  to forces
      atom    1 type  1   force =     0.00000000    0.00000000    0.00025424
      atom    2 type  1   force =     0.00000000   -0.00000000   -0.00338257
      atom    3 type  1   force =     0.00000000   -0.00000000    0.00338257
-     atom    4 type  1   force =     0.00000000    0.00000000   -0.00025424
+     atom    4 type  1   force =     0.00000000   -0.00000000   -0.00025424
      The ionic contribution  to forces
-     atom    1 type  1   force =     0.00000000   -0.00000000  -15.30501012
-     atom    2 type  1   force =    -0.00000000    0.00000000  -15.26400044
-     atom    3 type  1   force =    -0.00000000   -0.00000000   15.26400044
-     atom    4 type  1   force =     0.00000000    0.00000000   15.30501012
+     atom    1 type  1   force =     0.00000000   -0.00000000  -15.30501008
+     atom    2 type  1   force =    -0.00000000    0.00000000  -15.26400047
+     atom    3 type  1   force =    -0.00000000   -0.00000000   15.26400047
+     atom    4 type  1   force =     0.00000000    0.00000000   15.30501008
      The local contribution  to forces
-     atom    1 type  1   force =    -0.00000000    0.00000000   15.30353104
-     atom    2 type  1   force =    -0.00000000    0.00000000   15.26445102
-     atom    3 type  1   force =    -0.00000000    0.00000000  -15.26445102
-     atom    4 type  1   force =     0.00000000    0.00000000  -15.30353104
+     atom    1 type  1   force =    -0.00000000   -0.00000000   15.30353100
+     atom    2 type  1   force =    -0.00000000    0.00000000   15.26445105
+     atom    3 type  1   force =    -0.00000000    0.00000000  -15.26445105
+     atom    4 type  1   force =    -0.00000000    0.00000000  -15.30353100
      The core correction contribution to forces
      atom    1 type  1   force =     0.00000000    0.00000000    0.00008223
      atom    2 type  1   force =     0.00000000   -0.00000000    0.00008141
      atom    3 type  1   force =     0.00000000   -0.00000000   -0.00008141
-     atom    4 type  1   force =     0.00000000   -0.00000000   -0.00008223
+     atom    4 type  1   force =    -0.00000000   -0.00000000   -0.00008223
      The Hubbard contrib.    to forces
      atom    1 type  1   force =     0.00000000    0.00000000    0.00000000
      atom    2 type  1   force =     0.00000000    0.00000000    0.00000000
@@ -3351,9 +3351,9 @@ C                0.0000000000        1.4202816622       13.3606670314
      atom    4 type  1   force =     0.00000000    0.00000000    0.00000000
      The SCF correction term to forces
      atom    1 type  1   force =    -0.00000000   -0.00000000   -0.00000777
-     atom    2 type  1   force =     0.00000000    0.00000000   -0.00000771
-     atom    3 type  1   force =     0.00000000    0.00000000    0.00000771
-     atom    4 type  1   force =    -0.00000000   -0.00000000    0.00000777
+     atom    2 type  1   force =     0.00000000   -0.00000000   -0.00000771
+     atom    3 type  1   force =     0.00000000   -0.00000000    0.00000771
+     atom    4 type  1   force =     0.00000000    0.00000000    0.00000777
 
      DFT-D3 dispersion contribution to forces:
      atom    1 type  1   force =    -0.00000000    0.00000000    0.00125175
@@ -3381,8 +3381,8 @@ C                0.0000000000        1.4202816622       13.3606670314
 
 ATOMIC_POSITIONS (angstrom)
 C                0.0000000000        0.0000000000        9.9835867020
-C                1.2300000000        0.7101408311        9.9858319132
-C                1.2300000000        0.7101408311       13.3641680868
+C                1.2300000000        0.7101408311        9.9858319096
+C                1.2300000000        0.7101408311       13.3641680904
 C                0.0000000000        1.4202816622       13.3664132980
 
 
@@ -3393,7 +3393,7 @@ C                0.0000000000        1.4202816622       13.3664132980
 
      negative rho (up, down):  4.560E-06 0.000E+00
 
-     total cpu time spent up to now is      146.4 secs
+     total cpu time spent up to now is      141.3 secs
 
      Self-consistent Calculation
 
@@ -3403,13 +3403,13 @@ C                0.0000000000        1.4202816622       13.3664132980
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           779 MiB available memory on the node where the printing process lives
+           768 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  1.00E-06,  avg # of iterations =  4.8
 
      negative rho (up, down):  1.223E-06 0.000E+00
 
-     total cpu time spent up to now is      150.9 secs
+     total cpu time spent up to now is      145.3 secs
 
      total energy              =     -48.20705114 Ry
      estimated scf accuracy    <       0.00009248 Ry
@@ -3420,13 +3420,13 @@ C                0.0000000000        1.4202816622       13.3664132980
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           769 MiB available memory on the node where the printing process lives
+           750 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  5.78E-07,  avg # of iterations =  2.2
 
      negative rho (up, down):  7.293E-07 0.000E+00
 
-     total cpu time spent up to now is      153.5 secs
+     total cpu time spent up to now is      147.2 secs
 
      total energy              =     -48.20706523 Ry
      estimated scf accuracy    <       0.00008026 Ry
@@ -3437,13 +3437,13 @@ C                0.0000000000        1.4202816622       13.3664132980
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           768 MiB available memory on the node where the printing process lives
+           759 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  5.02E-07,  avg # of iterations =  2.0
 
      negative rho (up, down):  6.654E-08 0.000E+00
 
-     total cpu time spent up to now is      156.0 secs
+     total cpu time spent up to now is      149.9 secs
 
      total energy              =     -48.20708415 Ry
      estimated scf accuracy    <       0.00000133 Ry
@@ -3458,7 +3458,7 @@ C                0.0000000000        1.4202816622       13.3664132980
 ------------------
      ethr =  8.28E-09,  avg # of iterations =  1.9
 
-     total cpu time spent up to now is      157.8 secs
+     total cpu time spent up to now is      152.8 secs
 
      total energy              =     -48.20708437 Ry
      estimated scf accuracy    <       0.00000001 Ry
@@ -3469,11 +3469,11 @@ C                0.0000000000        1.4202816622       13.3664132980
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           765 MiB available memory on the node where the printing process lives
+           756 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  8.65E-11,  avg # of iterations =  3.7
 
-     total cpu time spent up to now is      161.4 secs
+     total cpu time spent up to now is      156.4 secs
 
      total energy              =     -48.20708438 Ry
      estimated scf accuracy    <          1.0E-09 Ry
@@ -3484,11 +3484,11 @@ C                0.0000000000        1.4202816622       13.3664132980
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           759 MiB available memory on the node where the printing process lives
+           747 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  6.41E-12,  avg # of iterations =  2.1
 
-     total cpu time spent up to now is      163.8 secs
+     total cpu time spent up to now is      158.2 secs
 
      End of self-consistent calculation
 
@@ -3743,40 +3743,40 @@ C                0.0000000000        1.4202816622       13.3664132980
      internal energy E=F+TS    =     -48.20698371 Ry
 
      The total energy is F=E-TS. E is the sum of the following terms:
-     one-electron contribution =    -704.92932032 Ry
-     hartree contribution      =     355.88954647 Ry
+     one-electron contribution =    -704.92931991 Ry
+     hartree contribution      =     355.88954627 Ry
      xc contribution           =     -17.18627774 Ry
-     ewald contribution        =     318.03664209 Ry
+     ewald contribution        =     318.03664188 Ry
      DFT-D3 Dispersion         =      -0.01757421 Ry
 
      convergence has been achieved in   6 iterations
 
      Forces acting on atoms (cartesian axes, Ry/au):
 
-     atom    1 type  1   force =     0.00000000    0.00000000    0.00042260
+     atom    1 type  1   force =     0.00000000   -0.00000000    0.00042259
      atom    2 type  1   force =     0.00000000   -0.00000000   -0.00184707
-     atom    3 type  1   force =     0.00000000   -0.00000000    0.00184707
-     atom    4 type  1   force =     0.00000000   -0.00000000   -0.00042260
+     atom    3 type  1   force =     0.00000000    0.00000000    0.00184707
+     atom    4 type  1   force =     0.00000000   -0.00000000   -0.00042259
      The non-local contrib.  to forces
-     atom    1 type  1   force =    -0.00000000    0.00000000    0.00077812
-     atom    2 type  1   force =     0.00000000   -0.00000000   -0.00379312
-     atom    3 type  1   force =     0.00000000    0.00000000    0.00379312
-     atom    4 type  1   force =    -0.00000000   -0.00000000   -0.00077812
+     atom    1 type  1   force =     0.00000000   -0.00000000    0.00077812
+     atom    2 type  1   force =     0.00000000    0.00000000   -0.00379311
+     atom    3 type  1   force =     0.00000000   -0.00000000    0.00379311
+     atom    4 type  1   force =     0.00000000   -0.00000000   -0.00077812
      The ionic contribution  to forces
-     atom    1 type  1   force =     0.00000000   -0.00000000  -15.28892608
-     atom    2 type  1   force =    -0.00000000    0.00000000  -15.23914867
-     atom    3 type  1   force =    -0.00000000   -0.00000000   15.23914867
-     atom    4 type  1   force =     0.00000000    0.00000000   15.28892608
+     atom    1 type  1   force =     0.00000000   -0.00000000  -15.28892603
+     atom    2 type  1   force =    -0.00000000    0.00000000  -15.23914870
+     atom    3 type  1   force =    -0.00000000   -0.00000000   15.23914870
+     atom    4 type  1   force =     0.00000000    0.00000000   15.28892603
      The local contribution  to forces
-     atom    1 type  1   force =    -0.00000000    0.00000000   15.28726021
-     atom    2 type  1   force =    -0.00000000    0.00000000   15.23984819
-     atom    3 type  1   force =    -0.00000000    0.00000000  -15.23984819
-     atom    4 type  1   force =     0.00000000    0.00000000  -15.28726021
+     atom    1 type  1   force =    -0.00000000    0.00000000   15.28726017
+     atom    2 type  1   force =    -0.00000000    0.00000000   15.23984822
+     atom    3 type  1   force =    -0.00000000    0.00000000  -15.23984822
+     atom    4 type  1   force =     0.00000000    0.00000000  -15.28726017
      The core correction contribution to forces
      atom    1 type  1   force =     0.00000000    0.00000000    0.00007353
      atom    2 type  1   force =     0.00000000   -0.00000000    0.00008375
      atom    3 type  1   force =     0.00000000   -0.00000000   -0.00008375
-     atom    4 type  1   force =    -0.00000000   -0.00000000   -0.00007353
+     atom    4 type  1   force =     0.00000000   -0.00000000   -0.00007353
      The Hubbard contrib.    to forces
      atom    1 type  1   force =     0.00000000    0.00000000    0.00000000
      atom    2 type  1   force =     0.00000000    0.00000000    0.00000000
@@ -3784,7 +3784,7 @@ C                0.0000000000        1.4202816622       13.3664132980
      atom    4 type  1   force =     0.00000000    0.00000000    0.00000000
      The SCF correction term to forces
      atom    1 type  1   force =    -0.00000000   -0.00000000   -0.00001025
-     atom    2 type  1   force =    -0.00000000    0.00000000   -0.00001023
+     atom    2 type  1   force =     0.00000000    0.00000000   -0.00001023
      atom    3 type  1   force =     0.00000000    0.00000000    0.00001023
      atom    4 type  1   force =     0.00000000    0.00000000    0.00001025
 
@@ -3804,7 +3804,7 @@ C                0.0000000000        1.4202816622       13.3664132980
      number of bfgs steps    =   7
 
      energy             old  =     -48.2070539955 Ry
-     energy             new  =     -48.2070843830 Ry
+     energy             new  =     -48.2070843831 Ry
 
      CASE: energy            _new < energy            _old
 
@@ -3813,10 +3813,10 @@ C                0.0000000000        1.4202816622       13.3664132980
 
 
 ATOMIC_POSITIONS (angstrom)
-C                0.0000000000        0.0000000000        9.9749673020
-C                1.2300000000        0.7101408311        9.9775445973
-C                1.2300000000        0.7101408311       13.3724554027
-C                0.0000000000        1.4202816622       13.3750326980
+C                0.0000000000        0.0000000000        9.9749673021
+C                1.2300000000        0.7101408311        9.9775445920
+C                1.2300000000        0.7101408311       13.3724554080
+C                0.0000000000        1.4202816622       13.3750326979
 
 
 
@@ -3826,7 +3826,7 @@ C                0.0000000000        1.4202816622       13.3750326980
 
      negative rho (up, down):  7.048E-06 0.000E+00
 
-     total cpu time spent up to now is      164.7 secs
+     total cpu time spent up to now is      158.8 secs
 
      Self-consistent Calculation
 
@@ -3836,13 +3836,13 @@ C                0.0000000000        1.4202816622       13.3750326980
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           771 MiB available memory on the node where the printing process lives
+           760 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  1.00E-06,  avg # of iterations =  5.3
 
      negative rho (up, down):  1.926E-06 0.000E+00
 
-     total cpu time spent up to now is      168.2 secs
+     total cpu time spent up to now is      163.9 secs
 
      total energy              =     -48.20704650 Ry
      estimated scf accuracy    <       0.00021529 Ry
@@ -3853,13 +3853,13 @@ C                0.0000000000        1.4202816622       13.3750326980
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           770 MiB available memory on the node where the printing process lives
+           752 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  1.35E-06,  avg # of iterations =  3.2
 
      negative rho (up, down):  1.167E-06 0.000E+00
 
-     total cpu time spent up to now is      171.5 secs
+     total cpu time spent up to now is      166.9 secs
 
      total energy              =     -48.20707923 Ry
      estimated scf accuracy    <       0.00019185 Ry
@@ -3870,13 +3870,13 @@ C                0.0000000000        1.4202816622       13.3750326980
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           769 MiB available memory on the node where the printing process lives
+           748 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  1.20E-06,  avg # of iterations =  2.2
 
      negative rho (up, down):  1.259E-07 0.000E+00
 
-     total cpu time spent up to now is      174.6 secs
+     total cpu time spent up to now is      169.7 secs
 
      total energy              =     -48.20712415 Ry
      estimated scf accuracy    <       0.00000297 Ry
@@ -3887,11 +3887,11 @@ C                0.0000000000        1.4202816622       13.3750326980
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           763 MiB available memory on the node where the printing process lives
+           748 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  1.86E-08,  avg # of iterations =  1.9
 
-     total cpu time spent up to now is      176.9 secs
+     total cpu time spent up to now is      172.4 secs
 
      total energy              =     -48.20712465 Ry
      estimated scf accuracy    <       0.00000003 Ry
@@ -3902,11 +3902,11 @@ C                0.0000000000        1.4202816622       13.3750326980
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           765 MiB available memory on the node where the printing process lives
+           746 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  2.03E-10,  avg # of iterations =  3.6
 
-     total cpu time spent up to now is      180.3 secs
+     total cpu time spent up to now is      176.1 secs
 
      total energy              =     -48.20712467 Ry
      estimated scf accuracy    <          2.0E-09 Ry
@@ -3917,11 +3917,11 @@ C                0.0000000000        1.4202816622       13.3750326980
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           762 MiB available memory on the node where the printing process lives
+           751 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  1.28E-11,  avg # of iterations =  2.4
 
-     total cpu time spent up to now is      183.3 secs
+     total cpu time spent up to now is      178.6 secs
 
      total energy              =     -48.20712467 Ry
      estimated scf accuracy    <          2.0E-10 Ry
@@ -3932,11 +3932,11 @@ C                0.0000000000        1.4202816622       13.3750326980
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           753 MiB available memory on the node where the printing process lives
+           738 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  1.28E-12,  avg # of iterations =  2.2
 
-     total cpu time spent up to now is      185.6 secs
+     total cpu time spent up to now is      181.1 secs
 
      End of self-consistent calculation
 
@@ -4191,35 +4191,35 @@ C                0.0000000000        1.4202816622       13.3750326980
      internal energy E=F+TS    =     -48.20702386 Ry
 
      The total energy is F=E-TS. E is the sum of the following terms:
-     one-electron contribution =    -702.98177766 Ry
-     hartree contribution      =     354.91594579 Ry
+     one-electron contribution =    -702.98177706 Ry
+     hartree contribution      =     354.91594550 Ry
      xc contribution           =     -17.18595288 Ry
-     ewald contribution        =     317.06225776 Ry
+     ewald contribution        =     317.06225745 Ry
      DFT-D3 Dispersion         =      -0.01749687 Ry
 
      convergence has been achieved in   7 iterations
 
      Forces acting on atoms (cartesian axes, Ry/au):
 
-     atom    1 type  1   force =     0.00000000   -0.00000000    0.00076513
-     atom    2 type  1   force =     0.00000000   -0.00000000   -0.00195771
-     atom    3 type  1   force =     0.00000000    0.00000000    0.00195771
-     atom    4 type  1   force =     0.00000000    0.00000000   -0.00076513
+     atom    1 type  1   force =     0.00000000    0.00000000    0.00076512
+     atom    2 type  1   force =     0.00000000    0.00000000   -0.00195770
+     atom    3 type  1   force =     0.00000000   -0.00000000    0.00195770
+     atom    4 type  1   force =     0.00000000   -0.00000000   -0.00076512
      The non-local contrib.  to forces
-     atom    1 type  1   force =     0.00000000   -0.00000000    0.00130412
-     atom    2 type  1   force =     0.00000000   -0.00000000   -0.00415831
-     atom    3 type  1   force =     0.00000000    0.00000000    0.00415831
-     atom    4 type  1   force =     0.00000000   -0.00000000   -0.00130412
+     atom    1 type  1   force =     0.00000000   -0.00000000    0.00130411
+     atom    2 type  1   force =     0.00000000    0.00000000   -0.00415830
+     atom    3 type  1   force =     0.00000000   -0.00000000    0.00415830
+     atom    4 type  1   force =     0.00000000    0.00000000   -0.00130411
      The ionic contribution  to forces
-     atom    1 type  1   force =     0.00000000   -0.00000000  -15.26197516
-     atom    2 type  1   force =    -0.00000000    0.00000000  -15.20394590
-     atom    3 type  1   force =    -0.00000000   -0.00000000   15.20394590
-     atom    4 type  1   force =     0.00000000    0.00000000   15.26197516
+     atom    1 type  1   force =     0.00000000   -0.00000000  -15.26197508
+     atom    2 type  1   force =    -0.00000000    0.00000000  -15.20394595
+     atom    3 type  1   force =    -0.00000000   -0.00000000   15.20394595
+     atom    4 type  1   force =     0.00000000    0.00000000   15.26197508
      The local contribution  to forces
-     atom    1 type  1   force =     0.00000000   -0.00000000   15.26013413
-     atom    2 type  1   force =    -0.00000000    0.00000000   15.20488339
-     atom    3 type  1   force =    -0.00000000    0.00000000  -15.20488339
-     atom    4 type  1   force =     0.00000000    0.00000000  -15.26013413
+     atom    1 type  1   force =    -0.00000000   -0.00000000   15.26013406
+     atom    2 type  1   force =    -0.00000000    0.00000000   15.20488345
+     atom    3 type  1   force =    -0.00000000    0.00000000  -15.20488345
+     atom    4 type  1   force =    -0.00000000    0.00000000  -15.26013406
      The core correction contribution to forces
      atom    1 type  1   force =     0.00000000    0.00000000    0.00006328
      atom    2 type  1   force =     0.00000000   -0.00000000    0.00008466
@@ -4251,7 +4251,7 @@ C                0.0000000000        1.4202816622       13.3750326980
      number of scf cycles    =   9
      number of bfgs steps    =   8
 
-     energy             old  =     -48.2070843830 Ry
+     energy             old  =     -48.2070843831 Ry
      energy             new  =     -48.2071246711 Ry
 
      CASE: energy            _new < energy            _old
@@ -4262,8 +4262,8 @@ C                0.0000000000        1.4202816622       13.3750326980
 
 ATOMIC_POSITIONS (angstrom)
 C                0.0000000000        0.0000000000        9.9620382022
-C                1.2300000000        0.7101408311        9.9648437012
-C                1.2300000000        0.7101408311       13.3851562988
+C                1.2300000000        0.7101408311        9.9648436921
+C                1.2300000000        0.7101408311       13.3851563079
 C                0.0000000000        1.4202816622       13.3879617978
 
 
@@ -4274,7 +4274,7 @@ C                0.0000000000        1.4202816622       13.3879617978
 
      negative rho (up, down):  1.074E-05 0.000E+00
 
-     total cpu time spent up to now is      186.6 secs
+     total cpu time spent up to now is      181.7 secs
 
      Self-consistent Calculation
 
@@ -4284,13 +4284,13 @@ C                0.0000000000        1.4202816622       13.3879617978
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           775 MiB available memory on the node where the printing process lives
+           759 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  1.00E-06,  avg # of iterations =  6.0
 
      negative rho (up, down):  2.978E-06 0.000E+00
 
-     total cpu time spent up to now is      192.0 secs
+     total cpu time spent up to now is      186.2 secs
 
      total energy              =     -48.20698727 Ry
      estimated scf accuracy    <       0.00050356 Ry
@@ -4301,16 +4301,16 @@ C                0.0000000000        1.4202816622       13.3879617978
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           770 MiB available memory on the node where the printing process lives
+           747 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  3.15E-06,  avg # of iterations =  4.0
 
      negative rho (up, down):  1.831E-06 0.000E+00
 
-     total cpu time spent up to now is      195.5 secs
+     total cpu time spent up to now is      189.6 secs
 
      total energy              =     -48.20706531 Ry
-     estimated scf accuracy    <       0.00046026 Ry
+     estimated scf accuracy    <       0.00046027 Ry
 
      iteration #  3     ecut=    80.00 Ry     beta= 0.70
      Davidson diagonalization with overlap
@@ -4318,13 +4318,13 @@ C                0.0000000000        1.4202816622       13.3879617978
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           768 MiB available memory on the node where the printing process lives
+           752 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  2.88E-06,  avg # of iterations =  2.9
 
      negative rho (up, down):  2.265E-07 0.000E+00
 
-     total cpu time spent up to now is      198.6 secs
+     total cpu time spent up to now is      191.7 secs
 
      total energy              =     -48.20717207 Ry
      estimated scf accuracy    <       0.00000634 Ry
@@ -4339,7 +4339,7 @@ C                0.0000000000        1.4202816622       13.3879617978
 ------------------
      ethr =  3.96E-08,  avg # of iterations =  1.9
 
-     total cpu time spent up to now is      201.3 secs
+     total cpu time spent up to now is      193.5 secs
 
      total energy              =     -48.20717312 Ry
      estimated scf accuracy    <       0.00000008 Ry
@@ -4354,7 +4354,7 @@ C                0.0000000000        1.4202816622       13.3879617978
 ------------------
      ethr =  5.13E-10,  avg # of iterations =  3.3
 
-     total cpu time spent up to now is      204.5 secs
+     total cpu time spent up to now is      195.6 secs
 
      total energy              =     -48.20717316 Ry
      estimated scf accuracy    <          5.4E-09 Ry
@@ -4365,11 +4365,11 @@ C                0.0000000000        1.4202816622       13.3879617978
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           753 MiB available memory on the node where the printing process lives
+           745 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  3.39E-11,  avg # of iterations =  2.2
 
-     total cpu time spent up to now is      207.6 secs
+     total cpu time spent up to now is      197.4 secs
 
      total energy              =     -48.20717316 Ry
      estimated scf accuracy    <          4.9E-10 Ry
@@ -4380,11 +4380,11 @@ C                0.0000000000        1.4202816622       13.3879617978
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           758 MiB available memory on the node where the printing process lives
+           750 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  3.09E-12,  avg # of iterations =  2.4
 
-     total cpu time spent up to now is      210.5 secs
+     total cpu time spent up to now is      199.3 secs
 
      End of self-consistent calculation
 
@@ -4639,40 +4639,40 @@ C                0.0000000000        1.4202816622       13.3879617978
      internal energy E=F+TS    =     -48.20707207 Ry
 
      The total energy is F=E-TS. E is the sum of the following terms:
-     one-electron contribution =    -700.03692259 Ry
-     hartree contribution      =     353.44378405 Ry
+     one-electron contribution =    -700.03692156 Ry
+     hartree contribution      =     353.44378353 Ry
      xc contribution           =     -17.18549081 Ry
-     ewald contribution        =     315.58893702 Ry
+     ewald contribution        =     315.58893650 Ry
      DFT-D3 Dispersion         =      -0.01737973 Ry
 
      convergence has been achieved in   7 iterations
 
      Forces acting on atoms (cartesian axes, Ry/au):
 
-     atom    1 type  1   force =     0.00000000    0.00000000    0.00108932
-     atom    2 type  1   force =     0.00000000    0.00000000   -0.00195642
-     atom    3 type  1   force =     0.00000000   -0.00000000    0.00195642
-     atom    4 type  1   force =     0.00000000    0.00000000   -0.00108932
+     atom    1 type  1   force =     0.00000000    0.00000000    0.00108931
+     atom    2 type  1   force =     0.00000000    0.00000000   -0.00195641
+     atom    3 type  1   force =     0.00000000    0.00000000    0.00195641
+     atom    4 type  1   force =     0.00000000    0.00000000   -0.00108931
      The non-local contrib.  to forces
-     atom    1 type  1   force =     0.00000000   -0.00000000    0.00173956
-     atom    2 type  1   force =     0.00000000    0.00000000   -0.00437249
-     atom    3 type  1   force =     0.00000000   -0.00000000    0.00437249
-     atom    4 type  1   force =    -0.00000000    0.00000000   -0.00173956
+     atom    1 type  1   force =     0.00000000    0.00000000    0.00173955
+     atom    2 type  1   force =     0.00000000    0.00000000   -0.00437248
+     atom    3 type  1   force =     0.00000000    0.00000000    0.00437248
+     atom    4 type  1   force =     0.00000000   -0.00000000   -0.00173955
      The ionic contribution  to forces
-     atom    1 type  1   force =     0.00000000   -0.00000000  -15.21777505
-     atom    2 type  1   force =    -0.00000000    0.00000000  -15.15391263
-     atom    3 type  1   force =    -0.00000000   -0.00000000   15.15391263
-     atom    4 type  1   force =     0.00000000    0.00000000   15.21777505
+     atom    1 type  1   force =     0.00000000   -0.00000000  -15.21777492
+     atom    2 type  1   force =    -0.00000000    0.00000000  -15.15391272
+     atom    3 type  1   force =    -0.00000000   -0.00000000   15.15391272
+     atom    4 type  1   force =     0.00000000    0.00000000   15.21777492
      The local contribution  to forces
-     atom    1 type  1   force =    -0.00000000   -0.00000000   15.21584643
-     atom    2 type  1   force =    -0.00000000    0.00000000   15.15505993
-     atom    3 type  1   force =    -0.00000000    0.00000000  -15.15505993
-     atom    4 type  1   force =     0.00000000    0.00000000  -15.21584643
+     atom    1 type  1   force =    -0.00000000   -0.00000000   15.21584631
+     atom    2 type  1   force =    -0.00000000    0.00000000   15.15506002
+     atom    3 type  1   force =    -0.00000000    0.00000000  -15.15506002
+     atom    4 type  1   force =     0.00000000    0.00000000  -15.21584631
      The core correction contribution to forces
-     atom    1 type  1   force =     0.00000000    0.00000000    0.00005222
+     atom    1 type  1   force =    -0.00000000    0.00000000    0.00005222
      atom    2 type  1   force =     0.00000000   -0.00000000    0.00008297
      atom    3 type  1   force =     0.00000000   -0.00000000   -0.00008297
-     atom    4 type  1   force =    -0.00000000   -0.00000000   -0.00005222
+     atom    4 type  1   force =     0.00000000   -0.00000000   -0.00005222
      The Hubbard contrib.    to forces
      atom    1 type  1   force =     0.00000000    0.00000000    0.00000000
      atom    2 type  1   force =     0.00000000    0.00000000    0.00000000
@@ -4680,8 +4680,8 @@ C                0.0000000000        1.4202816622       13.3879617978
      atom    4 type  1   force =     0.00000000    0.00000000    0.00000000
      The SCF correction term to forces
      atom    1 type  1   force =     0.00000000    0.00000000    0.00000010
-     atom    2 type  1   force =     0.00000000   -0.00000000    0.00000013
-     atom    3 type  1   force =     0.00000000    0.00000000   -0.00000013
+     atom    2 type  1   force =    -0.00000000   -0.00000000    0.00000013
+     atom    3 type  1   force =    -0.00000000   -0.00000000   -0.00000013
      atom    4 type  1   force =    -0.00000000   -0.00000000   -0.00000010
 
      DFT-D3 dispersion contribution to forces:
@@ -4700,7 +4700,7 @@ C                0.0000000000        1.4202816622       13.3879617978
      number of bfgs steps    =   9
 
      energy             old  =     -48.2071246711 Ry
-     energy             new  =     -48.2071731645 Ry
+     energy             new  =     -48.2071731646 Ry
 
      CASE: energy            _new < energy            _old
 
@@ -4709,10 +4709,10 @@ C                0.0000000000        1.4202816622       13.3879617978
 
 
 ATOMIC_POSITIONS (angstrom)
-C                0.0000000000        0.0000000000        9.9427093748
-C                1.2300000000        0.7101408311        9.9454500514
-C                1.2300000000        0.7101408311       13.4045499486
-C                0.0000000000        1.4202816622       13.4072906252
+C                0.0000000000        0.0000000000        9.9427093774
+C                1.2300000000        0.7101408311        9.9454500423
+C                1.2300000000        0.7101408311       13.4045499577
+C                0.0000000000        1.4202816622       13.4072906226
 
 
 
@@ -4722,7 +4722,7 @@ C                0.0000000000        1.4202816622       13.4072906252
 
      negative rho (up, down):  1.609E-05 0.000E+00
 
-     total cpu time spent up to now is      211.1 secs
+     total cpu time spent up to now is      200.0 secs
 
      Self-consistent Calculation
 
@@ -4732,13 +4732,13 @@ C                0.0000000000        1.4202816622       13.4072906252
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           769 MiB available memory on the node where the printing process lives
+           758 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  1.00E-06,  avg # of iterations =  6.6
 
      negative rho (up, down):  4.525E-06 0.000E+00
 
-     total cpu time spent up to now is      217.4 secs
+     total cpu time spent up to now is      206.6 secs
 
      total energy              =     -48.20679092 Ry
      estimated scf accuracy    <       0.00115740 Ry
@@ -4749,13 +4749,13 @@ C                0.0000000000        1.4202816622       13.4072906252
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           769 MiB available memory on the node where the printing process lives
+           755 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  7.23E-06,  avg # of iterations =  4.1
 
      negative rho (up, down):  2.812E-06 0.000E+00
 
-     total cpu time spent up to now is      221.6 secs
+     total cpu time spent up to now is      210.1 secs
 
      total energy              =     -48.20697093 Ry
      estimated scf accuracy    <       0.00107433 Ry
@@ -4766,13 +4766,13 @@ C                0.0000000000        1.4202816622       13.4072906252
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           769 MiB available memory on the node where the printing process lives
+           753 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  6.71E-06,  avg # of iterations =  3.1
 
      negative rho (up, down):  3.773E-07 0.000E+00
 
-     total cpu time spent up to now is      225.1 secs
+     total cpu time spent up to now is      213.3 secs
 
      total energy              =     -48.20721855 Ry
      estimated scf accuracy    <       0.00001386 Ry
@@ -4783,11 +4783,11 @@ C                0.0000000000        1.4202816622       13.4072906252
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           760 MiB available memory on the node where the printing process lives
+           755 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  8.66E-08,  avg # of iterations =  2.1
 
-     total cpu time spent up to now is      227.5 secs
+     total cpu time spent up to now is      215.1 secs
 
      total energy              =     -48.20722087 Ry
      estimated scf accuracy    <       0.00000021 Ry
@@ -4798,11 +4798,11 @@ C                0.0000000000        1.4202816622       13.4072906252
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           763 MiB available memory on the node where the printing process lives
+           746 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  1.33E-09,  avg # of iterations =  3.2
 
-     total cpu time spent up to now is      230.6 secs
+     total cpu time spent up to now is      218.4 secs
 
      total energy              =     -48.20722096 Ry
      estimated scf accuracy    <       0.00000001 Ry
@@ -4813,11 +4813,11 @@ C                0.0000000000        1.4202816622       13.4072906252
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           756 MiB available memory on the node where the printing process lives
+           751 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  7.44E-11,  avg # of iterations =  2.7
 
-     total cpu time spent up to now is      234.0 secs
+     total cpu time spent up to now is      221.5 secs
 
      total energy              =     -48.20722097 Ry
      estimated scf accuracy    <          1.2E-09 Ry
@@ -4828,11 +4828,11 @@ C                0.0000000000        1.4202816622       13.4072906252
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           760 MiB available memory on the node where the printing process lives
+           750 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  7.70E-12,  avg # of iterations =  2.2
 
-     total cpu time spent up to now is      237.2 secs
+     total cpu time spent up to now is      224.6 secs
 
      End of self-consistent calculation
 
@@ -5087,10 +5087,10 @@ C                0.0000000000        1.4202816622       13.4072906252
      internal energy E=F+TS    =     -48.20711920 Ry
 
      The total energy is F=E-TS. E is the sum of the following terms:
-     one-electron contribution =    -695.60491448 Ry
-     hartree contribution      =     351.22814763 Ry
+     one-electron contribution =    -695.60491374 Ry
+     hartree contribution      =     351.22814726 Ry
      xc contribution           =     -17.18485838 Ry
-     ewald contribution        =     313.37170983 Ry
+     ewald contribution        =     313.37170946 Ry
      DFT-D3 Dispersion         =      -0.01720380 Ry
 
      convergence has been achieved in   7 iterations
@@ -5098,29 +5098,29 @@ C                0.0000000000        1.4202816622       13.4072906252
      Forces acting on atoms (cartesian axes, Ry/au):
 
      atom    1 type  1   force =     0.00000000   -0.00000000    0.00128015
-     atom    2 type  1   force =     0.00000000    0.00000000   -0.00171487
-     atom    3 type  1   force =     0.00000000    0.00000000    0.00171487
+     atom    2 type  1   force =     0.00000000    0.00000000   -0.00171486
+     atom    3 type  1   force =     0.00000000   -0.00000000    0.00171486
      atom    4 type  1   force =     0.00000000    0.00000000   -0.00128015
      The non-local contrib.  to forces
-     atom    1 type  1   force =     0.00000000   -0.00000000    0.00185619
-     atom    2 type  1   force =     0.00000000    0.00000000   -0.00419422
-     atom    3 type  1   force =     0.00000000    0.00000000    0.00419422
-     atom    4 type  1   force =     0.00000000    0.00000000   -0.00185619
+     atom    1 type  1   force =     0.00000000    0.00000000    0.00185618
+     atom    2 type  1   force =    -0.00000000    0.00000000   -0.00419421
+     atom    3 type  1   force =    -0.00000000   -0.00000000    0.00419421
+     atom    4 type  1   force =     0.00000000   -0.00000000   -0.00185618
      The ionic contribution  to forces
-     atom    1 type  1   force =     0.00000000   -0.00000000  -15.14601253
-     atom    2 type  1   force =    -0.00000000    0.00000000  -15.08328611
-     atom    3 type  1   force =    -0.00000000   -0.00000000   15.08328611
-     atom    4 type  1   force =     0.00000000    0.00000000   15.14601253
+     atom    1 type  1   force =     0.00000000   -0.00000000  -15.14601238
+     atom    2 type  1   force =    -0.00000000    0.00000000  -15.08328624
+     atom    3 type  1   force =    -0.00000000   -0.00000000   15.08328624
+     atom    4 type  1   force =     0.00000000    0.00000000   15.14601238
      The local contribution  to forces
-     atom    1 type  1   force =    -0.00000000    0.00000000   15.14419094
-     atom    2 type  1   force =    -0.00000000    0.00000000   15.08449932
-     atom    3 type  1   force =    -0.00000000    0.00000000  -15.08449932
-     atom    4 type  1   force =     0.00000000    0.00000000  -15.14419094
+     atom    1 type  1   force =    -0.00000000   -0.00000000   15.14419079
+     atom    2 type  1   force =    -0.00000000    0.00000000   15.08449945
+     atom    3 type  1   force =    -0.00000000    0.00000000  -15.08449945
+     atom    4 type  1   force =    -0.00000000    0.00000000  -15.14419079
      The core correction contribution to forces
-     atom    1 type  1   force =     0.00000000    0.00000000    0.00004226
+     atom    1 type  1   force =     0.00000000   -0.00000000    0.00004226
      atom    2 type  1   force =     0.00000000   -0.00000000    0.00007593
      atom    3 type  1   force =     0.00000000   -0.00000000   -0.00007593
-     atom    4 type  1   force =    -0.00000000   -0.00000000   -0.00004226
+     atom    4 type  1   force =     0.00000000   -0.00000000   -0.00004226
      The Hubbard contrib.    to forces
      atom    1 type  1   force =     0.00000000    0.00000000    0.00000000
      atom    2 type  1   force =     0.00000000    0.00000000    0.00000000
@@ -5128,8 +5128,8 @@ C                0.0000000000        1.4202816622       13.4072906252
      atom    4 type  1   force =     0.00000000    0.00000000    0.00000000
      The SCF correction term to forces
      atom    1 type  1   force =     0.00000000    0.00000000   -0.00000104
-     atom    2 type  1   force =     0.00000000    0.00000000   -0.00000094
-     atom    3 type  1   force =     0.00000000    0.00000000    0.00000094
+     atom    2 type  1   force =    -0.00000000    0.00000000   -0.00000094
+     atom    3 type  1   force =    -0.00000000    0.00000000    0.00000094
      atom    4 type  1   force =    -0.00000000   -0.00000000    0.00000104
 
      DFT-D3 dispersion contribution to forces:
@@ -5147,20 +5147,20 @@ C                0.0000000000        1.4202816622       13.4072906252
      number of scf cycles    =  11
      number of bfgs steps    =  10
 
-     energy             old  =     -48.2071731645 Ry
+     energy             old  =     -48.2071731646 Ry
      energy             new  =     -48.2072209681 Ry
 
      CASE: energy            _new < energy            _old
 
-     new trust radius        =       0.0377203868 bohr
+     new trust radius        =       0.0377203907 bohr
      new conv_thr            =            1.0E-10 Ry
 
 
 ATOMIC_POSITIONS (angstrom)
-C                0.0000000000        0.0000000000        9.9233618770
-C                1.2300000000        0.7101408311        9.9254892823
-C                1.2300000000        0.7101408311       13.4245107177
-C                0.0000000000        1.4202816622       13.4266381230
+C                0.0000000000        0.0000000000        9.9233618784
+C                1.2300000000        0.7101408311        9.9254892712
+C                1.2300000000        0.7101408311       13.4245107288
+C                0.0000000000        1.4202816622       13.4266381216
 
 
 
@@ -5170,7 +5170,7 @@ C                0.0000000000        1.4202816622       13.4266381230
 
      negative rho (up, down):  1.621E-05 0.000E+00
 
-     total cpu time spent up to now is      238.2 secs
+     total cpu time spent up to now is      225.7 secs
 
      Self-consistent Calculation
 
@@ -5180,13 +5180,13 @@ C                0.0000000000        1.4202816622       13.4266381230
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           774 MiB available memory on the node where the printing process lives
+           758 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  1.00E-06,  avg # of iterations =  6.5
 
      negative rho (up, down):  4.564E-06 0.000E+00
 
-     total cpu time spent up to now is      243.5 secs
+     total cpu time spent up to now is      230.0 secs
 
      total energy              =     -48.20679919 Ry
      estimated scf accuracy    <       0.00119264 Ry
@@ -5197,13 +5197,13 @@ C                0.0000000000        1.4202816622       13.4266381230
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           771 MiB available memory on the node where the printing process lives
+           753 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  7.45E-06,  avg # of iterations =  3.9
 
      negative rho (up, down):  2.835E-06 0.000E+00
 
-     total cpu time spent up to now is      245.8 secs
+     total cpu time spent up to now is      233.4 secs
 
      total energy              =     -48.20698498 Ry
      estimated scf accuracy    <       0.00110600 Ry
@@ -5214,13 +5214,13 @@ C                0.0000000000        1.4202816622       13.4266381230
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           769 MiB available memory on the node where the printing process lives
+           760 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  6.91E-06,  avg # of iterations =  3.3
 
      negative rho (up, down):  3.846E-07 0.000E+00
 
-     total cpu time spent up to now is      248.0 secs
+     total cpu time spent up to now is      236.6 secs
 
      total energy              =     -48.20723973 Ry
      estimated scf accuracy    <       0.00001435 Ry
@@ -5231,11 +5231,11 @@ C                0.0000000000        1.4202816622       13.4266381230
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           767 MiB available memory on the node where the printing process lives
+           756 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  8.97E-08,  avg # of iterations =  2.0
 
-     total cpu time spent up to now is      250.5 secs
+     total cpu time spent up to now is      238.4 secs
 
      total energy              =     -48.20724212 Ry
      estimated scf accuracy    <       0.00000020 Ry
@@ -5246,11 +5246,11 @@ C                0.0000000000        1.4202816622       13.4266381230
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           764 MiB available memory on the node where the printing process lives
+           752 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  1.28E-09,  avg # of iterations =  3.3
 
-     total cpu time spent up to now is      253.7 secs
+     total cpu time spent up to now is      241.6 secs
 
      total energy              =     -48.20724221 Ry
      estimated scf accuracy    <       0.00000001 Ry
@@ -5261,11 +5261,11 @@ C                0.0000000000        1.4202816622       13.4266381230
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           763 MiB available memory on the node where the printing process lives
+           750 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  7.98E-11,  avg # of iterations =  2.5
 
-     total cpu time spent up to now is      256.8 secs
+     total cpu time spent up to now is      244.5 secs
 
      total energy              =     -48.20724222 Ry
      estimated scf accuracy    <          1.1E-09 Ry
@@ -5276,11 +5276,11 @@ C                0.0000000000        1.4202816622       13.4266381230
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           750 MiB available memory on the node where the printing process lives
+           745 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  6.85E-12,  avg # of iterations =  2.2
 
-     total cpu time spent up to now is      259.4 secs
+     total cpu time spent up to now is      247.1 secs
 
      End of self-consistent calculation
 
@@ -5535,35 +5535,35 @@ C                0.0000000000        1.4202816622       13.4266381230
      internal energy E=F+TS    =     -48.20713936 Ry
 
      The total energy is F=E-TS. E is the sum of the following terms:
-     one-electron contribution =    -691.12698096 Ry
-     hartree contribution      =     348.98950422 Ry
+     one-electron contribution =    -691.12697986 Ry
+     hartree contribution      =     348.98950367 Ry
      xc contribution           =     -17.18429075 Ry
-     ewald contribution        =     311.13165479 Ry
+     ewald contribution        =     311.13165424 Ry
      DFT-D3 Dispersion         =      -0.01702666 Ry
 
      convergence has been achieved in   7 iterations
 
      Forces acting on atoms (cartesian axes, Ry/au):
 
-     atom    1 type  1   force =     0.00000000    0.00000000    0.00108118
-     atom    2 type  1   force =     0.00000000   -0.00000000   -0.00114111
-     atom    3 type  1   force =     0.00000000    0.00000000    0.00114111
-     atom    4 type  1   force =     0.00000000    0.00000000   -0.00108118
+     atom    1 type  1   force =     0.00000000   -0.00000000    0.00108117
+     atom    2 type  1   force =     0.00000000   -0.00000000   -0.00114110
+     atom    3 type  1   force =     0.00000000   -0.00000000    0.00114110
+     atom    4 type  1   force =     0.00000000    0.00000000   -0.00108117
      The non-local contrib.  to forces
-     atom    1 type  1   force =     0.00000000   -0.00000000    0.00125521
-     atom    2 type  1   force =     0.00000000    0.00000000   -0.00333544
-     atom    3 type  1   force =     0.00000000   -0.00000000    0.00333544
-     atom    4 type  1   force =     0.00000000   -0.00000000   -0.00125521
+     atom    1 type  1   force =     0.00000000    0.00000000    0.00125519
+     atom    2 type  1   force =     0.00000000    0.00000000   -0.00333543
+     atom    3 type  1   force =     0.00000000   -0.00000000    0.00333543
+     atom    4 type  1   force =     0.00000000    0.00000000   -0.00125519
      The ionic contribution  to forces
-     atom    1 type  1   force =     0.00000000   -0.00000000  -15.06650995
-     atom    2 type  1   force =    -0.00000000    0.00000000  -15.01822541
-     atom    3 type  1   force =    -0.00000000   -0.00000000   15.01822541
-     atom    4 type  1   force =     0.00000000    0.00000000   15.06650995
+     atom    1 type  1   force =     0.00000000   -0.00000000  -15.06650978
+     atom    2 type  1   force =    -0.00000000    0.00000000  -15.01822555
+     atom    3 type  1   force =    -0.00000000   -0.00000000   15.01822555
+     atom    4 type  1   force =     0.00000000    0.00000000   15.06650978
      The local contribution  to forces
-     atom    1 type  1   force =    -0.00000000    0.00000000   15.06511255
-     atom    2 type  1   force =    -0.00000000    0.00000000   15.01916486
-     atom    3 type  1   force =    -0.00000000    0.00000000  -15.01916486
-     atom    4 type  1   force =     0.00000000    0.00000000  -15.06511255
+     atom    1 type  1   force =    -0.00000000    0.00000000   15.06511238
+     atom    2 type  1   force =    -0.00000000    0.00000000   15.01916498
+     atom    3 type  1   force =    -0.00000000    0.00000000  -15.01916498
+     atom    4 type  1   force =     0.00000000    0.00000000  -15.06511238
      The core correction contribution to forces
      atom    1 type  1   force =     0.00000000    0.00000000    0.00004090
      atom    2 type  1   force =     0.00000000   -0.00000000    0.00006238
@@ -5576,8 +5576,8 @@ C                0.0000000000        1.4202816622       13.4266381230
      atom    4 type  1   force =     0.00000000    0.00000000    0.00000000
      The SCF correction term to forces
      atom    1 type  1   force =     0.00000000    0.00000000    0.00000086
-     atom    2 type  1   force =     0.00000000    0.00000000    0.00000096
-     atom    3 type  1   force =     0.00000000    0.00000000   -0.00000096
+     atom    2 type  1   force =    -0.00000000   -0.00000000    0.00000096
+     atom    3 type  1   force =    -0.00000000   -0.00000000   -0.00000096
      atom    4 type  1   force =    -0.00000000   -0.00000000   -0.00000086
 
      DFT-D3 dispersion contribution to forces:
@@ -5596,19 +5596,19 @@ C                0.0000000000        1.4202816622       13.4266381230
      number of bfgs steps    =  11
 
      energy             old  =     -48.2072209681 Ry
-     energy             new  =     -48.2072422160 Ry
+     energy             new  =     -48.2072422161 Ry
 
      CASE: energy            _new < energy            _old
 
-     new trust radius        =       0.0088220443 bohr
+     new trust radius        =       0.0088220176 bohr
      new conv_thr            =            1.0E-10 Ry
 
 
 ATOMIC_POSITIONS (angstrom)
-C                0.0000000000        0.0000000000        9.9192452483
-C                1.2300000000        0.7101408311        9.9208208575
-C                1.2300000000        0.7101408311       13.4291791425
-C                0.0000000000        1.4202816622       13.4307547517
+C                0.0000000000        0.0000000000        9.9192452615
+C                1.2300000000        0.7101408311        9.9208208605
+C                1.2300000000        0.7101408311       13.4291791395
+C                0.0000000000        1.4202816622       13.4307547385
 
 
 
@@ -5618,7 +5618,7 @@ C                0.0000000000        1.4202816622       13.4307547517
 
      negative rho (up, down):  3.444E-06 0.000E+00
 
-     total cpu time spent up to now is      260.0 secs
+     total cpu time spent up to now is      247.7 secs
 
      Self-consistent Calculation
 
@@ -5628,13 +5628,13 @@ C                0.0000000000        1.4202816622       13.4307547517
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           755 MiB available memory on the node where the printing process lives
+           766 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  1.00E-06,  avg # of iterations =  4.2
 
      negative rho (up, down):  9.093E-07 0.000E+00
 
-     total cpu time spent up to now is      264.0 secs
+     total cpu time spent up to now is      251.5 secs
 
      total energy              =     -48.20722363 Ry
      estimated scf accuracy    <       0.00005786 Ry
@@ -5645,13 +5645,13 @@ C                0.0000000000        1.4202816622       13.4307547517
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           756 MiB available memory on the node where the printing process lives
+           755 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  3.62E-07,  avg # of iterations =  2.3
 
      negative rho (up, down):  5.410E-07 0.000E+00
 
-     total cpu time spent up to now is      265.9 secs
+     total cpu time spent up to now is      253.9 secs
 
      total energy              =     -48.20723236 Ry
      estimated scf accuracy    <       0.00005129 Ry
@@ -5662,13 +5662,13 @@ C                0.0000000000        1.4202816622       13.4307547517
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           770 MiB available memory on the node where the printing process lives
+           745 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  3.21E-07,  avg # of iterations =  2.0
 
      negative rho (up, down):  4.338E-08 0.000E+00
 
-     total cpu time spent up to now is      268.2 secs
+     total cpu time spent up to now is      256.7 secs
 
      total energy              =     -48.20724442 Ry
      estimated scf accuracy    <       0.00000084 Ry
@@ -5679,11 +5679,11 @@ C                0.0000000000        1.4202816622       13.4307547517
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           755 MiB available memory on the node where the printing process lives
+           744 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  5.25E-09,  avg # of iterations =  1.9
 
-     total cpu time spent up to now is      270.7 secs
+     total cpu time spent up to now is      259.0 secs
 
      total energy              =     -48.20724457 Ry
      estimated scf accuracy    <          8.3E-09 Ry
@@ -5694,11 +5694,11 @@ C                0.0000000000        1.4202816622       13.4307547517
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           752 MiB available memory on the node where the printing process lives
+           747 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  5.17E-11,  avg # of iterations =  3.2
 
-     total cpu time spent up to now is      273.1 secs
+     total cpu time spent up to now is      261.9 secs
 
      total energy              =     -48.20724457 Ry
      estimated scf accuracy    <          5.8E-10 Ry
@@ -5709,11 +5709,11 @@ C                0.0000000000        1.4202816622       13.4307547517
 ---- Real-time Memory Report at c_bands before calling an iterative solver
            132 MiB given to the printing process from OS
              0 MiB allocation reported by mallinfo(arena+hblkhd)
-           765 MiB available memory on the node where the printing process lives
+           735 MiB available memory on the node where the printing process lives
 ------------------
      ethr =  3.63E-12,  avg # of iterations =  2.1
 
-     total cpu time spent up to now is      276.1 secs
+     total cpu time spent up to now is      264.8 secs
 
      End of self-consistent calculation
 
@@ -5968,10 +5968,10 @@ C                0.0000000000        1.4202816622       13.4307547517
      internal energy E=F+TS    =     -48.20714139 Ry
 
      The total energy is F=E-TS. E is the sum of the following terms:
-     one-electron contribution =    -690.12920981 Ry
-     hartree contribution      =     348.49071143 Ry
+     one-electron contribution =    -690.12921165 Ry
+     hartree contribution      =     348.49071235 Ry
      xc contribution           =     -17.18417509 Ry
-     ewald contribution        =     310.63251938 Ry
+     ewald contribution        =     310.63252030 Ry
      DFT-D3 Dispersion         =      -0.01698729 Ry
 
      convergence has been achieved in   6 iterations
@@ -5980,27 +5980,27 @@ C                0.0000000000        1.4202816622       13.4307547517
 
      atom    1 type  1   force =     0.00000000   -0.00000000    0.00076055
      atom    2 type  1   force =     0.00000000   -0.00000000   -0.00074457
-     atom    3 type  1   force =     0.00000000   -0.00000000    0.00074457
+     atom    3 type  1   force =     0.00000000    0.00000000    0.00074457
      atom    4 type  1   force =     0.00000000    0.00000000   -0.00076055
      The non-local contrib.  to forces
-     atom    1 type  1   force =     0.00000000    0.00000000    0.00059181
-     atom    2 type  1   force =     0.00000000    0.00000000   -0.00262299
-     atom    3 type  1   force =     0.00000000   -0.00000000    0.00262299
-     atom    4 type  1   force =     0.00000000   -0.00000000   -0.00059181
+     atom    1 type  1   force =     0.00000000    0.00000000    0.00059179
+     atom    2 type  1   force =     0.00000000   -0.00000000   -0.00262298
+     atom    3 type  1   force =     0.00000000    0.00000000    0.00262298
+     atom    4 type  1   force =     0.00000000   -0.00000000   -0.00059179
      The ionic contribution  to forces
-     atom    1 type  1   force =     0.00000000   -0.00000000  -15.04372060
-     atom    2 type  1   force =    -0.00000000    0.00000000  -15.00870061
-     atom    3 type  1   force =    -0.00000000   -0.00000000   15.00870061
-     atom    4 type  1   force =     0.00000000    0.00000000   15.04372060
+     atom    1 type  1   force =     0.00000000   -0.00000000  -15.04372050
+     atom    2 type  1   force =    -0.00000000    0.00000000  -15.00870077
+     atom    3 type  1   force =    -0.00000000   -0.00000000   15.00870077
+     atom    4 type  1   force =     0.00000000    0.00000000   15.04372050
      The local contribution  to forces
-     atom    1 type  1   force =    -0.00000000    0.00000000   15.04267750
-     atom    2 type  1   force =    -0.00000000    0.00000000   15.00934518
-     atom    3 type  1   force =    -0.00000000    0.00000000  -15.00934518
-     atom    4 type  1   force =     0.00000000    0.00000000  -15.04267750
+     atom    1 type  1   force =    -0.00000000    0.00000000   15.04267741
+     atom    2 type  1   force =    -0.00000000    0.00000000   15.00934533
+     atom    3 type  1   force =    -0.00000000    0.00000000  -15.00934533
+     atom    4 type  1   force =    -0.00000000    0.00000000  -15.04267741
      The core correction contribution to forces
      atom    1 type  1   force =     0.00000000    0.00000000    0.00004649
-     atom    2 type  1   force =     0.00000000   -0.00000000    0.00005408
-     atom    3 type  1   force =     0.00000000   -0.00000000   -0.00005408
+     atom    2 type  1   force =     0.00000000   -0.00000000    0.00005407
+     atom    3 type  1   force =     0.00000000   -0.00000000   -0.00005407
      atom    4 type  1   force =    -0.00000000   -0.00000000   -0.00004649
      The Hubbard contrib.    to forces
      atom    1 type  1   force =     0.00000000    0.00000000    0.00000000
@@ -6036,10 +6036,10 @@ C                0.0000000000        1.4202816622       13.4307547517
 Begin final coordinates
 
 ATOMIC_POSITIONS (angstrom)
-C                0.0000000000        0.0000000000        9.9192452483
-C                1.2300000000        0.7101408311        9.9208208575
-C                1.2300000000        0.7101408311       13.4291791425
-C                0.0000000000        1.4202816622       13.4307547517
+C                0.0000000000        0.0000000000        9.9192452615
+C                1.2300000000        0.7101408311        9.9208208605
+C                1.2300000000        0.7101408311       13.4291791395
+C                0.0000000000        1.4202816622       13.4307547385
 End final coordinates
 
 
@@ -6047,63 +6047,63 @@ End final coordinates
      Writing all to output data dir /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/data/field_0.save/ :
      XML data file, charge density, pseudopotentials, collected wavefunctions
 
-     init_run     :      1.99s CPU      2.16s WALL (       1 calls)
-     electrons    :    261.80s CPU    264.57s WALL (      13 calls)
-     update_pot   :      0.93s CPU      1.18s WALL (      12 calls)
-     forces       :      8.41s CPU      8.77s WALL (      13 calls)
-     force_dftd3  :      1.42s CPU      1.43s WALL (      13 calls)
+     init_run     :      1.72s CPU      1.88s WALL (       1 calls)
+     electrons    :    249.01s CPU    253.74s WALL (      13 calls)
+     update_pot   :      0.91s CPU      1.18s WALL (      12 calls)
+     forces       :      7.42s CPU      7.87s WALL (      13 calls)
+     force_dftd3  :      1.33s CPU      1.36s WALL (      13 calls)
 
      Called by init_run:
-     wfcinit      :      1.19s CPU      1.23s WALL (       1 calls)
+     wfcinit      :      0.90s CPU      0.93s WALL (       1 calls)
      wfcinit:atom :      0.01s CPU      0.01s WALL (       7 calls)
-     wfcinit:wfcr :      1.08s CPU      1.10s WALL (       7 calls)
-     potinit      :      0.18s CPU      0.25s WALL (       1 calls)
-     hinit0       :      0.54s CPU      0.57s WALL (       1 calls)
+     wfcinit:wfcr :      0.80s CPU      0.83s WALL (       7 calls)
+     potinit      :      0.19s CPU      0.26s WALL (       1 calls)
+     hinit0       :      0.55s CPU      0.59s WALL (       1 calls)
 
      Called by electrons:
-     c_bands      :    226.27s CPU    228.16s WALL (      83 calls)
-     sum_band     :     24.58s CPU     24.80s WALL (      83 calls)
-     v_of_rho     :      5.94s CPU      6.47s WALL (      92 calls)
-     v_h          :      0.36s CPU      0.40s WALL (      92 calls)
-     v_xc         :      6.39s CPU      7.17s WALL (     105 calls)
-     mix_rho      :      0.77s CPU      0.93s WALL (      83 calls)
-     energy_dftd3 :      1.14s CPU      1.14s WALL (      13 calls)
+     c_bands      :    215.70s CPU    219.28s WALL (      83 calls)
+     sum_band     :     22.86s CPU     23.29s WALL (      83 calls)
+     v_of_rho     :      5.90s CPU      6.48s WALL (      92 calls)
+     v_h          :      0.35s CPU      0.40s WALL (      92 calls)
+     v_xc         :      6.34s CPU      7.19s WALL (     105 calls)
+     mix_rho      :      0.73s CPU      0.94s WALL (      83 calls)
+     energy_dftd3 :      1.08s CPU      1.09s WALL (      13 calls)
 
      Called by c_bands:
-     init_us_2    :      3.31s CPU      3.47s WALL (    1260 calls)
-     cegterg      :    160.14s CPU    161.75s WALL (     581 calls)
+     init_us_2    :      3.09s CPU      3.31s WALL (    1260 calls)
+     cegterg      :    154.68s CPU    157.64s WALL (     581 calls)
 
      Called by sum_band:
      sum_band:wei :      0.04s CPU      0.04s WALL (      83 calls)
-     sum_band:loo :     17.29s CPU     17.40s WALL (      83 calls)
-     sum_band:buf :      0.21s CPU      0.21s WALL (     581 calls)
-     sum_band:ini :      1.51s CPU      1.54s WALL (     581 calls)
+     sum_band:loo :     16.95s CPU     17.25s WALL (      83 calls)
+     sum_band:buf :      0.20s CPU      0.20s WALL (     581 calls)
+     sum_band:ini :      1.44s CPU      1.49s WALL (     581 calls)
 
      Called by *egterg:
      cdiaghg      :      0.66s CPU      0.67s WALL (    2269 calls)
-     cegterg:over :     14.54s CPU     14.58s WALL (    1800 calls)
-     cegterg:upda :      8.92s CPU      9.13s WALL (    1800 calls)
-     cegterg:last :     16.00s CPU     16.05s WALL (    1267 calls)
-     h_psi        :    114.71s CPU    115.78s WALL (    2388 calls)
-     g_psi        :      0.70s CPU      0.70s WALL (    1800 calls)
+     cegterg:over :     13.99s CPU     14.14s WALL (    1800 calls)
+     cegterg:upda :      8.64s CPU      8.88s WALL (    1800 calls)
+     cegterg:last :     15.33s CPU     15.52s WALL (    1267 calls)
+     h_psi        :    110.77s CPU    112.85s WALL (    2388 calls)
+     g_psi        :      0.66s CPU      0.68s WALL (    1800 calls)
 
      Called by h_psi:
-     h_psi:calbec :     14.98s CPU     15.02s WALL (    2388 calls)
-     vloc_psi     :     83.95s CPU     84.59s WALL (    2388 calls)
-     add_vuspsi   :     15.26s CPU     15.32s WALL (    2388 calls)
+     h_psi:calbec :     14.20s CPU     14.39s WALL (    2388 calls)
+     vloc_psi     :     81.55s CPU     82.92s WALL (    2388 calls)
+     add_vuspsi   :     14.54s CPU     14.71s WALL (    2388 calls)
 
      General routines
-     calbec       :     18.49s CPU     18.55s WALL (    2752 calls)
-     fft          :      3.22s CPU      3.24s WALL (    1066 calls)
+     calbec       :     17.23s CPU     17.46s WALL (    2752 calls)
+     fft          :      3.19s CPU      3.23s WALL (    1066 calls)
      ffts         :      0.23s CPU      0.23s WALL (      83 calls)
-     fftw         :     88.40s CPU     88.77s WALL (   51640 calls)
+     fftw         :     86.13s CPU     87.35s WALL (   51640 calls)
 
      Parallel routines
 
-     PWSCF        :   4m33.44s CPU   4m37.09s WALL
+     PWSCF        :   4m20.01s CPU   4m25.74s WALL
 
 
-   This run was terminated on:   4:46:30  26Sep2026            
+   This run was terminated on:   9:34:50  26Sep2026            
 
 =------------------------------------------------------------------------------=
    JOB DONE.

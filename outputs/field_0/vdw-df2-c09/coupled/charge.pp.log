@@ -1,5 +1,5 @@
 
-     Program POST-PROC v.7.6 starts on 26Sep2026 at  5:16:25 
+     Program POST-PROC v.7.6 starts on 26Sep2026 at 10: 2:44 
 
      This program is part of the open-source Quantum ESPRESSO suite
      for quantum simulation of materials; please cite
@@ -86,10 +86,10 @@
      Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/vdw-df2-c09/coupled/charge.xsf
      Plot Type: 3D                     Output format: XCrySDen     
 
-     POST-PROC    :     32.07s CPU     32.21s WALL
+     POST-PROC    :     28.25s CPU     28.41s WALL
 
 
-   This run was terminated on:   5:16:57  26Sep2026            
+   This run was terminated on:  10: 3:12  26Sep2026            
 
 =------------------------------------------------------------------------------=
    JOB DONE.
