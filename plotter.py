@@ -69,7 +69,7 @@ def potential_subtracted(results: Results, field, label):
     
     ax.set_xlabel(r"z (($\AA$))")
     ax.set_ylabel("Potential Energy (eV)")
-    ax.set_title(f"Subtracted Potential, E-field={field}au, Correction: {'ts_vd' if label == 'ts' else 'grimme-d3'}")
+    ax.set_title(f"Subtracted Potential, E-field={field}au, Correction: {label}")
     ax.legend(loc="upper right")
 
     plt.tight_layout()
@@ -91,7 +91,7 @@ def potential_individual(results: Results, field, label):
         fig, ax = plt.subplots()
 
         ax.plot(coordinates, potential, linewidth=0.75, color='black')
-        ax.set_title(f"1D {system.name.capitalize()} Layer Potential V(z), E-field={field}au, Correction: {'ts_vd' if label == 'ts' else 'grimme-d3'}")
+        ax.set_title(f"1D {system.name.capitalize()} Layer Potential V(z), E-field={field}au, Correction: {label}")
         ax.set_xlabel(r"z ($\AA$)")
         ax.set_ylabel("Potential Energy (eV)")
 
@@ -115,9 +115,9 @@ def charge_density_subtracted(results: Results, field, label):
     
     ax.plot(z, charge_density, color="black")
     
-    ax.set_xlabel(r"z (($\AA$))")
+    ax.set_xlabel(r"z ($\AA$)")
     ax.set_ylabel(r"Charge Density ($e/{\AA}^3)$")
-    ax.set_title(f"Subtracted Charge Density, E-field={field}au, Correction: {'ts_vd' if label == 'ts' else 'grimme-d3'}")
+    ax.set_title(f"Subtracted Charge Density, E-field={field}au, Correction: {label}")
 
     plt.tight_layout()
     plt.savefig(CHARGE_DENSITY_DIR / f"Subtracted_Charge_Density_{field}au_{label}.png", dpi=300, bbox_inches="tight")
@@ -150,7 +150,7 @@ def plot_vdw_charge_difference(results, field):
     ax.plot(dn_vdw, z, color="black", linewidth=1.1)
     
     ax.set_xlabel(r"vdW Charge Density ($e/{\AA}^3)$")
-    ax.set_ylabel(r"z ($\AA$))")
+    ax.set_ylabel(r"z ($\AA$)")
     ax.set_title(rf"vdW Charge Density $\Delta n_{{c09}}(z)-\Delta n_{{PBE + d3}}(z)$, E-field={field}au")
 
     plt.tight_layout()
@@ -189,7 +189,7 @@ def fermi_aligned_dos(results: Results, field, label, delta_e=LDOS_GRID_DELTA_E)
     # ax.plot(grid, dos_coupled_grid, label="$DOS_{coupled}$")
     ax.plot(grid, dos_subtracted, color="black", label=r"$DOS_{coupled} - DOS_{top} - DOS_{bottom}$")
 
-    ax.set_title(f"Fermi-Aligned DOS Subtracted, E-field={field}au, Correction: {'ts_vd' if label == 'ts' else 'grimme-d3'}")
+    ax.set_title(f"Fermi-Aligned DOS Subtracted, E-field={field}au, Correction: {label}")
     ax.set_xlabel(r"$Energy$ (eV)")
     ax.set_ylabel("DOS (states/eV/cell)")
     ax.legend()
@@ -224,7 +224,7 @@ def ldos_subtracted(results: Results, field, label):
     
     fig.colorbar(mesh, ax=ax, label=r"$\Delta LDOS$")
 
-    ax.set_title(f"Fermi-Aligned Subtracted LDOS, E-field={field}au, Correction: {'ts_vd' if label == 'ts' else 'grimme-d3'}")
+    ax.set_title(f"Fermi-Aligned Subtracted LDOS, E-field={field}au, Correction: {label}")
     ax.set_xlabel(r"$z$ ($\AA$)")
     ax.set_ylabel(r"$E-E_F$ (eV)")
     
@@ -240,17 +240,14 @@ def plot_potential(results, field, label):
 
 
 def plot_charge_density(results, field, label):
-    print("")
     charge_density_subtracted(results, field, label)
 
 
 def plot_dos(results, field, label):
-    print("")
     #individual_dos(results, field)
     #dos_comparison(results, field)
     fermi_aligned_dos(results, field, label)
 
 
 def plot_ldos(results, field, label):
-    print("")
     ldos_subtracted(results, field, label)
