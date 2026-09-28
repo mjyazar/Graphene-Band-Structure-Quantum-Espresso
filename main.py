@@ -129,7 +129,7 @@ def main():
 
         plotter.plot_vdw_charge_difference(results, eamp)
         
-        pp.vdw_charge_difference(path)
+        pp.vdw_charge_difference(path, eamp)
 
 
 if __name__ == "__main__":

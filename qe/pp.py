@@ -225,7 +225,7 @@ def ldos(path, fermi_energy):
     return ldos, intermediate_path, ldos.energies
 
 
-def vdw_charge_difference(path):
+def vdw_charge_difference(path, field):
     
     pbe_coupled, _, _, _ = _read_xsf(path / "PBE-d3" / "coupled" / "charge.xsf")
     pbe_bottom, _, _, _ = _read_xsf(path / "PBE-d3" / "bottom" / "charge.xsf")
@@ -240,7 +240,7 @@ def vdw_charge_difference(path):
     
     dn_vdw = (dn_c09 - dn_pbe) / BOHR_TO_ANGSTROM**3
     
-    output_path = path / "vdw_charge_difference.xsf"
+    output_path = path / f"vdw_charge_difference_{field}.xsf"
 
     with open(output_path, "w") as f:
         write_xsf(f, images=[atoms], data=dn_vdw, origin=origin, span_vectors=span_vectors)
