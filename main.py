@@ -41,14 +41,14 @@ def run_calculations(structure, path, eamp, xc):
         # potential_averaged = average.potential(path, potential_pp_path)
     else:
         # potential, potential_pp_path = pp._read_output(path / "potential.cube", 6), path / "data" / f"potential.pp.dat"        
-        data, atoms, xy_averaged, z = pp._read_output(path / "potential.cube", 5)
+        data, atoms, xy_averaged, z = pp._read_output(path / "potential.xsf", 5)
         potential = Potential(data=data, atoms=atoms, averaged=xy_averaged, z=z)
         
     if RUN_CHARGE_DENSITY:
         charge, charge_pp_path = pp.charge_density(path)
     else:
         # charge, charge_pp_path = pp._read_output(path / "charge.cube", 6), path / "data" / f"charge.pp.dat"
-        data, atoms, xy_averaged, z = pp._read_output(path / "charge.cube", 5)
+        data, atoms, xy_averaged, z = pp._read_output(path / "charge.xsf", 5)
         charge = ChargeDensity(data=data, atoms=atoms, averaged=xy_averaged, z=z)
     
     if RUN_DOS:
@@ -125,7 +125,7 @@ def main():
             plotter.plot_potential(result, eamp, label)
             plotter.plot_charge_density(result, eamp, label)
             plotter.plot_dos(result, eamp, label)
-            plotter.plot_ldos(result, eamp, label)
+            #plotter.plot_ldos(result, eamp, label)
 
         plotter.plot_vdw_charge_difference(results, eamp)
 
