@@ -128,6 +128,8 @@ def main():
             #plotter.plot_ldos(result, eamp, label)
 
         plotter.plot_vdw_charge_difference(results, eamp)
+        
+        pp.vdw_charge_difference(path)
 
 
 if __name__ == "__main__":

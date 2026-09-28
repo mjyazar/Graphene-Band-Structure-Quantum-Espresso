@@ -1,6 +1,6 @@
 import numpy as np
 from ase.io.cube import read_cube_data
-from ase.io.xsf import read_xsf
+from ase.io.xsf import read_xsf, write_xsf
 
 from results import *
 import qe.runner as runner
@@ -81,12 +81,17 @@ ny = 288
     
         input_file.write("/\n")
 
+def _read_xsf(path):
+    with open(path, "r") as file:
+        data, origin, span_vectors, atoms = read_xsf(file, read_data=True)
+        
+    return data, origin, span_vectors, atoms        
+
 
 def _read_output(path, output_format):
     
     if output_format == 5:
-        with open(path, "r") as file:
-            data, origin, span_vectors, atoms = read_xsf(file, read_data=True)
+        data, _, _ ,atoms = _read_xsf(path)
 
         xy_averaged = np.mean(data, axis=(0, 1))
         z = _coordinates(data, atoms)
@@ -218,3 +223,27 @@ def ldos(path, fermi_energy):
     ldos, intermediate_path = _calculate(3, path, "ldos", fermi_energy=fermi_energy)
     
     return ldos, intermediate_path, ldos.energies
+
+
+def vdw_charge_difference(path):
+    
+    pbe_coupled, _, _, _ = _read_xsf(path / "PBE-d3" / "coupled" / "charge.xsf")
+    pbe_bottom, _, _, _ = _read_xsf(path / "PBE-d3" / "bottom" / "charge.xsf")
+    pbe_top, _, _, _ = _read_xsf(path / "PBE-d3" / "top" / "charge.xsf")
+    
+    c09_coupled, origin, span_vectors, atoms = _read_xsf(path / "vdw-df2-c09" / "coupled" / "charge.xsf")
+    c09_bottom, _, _, _ = _read_xsf(path / "vdw-df2-c09" / "bottom" / "charge.xsf")
+    c09_top, _, _, _ = _read_xsf(path / "vdw-df2-c09" / "top" / "charge.xsf")
+    
+    dn_pbe = pbe_coupled - pbe_bottom - pbe_top
+    dn_c09 = c09_coupled - c09_bottom - c09_top
+    
+    dn_vdw = (dn_c09 - dn_pbe) / BOHR_TO_ANGSTROM**3
+    
+    output_path = path / "vdw_charge_difference.xsf"
+
+    with open(output_path, "w") as f:
+        write_xsf(f, images=[atoms], data=dn_vdw, origin=origin, span_vectors=span_vectors)
+        
+    print(output_path)
+    print("range:", dn_vdw.min(), dn_vdw.max())
