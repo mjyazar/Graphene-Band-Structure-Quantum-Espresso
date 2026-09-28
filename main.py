@@ -33,7 +33,7 @@ def run_calculations(structure, path, eamp, xc):
     fermi_energy = nscf.calc.get_fermi_level()
     
     if RUN_POTENTIAL:
-        potential, potential_pp_path, vacuum_level = pp.potential(path)
+        potential, potential_pp_path = pp.potential(path)
         # potential_averaged = average.potential(path, potential_pp_path)
     else:
         # potential, potential_pp_path = pp._read_output(path / "potential.cube", 6), path / "data" / f"potential.pp.dat"        
