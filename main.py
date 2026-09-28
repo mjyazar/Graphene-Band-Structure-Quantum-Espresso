@@ -8,10 +8,6 @@ import qe.average as average
 import convergence
 import plotter
 
-from pathlib import Path
-
-ROOT = Path(__file__).resolve().parent
-
 # Paths
 OUT_DIR = ROOT / "outputs"
 #MONOLAYER = OUT_DIR / "monolayer"
@@ -37,13 +33,17 @@ def run_calculations(structure, path, eamp, xc):
     fermi_energy = nscf.calc.get_fermi_level()
     
     if RUN_POTENTIAL:
-        potential, potential_pp_path = pp.potential(path)
+        potential, potential_pp_path, vacuum_level = pp.potential(path)
         # potential_averaged = average.potential(path, potential_pp_path)
     else:
         # potential, potential_pp_path = pp._read_output(path / "potential.cube", 6), path / "data" / f"potential.pp.dat"        
         data, atoms, xy_averaged, z = pp._read_output(path / "potential.xsf", 5)
         potential = Potential(data=data, atoms=atoms, averaged=xy_averaged, z=z)
-        
+
+    dV_dz = np.gradient(potential.averaged, potential.z)
+    vacuum_level = np.min(np.abs(potential.averaged[np.where(np.abs(dV_dz) < VACUUM_LEVEL_TOLERANCE)]))
+    work_function = np.abs(fermi_energy - vacuum_level)
+
     if RUN_CHARGE_DENSITY:
         charge, charge_pp_path = pp.charge_density(path)
     else:
@@ -69,6 +69,8 @@ def run_calculations(structure, path, eamp, xc):
                             atoms=structure,
                             path=path,
                             fermi_energy=fermi_energy,
+                            vacuum_level=vacuum_level,
+                            work_function=work_function,
                             potential=potential,
                             charge_density=charge,
                             dos = dos_,
@@ -81,6 +83,7 @@ def main():
     graphene = GrapheneStructure()
     
     energies = [0, 0.05, 0.1]
+    #energies = [0]
     
     for eamp in energies:
         

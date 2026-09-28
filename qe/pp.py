@@ -207,7 +207,7 @@ def potential(path):
     (data, atoms, xy_averaged, z), intermediate_path = _calculate(11, path, "potential")
 
     results = Potential(data=data, atoms=atoms, averaged=xy_averaged, z=z)
-    
+
     return results, intermediate_path
 
 

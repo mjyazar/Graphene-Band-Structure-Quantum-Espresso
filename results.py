@@ -57,6 +57,8 @@ class System:
     atoms: Atoms
     path: Path
     fermi_energy: float
+    vacuum_level: float
+    work_function: float
     
     potential: Potential
     charge_density: ChargeDensity

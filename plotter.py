@@ -67,7 +67,7 @@ def potential_subtracted(results: Results, field, label):
     
     ax.plot(z, potential, color='black', label=r"$U_{coupled layers} - U_{bottom layer} - U_{top layer}$")
     
-    ax.set_xlabel(r"z (($\AA$))")
+    ax.set_xlabel(r"z ($\AA$)")
     ax.set_ylabel("Potential Energy (eV)")
     ax.set_title(f"Subtracted Potential, E-field={field}au, Correction: {label}")
     ax.legend(loc="upper right")
@@ -83,17 +83,19 @@ def potential_individual(results: Results, field, label):
     for system in results.__dict__.values():
         system:System
 
-        Z = system.potential.z
+        z = system.potential.z
         potential = system.potential.averaged * RY_TO_EV
         
         print(f"PLOTTING {system.name} POTENTIAL")
 
         fig, ax = plt.subplots()
 
-        ax.plot(Z, potential, linewidth=0.75, color='black')
+        ax.plot(z, potential, linewidth=0.75, color='black')
         ax.set_title(f"1D {system.name.capitalize()} Layer Potential V(z), E-field={field}au, Correction: {label}")
         ax.set_xlabel(r"z ($\AA$)")
         ax.set_ylabel("Potential Energy (eV)")
+        
+        ax.axhline(system.vacuum_level, color="red", linestyle="--", linewidth=0.8, label="Vacuum Level")
 
         plt.tight_layout()
         plt.savefig(POTENTIAL_DIR / f"Potential_{system.name.capitalize()}_Layer_{field}au_{label}.png", dpi=300, bbox_inches="tight")
@@ -145,7 +147,7 @@ def plot_vdw_charge_difference(results, field):
     
     dn_vdw = ((dn_c09 - pbe) / BOHR_TO_ANGSTROM**3) * area
 
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(figsize=(4, 7))
     
     ax.plot(dn_vdw, z, color="black")
     ax.axvline(0, color="blue", linestyle="--", linewidth=0.8)
@@ -153,14 +155,28 @@ def plot_vdw_charge_difference(results, field):
     print("\nc09 Coupled Atoms Positions: ", c09.coupled.atoms.positions)
     positions_z = c09.coupled.atoms.positions[:, 2]
     
-    mid = 0.5 * (positions_z.min() + positions_z.max())
+    bottom_z = positions_z.min()
+    top_z = positions_z.max()
+    
+    ax.axhline(bottom_z, color="blue", linestyle=":", linewidth=0.8)
+    ax.axhline(top_z, color="red", linestyle=":", linewidth=0.8)
+
+    ax.set_ylim(0, 20)
+    
+    ax.xaxis.tick_top()
+    ax.xaxis.set_label_position("top")
+
+    ax.yaxis.tick_right()
+    ax.yaxis.set_label_position("right")
+    
+    ax.tick_params(axis="both", direction="in")
     
     ax.set_xlabel(r"$\Delta n_{vdW}(z)$ ($e/{\AA})$")
     ax.set_ylabel(r"z ($\AA$)")
     ax.set_title(rf"vdW Charge Density $\Delta n_{{c09}}(z)-\Delta n_{{PBE + d3}}(z)$, E-field={field}au")
 
     plt.tight_layout()
-    plt.savefig(CHARGE_DENSITY_DIR / f"vdW_Charge_Density_{field}au_.png", dpi=300, bbox_inches="tight")
+    plt.savefig(CHARGE_DENSITY_DIR / f"vdW_Charge_Density_{field}au.png", dpi=300, bbox_inches="tight")
     plt.close(fig)
 
 

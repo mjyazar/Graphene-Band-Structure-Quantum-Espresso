@@ -1,3 +1,6 @@
+from pathlib import Path
+ROOT = Path(__file__).resolve().parent
+
 # RUN_QE may be False if script already ran and want to work with existing files
 # True if running for the first time or want to create new files with new parameters
 RUN_QE = True
@@ -50,6 +53,7 @@ pp.x
 DEGAUSS_LDOS = 0.05 * EV_TO_RY  # eV
 WINDOW_LDOS = (-10, 10)
 DELTA_E_LDOS = 0.1
+VACUUM_LEVEL_TOLERANCE = 0.00001  # do not go lower -> error
 
 
 """
