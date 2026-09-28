@@ -147,7 +147,13 @@ def plot_vdw_charge_difference(results, field):
 
     fig, ax = plt.subplots()
     
-    ax.plot(dn_vdw, z, color="black", linewidth=1.1)
+    ax.plot(dn_vdw, z, color="black")
+    ax.axvline(0, color="blue", linestyle="--", linewidth=0.8)
+
+    print("\nc09 Coupled Atoms Positions: ", c09.coupled.atoms.positions)
+    positions_z = c09.coupled.atoms.positions[:, 2]
+    
+    mid = 0.5 * (positions_z.min() + positions_z.max())
     
     ax.set_xlabel(r"$\Delta n_{vdW}(z)$ ($e/{\AA})$")
     ax.set_ylabel(r"z ($\AA$)")
@@ -208,11 +214,12 @@ def ldos_subtracted(results: Results, field, label):
     
     z = coupled.ldos.z
     
-    assert np.array_equal(coupled.ldos.energies, bottom.ldos.energies)
-    assert np.array_equal(coupled.ldos.energies, top.ldos.energies)
+    np.testing.assert_allclose(coupled.ldos.z, bottom.ldos.z)
+    np.testing.assert_allclose(coupled.ldos.z, top.ldos.z)
+    
     E = coupled.ldos.energies
-    # print(f"z: {z.shape}")
-    # print(f"E: {E.shape}")
+    print(f"z: {z.shape}")
+    print(f"E: {E.shape}")
     
     ldos_subtracted = coupled.ldos.averaged - bottom.ldos.averaged - top.ldos.averaged
     
