@@ -125,7 +125,7 @@ def main():
             plotter.plot_potential(result, eamp, label)
             plotter.plot_charge_density(result, eamp, label)
             plotter.plot_dos(result, eamp, label)
-            #plotter.plot_ldos(result, eamp, label)
+            plotter.plot_ldos(result, eamp, label)
 
         plotter.plot_vdw_charge_difference(results, eamp)
         
