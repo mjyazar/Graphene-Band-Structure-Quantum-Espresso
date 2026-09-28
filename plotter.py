@@ -83,14 +83,14 @@ def potential_individual(results: Results, field, label):
     for system in results.__dict__.values():
         system:System
 
-        coordinates = system.potential.z * BOHR_TO_ANGSTROM
+        Z = system.potential.z
         potential = system.potential.averaged * RY_TO_EV
         
-        print(f"\nPLOTTING {system.name} POTENTIAL")
+        print(f"PLOTTING {system.name} POTENTIAL")
 
         fig, ax = plt.subplots()
 
-        ax.plot(coordinates, potential, linewidth=0.75, color='black')
+        ax.plot(Z, potential, linewidth=0.75, color='black')
         ax.set_title(f"1D {system.name.capitalize()} Layer Potential V(z), E-field={field}au, Correction: {label}")
         ax.set_xlabel(r"z ($\AA$)")
         ax.set_ylabel("Potential Energy (eV)")
@@ -126,30 +126,30 @@ def charge_density_subtracted(results: Results, field, label):
 
 def plot_vdw_charge_difference(results, field):
     print(f"PLOTTING VDW Charge Density Difference")
-    d3: Results = results["d3"]
+    pbe: Results = results["d3"]
     c09: Results = results["c09"]
     
-    np.testing.assert_allclose(d3.coupled.charge_density.z, d3.bottom.charge_density.z)
-    np.testing.assert_allclose(d3.coupled.charge_density.z, d3.top.charge_density.z)
+    np.testing.assert_allclose(pbe.coupled.charge_density.z, pbe.bottom.charge_density.z)
+    np.testing.assert_allclose(pbe.coupled.charge_density.z, pbe.top.charge_density.z)
     np.testing.assert_allclose(c09.coupled.charge_density.z, c09.bottom.charge_density.z)
     np.testing.assert_allclose(c09.coupled.charge_density.z, c09.top.charge_density.z)
-    np.testing.assert_allclose(d3.coupled.charge_density.z, c09.coupled.charge_density.z)
+    np.testing.assert_allclose(pbe.coupled.charge_density.z, c09.coupled.charge_density.z)
     
-    z = d3.coupled.charge_density.z
+    z = pbe.coupled.charge_density.z
     
-    dn_d3 = d3.coupled.charge_density.averaged - d3.bottom.charge_density.averaged - d3.top.charge_density.averaged
+    pbe = pbe.coupled.charge_density.averaged - pbe.bottom.charge_density.averaged - pbe.top.charge_density.averaged
     dn_c09 = c09.coupled.charge_density.averaged - c09.bottom.charge_density.averaged - c09.top.charge_density.averaged
     
     cell = c09.coupled.atoms.cell.array
     area = np.linalg.norm(np.cross(cell[0], cell[1]))
     
-    dn_vdw = ((dn_c09 - dn_d3) / BOHR_TO_ANGSTROM**3) * area
+    dn_vdw = ((dn_c09 - pbe) / BOHR_TO_ANGSTROM**3) * area
 
     fig, ax = plt.subplots()
     
     ax.plot(dn_vdw, z, color="black", linewidth=1.1)
     
-    ax.set_xlabel(r"vdW Charge Density ($e/{\AA}^3)$")
+    ax.set_xlabel(r"$\Delta n_{vdW}(z)$ ($e/{\AA})$")
     ax.set_ylabel(r"z ($\AA$)")
     ax.set_title(rf"vdW Charge Density $\Delta n_{{c09}}(z)-\Delta n_{{PBE + d3}}(z)$, E-field={field}au")
 
