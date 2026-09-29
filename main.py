@@ -40,8 +40,7 @@ def run_calculations(structure, path, eamp, xc):
         data, atoms, xy_averaged, z = pp._read_output(path / "potential.xsf", 5)
         potential = Potential(data=data, atoms=atoms, averaged=xy_averaged, z=z)
 
-    dV_dz = np.gradient(potential.averaged, potential.z)
-    vacuum_level = np.min(np.abs(potential.averaged[np.where(np.abs(dV_dz) < VACUUM_LEVEL_TOLERANCE)]))
+    vacuum_level = get_vacuum_level(potential, structure)
     work_function = np.abs(fermi_energy - vacuum_level)
 
     if RUN_CHARGE_DENSITY:
@@ -128,12 +127,39 @@ def main():
             plotter.plot_potential(result, eamp, label)
             plotter.plot_charge_density(result, eamp, label)
             plotter.plot_dos(result, eamp, label)
-            plotter.plot_ldos(result, eamp, label)
+            #plotter.plot_ldos(result, eamp, label)
 
         plotter.plot_vdw_charge_difference(results, eamp)
         
         pp.vdw_charge_difference(path, eamp)
+        
 
+def get_vacuum_level(potential: Potential, structure: Atoms):
+
+    VACUUM_LEVEL_TOLERANCE = 0.000000001
+    
+    V = potential.averaged * RY_TO_EV
+    z = potential.z
+    
+    assert V.shape == z.shape
+    
+    atomic_positions = structure.get_positions()[:, 2]
+    z_bottom = atomic_positions.min()
+    z_top = atomic_positions.max()
+    
+    # vacuum_mask = (z < z_bottom) | (z > z_top)
+    # positions = V[vacuum_mask]
+    
+    dV_dz = np.gradient(potential.averaged, potential.z)
+    vacuum_level = np.abs(potential.averaged[np.where(np.abs(dV_dz) < VACUUM_LEVEL_TOLERANCE)])
+    
+    while vacuum_level.size == 0:
+        VACUUM_LEVEL_TOLERANCE *= 10
+        vacuum_level = np.abs(potential.averaged[np.where(np.abs(dV_dz) < VACUUM_LEVEL_TOLERANCE)])
+    
+    vacuum_level = np.min(vacuum_level)
+    return vacuum_level
+    
 
 if __name__ == "__main__":
     main()
