@@ -152,7 +152,7 @@ def plot_vdw_charge_difference(results, field):
     ax.plot(dn_vdw, z, color="black")
     ax.axvline(0, color="blue", linestyle="--", linewidth=0.8)
 
-    print("\nc09 Coupled Atoms Positions: ", c09.coupled.atoms.positions)
+    print("\nc09 Coupled Atoms Positions: \n", c09.coupled.atoms.positions)
     positions_z = c09.coupled.atoms.positions[:, 2]
     
     bottom_z = positions_z.min()

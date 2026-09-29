@@ -7,7 +7,7 @@ RUN_QE = True
 RUN_POTENTIAL = RUN_QE
 RUN_CHARGE_DENSITY = RUN_QE
 RUN_DOS = RUN_QE
-RUN_LDOS = True  # must be True if no ldos metadata is present locally
+RUN_LDOS = RUN_QE  # must be True if no ldos metadata is present locally
 RUN_CONVERGENCE = False
 
 BOHR_TO_ANGSTROM = 0.529177210903
@@ -53,7 +53,7 @@ pp.x
 DEGAUSS_LDOS = 0.05 * EV_TO_RY  # eV
 WINDOW_LDOS = (-10, 10)
 DELTA_E_LDOS = 0.1
-VACUUM_LEVEL_TOLERANCE = 0.0001  # do not go lower -> error
+VACUUM_LEVEL_TOLERANCE = 0.0000001  # do not go lower -> error
 
 
 """
