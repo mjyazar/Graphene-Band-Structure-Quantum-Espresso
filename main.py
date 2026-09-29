@@ -19,10 +19,11 @@ OUT_DIR.mkdir(exist_ok=True)
 #BILAYER.mkdir(exist_ok=True)
 
 
-def run_calculations(structure, path, eamp, xc):
+def run_calculations(structure, path, eamp, xc, label):
     
-    print(f"\n\n{path.name.upper()} LAYER(S) COMPUTATIONS")
-    
+    print(f"\n{label} | {path.name.upper()} LAYER(S) COMPUTATIONS")
+    print("-" * 35)
+
     if RUN_QE:
         scf = pw.scf(structure, path, eamp, xc)
         nscf = pw.nscf(structure, path, eamp, xc)
@@ -40,8 +41,6 @@ def run_calculations(structure, path, eamp, xc):
         data, atoms, xy_averaged, z = pp._read_output(path / "potential.xsf", 5)
         potential = Potential(data=data, atoms=atoms, averaged=xy_averaged, z=z)
 
-    vacuum_level = get_vacuum_level(potential, structure)
-    work_function = np.abs(fermi_energy - vacuum_level)
 
     if RUN_CHARGE_DENSITY:
         charge, charge_pp_path = pp.charge_density(path)
@@ -68,8 +67,7 @@ def run_calculations(structure, path, eamp, xc):
                             atoms=structure,
                             path=path,
                             fermi_energy=fermi_energy,
-                            vacuum_level=vacuum_level,
-                            work_function=work_function,
+
                             potential=potential,
                             charge_density=charge,
                             dos = dos_,
@@ -87,9 +85,11 @@ def main():
     for eamp in energies:
         
         path = OUT_DIR /  f"field_{str(eamp)}"
-        
-        print(f"\nE-field = {str(eamp)}au")
-        print("-" * 30)
+
+        print()
+        print("*" * 35)
+        print(f"E-field = {str(eamp)}au")
+        print("*" * 35)
 
         print("CREATING GRAPHENE BILAYERS")
         bilayer = graphene.bilayer()
@@ -108,18 +108,16 @@ def main():
         for xc in XC:
             if xc is None:
                 label = "d3"
-                print("\nRUNNING grimme-d3")
             else:
                 label = xc.split("-")[-1]
-                print(f"\nRUNNING {xc}")                
             
             PATH_COUPLED = path / (f"PBE-{label}" if xc is None else xc) / "coupled" 
             PATH_BOTTOM = path / (f"PBE-{label}" if xc is None else xc) / "bottom"
             PATH_TOP = path / (f"PBE-{label}" if xc is None else xc) / "top"
             
-            coupled = run_calculations(relaxed_coupled, PATH_COUPLED, eamp, xc)
-            bottom = run_calculations(isolated_bottom, PATH_BOTTOM, eamp, xc)
-            top = run_calculations(isolated_top, PATH_TOP, eamp, xc)
+            coupled = run_calculations(relaxed_coupled, PATH_COUPLED, eamp, xc, label)
+            bottom = run_calculations(isolated_bottom, PATH_BOTTOM, eamp, xc, label)
+            top = run_calculations(isolated_top, PATH_TOP, eamp, xc, label)
             
             result = Results(coupled, bottom, top)
             results[label] = result
@@ -132,34 +130,7 @@ def main():
         plotter.plot_vdw_charge_difference(results, eamp)
         
         pp.vdw_charge_difference(path, eamp)
-        
 
-def get_vacuum_level(potential: Potential, structure: Atoms):
-
-    VACUUM_LEVEL_TOLERANCE = 0.000000001
-    
-    V = potential.averaged * RY_TO_EV
-    z = potential.z
-    
-    assert V.shape == z.shape
-    
-    atomic_positions = structure.get_positions()[:, 2]
-    z_bottom = atomic_positions.min()
-    z_top = atomic_positions.max()
-    
-    # vacuum_mask = (z < z_bottom) | (z > z_top)
-    # positions = V[vacuum_mask]
-    
-    dV_dz = np.gradient(potential.averaged, potential.z)
-    vacuum_level = np.abs(potential.averaged[np.where(np.abs(dV_dz) < VACUUM_LEVEL_TOLERANCE)])
-    
-    while vacuum_level.size == 0:
-        VACUUM_LEVEL_TOLERANCE *= 10
-        vacuum_level = np.abs(potential.averaged[np.where(np.abs(dV_dz) < VACUUM_LEVEL_TOLERANCE)])
-    
-    vacuum_level = np.min(vacuum_level)
-    return vacuum_level
-    
 
 if __name__ == "__main__":
     main()

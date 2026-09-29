@@ -46,6 +46,30 @@ def plot_band_structure(bandpath, energies, name):
     plt.close(fig)
 
 
+def _get_vacuum_level(V, z):
+        
+    assert V.shape == z.shape
+    
+    # old implementation
+    # atomic_positions = structure.get_positions()[:, 2]
+    # z_bottom = atomic_positions.min()
+    # z_top = atomic_positions.max()
+    # vacuum_mask = (z < z_bottom) | (z > z_top)
+    # positions = V[vacuum_mask]
+    
+    dV_dz = np.gradient(V, z)
+    vacuum_level = V[np.abs(dV_dz) < VACUUM_LEVEL_TOLERANCE]
+    
+    # if tolerance is too low prevent code crash by increasing magnitude
+    while vacuum_level.size == 0:
+        VACUUM_LEVEL_TOLERANCE *= 10
+        vacuum_level = np.abs(potential.averaged[np.where(np.abs(dV_dz) < VACUUM_LEVEL_TOLERANCE)])
+    
+    vacuum_level = np.min(vacuum_level)
+    
+    return vacuum_level
+
+
 def potential_subtracted(results: Results, field, label):
     print("PLOTTING SUBTRACTED POTENTIAL")
     
@@ -95,7 +119,9 @@ def potential_individual(results: Results, field, label):
         ax.set_xlabel(r"z ($\AA$)")
         ax.set_ylabel("Potential Energy (eV)")
         
-        ax.axhline(system.vacuum_level, color="red", linestyle="--", linewidth=0.8, label="Vacuum Level")
+        if field == 0:
+            vacuum_level = _get_vacuum_level(potential, z)
+            ax.axhline(vacuum_level, color="red", linestyle="--", linewidth=0.8, label="Vacuum Level")
 
         plt.tight_layout()
         plt.savefig(POTENTIAL_DIR / f"Potential_{system.name.capitalize()}_Layer_{field}au_{label}.png", dpi=300, bbox_inches="tight")
@@ -127,6 +153,12 @@ def charge_density_subtracted(results: Results, field, label):
 
 
 def plot_vdw_charge_difference(results, field):
+    """
+    Plot the plane averaged charge density difference between dn_c09 and dn_pbe, 
+    where each is the subtracted charge density i.e. coupled - top - bottom
+    """
+    
+    
     print(f"PLOTTING VDW Charge Density Difference")
     pbe: Results = results["d3"]
     c09: Results = results["c09"]
@@ -139,13 +171,13 @@ def plot_vdw_charge_difference(results, field):
     
     z = pbe.coupled.charge_density.z
     
-    pbe = pbe.coupled.charge_density.averaged - pbe.bottom.charge_density.averaged - pbe.top.charge_density.averaged
+    dn_pbe = pbe.coupled.charge_density.averaged - pbe.bottom.charge_density.averaged - pbe.top.charge_density.averaged
     dn_c09 = c09.coupled.charge_density.averaged - c09.bottom.charge_density.averaged - c09.top.charge_density.averaged
     
     cell = c09.coupled.atoms.cell.array
-    area = np.linalg.norm(np.cross(cell[0], cell[1]))
+    area = np.linalg.norm(np.cross(cell[0], cell[1]))  # cross product of a1 and a2 (i.e. in-plane vecors)
     
-    dn_vdw = ((dn_c09 - pbe) / BOHR_TO_ANGSTROM**3) * area
+    dn_vdw = ((dn_c09 - dn_pbe) / BOHR_TO_ANGSTROM**3) * area
 
     fig, ax = plt.subplots(figsize=(4, 7))
     
