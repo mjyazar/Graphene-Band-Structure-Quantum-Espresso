@@ -50,7 +50,7 @@ KGRID_DENSE = (30, 30, 1)
 """
 pp.x
 """
-DEGAUSS_LDOS = 0.05 * EV_TO_RY  # eV
+DEGAUSS_LDOS = 0.05
 WINDOW_LDOS = (-10, 10)
 DELTA_E_LDOS = 0.1
 VACUUM_LEVEL_TOLERANCE = 0.0000001  # do not go lower -> error
