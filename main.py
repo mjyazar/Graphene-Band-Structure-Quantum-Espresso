@@ -91,7 +91,7 @@ def main():
         print(f"E-field = {str(eamp)}au")
         print("*" * 35)
 
-        print("CREATING GRAPHENE BILAYERS")
+        print("\nCREATING GRAPHENE BILAYERS")
         bilayer = graphene.bilayer()
 
         if RUN_QE:
