@@ -116,14 +116,14 @@ def _read_output(path, output_format):
         raise ValueError("Invalid output_format.")
     
 
-def _read_ldos(intermediate_path):
+def _read_ldos(files_path):
 
     averaged_ldos = []
     z = None
     atoms_ = None
     
     # files = sorted(intermediate_path.parent.glob(f"{intermediate_path.name}[0-9]*.cube"))
-    files = sorted(intermediate_path.parent.glob(f"{intermediate_path.name}[0-9]*.xsf"))
+    files = sorted(files_path.parent.glob(f"{files_path.name}[0-9]*.xsf"))
     file_count = len(files)
     
     for i, file in enumerate(files, start=1):

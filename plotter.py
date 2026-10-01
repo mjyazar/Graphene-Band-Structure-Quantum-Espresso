@@ -58,12 +58,13 @@ def _get_vacuum_level(V, z):
     # positions = V[vacuum_mask]
     
     dV_dz = np.gradient(V, z)
-    vacuum_level = V[np.abs(dV_dz) < VACUUM_LEVEL_TOLERANCE]
-    
+    tolerance = VACUUM_LEVEL_TOLERANCE
+    vacuum_level = V[np.abs(dV_dz) < tolerance]
+
     # if tolerance is too low prevent code crash by increasing magnitude
     while vacuum_level.size == 0:
-        VACUUM_LEVEL_TOLERANCE *= 10
-        vacuum_level = np.abs(potential.averaged[np.where(np.abs(dV_dz) < VACUUM_LEVEL_TOLERANCE)])
+        tolerance *= 10
+        vacuum_level = V[np.abs(dV_dz) < tolerance]
     
     vacuum_level = np.min(vacuum_level)
     
