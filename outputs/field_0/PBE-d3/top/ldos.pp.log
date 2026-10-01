@@ -1,5 +1,5 @@
 
-     Program POST-PROC v.7.6 starts on  1Oct2026 at  1:44:54 
+     Program POST-PROC v.7.6 starts on  1Oct2026 at  3:12:20 
 
      This program is part of the open-source Quantum ESPRESSO suite
      for quantum simulation of materials; please cite
@@ -14,7 +14,7 @@
 
      MPI processes distributed on     1 nodes
      R & G space division:  proc/nbgrp/npool/nimage =       4
-     4678 MiB available memory on the printing compute node when the environment starts
+     3514 MiB available memory on the printing compute node when the environment starts
 
 
      Reading xml data from directory:
@@ -40,1008 +40,2008 @@
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -12.59210 eV, broadening =   0.05000eV
+     Energy = -12.59210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat001
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -12.49210 eV, broadening =   0.05000eV
+     Energy = -12.54210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat002
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -12.39210 eV, broadening =   0.05000eV
+     Energy = -12.49210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat003
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -12.29210 eV, broadening =   0.05000eV
+     Energy = -12.44210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat004
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -12.19210 eV, broadening =   0.05000eV
+     Energy = -12.39210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat005
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -12.09210 eV, broadening =   0.05000eV
+     Energy = -12.34210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat006
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -11.99210 eV, broadening =   0.05000eV
+     Energy = -12.29210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat007
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -11.89210 eV, broadening =   0.05000eV
+     Energy = -12.24210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat008
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -11.79210 eV, broadening =   0.05000eV
+     Energy = -12.19210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat009
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -11.69210 eV, broadening =   0.05000eV
+     Energy = -12.14210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat010
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -11.59210 eV, broadening =   0.05000eV
+     Energy = -12.09210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat011
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -11.49210 eV, broadening =   0.05000eV
+     Energy = -12.04210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat012
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -11.39210 eV, broadening =   0.05000eV
+     Energy = -11.99210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat013
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -11.29210 eV, broadening =   0.05000eV
+     Energy = -11.94210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat014
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -11.19210 eV, broadening =   0.05000eV
+     Energy = -11.89210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat015
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -11.09210 eV, broadening =   0.05000eV
+     Energy = -11.84210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat016
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -10.99210 eV, broadening =   0.05000eV
+     Energy = -11.79210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat017
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -10.89210 eV, broadening =   0.05000eV
+     Energy = -11.74210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat018
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -10.79210 eV, broadening =   0.05000eV
+     Energy = -11.69210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat019
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -10.69210 eV, broadening =   0.05000eV
+     Energy = -11.64210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat020
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -10.59210 eV, broadening =   0.05000eV
+     Energy = -11.59210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat021
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -10.49210 eV, broadening =   0.05000eV
+     Energy = -11.54210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat022
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -10.39210 eV, broadening =   0.05000eV
+     Energy = -11.49210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat023
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -10.29210 eV, broadening =   0.05000eV
+     Energy = -11.44210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat024
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -10.19210 eV, broadening =   0.05000eV
+     Energy = -11.39210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat025
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -10.09210 eV, broadening =   0.05000eV
+     Energy = -11.34210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat026
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -9.99210 eV, broadening =   0.05000eV
+     Energy = -11.29210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat027
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -9.89210 eV, broadening =   0.05000eV
+     Energy = -11.24210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat028
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -9.79210 eV, broadening =   0.05000eV
+     Energy = -11.19210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat029
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -9.69210 eV, broadening =   0.05000eV
+     Energy = -11.14210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat030
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -9.59210 eV, broadening =   0.05000eV
+     Energy = -11.09210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat031
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -9.49210 eV, broadening =   0.05000eV
+     Energy = -11.04210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat032
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -9.39210 eV, broadening =   0.05000eV
+     Energy = -10.99210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat033
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -9.29210 eV, broadening =   0.05000eV
+     Energy = -10.94210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat034
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -9.19210 eV, broadening =   0.05000eV
+     Energy = -10.89210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat035
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -9.09210 eV, broadening =   0.05000eV
+     Energy = -10.84210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat036
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -8.99210 eV, broadening =   0.05000eV
+     Energy = -10.79210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat037
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -8.89210 eV, broadening =   0.05000eV
+     Energy = -10.74210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat038
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -8.79210 eV, broadening =   0.05000eV
+     Energy = -10.69210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat039
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -8.69210 eV, broadening =   0.05000eV
+     Energy = -10.64210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat040
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -8.59210 eV, broadening =   0.05000eV
+     Energy = -10.59210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat041
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -8.49210 eV, broadening =   0.05000eV
+     Energy = -10.54210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat042
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -8.39210 eV, broadening =   0.05000eV
+     Energy = -10.49210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat043
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -8.29210 eV, broadening =   0.05000eV
+     Energy = -10.44210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat044
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -8.19210 eV, broadening =   0.05000eV
+     Energy = -10.39210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat045
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -8.09210 eV, broadening =   0.05000eV
+     Energy = -10.34210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat046
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -7.99210 eV, broadening =   0.05000eV
+     Energy = -10.29210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat047
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -7.89210 eV, broadening =   0.05000eV
+     Energy = -10.24210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat048
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -7.79210 eV, broadening =   0.05000eV
+     Energy = -10.19210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat049
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -7.69210 eV, broadening =   0.05000eV
+     Energy = -10.14210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat050
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -7.59210 eV, broadening =   0.05000eV
+     Energy = -10.09210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat051
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -7.49210 eV, broadening =   0.05000eV
+     Energy = -10.04210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat052
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -7.39210 eV, broadening =   0.05000eV
+     Energy =  -9.99210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat053
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -7.29210 eV, broadening =   0.05000eV
+     Energy =  -9.94210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat054
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -7.19210 eV, broadening =   0.05000eV
+     Energy =  -9.89210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat055
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -7.09210 eV, broadening =   0.05000eV
+     Energy =  -9.84210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat056
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -6.99210 eV, broadening =   0.05000eV
+     Energy =  -9.79210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat057
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -6.89210 eV, broadening =   0.05000eV
+     Energy =  -9.74210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat058
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -6.79210 eV, broadening =   0.05000eV
+     Energy =  -9.69210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat059
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -6.69210 eV, broadening =   0.05000eV
+     Energy =  -9.64210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat060
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -6.59210 eV, broadening =   0.05000eV
+     Energy =  -9.59210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat061
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -6.49210 eV, broadening =   0.05000eV
+     Energy =  -9.54210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat062
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -6.39210 eV, broadening =   0.05000eV
+     Energy =  -9.49210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat063
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -6.29210 eV, broadening =   0.05000eV
+     Energy =  -9.44210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat064
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -6.19210 eV, broadening =   0.05000eV
+     Energy =  -9.39210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat065
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -6.09210 eV, broadening =   0.05000eV
+     Energy =  -9.34210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat066
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -5.99210 eV, broadening =   0.05000eV
+     Energy =  -9.29210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat067
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -5.89210 eV, broadening =   0.05000eV
+     Energy =  -9.24210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat068
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -5.79210 eV, broadening =   0.05000eV
+     Energy =  -9.19210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat069
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -5.69210 eV, broadening =   0.05000eV
+     Energy =  -9.14210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat070
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -5.59210 eV, broadening =   0.05000eV
+     Energy =  -9.09210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat071
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -5.49210 eV, broadening =   0.05000eV
+     Energy =  -9.04210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat072
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -5.39210 eV, broadening =   0.05000eV
+     Energy =  -8.99210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat073
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -5.29210 eV, broadening =   0.05000eV
+     Energy =  -8.94210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat074
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -5.19210 eV, broadening =   0.05000eV
+     Energy =  -8.89210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat075
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -5.09210 eV, broadening =   0.05000eV
+     Energy =  -8.84210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat076
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -4.99210 eV, broadening =   0.05000eV
+     Energy =  -8.79210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat077
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -4.89210 eV, broadening =   0.05000eV
+     Energy =  -8.74210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat078
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -4.79210 eV, broadening =   0.05000eV
+     Energy =  -8.69210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat079
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -4.69210 eV, broadening =   0.05000eV
+     Energy =  -8.64210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat080
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -4.59210 eV, broadening =   0.05000eV
+     Energy =  -8.59210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat081
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -4.49210 eV, broadening =   0.05000eV
+     Energy =  -8.54210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat082
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -4.39210 eV, broadening =   0.05000eV
+     Energy =  -8.49210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat083
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -4.29210 eV, broadening =   0.05000eV
+     Energy =  -8.44210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat084
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -4.19210 eV, broadening =   0.05000eV
+     Energy =  -8.39210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat085
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -4.09210 eV, broadening =   0.05000eV
+     Energy =  -8.34210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat086
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -3.99210 eV, broadening =   0.05000eV
+     Energy =  -8.29210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat087
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -3.89210 eV, broadening =   0.05000eV
+     Energy =  -8.24210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat088
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -3.79210 eV, broadening =   0.05000eV
+     Energy =  -8.19210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat089
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -3.69210 eV, broadening =   0.05000eV
+     Energy =  -8.14210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat090
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -3.59210 eV, broadening =   0.05000eV
+     Energy =  -8.09210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat091
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -3.49210 eV, broadening =   0.05000eV
+     Energy =  -8.04210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat092
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -3.39210 eV, broadening =   0.05000eV
+     Energy =  -7.99210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat093
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -3.29210 eV, broadening =   0.05000eV
+     Energy =  -7.94210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat094
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -3.19210 eV, broadening =   0.05000eV
+     Energy =  -7.89210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat095
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -3.09210 eV, broadening =   0.05000eV
+     Energy =  -7.84210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat096
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -2.99210 eV, broadening =   0.05000eV
+     Energy =  -7.79210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat097
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -2.89210 eV, broadening =   0.05000eV
+     Energy =  -7.74210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat098
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -2.79210 eV, broadening =   0.05000eV
+     Energy =  -7.69210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat099
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -2.69210 eV, broadening =   0.05000eV
+     Energy =  -7.64210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat100
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -2.59210 eV, broadening =   0.05000eV
+     Energy =  -7.59210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat101
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -2.49210 eV, broadening =   0.05000eV
+     Energy =  -7.54210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat102
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -2.39210 eV, broadening =   0.05000eV
+     Energy =  -7.49210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat103
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -2.29210 eV, broadening =   0.05000eV
+     Energy =  -7.44210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat104
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -2.19210 eV, broadening =   0.05000eV
+     Energy =  -7.39210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat105
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -2.09210 eV, broadening =   0.05000eV
+     Energy =  -7.34210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat106
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -1.99210 eV, broadening =   0.05000eV
+     Energy =  -7.29210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat107
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -1.89210 eV, broadening =   0.05000eV
+     Energy =  -7.24210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat108
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -1.79210 eV, broadening =   0.05000eV
+     Energy =  -7.19210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat109
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -1.69210 eV, broadening =   0.05000eV
+     Energy =  -7.14210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat110
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -1.59210 eV, broadening =   0.05000eV
+     Energy =  -7.09210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat111
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -1.49210 eV, broadening =   0.05000eV
+     Energy =  -7.04210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat112
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -1.39210 eV, broadening =   0.05000eV
+     Energy =  -6.99210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat113
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -1.29210 eV, broadening =   0.05000eV
+     Energy =  -6.94210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat114
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -1.19210 eV, broadening =   0.05000eV
+     Energy =  -6.89210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat115
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -1.09210 eV, broadening =   0.05000eV
+     Energy =  -6.84210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat116
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -0.99210 eV, broadening =   0.05000eV
+     Energy =  -6.79210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat117
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -0.89210 eV, broadening =   0.05000eV
+     Energy =  -6.74210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat118
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -0.79210 eV, broadening =   0.05000eV
+     Energy =  -6.69210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat119
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -0.69210 eV, broadening =   0.05000eV
+     Energy =  -6.64210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat120
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -0.59210 eV, broadening =   0.05000eV
+     Energy =  -6.59210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat121
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -0.49210 eV, broadening =   0.05000eV
+     Energy =  -6.54210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat122
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -0.39210 eV, broadening =   0.05000eV
+     Energy =  -6.49210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat123
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -0.29210 eV, broadening =   0.05000eV
+     Energy =  -6.44210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat124
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -0.19210 eV, broadening =   0.05000eV
+     Energy =  -6.39210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat125
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -0.09210 eV, broadening =   0.05000eV
+     Energy =  -6.34210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat126
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   0.00790 eV, broadening =   0.05000eV
+     Energy =  -6.29210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat127
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   0.10790 eV, broadening =   0.05000eV
+     Energy =  -6.24210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat128
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   0.20790 eV, broadening =   0.05000eV
+     Energy =  -6.19210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat129
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   0.30790 eV, broadening =   0.05000eV
+     Energy =  -6.14210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat130
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   0.40790 eV, broadening =   0.05000eV
+     Energy =  -6.09210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat131
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   0.50790 eV, broadening =   0.05000eV
+     Energy =  -6.04210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat132
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   0.60790 eV, broadening =   0.05000eV
+     Energy =  -5.99210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat133
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   0.70790 eV, broadening =   0.05000eV
+     Energy =  -5.94210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat134
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   0.80790 eV, broadening =   0.05000eV
+     Energy =  -5.89210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat135
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   0.90790 eV, broadening =   0.05000eV
+     Energy =  -5.84210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat136
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   1.00790 eV, broadening =   0.05000eV
+     Energy =  -5.79210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat137
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   1.10790 eV, broadening =   0.05000eV
+     Energy =  -5.74210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat138
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   1.20790 eV, broadening =   0.05000eV
+     Energy =  -5.69210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat139
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   1.30790 eV, broadening =   0.05000eV
+     Energy =  -5.64210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat140
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   1.40790 eV, broadening =   0.05000eV
+     Energy =  -5.59210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat141
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   1.50790 eV, broadening =   0.05000eV
+     Energy =  -5.54210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat142
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   1.60790 eV, broadening =   0.05000eV
+     Energy =  -5.49210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat143
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   1.70790 eV, broadening =   0.05000eV
+     Energy =  -5.44210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat144
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   1.80790 eV, broadening =   0.05000eV
+     Energy =  -5.39210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat145
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   1.90790 eV, broadening =   0.05000eV
+     Energy =  -5.34210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat146
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   2.00790 eV, broadening =   0.05000eV
+     Energy =  -5.29210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat147
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   2.10790 eV, broadening =   0.05000eV
+     Energy =  -5.24210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat148
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   2.20790 eV, broadening =   0.05000eV
+     Energy =  -5.19210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat149
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   2.30790 eV, broadening =   0.05000eV
+     Energy =  -5.14210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat150
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   2.40790 eV, broadening =   0.05000eV
+     Energy =  -5.09210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat151
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   2.50790 eV, broadening =   0.05000eV
+     Energy =  -5.04210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat152
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   2.60790 eV, broadening =   0.05000eV
+     Energy =  -4.99210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat153
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   2.70790 eV, broadening =   0.05000eV
+     Energy =  -4.94210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat154
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   2.80790 eV, broadening =   0.05000eV
+     Energy =  -4.89210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat155
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   2.90790 eV, broadening =   0.05000eV
+     Energy =  -4.84210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat156
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   3.00790 eV, broadening =   0.05000eV
+     Energy =  -4.79210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat157
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   3.10790 eV, broadening =   0.05000eV
+     Energy =  -4.74210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat158
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   3.20790 eV, broadening =   0.05000eV
+     Energy =  -4.69210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat159
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   3.30790 eV, broadening =   0.05000eV
+     Energy =  -4.64210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat160
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   3.40790 eV, broadening =   0.05000eV
+     Energy =  -4.59210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat161
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   3.50790 eV, broadening =   0.05000eV
+     Energy =  -4.54210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat162
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   3.60790 eV, broadening =   0.05000eV
+     Energy =  -4.49210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat163
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   3.70790 eV, broadening =   0.05000eV
+     Energy =  -4.44210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat164
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   3.80790 eV, broadening =   0.05000eV
+     Energy =  -4.39210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat165
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   3.90790 eV, broadening =   0.05000eV
+     Energy =  -4.34210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat166
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   4.00790 eV, broadening =   0.05000eV
+     Energy =  -4.29210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat167
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   4.10790 eV, broadening =   0.05000eV
+     Energy =  -4.24210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat168
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   4.20790 eV, broadening =   0.05000eV
+     Energy =  -4.19210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat169
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   4.30790 eV, broadening =   0.05000eV
+     Energy =  -4.14210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat170
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   4.40790 eV, broadening =   0.05000eV
+     Energy =  -4.09210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat171
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   4.50790 eV, broadening =   0.05000eV
+     Energy =  -4.04210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat172
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   4.60790 eV, broadening =   0.05000eV
+     Energy =  -3.99210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat173
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   4.70790 eV, broadening =   0.05000eV
+     Energy =  -3.94210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat174
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   4.80790 eV, broadening =   0.05000eV
+     Energy =  -3.89210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat175
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   4.90790 eV, broadening =   0.05000eV
+     Energy =  -3.84210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat176
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   5.00790 eV, broadening =   0.05000eV
+     Energy =  -3.79210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat177
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   5.10790 eV, broadening =   0.05000eV
+     Energy =  -3.74210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat178
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   5.20790 eV, broadening =   0.05000eV
+     Energy =  -3.69210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat179
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   5.30790 eV, broadening =   0.05000eV
+     Energy =  -3.64210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat180
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   5.40790 eV, broadening =   0.05000eV
+     Energy =  -3.59210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat181
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   5.50790 eV, broadening =   0.05000eV
+     Energy =  -3.54210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat182
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   5.60790 eV, broadening =   0.05000eV
+     Energy =  -3.49210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat183
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   5.70790 eV, broadening =   0.05000eV
+     Energy =  -3.44210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat184
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   5.80790 eV, broadening =   0.05000eV
+     Energy =  -3.39210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat185
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   5.90790 eV, broadening =   0.05000eV
+     Energy =  -3.34210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat186
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   6.00790 eV, broadening =   0.05000eV
+     Energy =  -3.29210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat187
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   6.10790 eV, broadening =   0.05000eV
+     Energy =  -3.24210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat188
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   6.20790 eV, broadening =   0.05000eV
+     Energy =  -3.19210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat189
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   6.30790 eV, broadening =   0.05000eV
+     Energy =  -3.14210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat190
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   6.40790 eV, broadening =   0.05000eV
+     Energy =  -3.09210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat191
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   6.50790 eV, broadening =   0.05000eV
+     Energy =  -3.04210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat192
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   6.60790 eV, broadening =   0.05000eV
+     Energy =  -2.99210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat193
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   6.70790 eV, broadening =   0.05000eV
+     Energy =  -2.94210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat194
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   6.80790 eV, broadening =   0.05000eV
+     Energy =  -2.89210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat195
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   6.90790 eV, broadening =   0.05000eV
+     Energy =  -2.84210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat196
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   7.00790 eV, broadening =   0.05000eV
+     Energy =  -2.79210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat197
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   7.10790 eV, broadening =   0.05000eV
+     Energy =  -2.74210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat198
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   7.20790 eV, broadening =   0.05000eV
+     Energy =  -2.69210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat199
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   7.30790 eV, broadening =   0.05000eV
+     Energy =  -2.64210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat200
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   7.40790 eV, broadening =   0.05000eV
+     Energy =  -2.59210 eV, broadening =   0.10000eV
      Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat201
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =  -2.54210 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat202
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =  -2.49210 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat203
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =  -2.44210 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat204
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =  -2.39210 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat205
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =  -2.34210 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat206
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =  -2.29210 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat207
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =  -2.24210 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat208
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =  -2.19210 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat209
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =  -2.14210 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat210
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =  -2.09210 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat211
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =  -2.04210 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat212
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =  -1.99210 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat213
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =  -1.94210 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat214
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =  -1.89210 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat215
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =  -1.84210 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat216
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =  -1.79210 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat217
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =  -1.74210 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat218
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =  -1.69210 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat219
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =  -1.64210 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat220
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =  -1.59210 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat221
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =  -1.54210 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat222
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =  -1.49210 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat223
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =  -1.44210 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat224
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =  -1.39210 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat225
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =  -1.34210 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat226
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =  -1.29210 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat227
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =  -1.24210 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat228
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =  -1.19210 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat229
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =  -1.14210 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat230
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =  -1.09210 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat231
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =  -1.04210 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat232
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =  -0.99210 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat233
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =  -0.94210 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat234
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =  -0.89210 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat235
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =  -0.84210 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat236
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =  -0.79210 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat237
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =  -0.74210 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat238
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =  -0.69210 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat239
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =  -0.64210 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat240
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =  -0.59210 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat241
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =  -0.54210 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat242
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =  -0.49210 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat243
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =  -0.44210 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat244
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =  -0.39210 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat245
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =  -0.34210 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat246
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =  -0.29210 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat247
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =  -0.24210 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat248
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =  -0.19210 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat249
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =  -0.14210 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat250
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =  -0.09210 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat251
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =  -0.04210 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat252
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   0.00790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat253
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   0.05790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat254
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   0.10790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat255
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   0.15790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat256
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   0.20790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat257
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   0.25790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat258
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   0.30790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat259
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   0.35790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat260
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   0.40790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat261
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   0.45790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat262
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   0.50790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat263
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   0.55790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat264
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   0.60790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat265
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   0.65790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat266
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   0.70790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat267
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   0.75790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat268
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   0.80790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat269
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   0.85790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat270
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   0.90790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat271
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   0.95790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat272
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   1.00790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat273
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   1.05790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat274
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   1.10790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat275
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   1.15790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat276
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   1.20790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat277
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   1.25790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat278
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   1.30790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat279
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   1.35790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat280
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   1.40790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat281
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   1.45790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat282
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   1.50790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat283
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   1.55790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat284
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   1.60790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat285
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   1.65790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat286
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   1.70790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat287
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   1.75790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat288
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   1.80790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat289
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   1.85790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat290
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   1.90790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat291
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   1.95790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat292
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   2.00790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat293
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   2.05790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat294
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   2.10790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat295
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   2.15790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat296
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   2.20790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat297
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   2.25790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat298
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   2.30790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat299
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   2.35790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat300
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   2.40790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat301
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   2.45790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat302
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   2.50790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat303
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   2.55790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat304
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   2.60790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat305
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   2.65790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat306
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   2.70790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat307
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   2.75790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat308
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   2.80790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat309
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   2.85790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat310
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   2.90790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat311
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   2.95790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat312
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   3.00790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat313
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   3.05790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat314
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   3.10790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat315
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   3.15790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat316
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   3.20790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat317
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   3.25790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat318
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   3.30790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat319
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   3.35790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat320
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   3.40790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat321
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   3.45790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat322
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   3.50790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat323
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   3.55790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat324
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   3.60790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat325
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   3.65790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat326
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   3.70790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat327
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   3.75790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat328
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   3.80790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat329
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   3.85790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat330
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   3.90790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat331
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   3.95790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat332
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   4.00790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat333
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   4.05790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat334
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   4.10790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat335
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   4.15790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat336
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   4.20790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat337
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   4.25790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat338
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   4.30790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat339
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   4.35790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat340
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   4.40790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat341
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   4.45790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat342
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   4.50790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat343
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   4.55790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat344
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   4.60790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat345
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   4.65790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat346
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   4.70790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat347
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   4.75790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat348
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   4.80790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat349
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   4.85790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat350
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   4.90790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat351
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   4.95790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat352
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   5.00790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat353
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   5.05790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat354
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   5.10790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat355
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   5.15790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat356
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   5.20790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat357
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   5.25790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat358
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   5.30790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat359
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   5.35790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat360
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   5.40790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat361
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   5.45790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat362
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   5.50790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat363
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   5.55790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat364
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   5.60790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat365
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   5.65790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat366
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   5.70790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat367
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   5.75790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat368
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   5.80790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat369
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   5.85790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat370
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   5.90790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat371
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   5.95790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat372
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   6.00790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat373
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   6.05790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat374
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   6.10790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat375
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   6.15790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat376
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   6.20790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat377
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   6.25790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat378
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   6.30790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat379
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   6.35790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat380
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   6.40790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat381
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   6.45790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat382
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   6.50790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat383
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   6.55790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat384
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   6.60790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat385
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   6.65790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat386
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   6.70790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat387
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   6.75790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat388
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   6.80790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat389
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   6.85790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat390
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   6.90790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat391
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   6.95790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat392
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   7.00790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat393
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   7.05790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat394
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   7.10790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat395
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   7.15790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat396
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   7.20790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat397
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   7.25790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat398
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   7.30790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat399
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   7.35790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat400
+
+     Calling punch_plot, plot_num =   3
+
+     Energy =   7.40790 eV, broadening =   0.10000eV
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat401
      Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat001
 
      Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat001.xsf
@@ -1846,13 +2846,815 @@
 
      Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat201.xsf
      Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat202
 
-     POST-PROC    :   2m47.51s CPU   3m 5.02s WALL
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat202.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat203
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat203.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat204
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat204.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat205
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat205.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat206
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat206.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat207
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat207.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat208
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat208.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat209
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat209.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat210
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat210.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat211
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat211.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat212
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat212.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat213
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat213.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat214
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat214.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat215
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat215.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat216
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat216.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat217
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat217.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat218
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat218.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat219
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat219.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat220
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat220.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat221
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat221.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat222
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat222.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat223
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat223.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat224
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat224.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat225
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat225.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat226
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat226.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat227
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat227.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat228
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat228.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat229
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat229.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat230
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat230.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat231
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat231.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat232
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat232.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat233
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat233.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat234
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat234.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat235
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat235.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat236
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat236.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat237
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat237.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat238
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat238.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat239
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat239.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat240
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat240.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat241
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat241.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat242
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat242.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat243
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat243.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat244
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat244.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat245
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat245.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat246
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat246.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat247
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat247.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat248
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat248.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat249
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat249.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat250
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat250.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat251
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat251.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat252
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat252.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat253
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat253.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat254
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat254.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat255
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat255.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat256
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat256.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat257
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat257.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat258
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat258.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat259
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat259.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat260
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat260.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat261
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat261.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat262
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat262.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat263
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat263.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat264
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat264.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat265
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat265.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat266
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat266.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat267
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat267.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat268
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat268.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat269
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat269.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat270
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat270.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat271
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat271.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat272
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat272.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat273
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat273.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat274
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat274.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat275
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat275.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat276
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat276.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat277
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat277.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat278
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat278.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat279
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat279.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat280
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat280.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat281
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat281.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat282
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat282.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat283
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat283.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat284
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat284.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat285
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat285.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat286
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat286.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat287
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat287.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat288
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat288.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat289
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat289.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat290
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat290.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat291
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat291.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat292
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat292.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat293
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat293.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat294
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat294.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat295
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat295.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat296
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat296.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat297
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat297.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat298
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat298.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat299
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat299.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat300
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat300.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat301
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat301.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat302
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat302.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat303
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat303.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat304
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat304.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat305
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat305.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat306
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat306.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat307
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat307.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat308
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat308.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat309
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat309.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat310
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat310.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat311
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat311.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat312
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat312.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat313
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat313.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat314
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat314.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat315
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat315.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat316
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat316.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat317
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat317.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat318
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat318.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat319
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat319.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat320
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat320.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat321
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat321.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat322
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat322.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat323
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat323.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat324
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat324.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat325
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat325.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat326
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat326.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat327
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat327.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat328
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat328.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat329
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat329.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat330
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat330.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat331
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat331.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat332
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat332.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat333
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat333.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat334
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat334.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat335
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat335.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat336
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat336.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat337
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat337.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat338
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat338.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat339
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat339.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat340
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat340.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat341
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat341.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat342
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat342.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat343
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat343.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat344
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat344.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat345
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat345.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat346
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat346.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat347
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat347.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat348
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat348.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat349
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat349.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat350
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat350.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat351
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat351.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat352
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat352.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat353
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat353.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat354
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat354.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat355
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat355.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat356
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat356.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat357
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat357.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat358
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat358.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat359
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat359.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat360
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat360.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat361
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat361.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat362
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat362.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat363
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat363.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat364
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat364.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat365
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat365.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat366
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat366.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat367
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat367.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat368
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat368.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat369
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat369.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat370
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat370.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat371
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat371.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat372
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat372.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat373
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat373.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat374
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat374.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat375
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat375.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat376
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat376.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat377
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat377.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat378
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat378.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat379
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat379.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat380
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat380.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat381
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat381.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat382
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat382.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat383
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat383.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat384
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat384.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat385
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat385.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat386
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat386.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat387
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat387.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat388
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat388.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat389
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat389.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat390
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat390.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat391
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat391.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat392
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat392.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat393
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat393.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat394
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat394.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat395
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat395.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat396
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat396.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat397
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat397.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat398
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat398.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat399
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat399.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat400
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat400.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat401
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/top/data/ldos.pp.dat401.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+
+     POST-PROC    :   5m49.33s CPU   6m23.53s WALL
 
 
-   This run was terminated on:   1:47:59   1Oct2026            
+   This run was terminated on:   3:18:43   1Oct2026            
 
 =------------------------------------------------------------------------------=
    JOB DONE.
 =------------------------------------------------------------------------------=
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
 Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
