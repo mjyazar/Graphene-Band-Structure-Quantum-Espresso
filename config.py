@@ -43,16 +43,16 @@ NSCF_EXTRA_BANDS_PER_ATOM = 4  # number of unoccupied bands to run the calculati
 FORCE_CONVERGENCE_THRESHOLD = 0.001
 BANDPATH = 'GMKG'
 ECUTWFC = 80.0
-KGRID = (15, 15, 1)
-KGRID_DENSE = (30, 30, 1)
+KGRID = (15, 15, 1)  # scf
+KGRID_DENSE = (30, 30, 1)  # nscf
 
 
 """
 pp.x
 """
-DEGAUSS_LDOS = 0.05
+DEGAUSS_LDOS = 0.1
 WINDOW_LDOS = (-10, 10)
-DELTA_E_LDOS = 0.1
+DELTA_E_LDOS = 0.05
 VACUUM_LEVEL_TOLERANCE = 0.0000001  # do not go lower -> error
 
 
