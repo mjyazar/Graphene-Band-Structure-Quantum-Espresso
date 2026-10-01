@@ -1,5 +1,5 @@
 
-     Program PWSCF v.7.6 starts on 26Sep2026 at 10:10:47 
+     Program PWSCF v.7.6 starts on  1Oct2026 at  2: 1:25 
 
      This program is part of the open-source Quantum ESPRESSO suite
      for quantum simulation of materials; please cite
@@ -13,7 +13,7 @@
      Parallel version (MPI), running on     4 processors
 
      MPI processes distributed on     1 nodes
-     983 MiB available memory on the printing compute node when the environment starts
+     2570 MiB available memory on the printing compute node when the environment starts
 
      Waiting for input...
      Reading input from standard input
@@ -461,78 +461,78 @@ Warning: card &RISM ignored
      Davidson diagonalization with overlap
 
      Computing kpt #:     1  of    23 on this pool
-     total cpu time spent up to now is       33.1 secs
+     total cpu time spent up to now is       32.8 secs
 
      Computing kpt #:     2  of    23 on this pool
      c_bands:  1 eigenvalues not converged
-     total cpu time spent up to now is       37.9 secs
+     total cpu time spent up to now is       36.8 secs
 
      Computing kpt #:     3  of    23 on this pool
-     total cpu time spent up to now is       41.7 secs
+     total cpu time spent up to now is       41.0 secs
 
      Computing kpt #:     4  of    23 on this pool
-     total cpu time spent up to now is       45.2 secs
+     total cpu time spent up to now is       46.2 secs
 
      Computing kpt #:     5  of    23 on this pool
-     total cpu time spent up to now is       49.3 secs
+     total cpu time spent up to now is       49.6 secs
 
      Computing kpt #:     6  of    23 on this pool
      total cpu time spent up to now is       53.3 secs
 
      Computing kpt #:     7  of    23 on this pool
-     total cpu time spent up to now is       57.9 secs
+     total cpu time spent up to now is       57.3 secs
 
      Computing kpt #:     8  of    23 on this pool
-     total cpu time spent up to now is       61.6 secs
+     total cpu time spent up to now is       61.7 secs
 
      Computing kpt #:     9  of    23 on this pool
      total cpu time spent up to now is       66.7 secs
 
      Computing kpt #:    10  of    23 on this pool
-     total cpu time spent up to now is       72.1 secs
+     total cpu time spent up to now is       71.2 secs
 
      Computing kpt #:    11  of    23 on this pool
      total cpu time spent up to now is       76.1 secs
 
      Computing kpt #:    12  of    23 on this pool
-     total cpu time spent up to now is       79.2 secs
+     total cpu time spent up to now is       79.3 secs
 
      Computing kpt #:    13  of    23 on this pool
-     total cpu time spent up to now is       82.2 secs
+     total cpu time spent up to now is       82.9 secs
 
      Computing kpt #:    14  of    23 on this pool
-     total cpu time spent up to now is       85.4 secs
+     total cpu time spent up to now is       86.3 secs
 
      Computing kpt #:    15  of    23 on this pool
-     total cpu time spent up to now is       89.6 secs
+     total cpu time spent up to now is       89.9 secs
 
      Computing kpt #:    16  of    23 on this pool
-     total cpu time spent up to now is       94.0 secs
+     total cpu time spent up to now is       94.3 secs
 
      Computing kpt #:    17  of    23 on this pool
      total cpu time spent up to now is       98.2 secs
 
      Computing kpt #:    18  of    23 on this pool
-     total cpu time spent up to now is      102.3 secs
+     total cpu time spent up to now is      101.6 secs
 
      Computing kpt #:    19  of    23 on this pool
-     total cpu time spent up to now is      106.7 secs
+     total cpu time spent up to now is      106.6 secs
 
      Computing kpt #:    20  of    23 on this pool
-     total cpu time spent up to now is      110.8 secs
+     total cpu time spent up to now is      110.0 secs
 
      Computing kpt #:    21  of    23 on this pool
-     total cpu time spent up to now is      115.5 secs
+     total cpu time spent up to now is      114.2 secs
 
      Computing kpt #:    22  of    23 on this pool
-     total cpu time spent up to now is      120.5 secs
+     total cpu time spent up to now is      118.4 secs
 
      Computing kpt #:    23  of    23 on this pool
-     total cpu time spent up to now is      123.4 secs
+     total cpu time spent up to now is      122.2 secs
 
      ethr =  1.25E-10,  avg # of iterations = 69.8
 
-     total cpu time spent up to now is      124.0 secs
+     total cpu time spent up to now is      122.2 secs
 
      End of band structure calculation
 
@@ -1361,53 +1361,53 @@ Warning: card &RISM ignored
      Writing all to output data dir /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/vdw-df2-c09/bottom/data/bottom.save/ :
      XML data file, pseudopotentials, collected wavefunctions
 
-     init_run     :     28.54s CPU     28.80s WALL (       1 calls)
-     electrons    :     93.44s CPU     94.81s WALL (       1 calls)
+     init_run     :     28.82s CPU     29.12s WALL (       1 calls)
+     electrons    :     91.92s CPU     92.97s WALL (       1 calls)
 
      Called by init_run:
      wfcinit      :      0.00s CPU      0.00s WALL (       1 calls)
      wfcinit:atom :      0.03s CPU      0.03s WALL (      23 calls)
-     wfcinit:wfcr :      1.55s CPU      1.63s WALL (      23 calls)
-     potinit      :     27.85s CPU     28.08s WALL (       1 calls)
-     hinit0       :      0.58s CPU      0.60s WALL (       1 calls)
+     wfcinit:wfcr :      1.55s CPU      1.61s WALL (      23 calls)
+     potinit      :     28.17s CPU     28.41s WALL (       1 calls)
+     hinit0       :      0.55s CPU      0.57s WALL (       1 calls)
 
      Called by electrons:
-     c_bands      :     93.44s CPU     94.80s WALL (       1 calls)
-     v_of_rho     :     27.85s CPU     28.06s WALL (       1 calls)
+     c_bands      :     91.92s CPU     92.96s WALL (       1 calls)
+     v_of_rho     :     28.16s CPU     28.40s WALL (       1 calls)
      v_h          :      0.00s CPU      0.01s WALL (       1 calls)
-     v_xc         :     27.84s CPU     28.06s WALL (       1 calls)
-     vdW_kernel   :     27.21s CPU     27.28s WALL (       1 calls)
+     v_xc         :     28.16s CPU     28.39s WALL (       1 calls)
+     vdW_kernel   :     27.22s CPU     27.25s WALL (       1 calls)
 
      Called by c_bands:
-     init_us_2    :      0.05s CPU      0.07s WALL (      23 calls)
-     cegterg      :     76.05s CPU     77.16s WALL (      93 calls)
+     init_us_2    :      0.04s CPU      0.06s WALL (      23 calls)
+     cegterg      :     74.68s CPU     75.57s WALL (      93 calls)
 
      Called by sum_band:
 
      Called by *egterg:
-     cdiaghg      :      0.40s CPU      0.40s WALL (    1694 calls)
-     cegterg:over :      8.27s CPU      8.31s WALL (    1671 calls)
-     cegterg:upda :      5.50s CPU      5.62s WALL (    1671 calls)
-     cegterg:last :     11.48s CPU     11.53s WALL (    1077 calls)
-     h_psi        :     50.24s CPU     51.02s WALL (    1787 calls)
-     g_psi        :      0.49s CPU      0.49s WALL (    1671 calls)
+     cdiaghg      :      0.38s CPU      0.38s WALL (    1694 calls)
+     cegterg:over :      8.14s CPU      8.16s WALL (    1671 calls)
+     cegterg:upda :      5.35s CPU      5.46s WALL (    1671 calls)
+     cegterg:last :     11.22s CPU     11.25s WALL (    1077 calls)
+     h_psi        :     49.49s CPU     50.08s WALL (    1787 calls)
+     g_psi        :      0.47s CPU      0.47s WALL (    1671 calls)
 
      Called by h_psi:
-     h_psi:calbec :      3.81s CPU      3.83s WALL (    1787 calls)
-     vloc_psi     :     42.45s CPU     42.98s WALL (    1787 calls)
-     add_vuspsi   :      3.76s CPU      3.78s WALL (    1787 calls)
+     h_psi:calbec :      3.65s CPU      3.66s WALL (    1787 calls)
+     vloc_psi     :     41.91s CPU     42.31s WALL (    1787 calls)
+     add_vuspsi   :      3.69s CPU      3.70s WALL (    1787 calls)
 
      General routines
-     calbec       :      3.80s CPU      3.82s WALL (    1787 calls)
-     fft          :      0.58s CPU      0.59s WALL (      61 calls)
-     fftw         :     37.93s CPU     38.20s WALL (   22664 calls)
+     calbec       :      3.64s CPU      3.65s WALL (    1787 calls)
+     fft          :      0.64s CPU      0.64s WALL (      61 calls)
+     fftw         :     37.43s CPU     37.60s WALL (   22664 calls)
 
      Parallel routines
 
-     PWSCF        :   2m 2.42s CPU   2m 4.19s WALL
+     PWSCF        :   2m 0.88s CPU   2m 2.34s WALL
 
 
-   This run was terminated on:  10:12:52  26Sep2026            
+   This run was terminated on:   2: 3:27   1Oct2026            
 
 =------------------------------------------------------------------------------=
    JOB DONE.

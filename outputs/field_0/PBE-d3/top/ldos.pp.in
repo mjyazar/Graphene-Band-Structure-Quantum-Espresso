@@ -7,7 +7,7 @@ filplot = "/home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/output
 emin = -12.5921
 emax = 7.4079
 delta_e = 0.1
-degauss_ldos = 0.003674932217565499
+degauss_ldos = 0.05
 use_gauss_ldos = .true.
 /
 &PLOT
