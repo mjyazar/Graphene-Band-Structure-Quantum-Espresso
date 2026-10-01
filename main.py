@@ -58,7 +58,7 @@ def run_calculations(structure, path, eamp, xc, label):
         ldos, ldos_pp_path, energies = pp.ldos(path, fermi_energy)
         # ldos_averaged = average.ldos(path, ldos_pp_path, energies)
     else:
-        ldos = pp._read_ldos(path / "data" / f"ldos.pp.dat")
+        ldos = pp._load_ldos(path)
         
     # ldos_averaged = average.ldos(path, ldos_pp_path, energies)
         

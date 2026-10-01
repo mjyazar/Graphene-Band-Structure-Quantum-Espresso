@@ -117,15 +117,24 @@ def _read_output(path, output_format):
         raise ValueError("Invalid output_format.")
     
 
-def _read_ldos(files_path):
+def _read_ldos(files_path, save_path):
+
+    # files = sorted(intermediate_path.parent.glob(f"{intermediate_path.name}[0-9]*.cube"))
+    """
+    files to read (i.e. final pp.x output) are named the same as the intermediate file names + .xsf suffix
+    
+     - files_path.parent - gets the intermediate files path e.g. .../coupled/data
+     - glob(f"{files_path.name}[0-9]*.xsf") - ldos.pp.dat[0-9]*.xsf, i.e. finds all ldos.pp.dat files and returns them
+     - lambda function takes stem (i.e. file name without .xsf e.g. ldos.pp.dat12), strips the number with .removeprefix(files_path.name),
+    and and sorts accordingly.
+    """
+    files = sorted(files_path.parent.glob(f"{files_path.name}[0-9]*.xsf"),
+                   key=lambda f: int(f.stem.removeprefix(files_path.name)))
+    file_count = len(files)
 
     averaged_ldos = []
     z = None
     atoms_ = None
-    
-    # files = sorted(intermediate_path.parent.glob(f"{intermediate_path.name}[0-9]*.cube"))
-    files = sorted(files_path.parent.glob(f"{files_path.name}[0-9]*.xsf"))
-    file_count = len(files)
     
     for i, file in enumerate(files, start=1):
         print(f"\rREADING {file.name} [{i}/{file_count}]", flush=True, end="")
@@ -142,13 +151,25 @@ def _read_ldos(files_path):
         averaged_ldos.append(np.mean(data, axis=(0, 1)))
         file.unlink()
     
+    print()
     averaged_ldos = np.asarray(averaged_ldos)
     
     # shape[0] gets the number of rows i.e. the energy count
     energies = WINDOW_LDOS[0] + np.arange(averaged_ldos.shape[0]) * DELTA_E_LDOS
     
-    print()
+    np.savez(save_path / "ldos.npz", averaged=averaged_ldos, z=z, energies=energies)
+    with open(save_path / "ldos_atoms.xsf", "w") as f:
+        write_xsf(f, images=[atoms_])
+    
     return LDOS(averaged=averaged_ldos, z=z, energies=energies, atoms=atoms_)
+
+
+def _load_ldos(save_path):
+    arrays = np.load(save_path / "ldos.npz")
+    with open(save_path / "ldos_atoms.xsf", "r") as f:
+        atoms = read_xsf(f)
+
+    return LDOS(averaged=arrays["averaged"], z=arrays["z"], energies=arrays["energies"], atoms=atoms)
 
 
 def _calculate(computation, path, fileout, iflag=3, fermi_energy=None):
@@ -196,7 +217,7 @@ def _calculate(computation, path, fileout, iflag=3, fermi_energy=None):
             if f.suffix != ".xsf":
                 f.unlink()
         # final files derive their names from intermediate files, so pass intermediate_path
-        return _read_ldos(intermediate_path), intermediate_path
+        return _read_ldos(intermediate_path, path), intermediate_path
     
     print(f"READING {output_path.name}")
     return _read_output(output_path, output_format), intermediate_path
