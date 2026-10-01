@@ -50,7 +50,7 @@ KGRID_DENSE = (30, 30, 1)  # nscf
 """
 pp.x
 """
-DEGAUSS_LDOS = 0.2
+DEGAUSS_LDOS = 0.3
 WINDOW_LDOS = (-10, 10)
 DELTA_E_LDOS = 0.01
 VACUUM_LEVEL_TOLERANCE = 0.0000001  # do not go lower -> error
