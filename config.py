@@ -52,7 +52,7 @@ pp.x
 """
 DEGAUSS_LDOS = 0.1
 WINDOW_LDOS = (-10, 10)
-DELTA_E_LDOS = 0.05
+DELTA_E_LDOS = 0.005
 VACUUM_LEVEL_TOLERANCE = 0.0000001  # do not go lower -> error
 
 
