@@ -81,6 +81,7 @@ ny = 288
     
         input_file.write("/\n")
 
+
 def _read_xsf(path):
     with open(path, "r") as file:
         data, origin, span_vectors, atoms = read_xsf(file, read_data=True)
@@ -146,6 +147,7 @@ def _read_ldos(files_path):
     # shape[0] gets the number of rows i.e. the energy count
     energies = WINDOW_LDOS[0] + np.arange(averaged_ldos.shape[0]) * DELTA_E_LDOS
     
+    print()
     return LDOS(averaged=averaged_ldos, z=z, energies=energies, atoms=atoms_)
 
 
@@ -189,6 +191,11 @@ def _calculate(computation, path, fileout, iflag=3, fermi_energy=None):
     runner.run("pp.x", input_path, log_path)        
 
     if fileout == "ldos":
+        # delete intermediate files - otherwise storage fills and program crashes
+        for f in intermediate_path.parent.glob(f"{intermediate_path.name}[0-9]*"):
+            if f.suffix != ".xsf":
+                f.unlink()
+        # final files derive their names from intermediate files, so pass intermediate_path
         return _read_ldos(intermediate_path), intermediate_path
     
     print(f"READING {output_path.name}")
