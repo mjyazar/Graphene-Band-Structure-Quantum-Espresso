@@ -145,7 +145,7 @@ def charge_density_subtracted(results: Results, field, label):
     ax.plot(z, charge_density, color="black")
     
     ax.set_xlabel(r"z ($\AA$)")
-    ax.set_ylabel(r"Charge Density ($e/{\AA}^3)$")
+    ax.set_ylabel(r"Charge Density ($e/{\AA}^3)$")  # averaged but not multiplied by area
     ax.set_title(f"Subtracted Charge Density, E-field={field}au, Correction: {label}")
 
     plt.tight_layout()
