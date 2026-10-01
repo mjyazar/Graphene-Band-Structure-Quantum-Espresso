@@ -79,8 +79,8 @@ def run_calculations(structure, path, eamp, xc, label):
 def main():
     graphene = GrapheneStructure()
     
-    energies = [0, 0.001, 0.005]
-    #energies = [0]
+    #energies = [0, 0.001, 0.005]
+    energies = [0]
     
     for eamp in energies:
         
