@@ -3,7 +3,7 @@ ROOT = Path(__file__).resolve().parent
 
 # RUN_QE may be False if script already ran and want to work with existing files
 # True if running for the first time or want to create new files with new parameters
-RUN_QE = False
+RUN_QE = True
 RUN_POTENTIAL = RUN_QE
 RUN_CHARGE_DENSITY = RUN_QE
 RUN_DOS = RUN_QE
