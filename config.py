@@ -3,12 +3,12 @@ ROOT = Path(__file__).resolve().parent
 
 # RUN_QE may be False if script already ran and want to work with existing files
 # True if running for the first time or want to create new files with new parameters
-RUN_QE = True
+RUN_QE = False
 RUN_POTENTIAL = RUN_QE
 RUN_CHARGE_DENSITY = RUN_QE
 RUN_DOS = RUN_QE
-RUN_LDOS = True  # must be True if no ldos metadata is present locally
-RUN_CONVERGENCE = False
+RUN_LDOS = RUN_QE  # must be True if no ldos metadata is present locally
+RUN_CONVERGENCE = True
 
 BOHR_TO_ANGSTROM = 0.529177210903
 RY_TO_EV = 13.605693122994
@@ -44,7 +44,7 @@ FORCE_CONVERGENCE_THRESHOLD = 0.001
 BANDPATH = 'GMKG'
 ECUTWFC = 80.0
 KGRID = (15, 15, 1)  # scf
-KGRID_DENSE = (30, 30, 1)  # nscf
+KGRID_DENSE = (60, 60, 1)  # nscf
 
 
 """
@@ -59,7 +59,7 @@ VACUUM_LEVEL_TOLERANCE = 0.0000001  # do not go lower -> error
 """
 dos.x
 """
-DEGAUSS = 0.01
+DEGAUSS = 0.05
 WINDOW_DOS = (-10, 10)
 DELTA_E_DOS = 0.01
 
