@@ -6,7 +6,7 @@ import qe.dos as dos
 import qe.pp as pp
 import qe.average as average
 import convergence
-import plotter
+import plotter as plot
 
 # Paths
 OUT_DIR = ROOT / "outputs"
@@ -126,15 +126,16 @@ def main():
             
             result = Results(coupled, bottom, top)
             results[label] = result
-            
-            plotter.plot_potential(result, eamp, label)
-            plotter.plot_charge_density(result, eamp, label)
-            plotter.plot_dos(result, eamp, label)
-            plotter.plot_ldos(result, eamp, label)
 
-        plotter.plot_vdw_charge_difference(results, eamp)
+            plot.potential_individual(result, eamp, label)
+            plot.potential_subtracted(result, eamp, label)         
+            plot.charge_density_subtracted(result, eamp, label)
+            plot.fermi_aligned_dos(result, eamp, label)
+            plot.ldos_subtracted(result, eamp, label)
+            plot.ldos_individual(result, eamp, label)
         
-        pp.vdw_charge_difference(path, eamp)
+        pp.vdw_charge_difference(path, eamp)  # creates corresponding xsf file
+        plot.plot_vdw_charge_difference(results, eamp)
 
 
 if __name__ == "__main__":

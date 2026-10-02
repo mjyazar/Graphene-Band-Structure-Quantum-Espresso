@@ -71,7 +71,7 @@ def _get_vacuum_level(V, z):
     return vacuum_level
 
 
-def potential_subtracted(results: Results, field, label):
+def potential_subtracted(results: Results, field, vdw_scheme):
     print("PLOTTING SUBTRACTED POTENTIAL")
     
     coupled = results.coupled.potential
@@ -94,17 +94,18 @@ def potential_subtracted(results: Results, field, label):
     
     ax.set_xlabel(r"z ($\AA$)")
     ax.set_ylabel("Potential Energy (eV)")
-    ax.set_title(f"Subtracted Potential, E-field={field}au, Correction: {label}")
+    ax.set_title(f"Subtracted Potential, E-field={field}au, Correction: {vdw_scheme}")
     ax.legend(loc="upper right")
 
     plt.tight_layout()
-    plt.savefig(POTENTIAL_DIR / f"Subtracted_Potential_{field}au_{label}.png", dpi=300, bbox_inches="tight")
+    plt.savefig(POTENTIAL_DIR / f"Subtracted_Potential_{field}au_{vdw_scheme}.png", dpi=300, bbox_inches="tight")
     plt.close(fig)
     
 
-def potential_individual(results: Results, field, label):
+def potential_individual(results: Results, field, vdw_scheme):
     print("PLOTTING INDIVIDUAL POTENTIALS")
-
+    
+    # iterate through coupled, top, and bottom
     for system in results.__dict__.values():
         system:System
 
@@ -116,7 +117,7 @@ def potential_individual(results: Results, field, label):
         fig, ax = plt.subplots()
 
         ax.plot(z, potential, linewidth=0.75, color='black')
-        ax.set_title(f"1D {system.name.capitalize()} Layer Potential V(z), E-field={field}au, Correction: {label}")
+        ax.set_title(f"{system.name.capitalize()} Layer Potential V(z), E-field={field}au, Correction: {vdw_scheme}")
         ax.set_xlabel(r"z ($\AA$)")
         ax.set_ylabel("Potential Energy (eV)")
         
@@ -125,11 +126,11 @@ def potential_individual(results: Results, field, label):
             ax.axhline(vacuum_level, color="red", linestyle="--", linewidth=0.8, label="Vacuum Level")
 
         plt.tight_layout()
-        plt.savefig(POTENTIAL_DIR / f"Potential_{system.name.capitalize()}_Layer_{field}au_{label}.png", dpi=300, bbox_inches="tight")
+        plt.savefig(POTENTIAL_DIR / f"Potential_{system.name.capitalize()}_Layer_{field}au_{vdw_scheme}.png", dpi=300, bbox_inches="tight")
         plt.close(fig)
 
 
-def charge_density_subtracted(results: Results, field, label):
+def charge_density_subtracted(results: Results, field, vdw_scheme):
     print("PLOTTING SUBTRACTED CHARGE DENSITY")
 
     coupled = results.coupled.charge_density
@@ -146,10 +147,10 @@ def charge_density_subtracted(results: Results, field, label):
     
     ax.set_xlabel(r"z ($\AA$)")
     ax.set_ylabel(r"Charge Density ($e/{\AA}^3)$")  # averaged but not multiplied by area
-    ax.set_title(f"Subtracted Charge Density, E-field={field}au, Correction: {label}")
+    ax.set_title(f"Subtracted Charge Density, E-field={field}au, Correction: {vdw_scheme}")
 
     plt.tight_layout()
-    plt.savefig(CHARGE_DENSITY_DIR / f"Subtracted_Charge_Density_{field}au_{label}.png", dpi=300, bbox_inches="tight")
+    plt.savefig(CHARGE_DENSITY_DIR / f"Subtracted_Charge_Density_{field}au_{vdw_scheme}.png", dpi=300, bbox_inches="tight")
     plt.close(fig)
 
 
@@ -185,7 +186,7 @@ def plot_vdw_charge_difference(results, field):
     ax.plot(dn_vdw, z, color="black")
     ax.axvline(0, color="blue", linestyle="--", linewidth=0.8)
 
-    print("\nc09 Coupled Atoms Positions: \n", c09.coupled.atoms.positions)
+    # print("\nc09 Coupled Atoms Positions: \n", c09.coupled.atoms.positions)
     positions_z = c09.coupled.atoms.positions[:, 2]
     
     bottom_z = positions_z.min()
@@ -213,7 +214,7 @@ def plot_vdw_charge_difference(results, field):
     plt.close(fig)
 
 
-def fermi_aligned_dos(results: Results, field, label, delta_e=LDOS_GRID_DELTA_E):
+def fermi_aligned_dos(results: Results, field, vdw_scheme, delta_e=LDOS_GRID_DELTA_E):
     print(f"PLOTTING FERMI-ALIGNED SUBTRACTED DOS")
 
     coupled = results.coupled
@@ -244,33 +245,67 @@ def fermi_aligned_dos(results: Results, field, label, delta_e=LDOS_GRID_DELTA_E)
     # ax.plot(grid, dos_coupled_grid, label="$DOS_{coupled}$")
     ax.plot(grid, dos_subtracted, color="black", label=r"$DOS_{coupled} - DOS_{top} - DOS_{bottom}$")
 
-    ax.set_title(f"Fermi-Aligned DOS Subtracted, E-field={field}au, Correction: {label}")
+    ax.set_title(f"Fermi-Aligned DOS Subtracted, E-field={field}au, Correction: {vdw_scheme}")
     ax.set_xlabel(r"$Energy$ (eV)")
     ax.set_ylabel("DOS (states/eV/cell)")
     ax.legend()
 
     plt.tight_layout()
-    plt.savefig(DOS_DIR / f"DOS_Subtracted_Fermi-aligned_{field}au_{label}.png", dpi=300, bbox_inches="tight")
+    plt.savefig(DOS_DIR / f"DOS_Subtracted_Fermi-aligned_{field}au_{vdw_scheme}.png", dpi=300, bbox_inches="tight")
     plt.close(fig)
 
 
-def ldos_subtracted(results: Results, field, label):
-    print(f"PLOTTING FERMI-ALIGNED SUBTRACTED LDOS")
-
+def ldos_individual(results: Results, field, vdw_scheme):
+    print(f"PLOTTING FERMI-ALIGNED INDIDIVDUAL LDOS")
+        
     coupled = results.coupled
     bottom = results.bottom
     top = results.top
     
-    z = coupled.ldos.z
-    
     np.testing.assert_allclose(coupled.ldos.z, bottom.ldos.z)
     np.testing.assert_allclose(coupled.ldos.z, top.ldos.z)
     
-    E = coupled.ldos.energies
-    print(f"z: {z.shape}")
-    print(f"E: {E.shape}")
+    z = coupled.ldos.z
+    V = coupled.potential.averaged * RY_TO_EV - coupled.fermi_energy
     
-    ldos_subtracted = coupled.ldos.averaged - bottom.ldos.averaged - top.ldos.averaged
+    plots = [(coupled, "coupled"), (bottom, "bottom"), (top, "top")]
+
+    for layer, label in plots:
+        fig, ax = plt.subplots()
+        
+        E = layer.ldos.energies
+
+        limit = np.max(np.abs(layer.ldos.averaged))
+        symmetric_norm = TwoSlopeNorm(vmin=-limit, vcenter=0, vmax=limit)
+        mesh = ax.pcolormesh(z, E, layer.ldos.averaged, cmap="seismic", shading="auto", norm=symmetric_norm)
+        
+        fig.colorbar(mesh, ax=ax, label=r"$\Delta LDOS$")
+
+        ax.plot(layer.potential.z, V, linewidth=0.75, color='black')
+        ax.set_title(f"Fermi-Aligned LDOS, E-field={field}au, Correction: {vdw_scheme}")
+        ax.set_xlabel(r"$z$ ($\AA$)")
+        ax.set_ylabel(r"$E-E_F$ (eV)")
+        
+        plt.tight_layout()
+        plt.savefig(LDOS_DIR / f"LDOS_{label}_{field}au_{vdw_scheme}.png", dpi=300, bbox_inches="tight")
+        plt.close(fig)
+
+
+def ldos_subtracted(results: Results, field, vdw_scheme):
+    print(f"PLOTTING FERMI-ALIGNED SUBTRACTED LDOS")
+
+    coupled = results.coupled.ldos
+    bottom = results.bottom.ldos
+    top = results.top.ldos
+    
+    z = coupled.z
+    
+    np.testing.assert_allclose(coupled.z, bottom.z)
+    np.testing.assert_allclose(coupled.z, top.z)
+    
+    E = coupled.energies
+    
+    ldos_subtracted = coupled.averaged - bottom.averaged - top.averaged
     
     fig, ax = plt.subplots()
     
@@ -279,31 +314,32 @@ def ldos_subtracted(results: Results, field, label):
     mesh = ax.pcolormesh(z, E, ldos_subtracted, cmap="seismic", shading="auto", norm=symmetric_norm)
     
     fig.colorbar(mesh, ax=ax, label=r"$\Delta LDOS$")
-
-    ax.set_title(f"Fermi-Aligned Subtracted LDOS, E-field={field}au, Correction: {label}")
+    
+    ax.set_title(f"Fermi-Aligned Subtracted LDOS, E-field={field}au, Correction: {vdw_scheme}")
     ax.set_xlabel(r"$z$ ($\AA$)")
     ax.set_ylabel(r"$E-E_F$ (eV)")
     
     plt.tight_layout()
-    plt.savefig(LDOS_DIR / f"LDOS_Subtracted_{field}au_{label}.png", dpi=300, bbox_inches="tight")
+    plt.savefig(LDOS_DIR / f"LDOS_Subtracted_{field}au_{vdw_scheme}.png", dpi=300, bbox_inches="tight")
     plt.close(fig)
-    
 
-def plot_potential(results, field, label):
+
+def plot_potential(results, field, vdw_scheme):
     print("")
-    potential_subtracted(results, field, label)
-    potential_individual(results, field, label)
+    potential_subtracted(results, field, vdw_scheme)
+    potential_individual(results, field, vdw_scheme)
 
 
-def plot_charge_density(results, field, label):
-    charge_density_subtracted(results, field, label)
+def plot_charge_density(results, field, vdw_scheme):
+    charge_density_subtracted(results, field, vdw_scheme)
 
 
-def plot_dos(results, field, label):
+def plot_dos(results, field, vdw_scheme):
     #individual_dos(results, field)
     #dos_comparison(results, field)
-    fermi_aligned_dos(results, field, label)
+    fermi_aligned_dos(results, field, vdw_scheme)
 
 
-def plot_ldos(results, field, label):
-    ldos_subtracted(results, field, label)
+def plot_ldos(results, field, vdw_scheme):
+    ldos_subtracted(results, field, vdw_scheme)
+    ldos_individual(results, field, vdw_scheme)
