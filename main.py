@@ -105,8 +105,9 @@ def main():
         isolated_bottom, isolated_top = graphene.isolate_bilayer(relaxed_coupled)
         
         if RUN_CONVERGENCE:
-            convergence.test_kgrid(relaxed_coupled, eamp, 90)
-            convergence.test_ecutwfc(relaxed_coupled, eamp, 100)
+            convergence.test_kgrid(relaxed_coupled, eamp, "scf")
+            convergence.test_kgrid(relaxed_coupled, eamp, "nscf")
+            convergence.test_ecutwfc(relaxed_coupled, eamp)
         
         # store pbe+d3 results as d3 and vdw results as c09
         results = {}
