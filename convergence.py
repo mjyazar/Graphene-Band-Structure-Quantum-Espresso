@@ -8,8 +8,8 @@ ROOT = Path(__file__).resolve().parent
 FIG_DIR = ROOT / "convergence" / "figures"
 DATA_DIR = ROOT / "convergence" / "data"
 
-FIG_DIR.mkdir(exist_ok=True)
-DATA_DIR.mkdir(exist_ok=True)
+FIG_DIR.mkdir(parents=True, exist_ok=True)
+DATA_DIR.mkdir(parents=True, exist_ok=True)
 
 ECUTWFC = 100.0
 KGRID = (12, 12, 1)
