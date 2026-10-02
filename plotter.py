@@ -214,7 +214,7 @@ def plot_vdw_charge_difference(results, field):
     plt.close(fig)
 
 
-def fermi_aligned_dos(results: Results, field, vdw_scheme, delta_e=LDOS_GRID_DELTA_E):
+def dos_subtracted(results: Results, field, vdw_scheme, delta_e=DELTA_E_DOS):
     print(f"PLOTTING FERMI-ALIGNED SUBTRACTED DOS")
 
     coupled = results.coupled
@@ -251,8 +251,50 @@ def fermi_aligned_dos(results: Results, field, vdw_scheme, delta_e=LDOS_GRID_DEL
     ax.legend()
 
     plt.tight_layout()
-    plt.savefig(DOS_DIR / f"DOS_Subtracted_Fermi-aligned_{field}au_{vdw_scheme}.png", dpi=300, bbox_inches="tight")
+    plt.savefig(DOS_DIR / f"DOS_Subtracted_{field}au_{vdw_scheme}.png", dpi=300, bbox_inches="tight")
     plt.close(fig)
+
+
+def dos_individual(results: Results, field, vdw_scheme, delta_e=LDOS_GRID_DELTA_E):
+    print(f"PLOTTING FERMI-ALIGNED INDIVIDUAL DOS")
+
+    coupled = results.coupled
+    bottom = results.bottom
+    top = results.top
+    
+    energy_coupled = coupled.dos.energy - coupled.fermi_energy
+    energy_bottom = bottom.dos.energy - bottom.fermi_energy
+    energy_top = top.dos.energy - top.fermi_energy
+    
+    dos_coupled = coupled.dos.dos
+    dos_bottom = bottom.dos.dos
+    dos_top = top.dos.dos
+    
+    min_energy = max(energy_coupled.min(), energy_bottom.min(), energy_top.min())
+    max_energy = min(energy_coupled.max(), energy_top.max(), energy_bottom.max())
+    
+    grid = np.arange(min_energy, max_energy, delta_e)
+
+    dos_coupled_grid = np.interp(grid, energy_coupled, dos_coupled)
+    dos_bottom_grid = np.interp(grid, energy_bottom, dos_bottom)
+    dos_top_grid = np.interp(grid, energy_top, dos_top)
+    
+    plots = [(dos_coupled_grid, "Coupled Layers", "black", "-"), (dos_bottom_grid, "Bottom Layer", "red", "--"), (dos_top_grid, "Top Layer", "green", ":")]
+    
+    fig, ax = plt.subplots()
+
+    for plot, label, color, linestyle in plots:
+        ax.plot(grid, plot, color=color, label=f"{label}", linestyle=linestyle)
+
+    ax.set_title(f"Fermi-Aligned DOS Subtracted, E-field={field}au, Correction: {vdw_scheme}")
+    ax.set_xlabel(r"$Energy$ (eV)")
+    ax.set_ylabel("DOS (states/eV/cell)")
+    ax.legend()
+    
+    plt.tight_layout()
+    plt.savefig(DOS_DIR / f"DOS_Individual_{field}au_{vdw_scheme}.png", dpi=300, bbox_inches="tight")
+    plt.close(fig)
+
 
 
 def ldos_individual(results: Results, field, vdw_scheme):
@@ -324,6 +366,7 @@ def ldos_subtracted(results: Results, field, vdw_scheme):
     plt.close(fig)
 
 
+
 def plot_potential(results, field, vdw_scheme):
     print("")
     potential_subtracted(results, field, vdw_scheme)
@@ -337,7 +380,7 @@ def plot_charge_density(results, field, vdw_scheme):
 def plot_dos(results, field, vdw_scheme):
     #individual_dos(results, field)
     #dos_comparison(results, field)
-    fermi_aligned_dos(results, field, vdw_scheme)
+    dos_subtracted(results, field, vdw_scheme)
 
 
 def plot_ldos(results, field, vdw_scheme):
