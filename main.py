@@ -131,7 +131,8 @@ def main():
             plot.potential_individual(result, eamp, label)
             plot.potential_subtracted(result, eamp, label)         
             plot.charge_density_subtracted(result, eamp, label)
-            plot.fermi_aligned_dos(result, eamp, label)
+            plot.dos_subtracted(result, eamp, label)
+            plot.dos_individual(result, eamp, label)
             plot.ldos_subtracted(result, eamp, label)
             plot.ldos_individual(result, eamp, label)
         

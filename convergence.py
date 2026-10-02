@@ -88,6 +88,7 @@ def test_kgrid(structure, field, computation):
     
     _graph_convergence(kgrid_values, energy_values, field, header, f"kgrid_{label}")
     
+    # plot dos for each kgrid density compared against last density i.e. [-1]
     if computation == "nscf":
         error = [np.abs(d - doses[-1]).sum() / doses[-1].sum() for d in doses[:-1]]
         _graph_convergence(kgrid_values[:-1], error, field, "Relative DOS error", "kgrid_nscf_dos")
