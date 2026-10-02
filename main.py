@@ -104,6 +104,11 @@ def main():
         print("\nEXTRACTING FROZEN LAYERS")
         isolated_bottom, isolated_top = graphene.isolate_bilayer(relaxed_coupled)
         
+        if RUN_CONVERGENCE:
+            convergence.test_kgrid(relaxed_coupled, eamp, 90)
+            convergence.test_ecutwfc(relaxed_coupled, eamp, 100)
+        
+        # store pbe+d3 results as d3 and vdw results as c09
         results = {}
         for xc in XC:
             if xc is None:

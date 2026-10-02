@@ -5,22 +5,22 @@ import matplotlib.pyplot as plt
 
 ROOT = Path(__file__).resolve().parent
 
-OUT_DIR = ROOT / "outputs"
-FIG_DIR = OUT_DIR / "figures"
+FIG_DIR = ROOT / "convergence" / "figures"
+DATA_DIR = ROOT / "convergence" / "data"
 
-OUT_DIR.mkdir(exist_ok=True)
 FIG_DIR.mkdir(exist_ok=True)
+DATA_DIR.mkdir(exist_ok=True)
 
 ECUTWFC = 100.0
 KGRID = (12, 12, 1)
 
 
-def graph_convergence(kpoints, energies, structure_name, parameter):
+def _graph_convergence(values, energies, field, parameter):
     
     fig, ax = plt.subplots()
     
-    ax.plot(kpoints, energies, "o-")
-    ax.set_title(f"{parameter} Parameter Convergence for {str(structure_name).capitalize()} Graphene")
+    ax.plot(values, energies, "o-")
+    ax.set_title(f"{parameter} Parameter Convergence for {parameter} at E-field={field}au")
     
     if parameter == "kgrid":
         ax.set_xlabel(f"{parameter} Parameter x -> (x, x, 1)")
@@ -30,11 +30,11 @@ def graph_convergence(kpoints, energies, structure_name, parameter):
 
     ax.set_ylabel("Total Energy (eV)")
     
-    fig.savefig(FIG_DIR / f"{str(structure_name).capitalize()} {parameter} Convergence", bbox_inches="tight")
+    fig.savefig(FIG_DIR / f"{parameter} Convergence, E-field = {field}au", bbox_inches="tight")
     plt.close(fig)
 
 
-def test_kgrid(structure, structure_name, path, upper, ecutwfc=ECUTWFC):
+def test_kgrid(structure, field, upper):
     """
     Convergence testing of kgrid by iterating through from values of x and y 
     ranging from 2 to 16, with z being kept constant at 1.
@@ -50,9 +50,9 @@ def test_kgrid(structure, structure_name, path, upper, ecutwfc=ECUTWFC):
         
         kgrid = (i, i, 1)
         
-        calculation_path = path / "kgrid" / str(i)
+        calculation_path = DATA_DIR / "kgrid" / str(i)
         
-        scf = pw.calculate(structure, "scf", calculation_path, kgrid, ecutwfc)
+        scf = pw._calculate("scf", structure, calculation_path, kgrid, efield=field)
                 
         total_energy = scf.get_potential_energy()  # extract total energy
         
@@ -64,14 +64,14 @@ def test_kgrid(structure, structure_name, path, upper, ecutwfc=ECUTWFC):
     energy_values = np.array(energy_values)
     
     # save the results as a .txt file for reference
-    np.savetxt(path / "kgrid Convergence.txt", np.column_stack((kgrid_values, energy_values)), header="kgrid total_energy_eV")
+    np.savetxt(DATA_DIR / "kgrid Convergence.txt", np.column_stack((kgrid_values, energy_values)), header="kgrid total_energy_eV")
     
-    graph_convergence(kgrid_values, energy_values, structure_name, "kgrid")
+    _graph_convergence(kgrid_values, energy_values, field, "kgrid")
     
     return (kgrid_values, energy_values)
 
 
-def test_ecutwfc(structure, structure_name, path, upper, kgrid=KGRID):
+def test_ecutwfc(structure, field, upper):
     """
     Convergence testing of ecutwfc by iterating through values 10 to 100 in increments of 10.
     Involves running the scf process and plotting the total energy against ecutwfc values.
@@ -83,10 +83,10 @@ def test_ecutwfc(structure, structure_name, path, upper, kgrid=KGRID):
     energy_values = []
     
     for ecutwfc in range(10, upper+1, 10):
-    
-        calculation_path = path / "ecutwfc" / str(ecutwfc)
-                
-        scf = pw.calculate(structure, "scf", calculation_path, kgrid, ecutwfc)
+        
+        calculation_path = DATA_DIR / "ecutwfc" / str(ecutwfc)
+        
+        scf = pw._calculate("scf", structure, calculation_path, kgrid, ecutwfc)
         
         total_energy = scf.get_potential_energy()  # extract total energy
     
@@ -98,8 +98,8 @@ def test_ecutwfc(structure, structure_name, path, upper, kgrid=KGRID):
     energy_values = np.array(energy_values)
     
     # save the results as a .txt file for reference
-    np.savetxt(path / "ecutwfc Convergence.txt", np.column_stack((ecutwfc_values, energy_values)), header="kgrid total_energy_eV")
+    np.savetxt(DATA_DIR / "ecutwfc Convergence.txt", np.column_stack((ecutwfc_values, energy_values)), header="kgrid total_energy_eV")
     
-    graph_convergence(ecutwfc_values, energy_values, structure_name, "ecutwfc")
+    _graph_convergence(ecutwfc_values, energy_values, field, "ecutwfc")
     
     return (ecutwfc_values, energy_values)
