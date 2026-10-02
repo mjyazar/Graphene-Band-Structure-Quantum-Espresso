@@ -85,7 +85,8 @@ ny = 288
 def _read_xsf(path):
     with open(path, "r") as file:
         data, origin, span_vectors, atoms = read_xsf(file, read_data=True)
-        
+    
+    #data = data[:-1, :-1, :-1]  # XSF repeats the first point at the end of each axis, remove last 
     return data, origin, span_vectors, atoms        
 
 
