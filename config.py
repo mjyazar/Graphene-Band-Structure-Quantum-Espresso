@@ -45,7 +45,7 @@ NSCF_EXTRA_BANDS_PER_ATOM = 4  # number of unoccupied bands to run the calculati
 FORCE_CONVERGENCE_THRESHOLD = 0.001
 BANDPATH = 'GMKG'
 KGRID = (15, 15, 1)  # scf
-KGRID_DENSE = (90, 90, 1)  # nscf
+KGRID_DENSE = (75, 75, 1)  # nscf
 
 
 """
