@@ -56,6 +56,8 @@ def run_calculations(structure, path, eamp, xc, label):
     
     if RUN_LDOS:
         ldos, ldos_pp_path, energies = pp.ldos(path, fermi_energy)
+        for f in (path / "data").glob("*.save/wfc*.dat"):
+            f.unlink()
         # ldos_averaged = average.ldos(path, ldos_pp_path, energies)
     else:
         ldos = pp._load_ldos(path)
