@@ -93,9 +93,8 @@ def _calculate(calculation, structure, path, kpts, efield=0, xc=None, ecutwfc=EC
 
     occupied = 2 * len(structure)
 
-    # 2 * (number of atoms in Atoms object) -> number of occupied bands
-    #nbnd = 2 * len(structure) + (NSCF_EXTRA_BANDS_PER_ATOM * len(structure) if calculation == "nscf" else SCF_EXTRA_BANDS)
-    nbnd = SCF_EXTRA_BANDS if calculation == "scf" else NSCF_EXTRA_BANDS
+    # 2 * (number of atoms in Atoms object) -> number of occupied bands    
+    nbnd = (2 * len(structure) + SCF_EXTRA_BANDS) if calculation == "scf" else NSCF_NBND
     
     print(f"\nCREATING {input_path.name}")
     _write_input(input_path, structure, calculation, outdir, kpts, nbnd, path.name, efield, xc, ecutwfc, ecutrho)
