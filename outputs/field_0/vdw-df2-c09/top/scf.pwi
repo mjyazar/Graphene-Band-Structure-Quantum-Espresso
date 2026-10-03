@@ -9,8 +9,8 @@
 /
 &SYSTEM
    nbnd             = 10
-   ecutwfc          = 80.0
-   ecutrho          = 320.0
+   ecutwfc          = 90.0
+   ecutrho          = 360.0
    occupations      = 'smearing'
    degauss          = 0.01
    smearing         = 'gauss'
@@ -44,6 +44,6 @@ CELL_PARAMETERS angstrom
 0.00000000000000 0.00000000000000 23.34999874850822
 
 ATOMIC_POSITIONS angstrom
-C 1.2300000000 0.7101408311 13.4291791415  
-C 0.0000000000 1.4202816622 13.4307547504  
+C 1.2300000000 0.7101408311 13.4292115438  
+C 0.0000000000 1.4202816622 13.4308229667  
 

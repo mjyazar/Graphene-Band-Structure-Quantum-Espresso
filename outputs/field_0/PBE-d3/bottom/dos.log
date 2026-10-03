@@ -1,5 +1,5 @@
 
-     Program DOS v.7.6 starts on  2Oct2026 at  0:50:45 
+     Program DOS v.7.6 starts on  3Oct2026 at 16:22:57 
 
      This program is part of the open-source Quantum ESPRESSO suite
      for quantum simulation of materials; please cite
@@ -10,11 +10,11 @@
      in publications or presentations arising from this work. More details at
      http://www.quantum-espresso.org/quote
 
-     Parallel version (MPI), running on     4 processors
+     Parallel version (MPI), running on    16 processors
 
      MPI processes distributed on     1 nodes
-     R & G space division:  proc/nbgrp/npool/nimage =       4
-     5444 MiB available memory on the printing compute node when the environment starts
+     R & G space division:  proc/nbgrp/npool/nimage =      16
+     28067 MiB available memory on the printing compute node when the environment starts
 
 
      Reading xml data from directory:
@@ -31,20 +31,20 @@
      Parallelization info
      --------------------
      sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
-     Min         118     118     37                19916    19916    3337
-     Max         119     119     38                19947    19947    3350
-     Sum         475     475    151                79745    79745   13381
+     Min          33      33     10                 5919     5919     968
+     Max          34      34     11                 5943     5943     994
+     Sum         535     535    163                94953    94953   15739
 
      Using Slab Decomposition
 
 
-     Gaussian broadening (read from input): ngauss,degauss=   0    0.010000
+     Gaussian broadening (read from input): ngauss,degauss=   0    0.022050
 
 
-     DOS          :      0.42s CPU      0.47s WALL
+     DOS          :      1.13s CPU      1.16s WALL
 
 
-   This run was terminated on:   0:50:45   2Oct2026            
+   This run was terminated on:  16:22:59   3Oct2026            
 
 =------------------------------------------------------------------------------=
    JOB DONE.

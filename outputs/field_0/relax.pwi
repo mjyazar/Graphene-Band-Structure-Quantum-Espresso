@@ -10,8 +10,8 @@
 /
 &SYSTEM
    nbnd             = 14
-   ecutwfc          = 80.0
-   ecutrho          = 320.0
+   ecutwfc          = 90.0
+   ecutrho          = 360.0
    occupations      = 'smearing'
    degauss          = 0.01
    smearing         = 'gauss'

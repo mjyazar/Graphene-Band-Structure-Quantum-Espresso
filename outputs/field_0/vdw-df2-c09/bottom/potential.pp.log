@@ -1,5 +1,5 @@
 
-     Program POST-PROC v.7.6 starts on  2Oct2026 at  3:27: 3 
+     Program POST-PROC v.7.6 starts on  3Oct2026 at 18:10:20 
 
      This program is part of the open-source Quantum ESPRESSO suite
      for quantum simulation of materials; please cite
@@ -10,11 +10,11 @@
      in publications or presentations arising from this work. More details at
      http://www.quantum-espresso.org/quote
 
-     Parallel version (MPI), running on     4 processors
+     Parallel version (MPI), running on    16 processors
 
      MPI processes distributed on     1 nodes
-     R & G space division:  proc/nbgrp/npool/nimage =       4
-     5441 MiB available memory on the printing compute node when the environment starts
+     K-points division:     npool     =      16
+     26526 MiB available memory on the printing compute node when the environment starts
 
 
      Reading xml data from directory:
@@ -28,12 +28,10 @@
      Please, verify this is what you really want
 
 
-     Parallelization info
+     G-vector sticks info
      --------------------
      sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
-     Min         118     118     37                19916    19916    3337
-     Max         119     119     38                19947    19947    3350
-     Sum         475     475    151                79745    79745   13381
+     Sum         535     535    163                94953    94953   15739
 
      Using Slab Decomposition
 
@@ -86,14 +84,26 @@
      Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/vdw-df2-c09/bottom/potential.xsf
      Plot Type: 3D                     Output format: XCrySDen     
 
-     POST-PROC    :     28.83s CPU     29.07s WALL
+     POST-PROC    :     10.72s CPU     10.99s WALL
 
 
-   This run was terminated on:   3:27:33   2Oct2026            
+   This run was terminated on:  18:10:31   3Oct2026            
 
 =------------------------------------------------------------------------------=
    JOB DONE.
 =------------------------------------------------------------------------------=
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
 Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
 Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
 Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
