@@ -1,8 +1,7 @@
 import subprocess
 import time
 
-NPROC = 16
-NK = 16  # split kgrid computations into n pools with
+from config import *
 
 def run(process, input_path, output_path, cwd=None, nproc=NPROC):
     """
