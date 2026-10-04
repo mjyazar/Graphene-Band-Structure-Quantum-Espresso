@@ -3,9 +3,9 @@ prefix = "coupled"
 outdir = "/home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/coupled/data"  ! directory containing the input data, i.e. the pw.x metadata
 bz_sum = "smearing"  ! integration using gaussian smearing
 ngauss = 0  ! type of gaussian broadening - 0: Simple Gaussian (default)
-degauss = 0.022049593305392995  ! gaussian broadening, Ry (not eV!)
-emin = -10.9794
-emax = 9.0206
+degauss = 0.014699728870261997  ! gaussian broadening, Ry (not eV!)
+emin = -15.9794
+emax = 14.0206
 deltaE = 0.01  ! energy grid step (eV)
 fildos = "/home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/PBE-d3/coupled/dos.out"  ! output file containing DOS(E)
 /

@@ -4,10 +4,10 @@ outdir = "/home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs
 plot_num = 3
 filplot = "/home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/vdw-df2-c09/coupled/data/ldos.pp.dat"  ! QE intermediate 3D FFT i.e. real-space grid data
 
-emin = -11.088799999999999
-emax = 8.911200000000001
+emin = -16.0888
+emax = 13.911200000000001
 delta_e = 0.02
-degauss_ldos = 0.3
+degauss_ldos = 0.2
 use_gauss_ldos = .true.
 /
 &PLOT

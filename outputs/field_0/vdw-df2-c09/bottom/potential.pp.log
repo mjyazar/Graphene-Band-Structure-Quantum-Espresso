@@ -1,5 +1,5 @@
 
-     Program POST-PROC v.7.6 starts on  3Oct2026 at 18:10:20 
+     Program POST-PROC v.7.6 starts on  4Oct2026 at  7:42: 9 
 
      This program is part of the open-source Quantum ESPRESSO suite
      for quantum simulation of materials; please cite
@@ -14,7 +14,7 @@
 
      MPI processes distributed on     1 nodes
      K-points division:     npool     =      16
-     26526 MiB available memory on the printing compute node when the environment starts
+     26014 MiB available memory on the printing compute node when the environment starts
 
 
      Reading xml data from directory:
@@ -84,10 +84,10 @@
      Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0/vdw-df2-c09/bottom/potential.xsf
      Plot Type: 3D                     Output format: XCrySDen     
 
-     POST-PROC    :     10.72s CPU     10.99s WALL
+     POST-PROC    :     10.79s CPU     11.09s WALL
 
 
-   This run was terminated on:  18:10:31   3Oct2026            
+   This run was terminated on:   7:42:20   4Oct2026            
 
 =------------------------------------------------------------------------------=
    JOB DONE.
