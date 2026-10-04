@@ -6,7 +6,7 @@ ROOT = Path(__file__).resolve().parent
 RUN
 False for efficient run if data from previous run present, True if running for the first time or want to create new files with new parameters
 """
-RUN_QE = True
+RUN_QE = False
 RUN_POTENTIAL = RUN_QE
 RUN_CHARGE_DENSITY = RUN_QE
 RUN_DOS = RUN_QE
@@ -75,7 +75,7 @@ pp.x
 """
 DEGAUSS_LDOS = 0.2
 WINDOW_LDOS = (-15, 15)
-DELTA_E_LDOS = 0.02
+DELTA_E_LDOS = 0.05
 VACUUM_LEVEL_TOLERANCE = 0.0000001  # do not go lower -> error
 
 
@@ -91,6 +91,7 @@ DELTA_E_DOS = 0.01
 PLOTTER
 """
 WINDOW = (-15, 15)
+PLOT_WINDOW_LDOS = (-10, 3)
 LDOS_GRID_DELTA_E = 0.01
 FIGSIZE_CHARGE_DENSITY = (5, 8)
 
