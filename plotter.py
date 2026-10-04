@@ -368,8 +368,11 @@ def ldos_subtracted(results: Results, field, vdw_scheme):
     np.testing.assert_allclose(coupled.z, top.z)
     
     E = coupled.energies
-    
-    ldos_subtracted = coupled.averaged - bottom.averaged - top.averaged
+    mask = (E >= PLOT_WINDOW_LDOS[0]) & (E <= PLOT_WINDOW_LDOS[1])
+    E = E[mask]
+
+    # averaged is a 2D array with shape (n_energies, n_z)
+    ldos_subtracted = (coupled.averaged - bottom.averaged - top.averaged)[mask, :]
     
     fig, ax = plt.subplots()
     
@@ -382,6 +385,8 @@ def ldos_subtracted(results: Results, field, vdw_scheme):
     ax.set_title(f"Fermi-Aligned Subtracted LDOS, E-field={field}au, Correction: {vdw_scheme}")
     ax.set_xlabel(r"$z$ ($\AA$)")
     ax.set_ylabel(r"$E-E_F$ (eV)")
+    
+    #ax.set_ylim(*PLOT_WINDOW_LDOS)
     
     plt.tight_layout()
     plt.savefig(LDOS_DIR / f"LDOS_Subtracted_{field}au_{vdw_scheme}.png", dpi=300, bbox_inches="tight")
