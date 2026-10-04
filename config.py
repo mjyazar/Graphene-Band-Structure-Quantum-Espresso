@@ -3,11 +3,11 @@ ROOT = Path(__file__).resolve().parent
 
 # RUN_QE may be False if script already ran and want to work with existing files
 # True if running for the first time or want to create new files with new parameters
-RUN_QE = True
+RUN_QE = False
 RUN_POTENTIAL = RUN_QE
 RUN_CHARGE_DENSITY = RUN_QE
 RUN_DOS = RUN_QE
-RUN_LDOS = RUN_QE  # must be True if no ldos metadata is present locally
+RUN_LDOS = RUN_QE
 RUN_CONVERGENCE = False
 
 BOHR_TO_ANGSTROM = 0.529177210903
@@ -51,9 +51,9 @@ KGRID_DENSE = (75, 75, 1)  # nscf
 """
 pp.x
 """
-DEGAUSS_LDOS = 0.3
-WINDOW_LDOS = (-10, 10)
-DELTA_E_LDOS = 0.02
+DEGAUSS_LDOS = 0.2
+WINDOW_LDOS = (-15, 15)
+DELTA_E_LDOS = 0.01
 VACUUM_LEVEL_TOLERANCE = 0.0000001  # do not go lower -> error
 
 
@@ -61,15 +61,16 @@ VACUUM_LEVEL_TOLERANCE = 0.0000001  # do not go lower -> error
 dos.x
 """
 DEGAUSS_DOS = DEGAUSS_LDOS * EV_TO_RY
-WINDOW_DOS = (-10, 10)
+WINDOW_DOS = (-15, 15)
 DELTA_E_DOS = 0.01
 
 
 """
 PLOTTER
 """
-WINDOW = (-10, 10)
+WINDOW = (-15, 15)
 LDOS_GRID_DELTA_E = 0.01
+FIGSIZE_CHARGE_DENSITY = (5, 8 )
 
 
 """
