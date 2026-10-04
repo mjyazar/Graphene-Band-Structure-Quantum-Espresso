@@ -1,0 +1,38 @@
+
+***********************************
+E-field = 0.001au
+***********************************
+
+CREATING GRAPHENE BILAYERS
+
+EXTRACTING FROZEN LAYERS
+
+d3 | COUPLED LAYER(S) COMPUTATIONS
+-----------------------------------
+Traceback (most recent call last):
+  File "/home/ubuntu/venvs/graphene/lib/python3.12/site-packages/ase/io/xsf.py", line 150, in iread_xsf
+    line = readline()
+           ^^^^^^^^^^
+  File "/home/ubuntu/venvs/graphene/lib/python3.12/site-packages/ase/io/xsf.py", line 148, in readline
+    return next(_line_generator)
+           ^^^^^^^^^^^^^^^^^^^^^
+StopIteration
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/main.py", line 146, in <module>
+    main()
+  File "/home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/main.py", line 126, in main
+    coupled = run_calculations(relaxed_coupled, PATH_COUPLED, eamp, xc, label)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/main.py", line 63, in run_calculations
+    ldos = pp._load_ldos(path)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/qe/pp.py", line 171, in _load_ldos
+    atoms = read_xsf(f)
+            ^^^^^^^^^^^
+  File "/home/ubuntu/venvs/graphene/lib/python3.12/site-packages/ase/io/xsf.py", line 267, in read_xsf
+    images = list(iread_xsf(fileobj, read_data=read_data))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: generator raised StopIteration
