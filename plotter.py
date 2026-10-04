@@ -141,14 +141,35 @@ def charge_density_subtracted(results: Results, field, vdw_scheme):
     
     charge_density = (coupled.averaged - bottom.averaged - top.averaged) / (BOHR_TO_ANGSTROM)**3
     
-    fig, ax = plt.subplots()
+    # print("\nc09 Coupled Atoms Positions: \n", c09.coupled.atoms.positions)
+    positions_z = coupled.atoms.positions[:, 2]
     
-    ax.plot(z, charge_density, color="black")
+    bottom_z = positions_z.min()
+    top_z = positions_z.max()
     
-    ax.set_xlabel(r"z ($\AA$)")
-    ax.set_ylabel(r"Charge Density ($e/{\AA}^3)$")  # averaged but not multiplied by area
-    ax.set_title(f"Subtracted Charge Density, E-field={field}au, Correction: {vdw_scheme}")
+    fig, ax = plt.subplots(figsize=FIGSIZE_CHARGE_DENSITY)
+    
+    ax.plot(charge_density, z, color="black")
+    ax.axhline(bottom_z, color="blue", linestyle=":", linewidth=0.8, label="Bottom Layer")
+    ax.axhline(top_z, color="red", linestyle=":", linewidth=0.8, label="Top Layer")
+    ax.axvline(0, color="blue", linestyle="--", linewidth=0.8, label=f"E_{'Fermi'}")
 
+    ax.set_ylim(0, 20)
+    
+    ax.xaxis.tick_top()
+    ax.xaxis.set_label_position("top")
+
+    ax.yaxis.tick_right()
+    ax.yaxis.set_label_position("right")
+    
+    ax.tick_params(axis="both", direction="in")
+    ax.ticklabel_format(axis="x", style="sci", scilimits=(0, 0))
+
+    ax.set_xlabel(r"Charge Density ($e/{\AA}^3)$")  # averaged but not multiplied by area
+    ax.set_ylabel(r"z ($\AA$)")
+    ax.set_title(f"Subtracted Charge Density, E-field={field}au, Correction: {vdw_scheme}", pad=15)
+
+    plt.legend()
     plt.tight_layout()
     plt.savefig(CHARGE_DENSITY_DIR / f"Subtracted_Charge_Density_{field}au_{vdw_scheme}.png", dpi=300, bbox_inches="tight")
     plt.close(fig)
@@ -181,10 +202,9 @@ def plot_vdw_charge_difference(results, field):
     
     dn_vdw = ((dn_c09 - dn_pbe) / BOHR_TO_ANGSTROM**3) * area
 
-    fig, ax = plt.subplots(figsize=(4, 7))
+    fig, ax = plt.subplots(figsize=FIGSIZE_CHARGE_DENSITY)
     
     ax.plot(dn_vdw, z, color="black")
-    ax.axvline(0, color="blue", linestyle="--", linewidth=0.8)
 
     # print("\nc09 Coupled Atoms Positions: \n", c09.coupled.atoms.positions)
     positions_z = c09.coupled.atoms.positions[:, 2]
@@ -192,8 +212,9 @@ def plot_vdw_charge_difference(results, field):
     bottom_z = positions_z.min()
     top_z = positions_z.max()
     
-    ax.axhline(bottom_z, color="blue", linestyle=":", linewidth=0.8)
-    ax.axhline(top_z, color="red", linestyle=":", linewidth=0.8)
+    ax.axhline(bottom_z, color="blue", linestyle=":", linewidth=0.8, label="Bottom Layer")
+    ax.axhline(top_z, color="red", linestyle=":", linewidth=0.8, label="Top Layer")
+    ax.axvline(0, color="blue", linestyle="--", linewidth=0.8, label=f"E_{'Fermi'}")
 
     ax.set_ylim(0, 20)
     
@@ -204,11 +225,13 @@ def plot_vdw_charge_difference(results, field):
     ax.yaxis.set_label_position("right")
     
     ax.tick_params(axis="both", direction="in")
-    
+    ax.ticklabel_format(axis="x", style="sci", scilimits=(0, 0))
+
     ax.set_xlabel(r"$\Delta n_{vdW}(z)$ ($e/{\AA})$")
     ax.set_ylabel(r"z ($\AA$)")
-    ax.set_title(rf"vdW Charge Density $\Delta n_{{c09}}(z)-\Delta n_{{PBE + d3}}(z)$, E-field={field}au")
+    ax.set_title(rf"vdW Charge Density $\Delta n_{{c09}}(z)-\Delta n_{{PBE + d3}}(z)$, E-field={field}au", pad=15)
 
+    plt.legend()
     plt.tight_layout()
     plt.savefig(CHARGE_DENSITY_DIR / f"vdW_Charge_Density_{field}au.png", dpi=300, bbox_inches="tight")
     plt.close(fig)
@@ -296,7 +319,6 @@ def dos_individual(results: Results, field, vdw_scheme, delta_e=LDOS_GRID_DELTA_
     plt.close(fig)
 
 
-
 def ldos_individual(results: Results, field, vdw_scheme):
     print(f"PLOTTING FERMI-ALIGNED INDIDIVDUAL LDOS")
         
@@ -367,22 +389,22 @@ def ldos_subtracted(results: Results, field, vdw_scheme):
 
 
 
-def plot_potential(results, field, vdw_scheme):
-    print("")
-    potential_subtracted(results, field, vdw_scheme)
-    potential_individual(results, field, vdw_scheme)
+# def plot_potential(results, field, vdw_scheme):
+#     print("")
+#     potential_subtracted(results, field, vdw_scheme)
+#     potential_individual(results, field, vdw_scheme)
 
 
-def plot_charge_density(results, field, vdw_scheme):
-    charge_density_subtracted(results, field, vdw_scheme)
+# def plot_charge_density(results, field, vdw_scheme):
+#     charge_density_subtracted(results, field, vdw_scheme)
 
 
-def plot_dos(results, field, vdw_scheme):
-    #individual_dos(results, field)
-    #dos_comparison(results, field)
-    dos_subtracted(results, field, vdw_scheme)
+# def plot_dos(results, field, vdw_scheme):
+#     #individual_dos(results, field)
+#     #dos_comparison(results, field)
+#     dos_subtracted(results, field, vdw_scheme)
 
 
-def plot_ldos(results, field, vdw_scheme):
-    ldos_subtracted(results, field, vdw_scheme)
-    ldos_individual(results, field, vdw_scheme)
+# def plot_ldos(results, field, vdw_scheme):
+#     ldos_subtracted(results, field, vdw_scheme)
+#     ldos_individual(results, field, vdw_scheme)
