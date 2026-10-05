@@ -126,7 +126,9 @@ def potential_individual(results: Results, field, vdw_scheme):
             ax.axhline(vacuum_level, color="red", linestyle="--", linewidth=0.8, label="Vacuum Level")
 
         plt.tight_layout()
-        plt.savefig(POTENTIAL_DIR / f"Potential_{system.name.capitalize()}_Layer_{field}au_{vdw_scheme}.png", dpi=300, bbox_inches="tight")
+        path = POTENTIAL_DIR / "Individual"
+        path.mkdir(exist_ok=True)
+        plt.savefig(path / f"Potential_{system.name.capitalize()}_Layer_{field}au_{vdw_scheme}.png", dpi=300, bbox_inches="tight")
         plt.close(fig)
 
 
@@ -351,7 +353,9 @@ def ldos_individual(results: Results, field, vdw_scheme):
         ax.set_ylabel(r"$E-E_F$ (eV)")
         
         plt.tight_layout()
-        plt.savefig(LDOS_DIR / f"LDOS_{label}_{field}au_{vdw_scheme}.png", dpi=300, bbox_inches="tight")
+        path = LDOS_DIR / "Individual"
+        path.mkdir(exist_ok=True)
+        plt.savefig(path / f"LDOS_{label}_{field}au_{vdw_scheme}.png", dpi=300, bbox_inches="tight")
         plt.close(fig)
 
 
@@ -391,7 +395,6 @@ def ldos_subtracted(results: Results, field, vdw_scheme):
     plt.tight_layout()
     plt.savefig(LDOS_DIR / f"LDOS_Subtracted_{field}au_{vdw_scheme}.png", dpi=300, bbox_inches="tight")
     plt.close(fig)
-
 
 
 # def plot_potential(results, field, vdw_scheme):
