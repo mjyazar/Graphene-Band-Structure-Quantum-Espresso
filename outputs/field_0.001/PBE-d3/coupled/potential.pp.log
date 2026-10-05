@@ -1,0 +1,59 @@
+
+     Program POST-PROC v.7.6 starts on  4Oct2026 at 16: 3:20 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+         "P. Giannozzi et al., J. Chem. Phys. 152 154105 (2020);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI), running on    16 processors
+
+     MPI processes distributed on     1 nodes
+     K-points division:     npool     =      16
+     14574 MiB available memory on the printing compute node when the environment starts
+
+
+     Reading xml data from directory:
+
+     /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0.001/PBE-d3/coupled/data/coupled.save/
+
+     IMPORTANT: XC functional enforced from input :
+     Exchange-correlation= PBE
+                           (   1   4   3   4   0   0   0)
+     Any further DFT definition will be discarded
+     Please, verify this is what you really want
+
+
+     G-vector sticks info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Sum         535     535    169                94953    94953   17491
+
+     Using Slab Decomposition
+
+
+     Adding external electric field
+        E field amplitude [Ha a.u.]:  1.0000E-03
+        Potential amp.        0.0794 Ry
+        Total length         39.7126 bohr
+
+
+     Calling punch_plot, plot_num =  11
+     Writing data to file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0.001/PBE-d3/coupled/data/potential.pp.dat
+     Reading data from file  /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0.001/PBE-d3/coupled/data/potential.pp.dat
+
+     Writing data to be plotted to file /home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0.001/PBE-d3/coupled/potential.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+
+     POST-PROC    :      2.56s CPU      2.68s WALL
+
+
+   This run was terminated on:  16: 3:23   4Oct2026            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=

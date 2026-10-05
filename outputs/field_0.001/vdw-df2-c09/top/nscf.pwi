@@ -1,0 +1,54 @@
+&CONTROL
+   calculation      = 'nscf'
+   verbosity        = 'high'
+   tprnfor          = .true.
+   outdir           = '/home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/outputs/field_0.001/vdw-df2-c09/top/data'
+   prefix           = 'top'
+   disk_io          = 'low'
+   pseudo_dir       = '/home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/pseudo'
+   tefield          = .true.
+/
+&SYSTEM
+   nbnd             = 30
+   ecutwfc          = 90.0
+   ecutrho          = 360.0
+   occupations      = 'smearing'
+   degauss          = 0.01
+   smearing         = 'gauss'
+   input_dft        = 'vdw-df2-c09'
+   edir             = 3
+   emaxpos          = 0.9
+   eopreg           = 0.1
+   eamp             = 0.001
+   ntyp             = 1
+   nat              = 2
+   ibrav            = 0
+/
+&ELECTRONS
+   electron_maxstep = 200
+   conv_thr         = 1e-08
+   mixing_beta      = 0.7
+/
+&IONS
+/
+&CELL
+/
+&FCP
+/
+&RISM
+/
+ATOMIC_SPECIES
+C 12.011 C.upf
+
+K_POINTS automatic
+75 75 1  0 0 0
+
+CELL_PARAMETERS angstrom
+2.45999984708052 0.00000000000000 0.00000000000000
+-1.22999992354026 2.13042136756791 0.00000000000000
+0.00000000000000 0.00000000000000 23.34999874850822
+
+ATOMIC_POSITIONS angstrom
+C 1.2299694351 0.7100996707 13.4307268988  
+C 0.0000033824 1.4203112712 13.4318880080  
+
