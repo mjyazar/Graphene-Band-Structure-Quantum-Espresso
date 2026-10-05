@@ -4,7 +4,7 @@ set -o pipefail  # if any command in pipeline fails, get a failure status
 set -e  # stop script when a command fails i.e.s the "errexit" option
 
 MAX_LOGS=10
-STAMP=$(date +%Y-%m-%d_%Hh%Mm%Ss) 
+STAMP=$(TZ=Australia/Melbourne date +%Y-%m-%d_%Hh%Mm%Ss)
 LOG_TMP="log/run_${STAMP}.log"
 
 
